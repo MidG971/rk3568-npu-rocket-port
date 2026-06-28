@@ -1,0 +1,71 @@
+From: Your Name <your.email@example.com>
+Date: Thu, 13 Feb 2026 00:00:00 +0000
+Subject: [PATCH] pmdomain: rockchip: Add regulator support for RK3568 NPU
+
+The RK3568 NPU power domain requires its voltage regulator (VDD_NPU) to
+be enabled before the power domain can be successfully activated. Without
+this, the idle request to the NPU's Network Interconnect Unit (NIU) times
+out because the hardware cannot respond.
+
+This is similar to the RK3588 GPU power domain fix where the regulator
+must be enabled before power domain operations.
+
+Add a new DOMAIN_M_R macro that extends DOMAIN_M with regulator support,
+and use it for the RK3568 NPU domain definition.
+
+Signed-off-by: Your Name <your.email@example.com>
+---
+ drivers/pmdomain/rockchip/pm-domains.c | 23 +++++++++++++++++++++--
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/pmdomain/rockchip/pm-domains.c b/drivers/pmdomain/rockchip/pm-domains.c
+index xxxx..yyyy 100644
+--- a/drivers/pmdomain/rockchip/pm-domains.c
++++ b/drivers/pmdomain/rockchip/pm-domains.c
+@@ -xxx,6 +xxx,24 @@
+ 	.active_wakeup = wakeup,			\
+ }
+
++/*
++ * DOMAIN_M_R: Like DOMAIN_M but with regulator support.
++ * Used for domains that require external voltage regulation.
++ */
++#define DOMAIN_M_R(_name, pwr, status, req, idle, ack, wakeup, regulator) \
++{							\
++	.name = _name,					\
++	.pwr_w_mask = (pwr) << 16,			\
++	.pwr_mask = (pwr),				\
++	.status_mask = (status),			\
++	.req_w_mask = (req) << 16,			\
++	.req_mask = (req),				\
++	.idle_mask = (idle),				\
++	.ack_mask = (ack),				\
++	.active_wakeup = wakeup,			\
++	.need_regulator = regulator,			\
++}
++
+ #define DOMAIN_M_O_R(_name, p_offset, pwr, status, m_offset, m_status, r_status, r_offset, req, idle, ack, wakeup, regulator)	\
+ {							\
+ 	.name = _name,					\
+@@ -xxx,6 +xxx,9 @@
+ #define DOMAIN_RK3568(name, pwr, req, wakeup)		\
+ 	DOMAIN_M(name, pwr, pwr, req, req, req, wakeup)
+
++#define DOMAIN_RK3568_R(name, pwr, req, wakeup)		\
++	DOMAIN_M_R(name, pwr, pwr, req, req, req, wakeup, true)
++
+ #define DOMAIN_RK3576(name, p_offset, pwr, req, r_offset, idle, wakeup)	\
+ 	DOMAIN_M_O(name, p_offset, pwr, pwr, r_offset, req, idle, idle, wakeup)
+
+@@ -xxx,7 +xxx,8 @@
+ };
+
+ static const struct rockchip_domain_info rk3568_pm_domains[] = {
+-	[RK3568_PD_NPU]		= DOMAIN_RK3568("npu",  BIT(1), BIT(2),  false),
++	/* NPU requires regulator to be enabled before power domain activation */
++	[RK3568_PD_NPU]		= DOMAIN_RK3568_R("npu",  BIT(1), BIT(2),  false),
+ 	[RK3568_PD_GPU]		= DOMAIN_RK3568("gpu",  BIT(0), BIT(1),  false),
+ 	[RK3568_PD_VI]		= DOMAIN_RK3568("vi",   BIT(6), BIT(3),  false),
+ 	[RK3568_PD_VO]		= DOMAIN_RK3568("vo",   BIT(7), BIT(4),  false),
+--
+2.39.0

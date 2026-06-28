@@ -1,0 +1,131 @@
+From: Midgy BALON <midgy971@gmail.com>
+Date: 2026-05-29
+Subject: [PATCH v2 0/5] accel: rocket: Add RK3568 NPU support
+
+This series adds Rockchip RK3568 support to the upstream Rocket accel
+driver (drivers/accel/rocket/), tested on a Radxa ROCK 3B board running
+Linux 6.19-rc5.
+
+The RK3568 carries a single NVDLA-derived NPU core (0.8 TOPS), the same
+IP family as the three-core RK3588 NPU already supported by the driver.
+The hardware register layout (pc/cna/core regions, interrupt, IOMMU) is
+identical; the differences are:
+
+  - 32-bit DMA address limit (AXI bus and IOMMU page walker are 32-bit)
+  - Requires explicit PVTPLL initialisation via two TF-A SCMI calls before
+    the NPU NOC bus can be de-idled
+  - Requires an explicit PMU write to power on the NPU domain, because
+    the RK3568 power domain (RK3568_PD_NPU) is always_on so the generic
+    pm-domains callback is a no-op
+
+Patch 1 fixes a pre-existing issue that prevents the driver from loading
+as a module (DRM_ACCEL_ROCKET=m): for_each_of_allnodes() expands to a
+call to the non-exported __of_find_all_nodes().
+
+Patch 2 adds RK3568 hardware support to the driver.
+
+Patch 3 updates the DT binding to document rk3568-rknn-core and the
+new rockchip,pmu property.
+
+Patches 4-5 update the device tree for rk356x and the Radxa ROCK 3B.
+
+Verified on Radxa ROCK 3B (RK3568, 8 GB RAM):
+  - /dev/accel/accel0 created at boot
+  - dmesg: "Rockchip NPU core 0 version: 0"
+  - IOMMU domain created per open() (rockchip,rk3568-iommu)
+  - drm-sched scheduler initialized
+  - Job submission path complete: regcmd reaches NPU's program controller,
+    PC processes all 135 regcmd entries, broadcasts to sub-units, advances
+    to BSP-equivalent completion state (PC_TASKST=0x11000)
+
+Status of end-to-end inference: NOT YET WORKING. After 12 days of
+investigation comparing rocket's behavior against the vendor BSP RKNPU
+driver, the NPU's MMIO state matches BSP byte-for-byte at submission
+time (CNA configs, sub-unit OP_ENABLE registers, CBUF_CON0, etc.), but
+no sub-unit transitions to its EXECUTER state. Output remains uniform
+zero_point; IRQ count = 0.
+
+Investigation produced several findings worth sharing for maintainer
+review, regardless of whether end-to-end inference fires:
+
+1. Mesa rocket userspace (src/gallium/drivers/rocket/) targets RK3588.
+   For RK3568, several encoded values need adjustment, most notably:
+
+   * Sub-unit OP_ENABLE register offset is 0x_00c, not 0x_008. Mesa
+     emits writes at 0x1008/0x2008/0x3008/0x4008/0x5008 — BSP regcmd
+     captures show no writes at these offsets across two distinct
+     conv shapes (YOLOv5s 6×6/s2 and MobileNet 3×3/s2). BSP writes
+     OP_ENABLE at offset 0x_00c with multi-bit values (CMAC=0x1,
+     ACCU=0x0, DPU=0x108, DPU_RDMA=0x13f), not bit-0 booleans.
+
+   * CNA register 0x1018 (CONV_CON4) is not defined in mesa's
+     registers.xml. BSP writes a shape-specific value (RGB_BYTELENGTH
+     field per TRM). Without it, CNA's pipeline does not engage.
+
+   * CONV_CON1 (0x100c) — BSP writes 0xa000 (constant across YOLOv5s
+     and MobileNet); mesa writes 0. Likely conv-mode enable.
+
+   * CBUF_CON0 (0x1040) — BSP writes 0x17; mesa writes 0x44 (HW
+     default). Likely CBUF mode flags.
+
+   * TASK_CON.task_number = 1 in mesa stalls RK3568 PC at TASKST=0xf000
+     indefinitely. Setting task_number ≥ 6 advances PC to 0x11000
+     (BSP completed state). RK3588 may not require this.
+
+   I will send these as a separate RFC to mesa-dev.
+
+2. The vendor BSP RKNPU driver writes
+   args->task_base_addr to PC_DMA_BASE_ADDR (offset 0x34). This IOVA
+   points to an array of struct rknpu_task descriptors (40 bytes each)
+   read by the NPU PC's TASK_DMA engine. The mesa rocket userspace has
+   no descriptor-array concept; without writing PC_DMA_BASE_ADDR, PC
+   fetches garbage from IOVA 0 and the task counter never advances.
+
+   This driver has the descriptor BO scaffolding hidden behind a
+   transient #ifdef in the local tree; a clean version is staged for
+   v2 once the maintainer signals the patch series is otherwise
+   acceptable.
+
+3. The NPU's master AXI port is 32-bit, but the dma-iommu framework's
+   iommu_dma_alloc() silently ignores GFP_DMA32 — physical pages are
+   picked from alloc_pages_node() without zone constraint enforcement,
+   and a 40-bit-encoded IOMMU PTE produces an address the NPU master
+   cannot reach. The correct primitive for kernel-side BOs the NPU
+   reads is __get_free_pages(GFP_DMA32 | __GFP_ZERO, order) followed
+   by dma_map_single(). This may be a useful documentation note for
+   other 32-bit AXI accelerators using dma-iommu.
+
+If maintainers prefer, I can submit the descriptor BO architecture
+in this same series or as a follow-on. Item 1 (mesa fixes) and item 3
+(allocation pattern) are independent of this kernel series.
+
+Assistance from Claude Sonnet/Opus 4.x throughout the 12-day
+investigation. All findings empirically verified via BSP register
+captures and side-by-side rocket execution traces on the same board.
+
+Midgy BALON (5):
+  accel: rocket: Use of_find_matching_node() instead of for_each_of_allnodes()
+  accel: rocket: Add support for Rockchip RK3568
+  dt-bindings: npu: Add RK3568 to rknn-core binding
+  arm64: dts: rockchip: rk356x: Update NPU node for Rocket accel driver
+  arm64: dts: rockchip: rk3568-rock-3b: Enable NPU with Rocket driver
+
+ Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml |  11 ++++--
+ arch/arm64/boot/dts/rockchip/rk356x-base.dtsi                        |  29 +++++++++------
+ arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts                      |   4 +---
+ drivers/accel/rocket/rocket_device.c                                  |   6 ++--
+ drivers/accel/rocket/rocket_drv.c                                     |  76 +++++++++++++++++++++++++++++-
+ 5 files changed, 100 insertions(+), 24 deletions(-)
+
+---
+To: Tomeu Vizoso <tomeu@tomeuvizoso.net>
+To: Oded Gabbay <ogabbay@kernel.org>
+Cc: Rob Herring <robh@kernel.org>
+Cc: Krzysztof Kozlowski <krzk+dt@kernel.org>
+Cc: Conor Dooley <conor+dt@kernel.org>
+Cc: Heiko Stuebner <heiko@sntech.de>
+Cc: dri-devel@lists.freedesktop.org
+Cc: devicetree@vger.kernel.org
+Cc: linux-arm-kernel@lists.infradead.org
+Cc: linux-rockchip@lists.infradead.org
+Cc: linux-kernel@vger.kernel.org

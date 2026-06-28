@@ -1,0 +1,45 @@
+From 7ee119e7107bb29730338043415e3c1a0c3fdf1a Mon Sep 17 00:00:00 2001
+From: Midgy BALON <midgy971@gmail.com>
+Date: Thu, 4 Jun 2026 13:37:41 +0000
+Subject: [RFC PATCH v3 6/9] iommu/rockchip: Clear AUTO_GATING bit 1 on the
+ RK356x v1 IOMMU
+
+On the RK356x v1 IOMMU, RK_MMU_AUTO_GATING resets to 0x3. Bit 1 enables
+auto clock-gating of the page-table walker, so the walker's AXI master
+loses its clock between transactions; a TLB-miss page walk then never
+completes and the IOMMU is left stuck (PAGING_ENABLED, never IDLE).
+
+Clear bit 1 (keeping bit 0, the slave-port gate) once paging is enabled
+so the walker keeps its clock. This is required for the RK3568 NPU MMU.
+
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ drivers/iommu/rockchip-iommu.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/drivers/iommu/rockchip-iommu.c b/drivers/iommu/rockchip-iommu.c
+index 4da80136933c4..e3d8b6e9ca12b 100644
+--- a/drivers/iommu/rockchip-iommu.c
++++ b/drivers/iommu/rockchip-iommu.c
+@@ -953,6 +953,18 @@ static int rk_iommu_enable(struct rk_iommu *iommu)
+ 
+ 	ret = rk_iommu_enable_paging(iommu);
+ 
++	if (!ret) {
++		/*
++		 * RK356x v1 IOMMU: RK_MMU_AUTO_GATING bit 1 enables page-walker
++		 * auto clock-gating; the walker's AXI master then loses its clock
++		 * between transactions and a TLB-miss page walk never completes,
++		 * leaving the IOMMU stuck (PAGING_ENABLED, never IDLE).  Clear
++		 * bit 1 (keep bit 0, the slave-port gate) once paging is enabled.
++		 */
++		for (i = 0; i < iommu->num_mmu; i++)
++			rk_iommu_write(iommu->bases[i], RK_MMU_AUTO_GATING, 0x2);
++	}
++
+ out_disable_stall:
+ 	rk_iommu_disable_stall(iommu);
+ out_disable_clocks:
+-- 
+2.39.5
+

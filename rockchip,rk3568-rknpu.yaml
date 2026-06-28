@@ -1,0 +1,105 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/npu/rockchip,rk3568-rknpu.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Rockchip RK3568 Neural Processing Unit
+
+maintainers:
+  - MidG971 <midgy971@gmail.com>
+
+description:
+  The Rockchip RK3568 NPU is a neural network accelerator capable of 1 TOPS
+  performance with INT8/INT16 quantized networks. It supports TensorFlow Lite,
+  ONNX, and PyTorch models via the RKNN conversion toolkit.
+
+properties:
+  compatible:
+    oneOf:
+      - items:
+          - const: rockchip,rk3568-rknpu
+          - const: rockchip,rknpu
+      - const: rockchip,rknpu
+
+  reg:
+    maxItems: 1
+    description: NPU register region
+
+  interrupts:
+    maxItems: 1
+
+  interrupt-names:
+    items:
+      - const: npu_irq
+
+  clocks:
+    minItems: 3
+    maxItems: 4
+    description: |
+      Required clocks for NPU operation. The scmi_clk is optional and used
+      when SCMI clock management is available.
+
+  clock-names:
+    minItems: 3
+    items:
+      - enum: [scmi_clk, clk]
+      - enum: [clk, aclk]
+      - enum: [aclk, hclk]
+      - const: hclk
+
+  assigned-clocks:
+    maxItems: 1
+
+  assigned-clock-rates:
+    maxItems: 1
+
+  resets:
+    maxItems: 2
+
+  reset-names:
+    items:
+      - const: srst_a
+      - const: srst_h
+
+  power-domains:
+    maxItems: 1
+
+  iommus:
+    maxItems: 1
+    description: Reference to the NPU IOMMU for DMA buffer management
+
+required:
+  - compatible
+  - reg
+  - interrupts
+  - clocks
+  - clock-names
+  - resets
+  - reset-names
+
+additionalProperties: false
+
+examples:
+  - |
+    #include <dt-bindings/clock/rk3568-cru.h>
+    #include <dt-bindings/interrupt-controller/irq.h>
+    #include <dt-bindings/interrupt-controller/arm-gic.h>
+    #include <dt-bindings/power/rk3568-power.h>
+
+    npu@fde40000 {
+        compatible = "rockchip,rk3568-rknpu", "rockchip,rknpu";
+        reg = <0x0 0xfde40000 0x0 0x10000>;
+        interrupts = <GIC_SPI 151 IRQ_TYPE_LEVEL_HIGH>;
+        interrupt-names = "npu_irq";
+        clocks = <&scmi_clk 0>, <&cru 200>,
+                 <&cru 201>, <&cru 202>;
+        clock-names = "scmi_clk", "clk", "aclk", "hclk";
+        assigned-clocks = <&cru 200>;
+        assigned-clock-rates = <600000000>;
+        resets = <&cru 100>, <&cru 101>;
+        reset-names = "srst_a", "srst_h";
+        power-domains = <&power 1>;
+        status = "disabled";
+    };
+...

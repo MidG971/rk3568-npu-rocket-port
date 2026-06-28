@@ -1,0 +1,59 @@
+From 32e5b8a40f7f368ad9253b6f65b89ccc894cefce Mon Sep 17 00:00:00 2001
+From: Midgy BALON <midgy971@gmail.com>
+Date: Thu, 4 Jun 2026 13:37:40 +0000
+Subject: [RFC PATCH v3 4/9] accel: rocket: Reset the NPU before detaching the
+ IOMMU on timeout
+
+On a job timeout the NPU AXI master can be left wedged with
+outstanding transactions. rocket_reset() detached the IOMMU group
+before resetting the hardware, so iommu_detach_group() ->
+__iommu_group_set_core_domain() asked the rk_iommu to stall and wait
+for the in-flight transactions to drain. They never did, the stall
+request timed out (-ETIMEDOUT) and the IOMMU core WARNed:
+
+  WARNING: drivers/iommu/iommu.c:157 __iommu_group_set_core_domain
+    iommu_detach_group
+    rocket_reset
+    rocket_job_timedout
+
+Assert the core reset first: it quiesces the AXI master so the
+following IOMMU detach completes cleanly. Move the detach after
+rocket_core_reset() and out of the job_lock (it does not touch
+in_flight_job).
+
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ drivers/accel/rocket/rocket_job.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/accel/rocket/rocket_job.c b/drivers/accel/rocket/rocket_job.c
+index ac51bff39833f..e25234261536b 100644
+--- a/drivers/accel/rocket/rocket_job.c
++++ b/drivers/accel/rocket/rocket_job.c
+@@ -364,14 +364,20 @@ rocket_reset(struct rocket_core *core, struct drm_sched_job *bad)
+ 		if (core->in_flight_job)
+ 			pm_runtime_put_noidle(core->dev);
+ 
+-		iommu_detach_group(NULL, core->iommu_group);
+-
+ 		core->in_flight_job = NULL;
+ 	}
+ 
+-	/* Proceed with reset now. */
++	/*
++	 * Reset the NPU hardware before detaching the IOMMU. A timed-out job
++	 * leaves the NPU AXI master wedged; detaching the IOMMU then issues a
++	 * stall request that never drains and times out (warning in the IOMMU
++	 * core). Asserting the core reset first quiesces the master so the
++	 * detach completes cleanly.
++	 */
+ 	rocket_core_reset(core);
+ 
++	iommu_detach_group(NULL, core->iommu_group);
++
+ 	/* NPU has been reset, we can clear the reset pending bit. */
+ 	atomic_set(&core->reset.pending, 0);
+ 
+-- 
+2.39.5
+

@@ -1,0 +1,8 @@
+# Don't index these in Claude Code
+*.o
+*.ko
+*.mod
+*.mod.c
+.tmp_versions/
+Module.symvers
+modules.order

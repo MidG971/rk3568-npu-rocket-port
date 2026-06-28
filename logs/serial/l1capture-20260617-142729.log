@@ -1,0 +1,1854 @@
+[14892.211126] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14892.216096] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14892.217486] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14892.218923] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14892.220202] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14892.221810] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14892.226208] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14902.158790] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14979.238863] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14979.243920] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14979.245156] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14979.246626] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14979.248127] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14979.249682] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14979.253988] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[14991.640855] [drm] Initialized rocket 0.0.0 for rknn on minor 0
+[14991.641489] rocket fde40000.npu: iommu_dev = 0000000044b83b97
+[14991.642008] rocket fde40000.npu: BOUNCE: staging page PA=0x04596000
+[14991.643715] rocket fde40000.npu: rocket: OPP table loaded
+[14991.650029] rocket fde40000.npu: rocket: opp_set_rate(1000000000Hz) OK
+[14991.650633] rocket fde40000.npu: NOC_DEIDLE: BUS_IDLE_ACK(0x60)=0x000001ea BUS_IDLE_ST(0x68)=0x000001ea PWR_STATUS(0x98)=0x0000007d ret=0
+[14991.651728] rocket fde40000.npu: PP_INIT(resume): 0x1004=0xe 0x1024=0x80000000
+[14991.652373] rocket fde40000.npu: PROBE_CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000044 DCOMP_CTRL=00000000
+[14991.653460] rocket fde40000.npu: PROBE_CORE: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000
+[14991.654235] rocket fde40000.npu: Rockchip NPU core 0 version: 0
+[14991.794127] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15003.006466] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15003.011894] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15003.013437] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15003.015024] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15003.016777] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15003.018662] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15003.023685] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15003.474082] platform rknn: [drm] *ERROR* BO first page PA=0x417c000 size=51200 nents=1 sgt->nents=1 sgt->orig_nents=1
+[15003.475053] platform rknn: [drm] BO_MAP: iova=0xfffb0000 size=0xd000 end=0xfffbd000 pa=0x417c000
+[15003.475995] platform rknn: [drm] *ERROR* BO first page PA=0x4189000 size=512 nents=1 sgt->nents=1 sgt->orig_nents=1
+[15003.476971] platform rknn: [drm] BO_MAP: iova=0xfffaf000 size=0x1000 end=0xfffb0000 pa=0x4189000
+[15003.478145] platform rknn: [drm] *ERROR* BO first page PA=0x418a000 size=204800 nents=1 sgt->nents=1 sgt->orig_nents=1
+[15003.479144] platform rknn: [drm] BO_MAP: iova=0xfff40000 size=0x32000 end=0xfff72000 pa=0x418a000
+[15003.480593] platform rknn: [drm] *ERROR* BO first page PA=0x41bc000 size=512 nents=1 sgt->nents=1 sgt->orig_nents=1
+[15003.481528] platform rknn: [drm] BO_MAP: iova=0xfff3f000 size=0x1000 end=0xfff40000 pa=0x41bc000
+[15003.482670] platform rknn: [drm] *ERROR* BO first page PA=0x41bd000 size=204800 nents=1 sgt->nents=1 sgt->orig_nents=1
+[15003.483658] platform rknn: [drm] BO_MAP: iova=0xfff00000 size=0x32000 end=0xfff32000 pa=0x41bd000
+[15003.484884] platform rknn: [drm] *ERROR* BO first page PA=0x41ef000 size=409600 nents=1 sgt->nents=1 sgt->orig_nents=1
+[15003.485926] platform rknn: [drm] BO_MAP: iova=0xffe80000 size=0x64000 end=0xffee4000 pa=0x41ef000
+[15003.486801] platform rknn: [drm] *ERROR* BO first page PA=0x4253000 size=1088 nents=1 sgt->nents=1 sgt->orig_nents=1
+[15003.487733] platform rknn: [drm] BO_MAP: iova=0xffe7d000 size=0x1000 end=0xffe7e000 pa=0x4253000
+[15003.491355] rocket fde40000.npu: CNA_BISECT_T0(post-pm_get): S_STATUS=00000000
+[15003.492009] rocket fde40000.npu: job_run: detach+attach: attached=0000000000000000 job=000000005869c28c
+[15003.492874] rocket fde40000.npu: CNA_BISECT_T1(post-detach): S_STATUS=00000000
+[15003.493513] rocket fde40000.npu: CNA_BISECT_T2(post-attach): S_STATUS=00000000
+[15003.494147] ROCKET: before trigger_enable
+[15003.494508] ROCKET: after trigger_enable
+[15003.494856] rocket fde40000.npu: CNA_BISECT_T3(post-trigger_enable): S_STATUS=00000000
+[15003.495576] rocket fde40000.npu: BW_PRIO: 0x00=9a334204 0x04=3c9d4e00 0x08=80000101 0x0c=00000003 0x10=000001aa 0x14=00000040
+[15003.496649] rocket fde40000.npu: MYSTERY: 0x2000=00000000 0x2004=00000000 0x2008=00000000 0x200c=00001000
+[15003.497512] rocket fde40000.npu: PERF: 0x8010=00000101 0x8034=00000000 0x8038=00000000 0x803c=00000000
+[15003.498336] ROCKET: before hw_submit
+[15003.498657] rocket fde40000.npu: PRE_SUBMIT_RESET: skipped (test)
+[15003.499203] rocket fde40000.npu: PROBE: zeroed DPU OP_EN, readback=0x0
+[15003.499780] rocket fde40000.npu: MYSTERY_INIT: 0x2004=0x00000000 0x200c=0x00001000
+[15003.500475] rocket fde40000.npu: DPU_BSP: 0x4060=0x53 0x4070=0x383 0x4078=0x0 0x4080=0x0 0x4084=0x1 0x4088=0x0 0x40c0=0x0
+[15003.501446] iova: 0x0000000000000000 already mapped to 0x0000000000517000 cannot remap to phys: 0x0000000004596000 prot: 0x3
+[15003.502429] rocket fde40000.npu: IOVA0_MAP: scratch PA=0x4596000 ret=-98
+[15003.503025] rocket fde40000.npu: INJECT_CMAC_OPEN at slot 7: old(w0=0x00001100 w1=0x02010000) → new(0x0001200c, 0x04010000) = CMAC[0x200c]=1
+[15003.504141] rocket fde40000.npu: ROUTING_DUMP[0]: off=0x1004 val=0x0000000e routing=0x02
+[15003.504866] rocket fde40000.npu: ROUTING_DUMP[1]: off=0x2004 val=0x0000000e routing=0x04
+[15003.505579] rocket fde40000.npu: ROUTING_DUMP[2]: off=0x3004 val=0x0000000e routing=0x08
+[15003.506299] rocket fde40000.npu: ROUTING_DUMP[3]: off=0x4004 val=0x0000000e routing=0x10
+[15003.507011] rocket fde40000.npu: ROUTING_DUMP[4]: off=0x5004 val=0x0000000e routing=0x20
+[15003.507720] rocket fde40000.npu: ROUTING_DUMP[5]: off=0x1040 val=0x00000044 routing=0x02
+[15003.508451] rocket fde40000.npu: ROUTING_DUMP[6]: off=0x1104 val=0x00000000 routing=0x02
+[15003.509165] rocket fde40000.npu: ROUTING_DUMP[7]: off=0x200c val=0x00000001 routing=0x04
+[15003.509874] rocket fde40000.npu: ROUTING_DUMP[8]: off=0x100c val=0x00000000 routing=0x02
+[15003.510580] rocket fde40000.npu: ROUTING_DUMP[9]: off=0x1010 val=0x00030080 routing=0x02
+[15003.511289] rocket fde40000.npu: ROUTING_DUMP[10]: off=0x1014 val=0x00000012 routing=0x02
+[15003.512004] rocket fde40000.npu: ROUTING_DUMP[11]: off=0x1018 val=0x00019000 routing=0x02
+[15003.512741] rocket fde40000.npu: ROUTING_DUMP[12]: off=0x1020 val=0x00500050 routing=0x02
+[15003.513462] rocket fde40000.npu: ROUTING_DUMP[13]: off=0x1024 val=0x000f0010 routing=0x02
+[15003.514178] rocket fde40000.npu: ROUTING_DUMP[14]: off=0x1028 val=0x00000028 routing=0x02
+[15003.514893] rocket fde40000.npu: ROUTING_DUMP[15]: off=0x102c val=0x00000640 routing=0x02
+[15003.515609] rocket fde40000.npu: ROUTING_DUMP[16]: off=0x1030 val=0x0000c800 routing=0x02
+[15003.516325] rocket fde40000.npu: ROUTING_DUMP[17]: off=0x1034 val=0x00000190 routing=0x02
+[15003.517058] rocket fde40000.npu: ROUTING_DUMP[18]: off=0x1038 val=0x05050080 routing=0x02
+[15003.517780] rocket fde40000.npu: ROUTING_DUMP[19]: off=0x1040 val=0x00000044 routing=0x02
+[15003.518496] rocket fde40000.npu: ROUTING_DUMP[20]: off=0x1044 val=0x00000014 routing=0x02
+[15003.519211] rocket fde40000.npu: ROUTING_DUMP[21]: off=0x104c val=0x0000000b routing=0x02
+[15003.519926] rocket fde40000.npu: ROUTING_DUMP[22]: off=0x1050 val=0x00010000 routing=0x02
+[15003.520659] rocket fde40000.npu: ROUTING_DUMP[23]: off=0x1054 val=0x00010000 routing=0x02
+[15003.521381] rocket fde40000.npu: ROUTING_DUMP[24]: off=0x1058 val=0x00010000 routing=0x02
+[15003.522097] rocket fde40000.npu: ROUTING_DUMP[25]: off=0x105c val=0x00010000 routing=0x02
+[15003.522812] rocket fde40000.npu: ROUTING_DUMP[26]: off=0x1060 val=0x00000000 routing=0x02
+[15003.523528] rocket fde40000.npu: ROUTING_DUMP[27]: off=0x1064 val=0x00000000 routing=0x02
+[15003.524243] rocket fde40000.npu: ROUTING_DUMP[28]: off=0x1068 val=0x00000011 routing=0x02
+[15003.524987] rocket fde40000.npu: ROUTING_DUMP[29]: off=0x1070 val=0xfff00000 routing=0x02
+[15003.525709] rocket fde40000.npu: ROUTING_DUMP[30]: off=0x1074 val=0x00000000 routing=0x02
+[15003.526424] rocket fde40000.npu: ROUTING_DUMP[31]: off=0x1078 val=0x000f500f routing=0x02
+[15003.527139] rocket fde40000.npu: ROUTING_DUMP[32]: off=0x107c val=0x00000140 routing=0x02
+[15003.527854] rocket fde40000.npu: ROUTING_DUMP[33]: off=0x1080 val=0x000017c0 routing=0x02
+[15003.528582] rocket fde40000.npu: ROUTING_DUMP[34]: off=0x1084 val=0x00500050 routing=0x02
+[15003.529301] rocket fde40000.npu: ROUTING_DUMP[35]: off=0x1088 val=0x00000010 routing=0x02
+[15003.530016] rocket fde40000.npu: ROUTING_DUMP[36]: off=0x1100 val=0x00000000 routing=0x02
+[15003.530731] rocket fde40000.npu: ROUTING_DUMP[37]: off=0x1104 val=0x00000000 routing=0x02
+[15003.531445] rocket fde40000.npu: ROUTING_DUMP[38]: off=0x1110 val=0xfff40000 routing=0x02
+[15003.532159] rocket fde40000.npu: ROUTING_DUMP[39]: off=0x1114 val=0x00000000 routing=0x02
+[15003.532891] rocket fde40000.npu: ROUTING_DUMP[40]: off=0x1118 val=0x00000000 routing=0x02
+[15003.533613] rocket fde40000.npu: ROUTING_DUMP[41]: off=0x111c val=0x00000000 routing=0x02
+[15003.534331] rocket fde40000.npu: ROUTING_DUMP[42]: off=0x1120 val=0x00000000 routing=0x02
+[15003.535048] rocket fde40000.npu: ROUTING_DUMP[43]: off=0x1124 val=0x00000000 routing=0x02
+[15003.535765] rocket fde40000.npu: ROUTING_DUMP[44]: off=0x1128 val=0x00000000 routing=0x02
+[15003.536497] rocket fde40000.npu: ROUTING_DUMP[45]: off=0x112c val=0x00000000 routing=0x02
+[15003.537218] rocket fde40000.npu: ROUTING_DUMP[46]: off=0x1130 val=0x00000000 routing=0x02
+[15003.537936] rocket fde40000.npu: ROUTING_DUMP[47]: off=0x1134 val=0x00000000 routing=0x02
+[15003.538651] rocket fde40000.npu: ROUTING_DUMP[48]: off=0x1138 val=0x00000000 routing=0x02
+[15003.539368] rocket fde40000.npu: ROUTING_DUMP[49]: off=0x113c val=0x00000000 routing=0x02
+[15003.540084] rocket fde40000.npu: ROUTING_DUMP[50]: off=0x1140 val=0x00000000 routing=0x02
+[15003.540822] rocket fde40000.npu: ROUTING_DUMP[51]: off=0x1144 val=0x00000000 routing=0x02
+[15003.541545] rocket fde40000.npu: ROUTING_DUMP[52]: off=0x1148 val=0x00000000 routing=0x02
+[15003.542261] rocket fde40000.npu: ROUTING_DUMP[53]: off=0x114c val=0x00000000 routing=0x02
+[15003.542977] rocket fde40000.npu: ROUTING_DUMP[54]: off=0x1180 val=0x00000000 routing=0x02
+[15003.543695] rocket fde40000.npu: ROUTING_DUMP[55]: off=0x1184 val=0x00000000 routing=0x02
+[15003.544438] rocket fde40000.npu: ROUTING_DUMP[56]: off=0x3010 val=0x00000001 routing=0x08
+[15003.545164] rocket fde40000.npu: ROUTING_DUMP[57]: off=0x3014 val=0x00270027 routing=0x08
+[15003.545882] rocket fde40000.npu: ROUTING_DUMP[58]: off=0x3018 val=0x0000000f routing=0x08
+[15003.546597] rocket fde40000.npu: ROUTING_DUMP[59]: off=0x301c val=0x00000000 routing=0x08
+[15003.547313] rocket fde40000.npu: ROUTING_DUMP[60]: off=0x3030 val=0x00000000 routing=0x08
+[15003.548028] rocket fde40000.npu: ROUTING_DUMP[61]: off=0x400c val=0x00000108 routing=0x10
+[15003.548761] rocket fde40000.npu: ROUTING_DUMP[62]: off=0x4010 val=0x00000000 routing=0x10
+[15003.549484] rocket fde40000.npu: ROUTING_DUMP[63]: off=0x4014 val=0x00000000 routing=0x10
+[15003.550202] rocket fde40000.npu: ROUTING_DUMP[64]: off=0x4020 val=0xffe80000 routing=0x10
+[15003.550916] rocket fde40000.npu: ROUTING_DUMP[65]: off=0x4024 val=0x00006400 routing=0x10
+[15003.551632] rocket fde40000.npu: ROUTING_DUMP[66]: off=0x4030 val=0x00000027 routing=0x10
+[15003.552349] rocket fde40000.npu: ROUTING_DUMP[67]: off=0x4034 val=0x00000027 routing=0x10
+[15003.553079] rocket fde40000.npu: ROUTING_DUMP[68]: off=0x4038 val=0x00000000 routing=0x10
+[15003.553802] rocket fde40000.npu: ROUTING_DUMP[69]: off=0x403c val=0x007f007f routing=0x10
+[15003.554517] rocket fde40000.npu: ROUTING_DUMP[70]: off=0x4040 val=0x00020150 routing=0x10
+[15003.555233] rocket fde40000.npu: ROUTING_DUMP[71]: off=0x4044 val=0x00000000 routing=0x10
+[15003.555947] rocket fde40000.npu: ROUTING_DUMP[72]: off=0x4048 val=0x00000000 routing=0x10
+[15003.556677] rocket fde40000.npu: ROUTING_DUMP[73]: off=0x404c val=0x00000000 routing=0x10
+[15003.557397] rocket fde40000.npu: ROUTING_DUMP[74]: off=0x4050 val=0x00000124 routing=0x10
+[15003.558116] rocket fde40000.npu: ROUTING_DUMP[75]: off=0x4054 val=0x0000fffb routing=0x10
+[15003.558831] rocket fde40000.npu: ROUTING_DUMP[76]: off=0x4058 val=0x0000007f routing=0x10
+[15003.559546] rocket fde40000.npu: ROUTING_DUMP[77]: off=0x405c val=0x00270027 routing=0x10
+[15003.560261] rocket fde40000.npu: ROUTING_DUMP[78]: off=0x4060 val=0x00000053 routing=0x10
+[15003.561006] rocket fde40000.npu: ROUTING_DUMP[79]: off=0x4064 val=0x00000000 routing=0x10
+[15003.561728] rocket fde40000.npu: ROUTING_DUMP[80]: off=0x4068 val=0x00000000 routing=0x10
+[15003.562443] rocket fde40000.npu: ROUTING_DUMP[81]: off=0x406c val=0x00000000 routing=0x10
+[15003.563166] rocket fde40000.npu: ROUTING_DUMP[82]: off=0x4070 val=0x00000383 routing=0x10
+[15003.563883] rocket fde40000.npu: ROUTING_DUMP[83]: off=0x4074 val=0x00000000 routing=0x10
+[15003.564616] rocket fde40000.npu: ROUTING_DUMP[84]: off=0x4078 val=0x00000001 routing=0x10
+[15003.565332] rocket fde40000.npu: ROUTING_DUMP[85]: off=0x407c val=0x00000000 routing=0x10
+[15003.566047] rocket fde40000.npu: ROUTING_DUMP[86]: off=0x4080 val=0xffffff80 routing=0x10
+[15003.566763] rocket fde40000.npu: ROUTING_DUMP[87]: off=0x4084 val=0x00005325 routing=0x10
+[15003.567480] rocket fde40000.npu: ROUTING_DUMP[88]: off=0x4088 val=0x0000000e routing=0x10
+[15003.568194] rocket fde40000.npu: ROUTING_DUMP[89]: off=0x4090 val=0x00000000 routing=0x10
+[15003.568937] rocket fde40000.npu: ROUTING_DUMP[90]: off=0x4094 val=0x00000000 routing=0x10
+[15003.569659] rocket fde40000.npu: ROUTING_DUMP[91]: off=0x4098 val=0x00000000 routing=0x10
+[15003.570376] rocket fde40000.npu: ROUTING_DUMP[92]: off=0x409c val=0x00000000 routing=0x10
+[15003.571090] rocket fde40000.npu: ROUTING_DUMP[93]: off=0x40a0 val=0x00000000 routing=0x10
+[15003.571803] rocket fde40000.npu: ROUTING_DUMP[94]: off=0x40a4 val=0x00000000 routing=0x10
+[15003.572535] rocket fde40000.npu: ROUTING_DUMP[95]: off=0x40a8 val=0x00000000 routing=0x10
+[15003.573254] rocket fde40000.npu: ROUTING_DUMP[96]: off=0x40ac val=0x00000000 routing=0x10
+[15003.573969] rocket fde40000.npu: ROUTING_DUMP[97]: off=0x40c0 val=0x0000c800 routing=0x10
+[15003.574684] rocket fde40000.npu: ROUTING_DUMP[98]: off=0x40c4 val=0x00000000 routing=0x10
+[15003.575398] rocket fde40000.npu: ROUTING_DUMP[99]: off=0x4100 val=0x00000000 routing=0x10
+[15003.576114] rocket fde40000.npu: ROUTING_DUMP[100]: off=0x4104 val=0x00000000 routing=0x10
+[15003.576845] rocket fde40000.npu: ROUTING_DUMP[101]: off=0x4108 val=0x00000000 routing=0x10
+[15003.577570] rocket fde40000.npu: ROUTING_DUMP[102]: off=0x410c val=0x00000000 routing=0x10
+[15003.578293] rocket fde40000.npu: ROUTING_DUMP[103]: off=0x4110 val=0x00000000 routing=0x10
+[15003.579015] rocket fde40000.npu: ROUTING_DUMP[104]: off=0x4114 val=0x00000000 routing=0x10
+[15003.579738] rocket fde40000.npu: ROUTING_DUMP[105]: off=0x4118 val=0x00000000 routing=0x10
+[15003.580471] rocket fde40000.npu: ROUTING_DUMP[106]: off=0x411c val=0x00000000 routing=0x10
+[15003.581196] rocket fde40000.npu: ROUTING_DUMP[107]: off=0x4120 val=0x00000000 routing=0x10
+[15003.581919] rocket fde40000.npu: ROUTING_DUMP[108]: off=0x4124 val=0x00000000 routing=0x10
+[15003.582641] rocket fde40000.npu: ROUTING_DUMP[109]: off=0x4128 val=0x00000000 routing=0x10
+[15003.583363] rocket fde40000.npu: ROUTING_DUMP[110]: off=0x412c val=0x00000000 routing=0x10
+[15003.584086] rocket fde40000.npu: ROUTING_DUMP[111]: off=0x500c val=0x00000027 routing=0x20
+[15003.584820] rocket fde40000.npu: ROUTING_DUMP[112]: off=0x5010 val=0x00000027 routing=0x20
+[15003.585543] rocket fde40000.npu: ROUTING_DUMP[113]: off=0x5014 val=0x0000007f routing=0x20
+[15003.586264] rocket fde40000.npu: ROUTING_DUMP[114]: off=0x5018 val=0x00000000 routing=0x20
+[15003.586987] rocket fde40000.npu: ROUTING_DUMP[115]: off=0x501c val=0x00000002 routing=0x20
+[15003.587710] rocket fde40000.npu: ROUTING_DUMP[116]: off=0x5020 val=0xfff3f000 routing=0x20
+[15003.588444] rocket fde40000.npu: ROUTING_DUMP[117]: off=0x5028 val=0x00000000 routing=0x20
+[15003.589167] rocket fde40000.npu: ROUTING_DUMP[118]: off=0x502c val=0x00000000 routing=0x20
+[15003.589890] rocket fde40000.npu: ROUTING_DUMP[119]: off=0x5034 val=0x00000001 routing=0x20
+[15003.590612] rocket fde40000.npu: ROUTING_DUMP[120]: off=0x5038 val=0x00000000 routing=0x20
+[15003.591335] rocket fde40000.npu: ROUTING_DUMP[121]: off=0x5040 val=0x00000000 routing=0x20
+[15003.592058] rocket fde40000.npu: ROUTING_DUMP[122]: off=0x5044 val=0x00007810 routing=0x20
+[15003.592792] rocket fde40000.npu: ROUTING_DUMP[123]: off=0x5048 val=0x00000000 routing=0x20
+[15003.593517] rocket fde40000.npu: ROUTING_DUMP[124]: off=0x504c val=0x00000000 routing=0x20
+[15003.594240] rocket fde40000.npu: ROUTING_DUMP[125]: off=0x5064 val=0x00000000 routing=0x20
+[15003.594964] rocket fde40000.npu: ROUTING_DUMP[126]: off=0x5068 val=0x01010101 routing=0x20
+[15003.595687] rocket fde40000.npu: ROUTING_DUMP[127]: off=0x506c val=0x00000000 routing=0x20
+[15003.596422] rocket fde40000.npu: ROUTING_DUMP[128]: off=0x0000 val=0x00000000 routing=0x00
+[15003.597144] rocket fde40000.npu: ROUTING_DUMP[129]: off=0x0014 val=0x00000000 routing=0x01
+[15003.597868] rocket fde40000.npu: ROUTING_DUMP[130]: off=0x0000 val=0x00000000 routing=0x00
+[15003.598590] rocket fde40000.npu: ROUTING_DUMP[131]: off=0x1008 val=0x00000001 routing=0x02
+[15003.599312] rocket fde40000.npu: ROUTING_DUMP[132]: off=0x3008 val=0x00000001 routing=0x08
+[15003.600036] rocket fde40000.npu: ROUTING_DUMP[133]: off=0x5008 val=0x00000001 routing=0x20
+[15003.600769] rocket fde40000.npu: ROUTING_DUMP[134]: off=0x4008 val=0x00000001 routing=0x10
+[15003.601496] rocket fde40000.npu: OP_EN_PATCH[5]: old(w0=0x00441040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15003.602589] rocket fde40000.npu: OP_EN_PATCH[6]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15003.603674] rocket fde40000.npu: OP_EN_PATCH[8]: old(w0=0x0000100c w1=0x02010000) → new off=0x100c val=0xa000 (w0=0xa000100c w1=0x02010000)
+[15003.604809] rocket fde40000.npu: OP_EN_PATCH[9]: old(w0=0x00801010 w1=0x02010003) → new off=0x1010 val=0x40 (w0=0x00401010 w1=0x02010000)
+[15003.605904] rocket fde40000.npu: OP_EN_PATCH[10]: old(w0=0x00121014 w1=0x02010000) → new off=0x1014 val=0x12 (w0=0x00121014 w1=0x02010000)
+[15003.607002] rocket fde40000.npu: OP_EN_PATCH[11]: old(w0=0x90001018 w1=0x02010001) → new off=0x1018 val=0x3de00 (w0=0xde001018 w1=0x02010003)
+[15003.608124] rocket fde40000.npu: OP_EN_PATCH[12]: old(w0=0x00501020 w1=0x02010050) → new off=0x1020 val=0x280002c (w0=0x002c1020 w1=0x02010280)
+[15003.609285] rocket fde40000.npu: OP_EN_PATCH[13]: old(w0=0x00101024 w1=0x0201000f) → new off=0x1024 val=0x20008 (w0=0x00081024 w1=0x02010002)
+[15003.610531] rocket fde40000.npu: OP_EN_PATCH[14]: old(w0=0x00281028 w1=0x02010000) → new off=0x1028 val=0x140 (w0=0x01401028 w1=0x02010000)
+[15003.611709] rocket fde40000.npu: OP_EN_PATCH[15]: old(w0=0x0640102c w1=0x02010000) → new off=0x102c val=0x1b80 (w0=0x1b80102c w1=0x02010000)
+[15003.612858] rocket fde40000.npu: OP_EN_PATCH[16]: old(w0=0xc8001030 w1=0x02010000) → new off=0x1030 val=0x180 (w0=0x01801030 w1=0x02010000)
+[15003.613968] rocket fde40000.npu: OP_EN_PATCH[17]: old(w0=0x01901034 w1=0x02010000) → new off=0x1034 val=0x20 (w0=0x00201034 w1=0x02010000)
+[15003.615067] rocket fde40000.npu: OP_EN_PATCH[18]: old(w0=0x00801038 w1=0x02010505) → new off=0x1038 val=0x202000c (w0=0x000c1038 w1=0x02010202)
+[15003.616204] rocket fde40000.npu: OP_EN_PATCH[19]: old(w0=0x00441040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15003.617325] rocket fde40000.npu: OP_EN_PATCH[20]: old(w0=0x00141044 w1=0x02010000) → new off=0x1044 val=0x28000a0 (w0=0x00a01044 w1=0x02010280)
+[15003.618466] rocket fde40000.npu: OP_EN_PATCH[21]: old(w0=0x000b104c w1=0x02010000) → new off=0x104c val=0xe38e1 (w0=0x38e1104c w1=0x0201000e)
+[15003.619587] rocket fde40000.npu: OP_EN_PATCH[22]: old(w0=0x00001050 w1=0x02010001) → new off=0x1050 val=0x4000ff80 (w0=0xff801050 w1=0x02014000)
+[15003.620744] rocket fde40000.npu: OP_EN_PATCH[23]: old(w0=0x00001054 w1=0x02010001) → new off=0x1054 val=0x4000ff80 (w0=0xff801054 w1=0x02014000)
+[15003.621890] rocket fde40000.npu: OP_EN_PATCH[24]: old(w0=0x00001058 w1=0x02010001) → new off=0x1058 val=0x4000ff80 (w0=0xff801058 w1=0x02014000)
+[15003.623033] rocket fde40000.npu: OP_EN_PATCH[25]: old(w0=0x0000105c w1=0x02010001) → new off=0x105c val=0x10000 (w0=0x0000105c w1=0x02010001)
+[15003.624155] rocket fde40000.npu: OP_EN_PATCH[26]: old(w0=0x00001060 w1=0x02010000) → new off=0x1060 val=0x0 (w0=0x00001060 w1=0x02010000)
+[15003.625266] rocket fde40000.npu: OP_EN_PATCH[27]: old(w0=0x00001064 w1=0x02010000) → new off=0x1064 val=0x0 (w0=0x00001064 w1=0x02010000)
+[15003.626358] rocket fde40000.npu: OP_EN_PATCH[30]: old(w0=0x00001074 w1=0x02010000) → new off=0x1074 val=0x0 (w0=0x00001074 w1=0x02010000)
+[15003.627450] rocket fde40000.npu: OP_EN_PATCH[31]: old(w0=0x500f1078 w1=0x0201000f) → new off=0x1078 val=0x171c07 (w0=0x1c071078 w1=0x02010017)
+[15003.628605] rocket fde40000.npu: OP_EN_PATCH[32]: old(w0=0x0140107c w1=0x02010000) → new off=0x107c val=0xf0 (w0=0x00f0107c w1=0x02010000)
+[15003.629715] rocket fde40000.npu: OP_EN_PATCH[33]: old(w0=0x17c01080 w1=0x02010000) → new off=0x1080 val=0x64000 (w0=0x40001080 w1=0x02010006)
+[15003.630838] rocket fde40000.npu: OP_EN_PATCH[34]: old(w0=0x00501084 w1=0x02010050) → new off=0x1084 val=0x280002c (w0=0x002c1084 w1=0x02010280)
+[15003.631975] rocket fde40000.npu: OP_EN_PATCH[35]: old(w0=0x00101088 w1=0x02010000) → new off=0x1088 val=0x8 (w0=0x00081088 w1=0x02010000)
+[15003.633089] rocket fde40000.npu: OP_EN_PATCH[36]: old(w0=0x00001100 w1=0x02010000) → new off=0x1100 val=0x0 (w0=0x00001100 w1=0x02010000)
+[15003.634190] rocket fde40000.npu: OP_EN_PATCH[37]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15003.635309] rocket fde40000.npu: OP_EN_PATCH[39]: old(w0=0x00001114 w1=0x02010000) → new off=0x1114 val=0x0 (w0=0x00001114 w1=0x02010000)
+[15003.636430] rocket fde40000.npu: OP_EN_PATCH[40]: old(w0=0x00001118 w1=0x02010000) → new off=0x1118 val=0x0 (w0=0x00001118 w1=0x02010000)
+[15003.637526] rocket fde40000.npu: OP_EN_PATCH[41]: old(w0=0x0000111c w1=0x02010000) → new off=0x111c val=0x0 (w0=0x0000111c w1=0x02010000)
+[15003.638618] rocket fde40000.npu: OP_EN_PATCH[42]: old(w0=0x00001120 w1=0x02010000) → new off=0x1120 val=0x0 (w0=0x00001120 w1=0x02010000)
+[15003.639710] rocket fde40000.npu: OP_EN_PATCH[43]: old(w0=0x00001124 w1=0x02010000) → new off=0x1124 val=0x0 (w0=0x00001124 w1=0x02010000)
+[15003.640815] rocket fde40000.npu: OP_EN_PATCH[44]: old(w0=0x00001128 w1=0x02010000) → new off=0x1128 val=0x0 (w0=0x00001128 w1=0x02010000)
+[15003.641909] rocket fde40000.npu: OP_EN_PATCH[45]: old(w0=0x0000112c w1=0x02010000) → new off=0x112c val=0x0 (w0=0x0000112c w1=0x02010000)
+[15003.642999] rocket fde40000.npu: OP_EN_PATCH[46]: old(w0=0x00001130 w1=0x02010000) → new off=0x1130 val=0x0 (w0=0x00001130 w1=0x02010000)
+[15003.644090] rocket fde40000.npu: OP_EN_PATCH[47]: old(w0=0x00001134 w1=0x02010000) → new off=0x1134 val=0x0 (w0=0x00001134 w1=0x02010000)
+[15003.645200] rocket fde40000.npu: OP_EN_PATCH[48]: old(w0=0x00001138 w1=0x02010000) → new off=0x1138 val=0x0 (w0=0x00001138 w1=0x02010000)
+[15003.646293] rocket fde40000.npu: OP_EN_PATCH[49]: old(w0=0x0000113c w1=0x02010000) → new off=0x113c val=0x0 (w0=0x0000113c w1=0x02010000)
+[15003.647385] rocket fde40000.npu: OP_EN_PATCH[50]: old(w0=0x00001140 w1=0x02010000) → new off=0x1140 val=0x0 (w0=0x00001140 w1=0x02010000)
+[15003.648523] rocket fde40000.npu: OP_EN_PATCH[51]: old(w0=0x00001144 w1=0x02010000) → new off=0x1144 val=0x0 (w0=0x00001144 w1=0x02010000)
+[15003.649621] rocket fde40000.npu: OP_EN_PATCH[52]: old(w0=0x00001148 w1=0x02010000) → new off=0x1148 val=0x0 (w0=0x00001148 w1=0x02010000)
+[15003.650714] rocket fde40000.npu: OP_EN_PATCH[53]: old(w0=0x0000114c w1=0x02010000) → new off=0x114c val=0x0 (w0=0x0000114c w1=0x02010000)
+[15003.651808] rocket fde40000.npu: OP_EN_PATCH[56]: old(w0=0x00013010 w1=0x08010000) → new off=0x3010 val=0x0 (w0=0x00003010 w1=0x08010000)
+[15003.652917] rocket fde40000.npu: OP_EN_PATCH[57]: old(w0=0x00273014 w1=0x08010027) → new off=0x3014 val=0x0 (w0=0x00003014 w1=0x08010000)
+[15003.654011] rocket fde40000.npu: OP_EN_PATCH[62]: old(w0=0x00004010 w1=0x10010000) → new off=0x4010 val=0x0 (w0=0x00004010 w1=0x10010000)
+[15003.655103] rocket fde40000.npu: OP_EN_PATCH[63]: old(w0=0x00004014 w1=0x10010000) → new off=0x4014 val=0x0 (w0=0x00004014 w1=0x10010000)
+[15003.656196] rocket fde40000.npu: OP_EN_PATCH[65]: old(w0=0x64004024 w1=0x10010000) → new off=0x4024 val=0x0 (w0=0x00004024 w1=0x10010000)
+[15003.657311] rocket fde40000.npu: OP_EN_PATCH[66]: old(w0=0x00274030 w1=0x10010000) → new off=0x4030 val=0x0 (w0=0x00004030 w1=0x10010000)
+[15003.658405] rocket fde40000.npu: OP_EN_PATCH[67]: old(w0=0x00274034 w1=0x10010000) → new off=0x4034 val=0x0 (w0=0x00004034 w1=0x10010000)
+[15003.659497] rocket fde40000.npu: OP_EN_PATCH[68]: old(w0=0x00004038 w1=0x10010000) → new off=0x4038 val=0x0 (w0=0x00004038 w1=0x10010000)
+[15003.660599] rocket fde40000.npu: OP_EN_PATCH[69]: old(w0=0x007f403c w1=0x1001007f) → new off=0x403c val=0x0 (w0=0x0000403c w1=0x10010000)
+[15003.661693] rocket fde40000.npu: OP_EN_PATCH[70]: old(w0=0x01504040 w1=0x10010002) → new off=0x4040 val=0x0 (w0=0x00004040 w1=0x10010000)
+[15003.662786] rocket fde40000.npu: OP_EN_PATCH[71]: old(w0=0x00004044 w1=0x10010000) → new off=0x4044 val=0x0 (w0=0x00004044 w1=0x10010000)
+[15003.663878] rocket fde40000.npu: OP_EN_PATCH[72]: old(w0=0x00004048 w1=0x10010000) → new off=0x4048 val=0x0 (w0=0x00004048 w1=0x10010000)
+[15003.664982] rocket fde40000.npu: OP_EN_PATCH[73]: old(w0=0x0000404c w1=0x10010000) → new off=0x404c val=0x0 (w0=0x0000404c w1=0x10010000)
+[15003.666077] rocket fde40000.npu: OP_EN_PATCH[112]: old(w0=0x00275010 w1=0x20010000) → new off=0x5010 val=0x0 (w0=0x00005010 w1=0x20010000)
+[15003.667176] rocket fde40000.npu: OP_EN_PATCH[113]: old(w0=0x007f5014 w1=0x20010000) → new off=0x5014 val=0x0 (w0=0x00005014 w1=0x20010000)
+[15003.668275] rocket fde40000.npu: OP_EN_PATCH[115]: old(w0=0x0002501c w1=0x20010000) → new off=0x501c val=0x0 (w0=0x0000501c w1=0x20010000)
+[15003.669388] rocket fde40000.npu: OP_EN_PATCH[117]: old(w0=0x00005028 w1=0x20010000) → new off=0x5028 val=0x0 (w0=0x00005028 w1=0x20010000)
+[15003.670489] rocket fde40000.npu: OP_EN_PATCH[119]: old(w0=0x00015034 w1=0x20010000) → new off=0x5034 val=0x0 (w0=0x00005034 w1=0x20010000)
+[15003.671590] rocket fde40000.npu: OP_EN_PATCH[121]: old(w0=0x00005040 w1=0x20010000) → new off=0x5040 val=0x0 (w0=0x00005040 w1=0x20010000)
+[15003.672699] rocket fde40000.npu: OP_EN_PATCH[122]: old(w0=0x78105044 w1=0x20010000) → new off=0x5044 val=0x4000 (w0=0x40005044 w1=0x20010000)
+[15003.673822] rocket fde40000.npu: OP_EN_PATCH[123]: old(w0=0x00005048 w1=0x20010000) → new off=0x5048 val=0x0 (w0=0x00005048 w1=0x20010000)
+[15003.674926] rocket fde40000.npu: OP_EN_PATCH[124]: old(w0=0x0000504c w1=0x20010000) → new off=0x504c val=0x0 (w0=0x0000504c w1=0x20010000)
+[15003.676029] rocket fde40000.npu: OP_EN_PATCH[131]: old(w0=0x00011008 w1=0x02010000) → new off=0x0000 val=0x0 (w0=0x00000000 w1=0x02010000)
+[15003.677139] rocket fde40000.npu: OP_EN_PATCH[132]: old(w0=0x00013008 w1=0x08010000) → new off=0x300c val=0x0 (w0=0x0000300c w1=0x08010000)
+[15003.678240] rocket fde40000.npu: OP_EN_PATCH[133]: old(w0=0x00015008 w1=0x20010000) → new off=0x5064 val=0x0 (w0=0x00005064 w1=0x20010000)
+[15003.679341] rocket fde40000.npu: OP_EN_PATCH[134]: old(w0=0x00014008 w1=0x10010000) → new off=0x5068 val=0x1010101 (w0=0x01015068 w1=0x20010101)
+[15003.680497] rocket fde40000.npu: OP_EN_PATCH: patched 71 entries
+[15003.681922] iova: 0x00000000ff900000 already mapped to 0x00000000ec900000 cannot remap to phys: 0x00000000ec100000 prot: 0x3
+[15003.682907] rocket fde40000.npu: TASK_DESC v4: dma_map_single 1MB failed
+[15003.683539] rocket fde40000.npu: CLK_RATES: scmi=1000000000 clk=600000000 aclk=600000000 hclk=150000000
+[15003.684363] rocket fde40000.npu: HW_SUBMIT: regcmd=0xffe7d000 count=135 scale=1 AMOUNTS=0x0000008a TASKST=0x00007000 INT_MASK=0x00010300 INT_CLEAR=0x00000000 INT_STATUS=0x00000000 INT_RAWST=0x00000000
+[15003.685939] PBLK: iommu_dev=ffff0001009b6010 attached=ffff0001088604e0 domain=ffff00010948b330
+[15003.686721] rocket fde40000.npu: IOMMU_EXT: AUTO_GATING=0x00000003 INT_MASK=0x00000003 INT_STATUS=0x00000000
+[15003.687588] XDBG_PREOP_IOVA_ENTRY
+[15003.687881] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xffe7d000 SW_PA=0x4253000
+[15003.688548] rocket fde40000.npu: REGCMD_DRAM[0..7]: 000e1004 02010000 000e2004 04010000 000e3004 08010000 000e4004 10010000
+[15003.689522] rocket fde40000.npu: REGCMD_FULL[0]: off=0x1004 val=0x0000000e
+[15003.690126] rocket fde40000.npu: REGCMD_FULL[1]: off=0x2004 val=0x0000000e
+[15003.690727] rocket fde40000.npu: REGCMD_FULL[2]: off=0x3004 val=0x0000000e
+[15003.691330] rocket fde40000.npu: REGCMD_FULL[3]: off=0x4004 val=0x0000000e
+[15003.691931] rocket fde40000.npu: REGCMD_FULL[4]: off=0x5004 val=0x0000000e
+[15003.692545] rocket fde40000.npu: REGCMD_FULL[5]: off=0x1040 val=0x00000017
+[15003.693149] rocket fde40000.npu: REGCMD_FULL[6]: off=0x1104 val=0x00000000
+[15003.693751] rocket fde40000.npu: REGCMD_FULL[7]: off=0x200c val=0x00000001
+[15003.694356] rocket fde40000.npu: REGCMD_IOVA[8]: off=0x100c val=0x0000a000
+[15003.694957] rocket fde40000.npu: REGCMD_FULL[8]: off=0x100c val=0x0000a000
+[15003.695562] rocket fde40000.npu: REGCMD_FULL[9]: off=0x1010 val=0x00000040
+[15003.696164] rocket fde40000.npu: REGCMD_FULL[10]: off=0x1014 val=0x00000012
+[15003.696802] rocket fde40000.npu: REGCMD_FULL[11]: off=0x1018 val=0x0003de00
+[15003.697420] rocket fde40000.npu: REGCMD_FULL[12]: off=0x1020 val=0x0280002c
+[15003.698031] rocket fde40000.npu: REGCMD_FULL[13]: off=0x1024 val=0x00020008
+[15003.698640] rocket fde40000.npu: REGCMD_FULL[14]: off=0x1028 val=0x00000140
+[15003.699249] rocket fde40000.npu: REGCMD_FULL[15]: off=0x102c val=0x00001b80
+[15003.699861] rocket fde40000.npu: REGCMD_FULL[16]: off=0x1030 val=0x00000180
+[15003.700483] rocket fde40000.npu: REGCMD_FULL[17]: off=0x1034 val=0x00000020
+[15003.701096] rocket fde40000.npu: REGCMD_FULL[18]: off=0x1038 val=0x0202000c
+[15003.701706] rocket fde40000.npu: REGCMD_FULL[19]: off=0x1040 val=0x00000017
+[15003.702317] rocket fde40000.npu: REGCMD_FULL[20]: off=0x1044 val=0x028000a0
+[15003.702927] rocket fde40000.npu: REGCMD_FULL[21]: off=0x104c val=0x000e38e1
+[15003.703537] rocket fde40000.npu: REGCMD_FULL[22]: off=0x1050 val=0x4000ff80
+[15003.704147] rocket fde40000.npu: REGCMD_FULL[23]: off=0x1054 val=0x4000ff80
+[15003.704770] rocket fde40000.npu: REGCMD_FULL[24]: off=0x1058 val=0x4000ff80
+[15003.705382] rocket fde40000.npu: REGCMD_IOVA[25]: off=0x105c val=0x00010000
+[15003.705992] rocket fde40000.npu: REGCMD_FULL[25]: off=0x105c val=0x00010000
+[15003.706602] rocket fde40000.npu: REGCMD_FULL[26]: off=0x1060 val=0x00000000
+[15003.707212] rocket fde40000.npu: REGCMD_FULL[27]: off=0x1064 val=0x00000000
+[15003.707822] rocket fde40000.npu: REGCMD_FULL[28]: off=0x1068 val=0x00000011
+[15003.708443] rocket fde40000.npu: REGCMD_FULL[29]: off=0x1070 val=0xfff00000
+[15003.709056] rocket fde40000.npu: REGCMD_FULL[30]: off=0x1074 val=0x00000000
+[15003.709666] rocket fde40000.npu: REGCMD_FULL[31]: off=0x1078 val=0x00171c07
+[15003.710278] rocket fde40000.npu: REGCMD_FULL[32]: off=0x107c val=0x000000f0
+[15003.710887] rocket fde40000.npu: REGCMD_IOVA[33]: off=0x1080 val=0x00064000
+[15003.711499] rocket fde40000.npu: REGCMD_FULL[33]: off=0x1080 val=0x00064000
+[15003.712108] rocket fde40000.npu: REGCMD_FULL[34]: off=0x1084 val=0x0280002c
+[15003.712729] rocket fde40000.npu: REGCMD_FULL[35]: off=0x1088 val=0x00000008
+[15003.713340] rocket fde40000.npu: REGCMD_FULL[36]: off=0x1100 val=0x00000000
+[15003.713950] rocket fde40000.npu: REGCMD_FULL[37]: off=0x1104 val=0x00000000
+[15003.714561] rocket fde40000.npu: REGCMD_FULL[38]: off=0x1110 val=0xfff40000
+[15003.715171] rocket fde40000.npu: REGCMD_FULL[39]: off=0x1114 val=0x00000000
+[15003.715780] rocket fde40000.npu: REGCMD_FULL[40]: off=0x1118 val=0x00000000
+[15003.716389] rocket fde40000.npu: REGCMD_FULL[41]: off=0x111c val=0x00000000
+[15003.717009] rocket fde40000.npu: REGCMD_FULL[42]: off=0x1120 val=0x00000000
+[15003.717619] rocket fde40000.npu: REGCMD_FULL[43]: off=0x1124 val=0x00000000
+[15003.718229] rocket fde40000.npu: REGCMD_FULL[44]: off=0x1128 val=0x00000000
+[15003.718839] rocket fde40000.npu: REGCMD_FULL[45]: off=0x112c val=0x00000000
+[15003.719449] rocket fde40000.npu: REGCMD_FULL[46]: off=0x1130 val=0x00000000
+[15003.720058] rocket fde40000.npu: REGCMD_FULL[47]: off=0x1134 val=0x00000000
+[15003.720681] rocket fde40000.npu: REGCMD_FULL[48]: off=0x1138 val=0x00000000
+[15003.721293] rocket fde40000.npu: REGCMD_FULL[49]: off=0x113c val=0x00000000
+[15003.721903] rocket fde40000.npu: REGCMD_FULL[50]: off=0x1140 val=0x00000000
+[15003.722515] rocket fde40000.npu: REGCMD_FULL[51]: off=0x1144 val=0x00000000
+[15003.723125] rocket fde40000.npu: REGCMD_FULL[52]: off=0x1148 val=0x00000000
+[15003.723734] rocket fde40000.npu: REGCMD_FULL[53]: off=0x114c val=0x00000000
+[15003.724344] rocket fde40000.npu: REGCMD_FULL[54]: off=0x1180 val=0x00000000
+[15003.724964] rocket fde40000.npu: REGCMD_FULL[55]: off=0x1184 val=0x00000000
+[15003.725577] rocket fde40000.npu: REGCMD_FULL[56]: off=0x3010 val=0x00000000
+[15003.726185] rocket fde40000.npu: REGCMD_FULL[57]: off=0x3014 val=0x00000000
+[15003.726795] rocket fde40000.npu: REGCMD_FULL[58]: off=0x3018 val=0x0000000f
+[15003.727404] rocket fde40000.npu: REGCMD_FULL[59]: off=0x301c val=0x00000000
+[15003.728015] rocket fde40000.npu: REGCMD_FULL[60]: off=0x3030 val=0x00000000
+[15003.728661] rocket fde40000.npu: REGCMD_FULL[61]: off=0x400c val=0x00000108
+[15003.729274] rocket fde40000.npu: REGCMD_FULL[62]: off=0x4010 val=0x00000000
+[15003.729884] rocket fde40000.npu: REGCMD_FULL[63]: off=0x4014 val=0x00000000
+[15003.730494] rocket fde40000.npu: REGCMD_FULL[64]: off=0x4020 val=0xffe80000
+[15003.731104] rocket fde40000.npu: REGCMD_FULL[65]: off=0x4024 val=0x00000000
+[15003.731714] rocket fde40000.npu: REGCMD_FULL[66]: off=0x4030 val=0x00000000
+[15003.732325] rocket fde40000.npu: REGCMD_FULL[67]: off=0x4034 val=0x00000000
+[15003.732948] rocket fde40000.npu: REGCMD_FULL[68]: off=0x4038 val=0x00000000
+[15003.733558] rocket fde40000.npu: REGCMD_FULL[69]: off=0x403c val=0x00000000
+[15003.734169] rocket fde40000.npu: REGCMD_FULL[70]: off=0x4040 val=0x00000000
+[15003.734778] rocket fde40000.npu: REGCMD_FULL[71]: off=0x4044 val=0x00000000
+[15003.735389] rocket fde40000.npu: REGCMD_FULL[72]: off=0x4048 val=0x00000000
+[15003.735998] rocket fde40000.npu: REGCMD_FULL[73]: off=0x404c val=0x00000000
+[15003.736622] rocket fde40000.npu: REGCMD_FULL[74]: off=0x4050 val=0x00000124
+[15003.737234] rocket fde40000.npu: REGCMD_FULL[75]: off=0x4054 val=0x0000fffb
+[15003.737844] rocket fde40000.npu: REGCMD_FULL[76]: off=0x4058 val=0x0000007f
+[15003.738453] rocket fde40000.npu: REGCMD_FULL[77]: off=0x405c val=0x00270027
+[15003.739064] rocket fde40000.npu: REGCMD_FULL[78]: off=0x4060 val=0x00000053
+[15003.739674] rocket fde40000.npu: REGCMD_FULL[79]: off=0x4064 val=0x00000000
+[15003.740285] rocket fde40000.npu: REGCMD_FULL[80]: off=0x4068 val=0x00000000
+[15003.740904] rocket fde40000.npu: REGCMD_FULL[81]: off=0x406c val=0x00000000
+[15003.741516] rocket fde40000.npu: REGCMD_FULL[82]: off=0x4070 val=0x00000383
+[15003.742124] rocket fde40000.npu: REGCMD_FULL[83]: off=0x4074 val=0x00000000
+[15003.742734] rocket fde40000.npu: REGCMD_FULL[84]: off=0x4078 val=0x00000001
+[15003.743343] rocket fde40000.npu: REGCMD_FULL[85]: off=0x407c val=0x00000000
+[15003.743953] rocket fde40000.npu: REGCMD_FULL[86]: off=0x4080 val=0xffffff80
+[15003.744576] rocket fde40000.npu: REGCMD_FULL[87]: off=0x4084 val=0x00005325
+[15003.745187] rocket fde40000.npu: REGCMD_FULL[88]: off=0x4088 val=0x0000000e
+[15003.745796] rocket fde40000.npu: REGCMD_FULL[89]: off=0x4090 val=0x00000000
+[15003.746406] rocket fde40000.npu: REGCMD_FULL[90]: off=0x4094 val=0x00000000
+[15003.747017] rocket fde40000.npu: REGCMD_FULL[91]: off=0x4098 val=0x00000000
+[15003.747628] rocket fde40000.npu: REGCMD_FULL[92]: off=0x409c val=0x00000000
+[15003.748238] rocket fde40000.npu: REGCMD_FULL[93]: off=0x40a0 val=0x00000000
+[15003.748858] rocket fde40000.npu: REGCMD_FULL[94]: off=0x40a4 val=0x00000000
+[15003.749469] rocket fde40000.npu: REGCMD_FULL[95]: off=0x40a8 val=0x00000000
+[15003.750079] rocket fde40000.npu: REGCMD_FULL[96]: off=0x40ac val=0x00000000
+[15003.750688] rocket fde40000.npu: REGCMD_FULL[97]: off=0x40c0 val=0x0000c800
+[15003.751298] rocket fde40000.npu: REGCMD_FULL[98]: off=0x40c4 val=0x00000000
+[15003.751907] rocket fde40000.npu: REGCMD_FULL[99]: off=0x4100 val=0x00000000
+[15003.752529] rocket fde40000.npu: REGCMD_FULL[100]: off=0x4104 val=0x00000000
+[15003.753149] rocket fde40000.npu: REGCMD_FULL[101]: off=0x4108 val=0x00000000
+[15003.753766] rocket fde40000.npu: REGCMD_FULL[102]: off=0x410c val=0x00000000
+[15003.754383] rocket fde40000.npu: REGCMD_FULL[103]: off=0x4110 val=0x00000000
+[15003.755002] rocket fde40000.npu: REGCMD_FULL[104]: off=0x4114 val=0x00000000
+[15003.755620] rocket fde40000.npu: REGCMD_FULL[105]: off=0x4118 val=0x00000000
+[15003.756237] rocket fde40000.npu: REGCMD_FULL[106]: off=0x411c val=0x00000000
+[15003.756873] rocket fde40000.npu: REGCMD_FULL[107]: off=0x4120 val=0x00000000
+[15003.757496] rocket fde40000.npu: REGCMD_FULL[108]: off=0x4124 val=0x00000000
+[15003.758116] rocket fde40000.npu: REGCMD_FULL[109]: off=0x4128 val=0x00000000
+[15003.758733] rocket fde40000.npu: REGCMD_FULL[110]: off=0x412c val=0x00000000
+[15003.759348] rocket fde40000.npu: REGCMD_FULL[111]: off=0x500c val=0x00000027
+[15003.759965] rocket fde40000.npu: REGCMD_FULL[112]: off=0x5010 val=0x00000000
+[15003.760596] rocket fde40000.npu: REGCMD_FULL[113]: off=0x5014 val=0x00000000
+[15003.761216] rocket fde40000.npu: REGCMD_FULL[114]: off=0x5018 val=0x00000000
+[15003.761833] rocket fde40000.npu: REGCMD_FULL[115]: off=0x501c val=0x00000000
+[15003.762450] rocket fde40000.npu: REGCMD_FULL[116]: off=0x5020 val=0xfff3f000
+[15003.763067] rocket fde40000.npu: REGCMD_FULL[117]: off=0x5028 val=0x00000000
+[15003.763684] rocket fde40000.npu: REGCMD_FULL[118]: off=0x502c val=0x00000000
+[15003.764302] rocket fde40000.npu: REGCMD_FULL[119]: off=0x5034 val=0x00000000
+[15003.764935] rocket fde40000.npu: REGCMD_FULL[120]: off=0x5038 val=0x00000000
+[15003.765554] rocket fde40000.npu: REGCMD_OP[120]: off=0x5038 val=0x00000000 routing=0x20
+[15003.766256] rocket fde40000.npu: REGCMD_FULL[121]: off=0x5040 val=0x00000000
+[15003.766872] rocket fde40000.npu: REGCMD_OP[121]: off=0x5040 val=0x00000000 routing=0x20
+[15003.767573] rocket fde40000.npu: REGCMD_IOVA[122]: off=0x5044 val=0x00004000
+[15003.768189] rocket fde40000.npu: REGCMD_FULL[122]: off=0x5044 val=0x00004000
+[15003.768818] rocket fde40000.npu: REGCMD_OP[122]: off=0x5044 val=0x00004000 routing=0x20
+[15003.769522] rocket fde40000.npu: REGCMD_FULL[123]: off=0x5048 val=0x00000000
+[15003.770139] rocket fde40000.npu: REGCMD_OP[123]: off=0x5048 val=0x00000000 routing=0x20
+[15003.770841] rocket fde40000.npu: REGCMD_FULL[124]: off=0x504c val=0x00000000
+[15003.771458] rocket fde40000.npu: REGCMD_OP[124]: off=0x504c val=0x00000000 routing=0x20
+[15003.772158] rocket fde40000.npu: REGCMD_FULL[125]: off=0x5064 val=0x00000000
+[15003.772794] rocket fde40000.npu: REGCMD_OP[125]: off=0x5064 val=0x00000000 routing=0x20
+[15003.773496] rocket fde40000.npu: REGCMD_FULL[126]: off=0x5068 val=0x01010101
+[15003.774114] rocket fde40000.npu: REGCMD_OP[126]: off=0x5068 val=0x01010101 routing=0x20
+[15003.774814] rocket fde40000.npu: REGCMD_FULL[127]: off=0x506c val=0x00000000
+[15003.775433] rocket fde40000.npu: REGCMD_OP[127]: off=0x506c val=0x00000000 routing=0x20
+[15003.776133] rocket fde40000.npu: REGCMD_OP[128]: off=0x0000 val=0x00000000 routing=0x00
+[15003.776850] rocket fde40000.npu: REGCMD_OP[129]: off=0x0014 val=0x00000000 routing=0x01
+[15003.777551] rocket fde40000.npu: REGCMD_OP[130]: off=0x0000 val=0x00000000 routing=0x00
+[15003.778252] rocket fde40000.npu: REGCMD_OP[131]: off=0x0000 val=0x00000000 routing=0x02
+[15003.778952] rocket fde40000.npu: REGCMD_FULL[132]: off=0x300c val=0x00000000
+[15003.779570] rocket fde40000.npu: REGCMD_OP[132]: off=0x300c val=0x00000000 routing=0x08
+[15003.780271] rocket fde40000.npu: REGCMD_FULL[133]: off=0x5064 val=0x00000000
+[15003.780907] rocket fde40000.npu: REGCMD_OP[133]: off=0x5064 val=0x00000000 routing=0x20
+[15003.781612] rocket fde40000.npu: REGCMD_FULL[134]: off=0x5068 val=0x01010101
+[15003.782230] rocket fde40000.npu: REGCMD_OP[134]: off=0x5068 val=0x01010101 routing=0x20
+[15003.782946] rocket fde40000.npu: OUTPUT_BO_PRE iova=0xffe80000: 00 00 00 00 00 00 00 00
+[15003.783652] rocket fde40000.npu: INPUT_BO iova=0xfff00000 pa=0x41bd000: 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81
+[15003.784614] rocket fde40000.npu: WEIGHT_BO[000] iova=0xfff40000: e9 0a c9 04 23 fc 0d da 1b f0 59 14 05 35 44 26
+[15003.785508] rocket fde40000.npu: WEIGHT_BO[010] iova=0xfff40000: 21 f5 f4 fe 15 e4 d5 ef ee f9 2e 1a f0 17 d3 f8
+[15003.786399] rocket fde40000.npu: WEIGHT_BO[020] iova=0xfff40000: cf e7 cf 21 38 bf 1e 2c e9 0a e0 eb 33 0f fd e4
+[15003.787290] rocket fde40000.npu: WEIGHT_BO[030] iova=0xfff40000: ea ea 09 06 ff 1e 24 23 f1 23 0c e9 15 24 1c 03
+[15003.788181] rocket fde40000.npu: WEIGHT_BO[040] iova=0xfff40000: f4 19 03 e8 02 2f fa fc 18 0b fd ee e1 ff fa e8
+[15003.789092] rocket fde40000.npu: WEIGHT_BO[050] iova=0xfff40000: 09 44 fc 1d f7 df f2 fd ea 0f b0 d0 f8 cb 1c 1e
+[15003.789984] rocket fde40000.npu: WEIGHT_BO[060] iova=0xfff40000: e2 0c f9 ec e6 fa e3 e0 f8 25 eb d7 ca 19 10 12
+[15003.790875] rocket fde40000.npu: WEIGHT_BO[070] iova=0xfff40000: 21 14 e2 df 31 ef 10 d3 f8 00 1f a5 00 2c ff df
+[15003.791768] rocket fde40000.npu: WEIGHT_BO[080] iova=0xfff40000: 37 1a 23 0b b9 0f f4 fd 0c 0f e1 dc ec 25 2f 2a
+[15003.792671] rocket fde40000.npu: WEIGHT_BO[090] iova=0xfff40000: fb 07 45 04 fe 0d e9 1c 60 13 0a e3 f7 f9 23 f3
+[15003.793563] rocket fde40000.npu: WEIGHT_BO[0a0] iova=0xfff40000: f0 01 31 13 d9 ff f1 16 e0 09 02 10 e8 e5 10 c5
+[15003.794454] rocket fde40000.npu: WEIGHT_BO[0b0] iova=0xfff40000: 1a 07 ee eb 40 f9 ee 05 0a 0f e0 37 0a de f3 d6
+[15003.795347] rocket fde40000.npu: WEIGHT_BO[0c0] iova=0xfff40000: 13 24 26 20 09 12 be 0b 19 00 f3 0f 2b de fd 01
+[15003.796238] rocket fde40000.npu: WEIGHT_BO[0d0] iova=0xfff40000: df 18 11 04 ee 32 0c f3 15 15 20 28 fe ee 06 25
+[15003.797147] rocket fde40000.npu: WEIGHT_BO[0e0] iova=0xfff40000: 17 07 c3 e0 e4 f7 e4 0b 13 ea 12 21 fa e9 ad 0f
+[15003.798040] rocket fde40000.npu: WEIGHT_BO[0f0] iova=0xfff40000: 22 0c 01 08 fe 1d 01 f5 2e 11 31 07 fa e9 0c 0c
+[15003.798932] rocket fde40000.npu: WEIGHT_BO[100] iova=0xfff40000: c7 d6 1f e5 ec 32 1b c3 06 fc 0b c1 30 f5 e4 40
+[15003.799823] rocket fde40000.npu: WEIGHT_BO[110] iova=0xfff40000: 1b f0 ea 0f f5 35 f6 33 d8 15 f2 01 32 35 1f e2
+[15003.800726] rocket fde40000.npu: WEIGHT_BO[120] iova=0xfff40000: 10 14 ff 0e 09 04 ea ff d4 a6 05 0c d0 b5 e9 0e
+[15003.801619] rocket fde40000.npu: WEIGHT_BO[130] iova=0xfff40000: ff f0 fa 05 19 0e f3 3d fb 0b cc d7 2e 1f 18 0f
+[15003.802511] rocket fde40000.npu: WEIGHT_BO[140] iova=0xfff40000: e6 13 17 df f1 16 f9 d6 3f 04 d7 d9 10 1c 3c 37
+[15003.803403] rocket fde40000.npu: WEIGHT_BO[150] iova=0xfff40000: 12 f1 fa 0d 04 2f e8 13 0e cf eb 03 f1 02 f6 26
+[15003.804296] rocket fde40000.npu: WEIGHT_BO[160] iova=0xfff40000: f0 0f ee 2d 18 cc dd 05 26 24 b6 1a 48 f1 25 f1
+[15003.805214] rocket fde40000.npu: WEIGHT_BO[170] iova=0xfff40000: e3 0e 19 30 d0 0c e5 06 f8 22 08 16 d3 fb 0c 02
+[15003.806113] rocket fde40000.npu: WEIGHT_BO[180] iova=0xfff40000: fe fc df ce f8 04 15 02 1f 1e fe 02 21 0d 32 05
+[15003.807005] rocket fde40000.npu: WEIGHT_BO[190] iova=0xfff40000: c5 e3 24 da e0 de 20 f0 20 0d ee 11 13 c8 f0 1c
+[15003.807895] rocket fde40000.npu: WEIGHT_BO[1a0] iova=0xfff40000: 02 f5 d7 3c fb 10 11 08 e2 ef 33 f7 22 03 17 f0
+[15003.808801] rocket fde40000.npu: WEIGHT_BO[1b0] iova=0xfff40000: e9 28 10 e7 15 38 27 fc 1d e6 32 d4 48 fc 01 f0
+[15003.809696] rocket fde40000.npu: WEIGHT_BO[1c0] iova=0xfff40000: de 30 3c 19 f0 25 bd 2b 2e 16 c7 fe 18 f2 02 dc
+[15003.810587] rocket fde40000.npu: WEIGHT_BO[1d0] iova=0xfff40000: 12 26 08 25 16 2e 0b fb ee 44 e5 f8 3e 08 33 fb
+[15003.811479] rocket fde40000.npu: WEIGHT_BO[1e0] iova=0xfff40000: 11 26 f1 0e fd 00 f6 20 02 e9 0e 1c 11 eb 0b 2b
+[15003.812370] rocket fde40000.npu: WEIGHT_BO[1f0] iova=0xfff40000: 23 fb f9 e7 0e f0 c0 19 16 3b f4 ed 15 00 ed 13
+[15003.813275] rocket fde40000.npu: REGCMD_SCAN: count=135 CNA_OP=0 CORE_OP=0 DPU_OP=0 PPU_OP=0 LAST_OFF=0x5068 LAST_VAL=0x01010101
+[15003.814295] rocket fde40000.npu: DTE_DRAM: [0]=0x0417a001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[15003.815110] rocket fde40000.npu: PTE_DRAM: table=0x0417a000 idx=0x27d PTE=0x00000000 (expected_pa=0x4253000)
+[15003.815969] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15003.817308] rocket fde40000.npu: PRE_OP CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000044 DCOMP_CTRL=00000000
+[15003.818371] rocket fde40000.npu: PRE_OP CORE: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000
+[15003.819166] rocket fde40000.npu: PERF_CLR(pre-OP): clr=00000101 dt_wr=00000000 dt_rd=00000000 wt_rd=00000000
+[15003.820323] rocket fde40000.npu: AFTER_OPEN_ENGAGE(bit16-ever): CNA=00000000 CMAC=00000000 CORE=00000000 DPU=00000000 RDMA=00000000
+[15003.821371] rocket fde40000.npu: VMIN: single OP_EN pulse
+[15003.821857] rocket fde40000.npu: AT_OPEN CNA: OP_EN=00000000  CORE: OP_EN=00000000  DPU: OP_EN=00000000  DPU_RDMA: OP_EN=00000000
+[15003.822884] rocket fde40000.npu: AT_OPEN PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15003.824361] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000019 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[15003.825271] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000019 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000
+[15003.826299] rocket fde40000.npu: AT50US CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15003.827363] rocket fde40000.npu: AT50US CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15003.828159] rocket fde40000.npu: AT50US PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15003.836421] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15003.837453] rocket fde40000.npu: AT1MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15003.838359] rocket fde40000.npu: AT1MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15003.839140] rocket fde40000.npu: AT1MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15003.848428] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15003.849467] rocket fde40000.npu: AT5MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15003.850372] rocket fde40000.npu: AT5MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15003.851160] rocket fde40000.npu: AT5MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15003.864441] rocket fde40000.npu: AT10MS: PC_RS=0x00000000 PC_ISTATUS=0x00000000 PC_OPENA=0x00000000 PC_BASE=0xffe7d000 PC_AMOUNTS=0x0000008a PC_TASKST=0x0000f000
+[15003.865707] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[15003.866896] rocket fde40000.npu: AT10MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15003.868356] rocket fde40000.npu: AT10MS PCDUMP: VER=00000000 VERNUM=00000000 OPENA=00000000 BASE=ffe7d000 AMOUNTS=0000008a MASK=00010300 CLEAR=00000000 STATUS=00000000 RAW=00000000 TASKCON=00001001 TASKDMA=00000000 TASKST=0000f000
+[15003.870152] rocket fde40000.npu: AT10MS CNADUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CONV_CON1=0000a000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15003.871411] rocket fde40000.npu: AT10MS CNA_DBG[90-1fc]: 1110=fff40000
+[15003.871998] rocket fde40000.npu: AT10MS CNA_DBG[200-2fc]: 1210=01ff0000 1280=00000078 1284=00200001
+[15003.872798] rocket fde40000.npu: AT10MS COREDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15003.873614] rocket fde40000.npu: AT10MS CMACDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15003.874431] rocket fde40000.npu: AT10MS OPEN_C: CMAC[0x200c]=0x1 ACCU[0x300c]=0x0 DPU[0x400c]=0x108 DPU_RDMA[0x500c]=0x27
+[15003.875390] rocket fde40000.npu: AT10MS OPEN_8 (run status): CMAC[0x2008]=0x0 ACCU[0x3008]=0x0 DPU[0x4008]=0x0 DPU_RDMA[0x5008]=0x0 CNA[0x1008]=0x0
+[15003.876555] rocket fde40000.npu: AT10MS PERF_POST: dt_wr(0x8034)=00000000 dt_rd(0x8038)=0000008b wt_rd(0x803c)=00000000 clr(0x8010)=00000101
+[15003.877656] rocket fde40000.npu: AT10MS DPU: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 DST_BASE=ffe80000
+[15003.878559] rocket fde40000.npu: AT10MS DPU_RDMA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15003.879365] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 500c=00000027 5010=00000000 5014=00000000 5018=00000000 501c=00000000 5020=fff3f000
+[15003.880453] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 5024=00000000 5028=00000000 502c=00000000 5030=00000000 5034=00000000 5038=00000000 503c=00000000 5040=00000000
+[15003.881742] rocket fde40000.npu: AT10MS DCOMP_CTRL/REGNUM/ADDR0/AMOUNT0: 0x1100=00000000 0x1104=00000000 0x1110=fff40000 0x1140=00000000
+[15003.882810] rocket fde40000.npu: AT10MS CNA CONV: 0x100c=0000a000 0x1010=00000040 0x1014=00000012 0x1018=0003de00
+[15003.883706] rocket fde40000.npu: AT10MS DATA/WEIGHT: 0x1020=0280002c 0x1024=00020008 0x1028=00000140 0x1030=00000180 0x1034=00000020 0x1038=0202000c
+[15003.884884] ROCKET: after hw_submit
+[15004.004461] rocket fde40000.npu: NPU job timed out
+[15004.004914] rocket fde40000.npu: TIMEOUT PC_RS=0x00000000 TASKST=0x0000f000 IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15004.006065] rocket fde40000.npu: POST_TIMEOUT_CNA: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15004.007534] rocket fde40000.npu: POST_TIMEOUT_CNA_SWAP: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15004.009074] rocket fde40000.npu: ALL_SP CNA(0x1000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=0000a000
+[15004.010025] rocket fde40000.npu: ALL_SP CMAC(0x2000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000001
+[15004.010980] rocket fde40000.npu: ALL_SP ACCU(0x3000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000000
+[15004.011934] rocket fde40000.npu: ALL_SP DPU(0x4000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000108
+[15004.012907] rocket fde40000.npu: ALL_SP RDMA(0x5000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000027
+[15004.013863] rocket fde40000.npu: PERF_POST(dt_wr=DPU output bytes): dt_wr=00000000 dt_rd=0000008b wt_rd=00000000
+[15004.014760] rocket fde40000.npu: WEIGHT_CFG: CBUF_CON0=00000017 CBUF_CON1=028000a0 WSIZE0=00000180 WSIZE1=00000020 WSIZE2=0202000c DMACON0=00171c07 DMACON2=00064000 FEAT_ADDR=fff00000 DCOMP_CTRL=00000000 DCOMP_ADDR0=fff40000 DCOMP_AMT0=00000000
+[15004.016672] rocket fde40000.npu: DPU_CFG: DST_4018=00000000 SIZE_401c=00000000 4020=ffe80000 4024=00000000 4034=00000000 WIN_40b8=00000000 SURF_40c0=0000c800 BIAS_5020=fff3f000
+[15004.018065] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=0000000057fa1521
+[15004.018742] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[15004.019326] rocket fde40000.npu: NOC_DEIDLE: BUS_IDLE_ACK(0x60)=0x000001ea BUS_IDLE_ST(0x68)=0x000001ea PWR_STATUS(0x98)=0x0000007d ret=0
+[15004.020435] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[15004.021005] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[15004.029603] rocket fde40000.npu: CNA_BISECT_T0(post-pm_get): S_STATUS=00000000
+[15004.030257] ROCKET: before hw_submit
+[15004.030582] rocket fde40000.npu: PRE_SUBMIT_RESET: skipped (test)
+[15004.031160] rocket fde40000.npu: PROBE: zeroed DPU OP_EN, readback=0x0
+[15004.031747] rocket fde40000.npu: MYSTERY_INIT: 0x2004=0x00000000 0x200c=0x00001000
+[15004.032477] rocket fde40000.npu: DPU_BSP: 0x4060=0x53 0x4070=0x383 0x4078=0x0 0x4080=0x0 0x4084=0x1 0x4088=0x0 0x40c0=0x0
+[15004.033476] rocket fde40000.npu: OP_EN_PATCH[5]: old(w0=0x00171040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15004.034585] rocket fde40000.npu: OP_EN_PATCH[6]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15004.035684] rocket fde40000.npu: OP_EN_PATCH[8]: old(w0=0xa000100c w1=0x02010000) → new off=0x100c val=0xa000 (w0=0xa000100c w1=0x02010000)
+[15004.036865] rocket fde40000.npu: OP_EN_PATCH[9]: old(w0=0x00401010 w1=0x02010000) → new off=0x1010 val=0x40 (w0=0x00401010 w1=0x02010000)
+[15004.037981] rocket fde40000.npu: OP_EN_PATCH[10]: old(w0=0x00121014 w1=0x02010000) → new off=0x1014 val=0x12 (w0=0x00121014 w1=0x02010000)
+[15004.039093] rocket fde40000.npu: OP_EN_PATCH[11]: old(w0=0xde001018 w1=0x02010003) → new off=0x1018 val=0x3de00 (w0=0xde001018 w1=0x02010003)
+[15004.040225] rocket fde40000.npu: OP_EN_PATCH[12]: old(w0=0x002c1020 w1=0x02010280) → new off=0x1020 val=0x280002c (w0=0x002c1020 w1=0x02010280)
+[15004.041406] rocket fde40000.npu: OP_EN_PATCH[13]: old(w0=0x00081024 w1=0x02010002) → new off=0x1024 val=0x20008 (w0=0x00081024 w1=0x02010002)
+[15004.042550] rocket fde40000.npu: OP_EN_PATCH[14]: old(w0=0x01401028 w1=0x02010000) → new off=0x1028 val=0x140 (w0=0x01401028 w1=0x02010000)
+[15004.043670] rocket fde40000.npu: OP_EN_PATCH[15]: old(w0=0x1b80102c w1=0x02010000) → new off=0x102c val=0x1b80 (w0=0x1b80102c w1=0x02010000)
+[15004.044834] rocket fde40000.npu: OP_EN_PATCH[16]: old(w0=0x01801030 w1=0x02010000) → new off=0x1030 val=0x180 (w0=0x01801030 w1=0x02010000)
+[15004.045964] rocket fde40000.npu: OP_EN_PATCH[17]: old(w0=0x00201034 w1=0x02010000) → new off=0x1034 val=0x20 (w0=0x00201034 w1=0x02010000)
+[15004.047079] rocket fde40000.npu: OP_EN_PATCH[18]: old(w0=0x000c1038 w1=0x02010202) → new off=0x1038 val=0x202000c (w0=0x000c1038 w1=0x02010202)
+[15004.048230] rocket fde40000.npu: OP_EN_PATCH[19]: old(w0=0x00171040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15004.049383] rocket fde40000.npu: OP_EN_PATCH[20]: old(w0=0x00a01044 w1=0x02010280) → new off=0x1044 val=0x28000a0 (w0=0x00a01044 w1=0x02010280)
+[15004.050540] rocket fde40000.npu: OP_EN_PATCH[21]: old(w0=0x38e1104c w1=0x0201000e) → new off=0x104c val=0xe38e1 (w0=0x38e1104c w1=0x0201000e)
+[15004.051674] rocket fde40000.npu: OP_EN_PATCH[22]: old(w0=0xff801050 w1=0x02014000) → new off=0x1050 val=0x4000ff80 (w0=0xff801050 w1=0x02014000)
+[15004.052903] rocket fde40000.npu: OP_EN_PATCH[23]: old(w0=0xff801054 w1=0x02014000) → new off=0x1054 val=0x4000ff80 (w0=0xff801054 w1=0x02014000)
+[15004.054068] rocket fde40000.npu: OP_EN_PATCH[24]: old(w0=0xff801058 w1=0x02014000) → new off=0x1058 val=0x4000ff80 (w0=0xff801058 w1=0x02014000)
+[15004.055228] rocket fde40000.npu: OP_EN_PATCH[25]: old(w0=0x0000105c w1=0x02010001) → new off=0x105c val=0x10000 (w0=0x0000105c w1=0x02010001)
+[15004.056362] rocket fde40000.npu: OP_EN_PATCH[26]: old(w0=0x00001060 w1=0x02010000) → new off=0x1060 val=0x0 (w0=0x00001060 w1=0x02010000)
+[15004.057511] rocket fde40000.npu: OP_EN_PATCH[27]: old(w0=0x00001064 w1=0x02010000) → new off=0x1064 val=0x0 (w0=0x00001064 w1=0x02010000)
+[15004.058616] rocket fde40000.npu: OP_EN_PATCH[30]: old(w0=0x00001074 w1=0x02010000) → new off=0x1074 val=0x0 (w0=0x00001074 w1=0x02010000)
+[15004.059716] rocket fde40000.npu: OP_EN_PATCH[31]: old(w0=0x1c071078 w1=0x02010017) → new off=0x1078 val=0x171c07 (w0=0x1c071078 w1=0x02010017)
+[15004.060895] rocket fde40000.npu: OP_EN_PATCH[32]: old(w0=0x00f0107c w1=0x02010000) → new off=0x107c val=0xf0 (w0=0x00f0107c w1=0x02010000)
+[15004.062008] rocket fde40000.npu: OP_EN_PATCH[33]: old(w0=0x40001080 w1=0x02010006) → new off=0x1080 val=0x64000 (w0=0x40001080 w1=0x02010006)
+[15004.063138] rocket fde40000.npu: OP_EN_PATCH[34]: old(w0=0x002c1084 w1=0x02010280) → new off=0x1084 val=0x280002c (w0=0x002c1084 w1=0x02010280)
+[15004.064280] rocket fde40000.npu: OP_EN_PATCH[35]: old(w0=0x00081088 w1=0x02010000) → new off=0x1088 val=0x8 (w0=0x00081088 w1=0x02010000)
+[15004.065412] rocket fde40000.npu: OP_EN_PATCH[36]: old(w0=0x00001100 w1=0x02010000) → new off=0x1100 val=0x0 (w0=0x00001100 w1=0x02010000)
+[15004.066516] rocket fde40000.npu: OP_EN_PATCH[37]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15004.067615] rocket fde40000.npu: OP_EN_PATCH[39]: old(w0=0x00001114 w1=0x02010000) → new off=0x1114 val=0x0 (w0=0x00001114 w1=0x02010000)
+[15004.068764] rocket fde40000.npu: OP_EN_PATCH[40]: old(w0=0x00001118 w1=0x02010000) → new off=0x1118 val=0x0 (w0=0x00001118 w1=0x02010000)
+[15004.069870] rocket fde40000.npu: OP_EN_PATCH[41]: old(w0=0x0000111c w1=0x02010000) → new off=0x111c val=0x0 (w0=0x0000111c w1=0x02010000)
+[15004.070968] rocket fde40000.npu: OP_EN_PATCH[42]: old(w0=0x00001120 w1=0x02010000) → new off=0x1120 val=0x0 (w0=0x00001120 w1=0x02010000)
+[15004.072065] rocket fde40000.npu: OP_EN_PATCH[43]: old(w0=0x00001124 w1=0x02010000) → new off=0x1124 val=0x0 (w0=0x00001124 w1=0x02010000)
+[15004.073204] rocket fde40000.npu: OP_EN_PATCH[44]: old(w0=0x00001128 w1=0x02010000) → new off=0x1128 val=0x0 (w0=0x00001128 w1=0x02010000)
+[15004.074306] rocket fde40000.npu: OP_EN_PATCH[45]: old(w0=0x0000112c w1=0x02010000) → new off=0x112c val=0x0 (w0=0x0000112c w1=0x02010000)
+[15004.075402] rocket fde40000.npu: OP_EN_PATCH[46]: old(w0=0x00001130 w1=0x02010000) → new off=0x1130 val=0x0 (w0=0x00001130 w1=0x02010000)
+[15004.076526] rocket fde40000.npu: OP_EN_PATCH[47]: old(w0=0x00001134 w1=0x02010000) → new off=0x1134 val=0x0 (w0=0x00001134 w1=0x02010000)
+[15004.077625] rocket fde40000.npu: OP_EN_PATCH[48]: old(w0=0x00001138 w1=0x02010000) → new off=0x1138 val=0x0 (w0=0x00001138 w1=0x02010000)
+[15004.078720] rocket fde40000.npu: OP_EN_PATCH[49]: old(w0=0x0000113c w1=0x02010000) → new off=0x113c val=0x0 (w0=0x0000113c w1=0x02010000)
+[15004.079814] rocket fde40000.npu: OP_EN_PATCH[50]: old(w0=0x00001140 w1=0x02010000) → new off=0x1140 val=0x0 (w0=0x00001140 w1=0x02010000)
+[15004.080946] rocket fde40000.npu: OP_EN_PATCH[51]: old(w0=0x00001144 w1=0x02010000) → new off=0x1144 val=0x0 (w0=0x00001144 w1=0x02010000)
+[15004.082047] rocket fde40000.npu: OP_EN_PATCH[52]: old(w0=0x00001148 w1=0x02010000) → new off=0x1148 val=0x0 (w0=0x00001148 w1=0x02010000)
+[15004.083141] rocket fde40000.npu: OP_EN_PATCH[53]: old(w0=0x0000114c w1=0x02010000) → new off=0x114c val=0x0 (w0=0x0000114c w1=0x02010000)
+[15004.084237] rocket fde40000.npu: OP_EN_PATCH[56]: old(w0=0x00003010 w1=0x08010000) → new off=0x3010 val=0x0 (w0=0x00003010 w1=0x08010000)
+[15004.085361] rocket fde40000.npu: OP_EN_PATCH[57]: old(w0=0x00003014 w1=0x08010000) → new off=0x3014 val=0x0 (w0=0x00003014 w1=0x08010000)
+[15004.086460] rocket fde40000.npu: OP_EN_PATCH[62]: old(w0=0x00004010 w1=0x10010000) → new off=0x4010 val=0x0 (w0=0x00004010 w1=0x10010000)
+[15004.087556] rocket fde40000.npu: OP_EN_PATCH[63]: old(w0=0x00004014 w1=0x10010000) → new off=0x4014 val=0x0 (w0=0x00004014 w1=0x10010000)
+[15004.088703] rocket fde40000.npu: OP_EN_PATCH[65]: old(w0=0x00004024 w1=0x10010000) → new off=0x4024 val=0x0 (w0=0x00004024 w1=0x10010000)
+[15004.089803] rocket fde40000.npu: OP_EN_PATCH[66]: old(w0=0x00004030 w1=0x10010000) → new off=0x4030 val=0x0 (w0=0x00004030 w1=0x10010000)
+[15004.090902] rocket fde40000.npu: OP_EN_PATCH[67]: old(w0=0x00004034 w1=0x10010000) → new off=0x4034 val=0x0 (w0=0x00004034 w1=0x10010000)
+[15004.091995] rocket fde40000.npu: OP_EN_PATCH[68]: old(w0=0x00004038 w1=0x10010000) → new off=0x4038 val=0x0 (w0=0x00004038 w1=0x10010000)
+[15004.093118] rocket fde40000.npu: OP_EN_PATCH[69]: old(w0=0x0000403c w1=0x10010000) → new off=0x403c val=0x0 (w0=0x0000403c w1=0x10010000)
+[15004.094216] rocket fde40000.npu: OP_EN_PATCH[70]: old(w0=0x00004040 w1=0x10010000) → new off=0x4040 val=0x0 (w0=0x00004040 w1=0x10010000)
+[15004.095311] rocket fde40000.npu: OP_EN_PATCH[71]: old(w0=0x00004044 w1=0x10010000) → new off=0x4044 val=0x0 (w0=0x00004044 w1=0x10010000)
+[15004.096434] rocket fde40000.npu: OP_EN_PATCH[72]: old(w0=0x00004048 w1=0x10010000) → new off=0x4048 val=0x0 (w0=0x00004048 w1=0x10010000)
+[15004.097532] rocket fde40000.npu: OP_EN_PATCH[73]: old(w0=0x0000404c w1=0x10010000) → new off=0x404c val=0x0 (w0=0x0000404c w1=0x10010000)
+[15004.098628] rocket fde40000.npu: OP_EN_PATCH[112]: old(w0=0x00005010 w1=0x20010000) → new off=0x5010 val=0x0 (w0=0x00005010 w1=0x20010000)
+[15004.099737] rocket fde40000.npu: OP_EN_PATCH[113]: old(w0=0x00005014 w1=0x20010000) → new off=0x5014 val=0x0 (w0=0x00005014 w1=0x20010000)
+[15004.100877] rocket fde40000.npu: OP_EN_PATCH[115]: old(w0=0x0000501c w1=0x20010000) → new off=0x501c val=0x0 (w0=0x0000501c w1=0x20010000)
+[15004.101983] rocket fde40000.npu: OP_EN_PATCH[117]: old(w0=0x00005028 w1=0x20010000) → new off=0x5028 val=0x0 (w0=0x00005028 w1=0x20010000)
+[15004.103085] rocket fde40000.npu: OP_EN_PATCH[119]: old(w0=0x00005034 w1=0x20010000) → new off=0x5034 val=0x0 (w0=0x00005034 w1=0x20010000)
+[15004.104186] rocket fde40000.npu: OP_EN_PATCH[121]: old(w0=0x00005040 w1=0x20010000) → new off=0x5040 val=0x0 (w0=0x00005040 w1=0x20010000)
+[15004.105318] rocket fde40000.npu: OP_EN_PATCH[122]: old(w0=0x40005044 w1=0x20010000) → new off=0x5044 val=0x4000 (w0=0x40005044 w1=0x20010000)
+[15004.106447] rocket fde40000.npu: OP_EN_PATCH[123]: old(w0=0x00005048 w1=0x20010000) → new off=0x5048 val=0x0 (w0=0x00005048 w1=0x20010000)
+[15004.107548] rocket fde40000.npu: OP_EN_PATCH[124]: old(w0=0x0000504c w1=0x20010000) → new off=0x504c val=0x0 (w0=0x0000504c w1=0x20010000)
+[15004.108674] rocket fde40000.npu: OP_EN_PATCH[133]: old(w0=0x00005064 w1=0x20010000) → new off=0x5064 val=0x0 (w0=0x00005064 w1=0x20010000)
+[15004.109781] rocket fde40000.npu: OP_EN_PATCH[134]: old(w0=0x01015068 w1=0x20010101) → new off=0x5068 val=0x1010101 (w0=0x01015068 w1=0x20010101)
+[15004.110928] rocket fde40000.npu: OP_EN_PATCH: patched 69 entries
+[15004.112362] iova: 0x00000000ff900000 already mapped to 0x00000000ec900000 cannot remap to phys: 0x00000000ec100000 prot: 0x3
+[15004.113402] rocket fde40000.npu: TASK_DESC v4: dma_map_single 1MB failed
+[15004.114039] rocket fde40000.npu: CLK_RATES: scmi=1000000000 clk=600000000 aclk=600000000 hclk=150000000
+[15004.114866] rocket fde40000.npu: HW_SUBMIT: regcmd=0xffe7d000 count=135 scale=1 AMOUNTS=0x0000008a TASKST=0x00007000 INT_MASK=0x00010300 INT_CLEAR=0x00000000 INT_STATUS=0x00000000 INT_RAWST=0x00000000
+[15004.116459] PBLK: iommu_dev=ffff0001009b6010 attached=ffff0001088604e0 domain=ffff00010948b330
+[15004.117247] rocket fde40000.npu: IOMMU_EXT: AUTO_GATING=0x00000003 INT_MASK=0x00000003 INT_STATUS=0x00000000
+[15004.118114] XDBG_PREOP_IOVA_ENTRY
+[15004.118408] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xffe7d000 SW_PA=0x4253000
+[15004.119065] rocket fde40000.npu: REGCMD_DRAM[0..7]: 000e1004 02010000 000e2004 04010000 000e3004 08010000 000e4004 10010000
+[15004.120038] rocket fde40000.npu: REGCMD_FULL[0]: off=0x1004 val=0x0000000e
+[15004.120666] rocket fde40000.npu: REGCMD_FULL[1]: off=0x2004 val=0x0000000e
+[15004.121272] rocket fde40000.npu: REGCMD_FULL[2]: off=0x3004 val=0x0000000e
+[15004.121876] rocket fde40000.npu: REGCMD_FULL[3]: off=0x4004 val=0x0000000e
+[15004.122479] rocket fde40000.npu: REGCMD_FULL[4]: off=0x5004 val=0x0000000e
+[15004.123082] rocket fde40000.npu: REGCMD_FULL[5]: off=0x1040 val=0x00000017
+[15004.123684] rocket fde40000.npu: REGCMD_FULL[6]: off=0x1104 val=0x00000000
+[15004.124286] rocket fde40000.npu: REGCMD_FULL[7]: off=0x200c val=0x00000001
+[15004.124929] rocket fde40000.npu: REGCMD_IOVA[8]: off=0x100c val=0x0000a000
+[15004.125536] rocket fde40000.npu: REGCMD_FULL[8]: off=0x100c val=0x0000a000
+[15004.126140] rocket fde40000.npu: REGCMD_FULL[9]: off=0x1010 val=0x00000040
+[15004.126742] rocket fde40000.npu: REGCMD_FULL[10]: off=0x1014 val=0x00000012
+[15004.127353] rocket fde40000.npu: REGCMD_FULL[11]: off=0x1018 val=0x0003de00
+[15004.127962] rocket fde40000.npu: REGCMD_FULL[12]: off=0x1020 val=0x0280002c
+[15004.128593] rocket fde40000.npu: REGCMD_FULL[13]: off=0x1024 val=0x00020008
+[15004.129224] rocket fde40000.npu: REGCMD_FULL[14]: off=0x1028 val=0x00000140
+[15004.129840] rocket fde40000.npu: REGCMD_FULL[15]: off=0x102c val=0x00001b80
+[15004.130453] rocket fde40000.npu: REGCMD_FULL[16]: off=0x1030 val=0x00000180
+[15004.131063] rocket fde40000.npu: REGCMD_FULL[17]: off=0x1034 val=0x00000020
+[15004.131675] rocket fde40000.npu: REGCMD_FULL[18]: off=0x1038 val=0x0202000c
+[15004.132285] rocket fde40000.npu: REGCMD_FULL[19]: off=0x1040 val=0x00000017
+[15004.132936] rocket fde40000.npu: REGCMD_FULL[20]: off=0x1044 val=0x028000a0
+[15004.133559] rocket fde40000.npu: REGCMD_FULL[21]: off=0x104c val=0x000e38e1
+[15004.134174] rocket fde40000.npu: REGCMD_FULL[22]: off=0x1050 val=0x4000ff80
+[15004.134785] rocket fde40000.npu: REGCMD_FULL[23]: off=0x1054 val=0x4000ff80
+[15004.135396] rocket fde40000.npu: REGCMD_FULL[24]: off=0x1058 val=0x4000ff80
+[15004.136006] rocket fde40000.npu: REGCMD_IOVA[25]: off=0x105c val=0x00010000
+[15004.136645] rocket fde40000.npu: REGCMD_FULL[25]: off=0x105c val=0x00010000
+[15004.137267] rocket fde40000.npu: REGCMD_FULL[26]: off=0x1060 val=0x00000000
+[15004.137882] rocket fde40000.npu: REGCMD_FULL[27]: off=0x1064 val=0x00000000
+[15004.138493] rocket fde40000.npu: REGCMD_FULL[28]: off=0x1068 val=0x00000011
+[15004.139105] rocket fde40000.npu: REGCMD_FULL[29]: off=0x1070 val=0xfff00000
+[15004.139714] rocket fde40000.npu: REGCMD_FULL[30]: off=0x1074 val=0x00000000
+[15004.140324] rocket fde40000.npu: REGCMD_FULL[31]: off=0x1078 val=0x00171c07
+[15004.140963] rocket fde40000.npu: REGCMD_FULL[32]: off=0x107c val=0x000000f0
+[15004.141580] rocket fde40000.npu: REGCMD_IOVA[33]: off=0x1080 val=0x00064000
+[15004.142192] rocket fde40000.npu: REGCMD_FULL[33]: off=0x1080 val=0x00064000
+[15004.142803] rocket fde40000.npu: REGCMD_FULL[34]: off=0x1084 val=0x0280002c
+[15004.143414] rocket fde40000.npu: REGCMD_FULL[35]: off=0x1088 val=0x00000008
+[15004.144023] rocket fde40000.npu: REGCMD_FULL[36]: off=0x1100 val=0x00000000
+[15004.144657] rocket fde40000.npu: REGCMD_FULL[37]: off=0x1104 val=0x00000000
+[15004.145274] rocket fde40000.npu: REGCMD_FULL[38]: off=0x1110 val=0xfff40000
+[15004.145886] rocket fde40000.npu: REGCMD_FULL[39]: off=0x1114 val=0x00000000
+[15004.146500] rocket fde40000.npu: REGCMD_FULL[40]: off=0x1118 val=0x00000000
+[15004.147111] rocket fde40000.npu: REGCMD_FULL[41]: off=0x111c val=0x00000000
+[15004.147724] rocket fde40000.npu: REGCMD_FULL[42]: off=0x1120 val=0x00000000
+[15004.148335] rocket fde40000.npu: REGCMD_FULL[43]: off=0x1124 val=0x00000000
+[15004.149011] rocket fde40000.npu: REGCMD_FULL[44]: off=0x1128 val=0x00000000
+[15004.149630] rocket fde40000.npu: REGCMD_FULL[45]: off=0x112c val=0x00000000
+[15004.150242] rocket fde40000.npu: REGCMD_FULL[46]: off=0x1130 val=0x00000000
+[15004.150855] rocket fde40000.npu: REGCMD_FULL[47]: off=0x1134 val=0x00000000
+[15004.151466] rocket fde40000.npu: REGCMD_FULL[48]: off=0x1138 val=0x00000000
+[15004.152075] rocket fde40000.npu: REGCMD_FULL[49]: off=0x113c val=0x00000000
+[15004.152715] rocket fde40000.npu: REGCMD_FULL[50]: off=0x1140 val=0x00000000
+[15004.153337] rocket fde40000.npu: REGCMD_FULL[51]: off=0x1144 val=0x00000000
+[15004.153953] rocket fde40000.npu: REGCMD_FULL[52]: off=0x1148 val=0x00000000
+[15004.154567] rocket fde40000.npu: REGCMD_FULL[53]: off=0x114c val=0x00000000
+[15004.155178] rocket fde40000.npu: REGCMD_FULL[54]: off=0x1180 val=0x00000000
+[15004.155790] rocket fde40000.npu: REGCMD_FULL[55]: off=0x1184 val=0x00000000
+[15004.156427] rocket fde40000.npu: REGCMD_FULL[56]: off=0x3010 val=0x00000000
+[15004.157048] rocket fde40000.npu: REGCMD_FULL[57]: off=0x3014 val=0x00000000
+[15004.157663] rocket fde40000.npu: REGCMD_FULL[58]: off=0x3018 val=0x0000000f
+[15004.158273] rocket fde40000.npu: REGCMD_FULL[59]: off=0x301c val=0x00000000
+[15004.158885] rocket fde40000.npu: REGCMD_FULL[60]: off=0x3030 val=0x00000000
+[15004.159497] rocket fde40000.npu: REGCMD_FULL[61]: off=0x400c val=0x00000108
+[15004.160109] rocket fde40000.npu: REGCMD_FULL[62]: off=0x4010 val=0x00000000
+[15004.160751] rocket fde40000.npu: REGCMD_FULL[63]: off=0x4014 val=0x00000000
+[15004.161370] rocket fde40000.npu: REGCMD_FULL[64]: off=0x4020 val=0xffe80000
+[15004.161983] rocket fde40000.npu: REGCMD_FULL[65]: off=0x4024 val=0x00000000
+[15004.162595] rocket fde40000.npu: REGCMD_FULL[66]: off=0x4030 val=0x00000000
+[15004.163204] rocket fde40000.npu: REGCMD_FULL[67]: off=0x4034 val=0x00000000
+[15004.163814] rocket fde40000.npu: REGCMD_FULL[68]: off=0x4038 val=0x00000000
+[15004.164455] rocket fde40000.npu: REGCMD_FULL[69]: off=0x403c val=0x00000000
+[15004.165071] rocket fde40000.npu: REGCMD_FULL[70]: off=0x4040 val=0x00000000
+[15004.165683] rocket fde40000.npu: REGCMD_FULL[71]: off=0x4044 val=0x00000000
+[15004.166292] rocket fde40000.npu: REGCMD_FULL[72]: off=0x4048 val=0x00000000
+[15004.166903] rocket fde40000.npu: REGCMD_FULL[73]: off=0x404c val=0x00000000
+[15004.167511] rocket fde40000.npu: REGCMD_FULL[74]: off=0x4050 val=0x00000124
+[15004.168121] rocket fde40000.npu: REGCMD_FULL[75]: off=0x4054 val=0x0000fffb
+[15004.168754] rocket fde40000.npu: REGCMD_FULL[76]: off=0x4058 val=0x0000007f
+[15004.169370] rocket fde40000.npu: REGCMD_FULL[77]: off=0x405c val=0x00270027
+[15004.169981] rocket fde40000.npu: REGCMD_FULL[78]: off=0x4060 val=0x00000053
+[15004.170592] rocket fde40000.npu: REGCMD_FULL[79]: off=0x4064 val=0x00000000
+[15004.171202] rocket fde40000.npu: REGCMD_FULL[80]: off=0x4068 val=0x00000000
+[15004.171813] rocket fde40000.npu: REGCMD_FULL[81]: off=0x406c val=0x00000000
+[15004.172447] rocket fde40000.npu: REGCMD_FULL[82]: off=0x4070 val=0x00000383
+[15004.173065] rocket fde40000.npu: REGCMD_FULL[83]: off=0x4074 val=0x00000000
+[15004.173676] rocket fde40000.npu: REGCMD_FULL[84]: off=0x4078 val=0x00000001
+[15004.174285] rocket fde40000.npu: REGCMD_FULL[85]: off=0x407c val=0x00000000
+[15004.174895] rocket fde40000.npu: REGCMD_FULL[86]: off=0x4080 val=0xffffff80
+[15004.175504] rocket fde40000.npu: REGCMD_FULL[87]: off=0x4084 val=0x00005325
+[15004.176115] rocket fde40000.npu: REGCMD_FULL[88]: off=0x4088 val=0x0000000e
+[15004.176737] rocket fde40000.npu: REGCMD_FULL[89]: off=0x4090 val=0x00000000
+[15004.177351] rocket fde40000.npu: REGCMD_FULL[90]: off=0x4094 val=0x00000000
+[15004.177963] rocket fde40000.npu: REGCMD_FULL[91]: off=0x4098 val=0x00000000
+[15004.178575] rocket fde40000.npu: REGCMD_FULL[92]: off=0x409c val=0x00000000
+[15004.179186] rocket fde40000.npu: REGCMD_FULL[93]: off=0x40a0 val=0x00000000
+[15004.179794] rocket fde40000.npu: REGCMD_FULL[94]: off=0x40a4 val=0x00000000
+[15004.180427] rocket fde40000.npu: REGCMD_FULL[95]: off=0x40a8 val=0x00000000
+[15004.181042] rocket fde40000.npu: REGCMD_FULL[96]: off=0x40ac val=0x00000000
+[15004.181653] rocket fde40000.npu: REGCMD_FULL[97]: off=0x40c0 val=0x0000c800
+[15004.182263] rocket fde40000.npu: REGCMD_FULL[98]: off=0x40c4 val=0x00000000
+[15004.182873] rocket fde40000.npu: REGCMD_FULL[99]: off=0x4100 val=0x00000000
+[15004.183482] rocket fde40000.npu: REGCMD_FULL[100]: off=0x4104 val=0x00000000
+[15004.184099] rocket fde40000.npu: REGCMD_FULL[101]: off=0x4108 val=0x00000000
+[15004.184736] rocket fde40000.npu: REGCMD_FULL[102]: off=0x410c val=0x00000000
+[15004.185359] rocket fde40000.npu: REGCMD_FULL[103]: off=0x4110 val=0x00000000
+[15004.185978] rocket fde40000.npu: REGCMD_FULL[104]: off=0x4114 val=0x00000000
+[15004.186596] rocket fde40000.npu: REGCMD_FULL[105]: off=0x4118 val=0x00000000
+[15004.187215] rocket fde40000.npu: REGCMD_FULL[106]: off=0x411c val=0x00000000
+[15004.187831] rocket fde40000.npu: REGCMD_FULL[107]: off=0x4120 val=0x00000000
+[15004.188466] rocket fde40000.npu: REGCMD_FULL[108]: off=0x4124 val=0x00000000
+[15004.189089] rocket fde40000.npu: REGCMD_FULL[109]: off=0x4128 val=0x00000000
+[15004.189706] rocket fde40000.npu: REGCMD_FULL[110]: off=0x412c val=0x00000000
+[15004.190322] rocket fde40000.npu: REGCMD_FULL[111]: off=0x500c val=0x00000027
+[15004.190939] rocket fde40000.npu: REGCMD_FULL[112]: off=0x5010 val=0x00000000
+[15004.191556] rocket fde40000.npu: REGCMD_FULL[113]: off=0x5014 val=0x00000000
+[15004.192173] rocket fde40000.npu: REGCMD_FULL[114]: off=0x5018 val=0x00000000
+[15004.192810] rocket fde40000.npu: REGCMD_FULL[115]: off=0x501c val=0x00000000
+[15004.193433] rocket fde40000.npu: REGCMD_FULL[116]: off=0x5020 val=0xfff3f000
+[15004.194049] rocket fde40000.npu: REGCMD_FULL[117]: off=0x5028 val=0x00000000
+[15004.194665] rocket fde40000.npu: REGCMD_FULL[118]: off=0x502c val=0x00000000
+[15004.195283] rocket fde40000.npu: REGCMD_FULL[119]: off=0x5034 val=0x00000000
+[15004.195901] rocket fde40000.npu: REGCMD_FULL[120]: off=0x5038 val=0x00000000
+[15004.196538] rocket fde40000.npu: REGCMD_OP[120]: off=0x5038 val=0x00000000 routing=0x20
+[15004.197245] rocket fde40000.npu: REGCMD_FULL[121]: off=0x5040 val=0x00000000
+[15004.197863] rocket fde40000.npu: REGCMD_OP[121]: off=0x5040 val=0x00000000 routing=0x20
+[15004.198562] rocket fde40000.npu: REGCMD_IOVA[122]: off=0x5044 val=0x00004000
+[15004.199180] rocket fde40000.npu: REGCMD_FULL[122]: off=0x5044 val=0x00004000
+[15004.199797] rocket fde40000.npu: REGCMD_OP[122]: off=0x5044 val=0x00004000 routing=0x20
+[15004.200511] rocket fde40000.npu: REGCMD_FULL[123]: off=0x5048 val=0x00000000
+[15004.201131] rocket fde40000.npu: REGCMD_OP[123]: off=0x5048 val=0x00000000 routing=0x20
+[15004.201831] rocket fde40000.npu: REGCMD_FULL[124]: off=0x504c val=0x00000000
+[15004.202447] rocket fde40000.npu: REGCMD_OP[124]: off=0x504c val=0x00000000 routing=0x20
+[15004.203147] rocket fde40000.npu: REGCMD_FULL[125]: off=0x5064 val=0x00000000
+[15004.203763] rocket fde40000.npu: REGCMD_OP[125]: off=0x5064 val=0x00000000 routing=0x20
+[15004.204484] rocket fde40000.npu: REGCMD_FULL[126]: off=0x5068 val=0x01010101
+[15004.205108] rocket fde40000.npu: REGCMD_OP[126]: off=0x5068 val=0x01010101 routing=0x20
+[15004.205809] rocket fde40000.npu: REGCMD_FULL[127]: off=0x506c val=0x00000000
+[15004.206428] rocket fde40000.npu: REGCMD_OP[127]: off=0x506c val=0x00000000 routing=0x20
+[15004.207128] rocket fde40000.npu: REGCMD_OP[128]: off=0x0000 val=0x00000000 routing=0x00
+[15004.207827] rocket fde40000.npu: REGCMD_OP[129]: off=0x0014 val=0x00000000 routing=0x01
+[15004.208551] rocket fde40000.npu: REGCMD_OP[130]: off=0x0000 val=0x00000000 routing=0x00
+[15004.209259] rocket fde40000.npu: REGCMD_OP[131]: off=0x0000 val=0x00000000 routing=0x02
+[15004.209960] rocket fde40000.npu: REGCMD_FULL[132]: off=0x300c val=0x00000000
+[15004.210576] rocket fde40000.npu: REGCMD_OP[132]: off=0x300c val=0x00000000 routing=0x08
+[15004.211277] rocket fde40000.npu: REGCMD_FULL[133]: off=0x5064 val=0x00000000
+[15004.211895] rocket fde40000.npu: REGCMD_OP[133]: off=0x5064 val=0x00000000 routing=0x20
+[15004.212608] rocket fde40000.npu: REGCMD_FULL[134]: off=0x5068 val=0x01010101
+[15004.213228] rocket fde40000.npu: REGCMD_OP[134]: off=0x5068 val=0x01010101 routing=0x20
+[15004.213945] rocket fde40000.npu: OUTPUT_BO_PRE iova=0xffe80000: 00 00 00 00 00 00 00 00
+[15004.214649] rocket fde40000.npu: INPUT_BO iova=0xfff00000 pa=0x41bd000: 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81
+[15004.215600] rocket fde40000.npu: WEIGHT_BO[000] iova=0xfff40000: e9 0a c9 04 23 fc 0d da 1b f0 59 14 05 35 44 26
+[15004.216518] rocket fde40000.npu: WEIGHT_BO[010] iova=0xfff40000: 21 f5 f4 fe 15 e4 d5 ef ee f9 2e 1a f0 17 d3 f8
+[15004.217418] rocket fde40000.npu: WEIGHT_BO[020] iova=0xfff40000: cf e7 cf 21 38 bf 1e 2c e9 0a e0 eb 33 0f fd e4
+[15004.218309] rocket fde40000.npu: WEIGHT_BO[030] iova=0xfff40000: ea ea 09 06 ff 1e 24 23 f1 23 0c e9 15 24 1c 03
+[15004.219200] rocket fde40000.npu: WEIGHT_BO[040] iova=0xfff40000: f4 19 03 e8 02 2f fa fc 18 0b fd ee e1 ff fa e8
+[15004.220091] rocket fde40000.npu: WEIGHT_BO[050] iova=0xfff40000: 09 44 fc 1d f7 df f2 fd ea 0f b0 d0 f8 cb 1c 1e
+[15004.220995] rocket fde40000.npu: WEIGHT_BO[060] iova=0xfff40000: e2 0c f9 ec e6 fa e3 e0 f8 25 eb d7 ca 19 10 12
+[15004.221890] rocket fde40000.npu: WEIGHT_BO[070] iova=0xfff40000: 21 14 e2 df 31 ef 10 d3 f8 00 1f a5 00 2c ff df
+[15004.222783] rocket fde40000.npu: WEIGHT_BO[080] iova=0xfff40000: 37 1a 23 0b b9 0f f4 fd 0c 0f e1 dc ec 25 2f 2a
+[15004.223673] rocket fde40000.npu: WEIGHT_BO[090] iova=0xfff40000: fb 07 45 04 fe 0d e9 1c 60 13 0a e3 f7 f9 23 f3
+[15004.224625] rocket fde40000.npu: WEIGHT_BO[0a0] iova=0xfff40000: f0 01 31 13 d9 ff f1 16 e0 09 02 10 e8 e5 10 c5
+[15004.225530] rocket fde40000.npu: WEIGHT_BO[0b0] iova=0xfff40000: 1a 07 ee eb 40 f9 ee 05 0a 0f e0 37 0a de f3 d6
+[15004.226427] rocket fde40000.npu: WEIGHT_BO[0c0] iova=0xfff40000: 13 24 26 20 09 12 be 0b 19 00 f3 0f 2b de fd 01
+[15004.227320] rocket fde40000.npu: WEIGHT_BO[0d0] iova=0xfff40000: df 18 11 04 ee 32 0c f3 15 15 20 28 fe ee 06 25
+[15004.228212] rocket fde40000.npu: WEIGHT_BO[0e0] iova=0xfff40000: 17 07 c3 e0 e4 f7 e4 0b 13 ea 12 21 fa e9 ad 0f
+[15004.229138] rocket fde40000.npu: WEIGHT_BO[0f0] iova=0xfff40000: 22 0c 01 08 fe 1d 01 f5 2e 11 31 07 fa e9 0c 0c
+[15004.230038] rocket fde40000.npu: WEIGHT_BO[100] iova=0xfff40000: c7 d6 1f e5 ec 32 1b c3 06 fc 0b c1 30 f5 e4 40
+[15004.230931] rocket fde40000.npu: WEIGHT_BO[110] iova=0xfff40000: 1b f0 ea 0f f5 35 f6 33 d8 15 f2 01 32 35 1f e2
+[15004.231824] rocket fde40000.npu: WEIGHT_BO[120] iova=0xfff40000: 10 14 ff 0e 09 04 ea ff d4 a6 05 0c d0 b5 e9 0e
+[15004.232740] rocket fde40000.npu: WEIGHT_BO[130] iova=0xfff40000: ff f0 fa 05 19 0e f3 3d fb 0b cc d7 2e 1f 18 0f
+[15004.233640] rocket fde40000.npu: WEIGHT_BO[140] iova=0xfff40000: e6 13 17 df f1 16 f9 d6 3f 04 d7 d9 10 1c 3c 37
+[15004.234532] rocket fde40000.npu: WEIGHT_BO[150] iova=0xfff40000: 12 f1 fa 0d 04 2f e8 13 0e cf eb 03 f1 02 f6 26
+[15004.235424] rocket fde40000.npu: WEIGHT_BO[160] iova=0xfff40000: f0 0f ee 2d 18 cc dd 05 26 24 b6 1a 48 f1 25 f1
+[15004.236317] rocket fde40000.npu: WEIGHT_BO[170] iova=0xfff40000: e3 0e 19 30 d0 0c e5 06 f8 22 08 16 d3 fb 0c 02
+[15004.237229] rocket fde40000.npu: WEIGHT_BO[180] iova=0xfff40000: fe fc df ce f8 04 15 02 1f 1e fe 02 21 0d 32 05
+[15004.238127] rocket fde40000.npu: WEIGHT_BO[190] iova=0xfff40000: c5 e3 24 da e0 de 20 f0 20 0d ee 11 13 c8 f0 1c
+[15004.239019] rocket fde40000.npu: WEIGHT_BO[1a0] iova=0xfff40000: 02 f5 d7 3c fb 10 11 08 e2 ef 33 f7 22 03 17 f0
+[15004.239909] rocket fde40000.npu: WEIGHT_BO[1b0] iova=0xfff40000: e9 28 10 e7 15 38 27 fc 1d e6 32 d4 48 fc 01 f0
+[15004.240816] rocket fde40000.npu: WEIGHT_BO[1c0] iova=0xfff40000: de 30 3c 19 f0 25 bd 2b 2e 16 c7 fe 18 f2 02 dc
+[15004.241710] rocket fde40000.npu: WEIGHT_BO[1d0] iova=0xfff40000: 12 26 08 25 16 2e 0b fb ee 44 e5 f8 3e 08 33 fb
+[15004.242602] rocket fde40000.npu: WEIGHT_BO[1e0] iova=0xfff40000: 11 26 f1 0e fd 00 f6 20 02 e9 0e 1c 11 eb 0b 2b
+[15004.243495] rocket fde40000.npu: WEIGHT_BO[1f0] iova=0xfff40000: 23 fb f9 e7 0e f0 c0 19 16 3b f4 ed 15 00 ed 13
+[15004.244410] rocket fde40000.npu: REGCMD_SCAN: count=135 CNA_OP=0 CORE_OP=0 DPU_OP=0 PPU_OP=0 LAST_OFF=0x5068 LAST_VAL=0x01010101
+[15004.245435] rocket fde40000.npu: DTE_DRAM: [0]=0x0417a001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[15004.246252] rocket fde40000.npu: PTE_DRAM: table=0x0417a000 idx=0x27d PTE=0x00000000 (expected_pa=0x4253000)
+[15004.247112] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15004.248456] rocket fde40000.npu: PRE_OP CNA: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000 CBUF_CON0=00000044 DCOMP_CTRL=00000000
+[15004.249523] rocket fde40000.npu: PRE_OP CORE: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000
+[15004.250330] rocket fde40000.npu: PERF_CLR(pre-OP): clr=00000101 dt_wr=00000000 dt_rd=00000000 wt_rd=00000000
+[15004.251486] rocket fde40000.npu: AFTER_OPEN_ENGAGE(bit16-ever): CNA=00000000 CMAC=00000000 CORE=00000000 DPU=00000000 RDMA=00000000
+[15004.252546] rocket fde40000.npu: VMIN: single OP_EN pulse
+[15004.253034] rocket fde40000.npu: AT_OPEN CNA: OP_EN=00000000  CORE: OP_EN=00000000  DPU: OP_EN=00000000  DPU_RDMA: OP_EN=00000000
+[15004.254064] rocket fde40000.npu: AT_OPEN PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.255544] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000019 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[15004.256463] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000019 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000
+[15004.257490] rocket fde40000.npu: AT50US CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15004.258553] rocket fde40000.npu: AT50US CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.259344] rocket fde40000.npu: AT50US PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.268452] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15004.269493] rocket fde40000.npu: AT1MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15004.270399] rocket fde40000.npu: AT1MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.271194] rocket fde40000.npu: AT1MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.280422] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15004.281459] rocket fde40000.npu: AT5MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15004.282364] rocket fde40000.npu: AT5MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.283154] rocket fde40000.npu: AT5MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.296435] rocket fde40000.npu: AT10MS: PC_RS=0x00000000 PC_ISTATUS=0x00000000 PC_OPENA=0x00000000 PC_BASE=0xffe7d000 PC_AMOUNTS=0x0000008a PC_TASKST=0x0000f000
+[15004.297705] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[15004.298906] rocket fde40000.npu: AT10MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.300402] rocket fde40000.npu: AT10MS PCDUMP: VER=00000000 VERNUM=00000000 OPENA=00000000 BASE=ffe7d000 AMOUNTS=0000008a MASK=00010300 CLEAR=00000000 STATUS=00000000 RAW=00000000 TASKCON=00001001 TASKDMA=00000000 TASKST=0000f000
+[15004.302187] rocket fde40000.npu: AT10MS CNADUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CONV_CON1=0000a000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15004.303446] rocket fde40000.npu: AT10MS CNA_DBG[90-1fc]: 1110=fff40000
+[15004.304035] rocket fde40000.npu: AT10MS CNA_DBG[200-2fc]: 1210=01ff0000 1280=00000078 1284=00200001
+[15004.304843] rocket fde40000.npu: AT10MS COREDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.305668] rocket fde40000.npu: AT10MS CMACDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.306493] rocket fde40000.npu: AT10MS OPEN_C: CMAC[0x200c]=0x1 ACCU[0x300c]=0x0 DPU[0x400c]=0x108 DPU_RDMA[0x500c]=0x27
+[15004.307451] rocket fde40000.npu: AT10MS OPEN_8 (run status): CMAC[0x2008]=0x0 ACCU[0x3008]=0x0 DPU[0x4008]=0x0 DPU_RDMA[0x5008]=0x0 CNA[0x1008]=0x0
+[15004.308628] rocket fde40000.npu: AT10MS PERF_POST: dt_wr(0x8034)=00000000 dt_rd(0x8038)=0000008b wt_rd(0x803c)=00000000 clr(0x8010)=00000101
+[15004.309736] rocket fde40000.npu: AT10MS DPU: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 DST_BASE=ffe80000
+[15004.310646] rocket fde40000.npu: AT10MS DPU_RDMA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.311455] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 500c=00000027 5010=00000000 5014=00000000 5018=00000000 501c=00000000 5020=fff3f000
+[15004.312560] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 5024=00000000 5028=00000000 502c=00000000 5030=00000000 5034=00000000 5038=00000000 503c=00000000 5040=00000000
+[15004.313857] rocket fde40000.npu: AT10MS DCOMP_CTRL/REGNUM/ADDR0/AMOUNT0: 0x1100=00000000 0x1104=00000000 0x1110=fff40000 0x1140=00000000
+[15004.314930] rocket fde40000.npu: AT10MS CNA CONV: 0x100c=0000a000 0x1010=00000040 0x1014=00000012 0x1018=0003de00
+[15004.315830] rocket fde40000.npu: AT10MS DATA/WEIGHT: 0x1020=0280002c 0x1024=00020008 0x1028=00000140 0x1030=00000180 0x1034=00000020 0x1038=0202000c
+[15004.317025] ROCKET: after hw_submit
+[15004.544472] rocket fde40000.npu: NPU job timed out
+[15004.544932] rocket fde40000.npu: TIMEOUT PC_RS=0x00000000 TASKST=0x0000f000 IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15004.546081] rocket fde40000.npu: POST_TIMEOUT_CNA: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15004.547578] rocket fde40000.npu: POST_TIMEOUT_CNA_SWAP: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15004.549145] rocket fde40000.npu: ALL_SP CNA(0x1000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=0000a000
+[15004.550100] rocket fde40000.npu: ALL_SP CMAC(0x2000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000001
+[15004.551056] rocket fde40000.npu: ALL_SP ACCU(0x3000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000000
+[15004.552007] rocket fde40000.npu: ALL_SP DPU(0x4000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000108
+[15004.552983] rocket fde40000.npu: ALL_SP RDMA(0x5000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000027
+[15004.553941] rocket fde40000.npu: PERF_POST(dt_wr=DPU output bytes): dt_wr=00000000 dt_rd=0000008b wt_rd=00000000
+[15004.554834] rocket fde40000.npu: WEIGHT_CFG: CBUF_CON0=00000017 CBUF_CON1=028000a0 WSIZE0=00000180 WSIZE1=00000020 WSIZE2=0202000c DMACON0=00171c07 DMACON2=00064000 FEAT_ADDR=fff00000 DCOMP_CTRL=00000000 DCOMP_ADDR0=fff40000 DCOMP_AMT0=00000000
+[15004.556742] rocket fde40000.npu: DPU_CFG: DST_4018=00000000 SIZE_401c=00000000 4020=ffe80000 4024=00000000 4034=00000000 WIN_40b8=00000000 SURF_40c0=0000c800 BIAS_5020=fff3f000
+[15004.558139] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=0000000090c6bb21
+[15004.558820] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[15004.559407] rocket fde40000.npu: NOC_DEIDLE: BUS_IDLE_ACK(0x60)=0x000001ea BUS_IDLE_ST(0x68)=0x000001ea PWR_STATUS(0x98)=0x0000007d ret=0
+[15004.560522] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[15004.561099] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[15004.567221] rocket fde40000.npu: CNA_BISECT_T0(post-pm_get): S_STATUS=00000000
+[15004.567870] ROCKET: before hw_submit
+[15004.568190] rocket fde40000.npu: PRE_SUBMIT_RESET: skipped (test)
+[15004.568764] rocket fde40000.npu: PROBE: zeroed DPU OP_EN, readback=0x0
+[15004.569340] rocket fde40000.npu: MYSTERY_INIT: 0x2004=0x00000000 0x200c=0x00001000
+[15004.570005] rocket fde40000.npu: DPU_BSP: 0x4060=0x53 0x4070=0x383 0x4078=0x0 0x4080=0x0 0x4084=0x1 0x4088=0x0 0x40c0=0x0
+[15004.570975] rocket fde40000.npu: OP_EN_PATCH[5]: old(w0=0x00171040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15004.572072] rocket fde40000.npu: OP_EN_PATCH[6]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15004.573190] rocket fde40000.npu: OP_EN_PATCH[8]: old(w0=0xa000100c w1=0x02010000) → new off=0x100c val=0xa000 (w0=0xa000100c w1=0x02010000)
+[15004.574304] rocket fde40000.npu: OP_EN_PATCH[9]: old(w0=0x00401010 w1=0x02010000) → new off=0x1010 val=0x40 (w0=0x00401010 w1=0x02010000)
+[15004.575412] rocket fde40000.npu: OP_EN_PATCH[10]: old(w0=0x00121014 w1=0x02010000) → new off=0x1014 val=0x12 (w0=0x00121014 w1=0x02010000)
+[15004.576531] rocket fde40000.npu: OP_EN_PATCH[11]: old(w0=0xde001018 w1=0x02010003) → new off=0x1018 val=0x3de00 (w0=0xde001018 w1=0x02010003)
+[15004.577658] rocket fde40000.npu: OP_EN_PATCH[12]: old(w0=0x002c1020 w1=0x02010280) → new off=0x1020 val=0x280002c (w0=0x002c1020 w1=0x02010280)
+[15004.578797] rocket fde40000.npu: OP_EN_PATCH[13]: old(w0=0x00081024 w1=0x02010002) → new off=0x1024 val=0x20008 (w0=0x00081024 w1=0x02010002)
+[15004.579920] rocket fde40000.npu: OP_EN_PATCH[14]: old(w0=0x01401028 w1=0x02010000) → new off=0x1028 val=0x140 (w0=0x01401028 w1=0x02010000)
+[15004.581042] rocket fde40000.npu: OP_EN_PATCH[15]: old(w0=0x1b80102c w1=0x02010000) → new off=0x102c val=0x1b80 (w0=0x1b80102c w1=0x02010000)
+[15004.582161] rocket fde40000.npu: OP_EN_PATCH[16]: old(w0=0x01801030 w1=0x02010000) → new off=0x1030 val=0x180 (w0=0x01801030 w1=0x02010000)
+[15004.583268] rocket fde40000.npu: OP_EN_PATCH[17]: old(w0=0x00201034 w1=0x02010000) → new off=0x1034 val=0x20 (w0=0x00201034 w1=0x02010000)
+[15004.584388] rocket fde40000.npu: OP_EN_PATCH[18]: old(w0=0x000c1038 w1=0x02010202) → new off=0x1038 val=0x202000c (w0=0x000c1038 w1=0x02010202)
+[15004.585530] rocket fde40000.npu: OP_EN_PATCH[19]: old(w0=0x00171040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15004.586631] rocket fde40000.npu: OP_EN_PATCH[20]: old(w0=0x00a01044 w1=0x02010280) → new off=0x1044 val=0x28000a0 (w0=0x00a01044 w1=0x02010280)
+[15004.587770] rocket fde40000.npu: OP_EN_PATCH[21]: old(w0=0x38e1104c w1=0x0201000e) → new off=0x104c val=0xe38e1 (w0=0x38e1104c w1=0x0201000e)
+[15004.588910] rocket fde40000.npu: OP_EN_PATCH[22]: old(w0=0xff801050 w1=0x02014000) → new off=0x1050 val=0x4000ff80 (w0=0xff801050 w1=0x02014000)
+[15004.590059] rocket fde40000.npu: OP_EN_PATCH[23]: old(w0=0xff801054 w1=0x02014000) → new off=0x1054 val=0x4000ff80 (w0=0xff801054 w1=0x02014000)
+[15004.591205] rocket fde40000.npu: OP_EN_PATCH[24]: old(w0=0xff801058 w1=0x02014000) → new off=0x1058 val=0x4000ff80 (w0=0xff801058 w1=0x02014000)
+[15004.592349] rocket fde40000.npu: OP_EN_PATCH[25]: old(w0=0x0000105c w1=0x02010001) → new off=0x105c val=0x10000 (w0=0x0000105c w1=0x02010001)
+[15004.593487] rocket fde40000.npu: OP_EN_PATCH[26]: old(w0=0x00001060 w1=0x02010000) → new off=0x1060 val=0x0 (w0=0x00001060 w1=0x02010000)
+[15004.594583] rocket fde40000.npu: OP_EN_PATCH[27]: old(w0=0x00001064 w1=0x02010000) → new off=0x1064 val=0x0 (w0=0x00001064 w1=0x02010000)
+[15004.595676] rocket fde40000.npu: OP_EN_PATCH[30]: old(w0=0x00001074 w1=0x02010000) → new off=0x1074 val=0x0 (w0=0x00001074 w1=0x02010000)
+[15004.596786] rocket fde40000.npu: OP_EN_PATCH[31]: old(w0=0x1c071078 w1=0x02010017) → new off=0x1078 val=0x171c07 (w0=0x1c071078 w1=0x02010017)
+[15004.597931] rocket fde40000.npu: OP_EN_PATCH[32]: old(w0=0x00f0107c w1=0x02010000) → new off=0x107c val=0xf0 (w0=0x00f0107c w1=0x02010000)
+[15004.599034] rocket fde40000.npu: OP_EN_PATCH[33]: old(w0=0x40001080 w1=0x02010006) → new off=0x1080 val=0x64000 (w0=0x40001080 w1=0x02010006)
+[15004.600170] rocket fde40000.npu: OP_EN_PATCH[34]: old(w0=0x002c1084 w1=0x02010280) → new off=0x1084 val=0x280002c (w0=0x002c1084 w1=0x02010280)
+[15004.601330] rocket fde40000.npu: OP_EN_PATCH[35]: old(w0=0x00081088 w1=0x02010000) → new off=0x1088 val=0x8 (w0=0x00081088 w1=0x02010000)
+[15004.602438] rocket fde40000.npu: OP_EN_PATCH[36]: old(w0=0x00001100 w1=0x02010000) → new off=0x1100 val=0x0 (w0=0x00001100 w1=0x02010000)
+[15004.603533] rocket fde40000.npu: OP_EN_PATCH[37]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15004.604648] rocket fde40000.npu: OP_EN_PATCH[39]: old(w0=0x00001114 w1=0x02010000) → new off=0x1114 val=0x0 (w0=0x00001114 w1=0x02010000)
+[15004.605746] rocket fde40000.npu: OP_EN_PATCH[40]: old(w0=0x00001118 w1=0x02010000) → new off=0x1118 val=0x0 (w0=0x00001118 w1=0x02010000)
+[15004.606852] rocket fde40000.npu: OP_EN_PATCH[41]: old(w0=0x0000111c w1=0x02010000) → new off=0x111c val=0x0 (w0=0x0000111c w1=0x02010000)
+[15004.607949] rocket fde40000.npu: OP_EN_PATCH[42]: old(w0=0x00001120 w1=0x02010000) → new off=0x1120 val=0x0 (w0=0x00001120 w1=0x02010000)
+[15004.609072] rocket fde40000.npu: OP_EN_PATCH[43]: old(w0=0x00001124 w1=0x02010000) → new off=0x1124 val=0x0 (w0=0x00001124 w1=0x02010000)
+[15004.610170] rocket fde40000.npu: OP_EN_PATCH[44]: old(w0=0x00001128 w1=0x02010000) → new off=0x1128 val=0x0 (w0=0x00001128 w1=0x02010000)
+[15004.611266] rocket fde40000.npu: OP_EN_PATCH[45]: old(w0=0x0000112c w1=0x02010000) → new off=0x112c val=0x0 (w0=0x0000112c w1=0x02010000)
+[15004.612358] rocket fde40000.npu: OP_EN_PATCH[46]: old(w0=0x00001130 w1=0x02010000) → new off=0x1130 val=0x0 (w0=0x00001130 w1=0x02010000)
+[15004.613493] rocket fde40000.npu: OP_EN_PATCH[47]: old(w0=0x00001134 w1=0x02010000) → new off=0x1134 val=0x0 (w0=0x00001134 w1=0x02010000)
+[15004.614589] rocket fde40000.npu: OP_EN_PATCH[48]: old(w0=0x00001138 w1=0x02010000) → new off=0x1138 val=0x0 (w0=0x00001138 w1=0x02010000)
+[15004.615681] rocket fde40000.npu: OP_EN_PATCH[49]: old(w0=0x0000113c w1=0x02010000) → new off=0x113c val=0x0 (w0=0x0000113c w1=0x02010000)
+[15004.616800] rocket fde40000.npu: OP_EN_PATCH[50]: old(w0=0x00001140 w1=0x02010000) → new off=0x1140 val=0x0 (w0=0x00001140 w1=0x02010000)
+[15004.617899] rocket fde40000.npu: OP_EN_PATCH[51]: old(w0=0x00001144 w1=0x02010000) → new off=0x1144 val=0x0 (w0=0x00001144 w1=0x02010000)
+[15004.618992] rocket fde40000.npu: OP_EN_PATCH[52]: old(w0=0x00001148 w1=0x02010000) → new off=0x1148 val=0x0 (w0=0x00001148 w1=0x02010000)
+[15004.620086] rocket fde40000.npu: OP_EN_PATCH[53]: old(w0=0x0000114c w1=0x02010000) → new off=0x114c val=0x0 (w0=0x0000114c w1=0x02010000)
+[15004.621197] rocket fde40000.npu: OP_EN_PATCH[56]: old(w0=0x00003010 w1=0x08010000) → new off=0x3010 val=0x0 (w0=0x00003010 w1=0x08010000)
+[15004.622292] rocket fde40000.npu: OP_EN_PATCH[57]: old(w0=0x00003014 w1=0x08010000) → new off=0x3014 val=0x0 (w0=0x00003014 w1=0x08010000)
+[15004.623385] rocket fde40000.npu: OP_EN_PATCH[62]: old(w0=0x00004010 w1=0x10010000) → new off=0x4010 val=0x0 (w0=0x00004010 w1=0x10010000)
+[15004.624506] rocket fde40000.npu: OP_EN_PATCH[63]: old(w0=0x00004014 w1=0x10010000) → new off=0x4014 val=0x0 (w0=0x00004014 w1=0x10010000)
+[15004.625603] rocket fde40000.npu: OP_EN_PATCH[65]: old(w0=0x00004024 w1=0x10010000) → new off=0x4024 val=0x0 (w0=0x00004024 w1=0x10010000)
+[15004.626696] rocket fde40000.npu: OP_EN_PATCH[66]: old(w0=0x00004030 w1=0x10010000) → new off=0x4030 val=0x0 (w0=0x00004030 w1=0x10010000)
+[15004.627804] rocket fde40000.npu: OP_EN_PATCH[67]: old(w0=0x00004034 w1=0x10010000) → new off=0x4034 val=0x0 (w0=0x00004034 w1=0x10010000)
+[15004.628924] rocket fde40000.npu: OP_EN_PATCH[68]: old(w0=0x00004038 w1=0x10010000) → new off=0x4038 val=0x0 (w0=0x00004038 w1=0x10010000)
+[15004.630026] rocket fde40000.npu: OP_EN_PATCH[69]: old(w0=0x0000403c w1=0x10010000) → new off=0x403c val=0x0 (w0=0x0000403c w1=0x10010000)
+[15004.631122] rocket fde40000.npu: OP_EN_PATCH[70]: old(w0=0x00004040 w1=0x10010000) → new off=0x4040 val=0x0 (w0=0x00004040 w1=0x10010000)
+[15004.632215] rocket fde40000.npu: OP_EN_PATCH[71]: old(w0=0x00004044 w1=0x10010000) → new off=0x4044 val=0x0 (w0=0x00004044 w1=0x10010000)
+[15004.633330] rocket fde40000.npu: OP_EN_PATCH[72]: old(w0=0x00004048 w1=0x10010000) → new off=0x4048 val=0x0 (w0=0x00004048 w1=0x10010000)
+[15004.634428] rocket fde40000.npu: OP_EN_PATCH[73]: old(w0=0x0000404c w1=0x10010000) → new off=0x404c val=0x0 (w0=0x0000404c w1=0x10010000)
+[15004.635523] rocket fde40000.npu: OP_EN_PATCH[112]: old(w0=0x00005010 w1=0x20010000) → new off=0x5010 val=0x0 (w0=0x00005010 w1=0x20010000)
+[15004.636640] rocket fde40000.npu: OP_EN_PATCH[113]: old(w0=0x00005014 w1=0x20010000) → new off=0x5014 val=0x0 (w0=0x00005014 w1=0x20010000)
+[15004.637744] rocket fde40000.npu: OP_EN_PATCH[115]: old(w0=0x0000501c w1=0x20010000) → new off=0x501c val=0x0 (w0=0x0000501c w1=0x20010000)
+[15004.638846] rocket fde40000.npu: OP_EN_PATCH[117]: old(w0=0x00005028 w1=0x20010000) → new off=0x5028 val=0x0 (w0=0x00005028 w1=0x20010000)
+[15004.639944] rocket fde40000.npu: OP_EN_PATCH[119]: old(w0=0x00005034 w1=0x20010000) → new off=0x5034 val=0x0 (w0=0x00005034 w1=0x20010000)
+[15004.641062] rocket fde40000.npu: OP_EN_PATCH[121]: old(w0=0x00005040 w1=0x20010000) → new off=0x5040 val=0x0 (w0=0x00005040 w1=0x20010000)
+[15004.642166] rocket fde40000.npu: OP_EN_PATCH[122]: old(w0=0x40005044 w1=0x20010000) → new off=0x5044 val=0x4000 (w0=0x40005044 w1=0x20010000)
+[15004.643305] rocket fde40000.npu: OP_EN_PATCH[123]: old(w0=0x00005048 w1=0x20010000) → new off=0x5048 val=0x0 (w0=0x00005048 w1=0x20010000)
+[15004.644421] rocket fde40000.npu: OP_EN_PATCH[124]: old(w0=0x0000504c w1=0x20010000) → new off=0x504c val=0x0 (w0=0x0000504c w1=0x20010000)
+[15004.645524] rocket fde40000.npu: OP_EN_PATCH[133]: old(w0=0x00005064 w1=0x20010000) → new off=0x5064 val=0x0 (w0=0x00005064 w1=0x20010000)
+[15004.646623] rocket fde40000.npu: OP_EN_PATCH[134]: old(w0=0x01015068 w1=0x20010101) → new off=0x5068 val=0x1010101 (w0=0x01015068 w1=0x20010101)
+[15004.647768] rocket fde40000.npu: OP_EN_PATCH: patched 69 entries
+[15004.649228] iova: 0x00000000ff900000 already mapped to 0x00000000ec900000 cannot remap to phys: 0x00000000ec100000 prot: 0x3
+[15004.650222] rocket fde40000.npu: TASK_DESC v4: dma_map_single 1MB failed
+[15004.650858] rocket fde40000.npu: CLK_RATES: scmi=1000000000 clk=600000000 aclk=600000000 hclk=150000000
+[15004.651684] rocket fde40000.npu: HW_SUBMIT: regcmd=0xffe7d000 count=135 scale=1 AMOUNTS=0x0000008a TASKST=0x00007000 INT_MASK=0x00010300 INT_CLEAR=0x00000000 INT_STATUS=0x00000000 INT_RAWST=0x00000000
+[15004.653274] PBLK: iommu_dev=ffff0001009b6010 attached=ffff0001088604e0 domain=ffff00010948b330
+[15004.654051] rocket fde40000.npu: IOMMU_EXT: AUTO_GATING=0x00000003 INT_MASK=0x00000003 INT_STATUS=0x00000000
+[15004.654919] XDBG_PREOP_IOVA_ENTRY
+[15004.655214] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xffe7d000 SW_PA=0x4253000
+[15004.655872] rocket fde40000.npu: REGCMD_DRAM[0..7]: 000e1004 02010000 000e2004 04010000 000e3004 08010000 000e4004 10010000
+[15004.656864] rocket fde40000.npu: REGCMD_FULL[0]: off=0x1004 val=0x0000000e
+[15004.657472] rocket fde40000.npu: REGCMD_FULL[1]: off=0x2004 val=0x0000000e
+[15004.658075] rocket fde40000.npu: REGCMD_FULL[2]: off=0x3004 val=0x0000000e
+[15004.658678] rocket fde40000.npu: REGCMD_FULL[3]: off=0x4004 val=0x0000000e
+[15004.659280] rocket fde40000.npu: REGCMD_FULL[4]: off=0x5004 val=0x0000000e
+[15004.659881] rocket fde40000.npu: REGCMD_FULL[5]: off=0x1040 val=0x00000017
+[15004.660498] rocket fde40000.npu: REGCMD_FULL[6]: off=0x1104 val=0x00000000
+[15004.661103] rocket fde40000.npu: REGCMD_FULL[7]: off=0x200c val=0x00000001
+[15004.661706] rocket fde40000.npu: REGCMD_IOVA[8]: off=0x100c val=0x0000a000
+[15004.662309] rocket fde40000.npu: REGCMD_FULL[8]: off=0x100c val=0x0000a000
+[15004.662931] rocket fde40000.npu: REGCMD_FULL[9]: off=0x1010 val=0x00000040
+[15004.663537] rocket fde40000.npu: REGCMD_FULL[10]: off=0x1014 val=0x00000012
+[15004.664147] rocket fde40000.npu: REGCMD_FULL[11]: off=0x1018 val=0x0003de00
+[15004.664779] rocket fde40000.npu: REGCMD_FULL[12]: off=0x1020 val=0x0280002c
+[15004.665393] rocket fde40000.npu: REGCMD_FULL[13]: off=0x1024 val=0x00020008
+[15004.666003] rocket fde40000.npu: REGCMD_FULL[14]: off=0x1028 val=0x00000140
+[15004.666613] rocket fde40000.npu: REGCMD_FULL[15]: off=0x102c val=0x00001b80
+[15004.667225] rocket fde40000.npu: REGCMD_FULL[16]: off=0x1030 val=0x00000180
+[15004.667851] rocket fde40000.npu: REGCMD_FULL[17]: off=0x1034 val=0x00000020
+[15004.668504] rocket fde40000.npu: REGCMD_FULL[18]: off=0x1038 val=0x0202000c
+[15004.669136] rocket fde40000.npu: REGCMD_FULL[19]: off=0x1040 val=0x00000017
+[15004.669750] rocket fde40000.npu: REGCMD_FULL[20]: off=0x1044 val=0x028000a0
+[15004.670362] rocket fde40000.npu: REGCMD_FULL[21]: off=0x104c val=0x000e38e1
+[15004.670972] rocket fde40000.npu: REGCMD_FULL[22]: off=0x1050 val=0x4000ff80
+[15004.671582] rocket fde40000.npu: REGCMD_FULL[23]: off=0x1054 val=0x4000ff80
+[15004.672192] rocket fde40000.npu: REGCMD_FULL[24]: off=0x1058 val=0x4000ff80
+[15004.672824] rocket fde40000.npu: REGCMD_IOVA[25]: off=0x105c val=0x00010000
+[15004.673440] rocket fde40000.npu: REGCMD_FULL[25]: off=0x105c val=0x00010000
+[15004.674050] rocket fde40000.npu: REGCMD_FULL[26]: off=0x1060 val=0x00000000
+[15004.674660] rocket fde40000.npu: REGCMD_FULL[27]: off=0x1064 val=0x00000000
+[15004.675271] rocket fde40000.npu: REGCMD_FULL[28]: off=0x1068 val=0x00000011
+[15004.675881] rocket fde40000.npu: REGCMD_FULL[29]: off=0x1070 val=0xfff00000
+[15004.676507] rocket fde40000.npu: REGCMD_FULL[30]: off=0x1074 val=0x00000000
+[15004.677124] rocket fde40000.npu: REGCMD_FULL[31]: off=0x1078 val=0x00171c07
+[15004.677734] rocket fde40000.npu: REGCMD_FULL[32]: off=0x107c val=0x000000f0
+[15004.678344] rocket fde40000.npu: REGCMD_IOVA[33]: off=0x1080 val=0x00064000
+[15004.678955] rocket fde40000.npu: REGCMD_FULL[33]: off=0x1080 val=0x00064000
+[15004.679566] rocket fde40000.npu: REGCMD_FULL[34]: off=0x1084 val=0x0280002c
+[15004.680175] rocket fde40000.npu: REGCMD_FULL[35]: off=0x1088 val=0x00000008
+[15004.680805] rocket fde40000.npu: REGCMD_FULL[36]: off=0x1100 val=0x00000000
+[15004.681422] rocket fde40000.npu: REGCMD_FULL[37]: off=0x1104 val=0x00000000
+[15004.682032] rocket fde40000.npu: REGCMD_FULL[38]: off=0x1110 val=0xfff40000
+[15004.682642] rocket fde40000.npu: REGCMD_FULL[39]: off=0x1114 val=0x00000000
+[15004.683251] rocket fde40000.npu: REGCMD_FULL[40]: off=0x1118 val=0x00000000
+[15004.683861] rocket fde40000.npu: REGCMD_FULL[41]: off=0x111c val=0x00000000
+[15004.684487] rocket fde40000.npu: REGCMD_FULL[42]: off=0x1120 val=0x00000000
+[15004.685102] rocket fde40000.npu: REGCMD_FULL[43]: off=0x1124 val=0x00000000
+[15004.685713] rocket fde40000.npu: REGCMD_FULL[44]: off=0x1128 val=0x00000000
+[15004.686323] rocket fde40000.npu: REGCMD_FULL[45]: off=0x112c val=0x00000000
+[15004.686933] rocket fde40000.npu: REGCMD_FULL[46]: off=0x1130 val=0x00000000
+[15004.687544] rocket fde40000.npu: REGCMD_FULL[47]: off=0x1134 val=0x00000000
+[15004.688155] rocket fde40000.npu: REGCMD_FULL[48]: off=0x1138 val=0x00000000
+[15004.688815] rocket fde40000.npu: REGCMD_FULL[49]: off=0x113c val=0x00000000
+[15004.689432] rocket fde40000.npu: REGCMD_FULL[50]: off=0x1140 val=0x00000000
+[15004.690043] rocket fde40000.npu: REGCMD_FULL[51]: off=0x1144 val=0x00000000
+[15004.690651] rocket fde40000.npu: REGCMD_FULL[52]: off=0x1148 val=0x00000000
+[15004.691259] rocket fde40000.npu: REGCMD_FULL[53]: off=0x114c val=0x00000000
+[15004.691869] rocket fde40000.npu: REGCMD_FULL[54]: off=0x1180 val=0x00000000
+[15004.692496] rocket fde40000.npu: REGCMD_FULL[55]: off=0x1184 val=0x00000000
+[15004.693113] rocket fde40000.npu: REGCMD_FULL[56]: off=0x3010 val=0x00000000
+[15004.693722] rocket fde40000.npu: REGCMD_FULL[57]: off=0x3014 val=0x00000000
+[15004.694331] rocket fde40000.npu: REGCMD_FULL[58]: off=0x3018 val=0x0000000f
+[15004.694940] rocket fde40000.npu: REGCMD_FULL[59]: off=0x301c val=0x00000000
+[15004.695549] rocket fde40000.npu: REGCMD_FULL[60]: off=0x3030 val=0x00000000
+[15004.696158] rocket fde40000.npu: REGCMD_FULL[61]: off=0x400c val=0x00000108
+[15004.696778] rocket fde40000.npu: REGCMD_FULL[62]: off=0x4010 val=0x00000000
+[15004.697389] rocket fde40000.npu: REGCMD_FULL[63]: off=0x4014 val=0x00000000
+[15004.697999] rocket fde40000.npu: REGCMD_FULL[64]: off=0x4020 val=0xffe80000
+[15004.698609] rocket fde40000.npu: REGCMD_FULL[65]: off=0x4024 val=0x00000000
+[15004.699217] rocket fde40000.npu: REGCMD_FULL[66]: off=0x4030 val=0x00000000
+[15004.699826] rocket fde40000.npu: REGCMD_FULL[67]: off=0x4034 val=0x00000000
+[15004.700446] rocket fde40000.npu: REGCMD_FULL[68]: off=0x4038 val=0x00000000
+[15004.701057] rocket fde40000.npu: REGCMD_FULL[69]: off=0x403c val=0x00000000
+[15004.701667] rocket fde40000.npu: REGCMD_FULL[70]: off=0x4040 val=0x00000000
+[15004.702279] rocket fde40000.npu: REGCMD_FULL[71]: off=0x4044 val=0x00000000
+[15004.702889] rocket fde40000.npu: REGCMD_FULL[72]: off=0x4048 val=0x00000000
+[15004.703498] rocket fde40000.npu: REGCMD_FULL[73]: off=0x404c val=0x00000000
+[15004.704108] rocket fde40000.npu: REGCMD_FULL[74]: off=0x4050 val=0x00000124
+[15004.704739] rocket fde40000.npu: REGCMD_FULL[75]: off=0x4054 val=0x0000fffb
+[15004.705356] rocket fde40000.npu: REGCMD_FULL[76]: off=0x4058 val=0x0000007f
+[15004.705965] rocket fde40000.npu: REGCMD_FULL[77]: off=0x405c val=0x00270027
+[15004.706575] rocket fde40000.npu: REGCMD_FULL[78]: off=0x4060 val=0x00000053
+[15004.707185] rocket fde40000.npu: REGCMD_FULL[79]: off=0x4064 val=0x00000000
+[15004.707795] rocket fde40000.npu: REGCMD_FULL[80]: off=0x4068 val=0x00000000
+[15004.708417] rocket fde40000.npu: REGCMD_FULL[81]: off=0x406c val=0x00000000
+[15004.709030] rocket fde40000.npu: REGCMD_FULL[82]: off=0x4070 val=0x00000383
+[15004.709640] rocket fde40000.npu: REGCMD_FULL[83]: off=0x4074 val=0x00000000
+[15004.710251] rocket fde40000.npu: REGCMD_FULL[84]: off=0x4078 val=0x00000001
+[15004.710862] rocket fde40000.npu: REGCMD_FULL[85]: off=0x407c val=0x00000000
+[15004.711473] rocket fde40000.npu: REGCMD_FULL[86]: off=0x4080 val=0xffffff80
+[15004.712082] rocket fde40000.npu: REGCMD_FULL[87]: off=0x4084 val=0x00005325
+[15004.712709] rocket fde40000.npu: REGCMD_FULL[88]: off=0x4088 val=0x0000000e
+[15004.713326] rocket fde40000.npu: REGCMD_FULL[89]: off=0x4090 val=0x00000000
+[15004.713936] rocket fde40000.npu: REGCMD_FULL[90]: off=0x4094 val=0x00000000
+[15004.714545] rocket fde40000.npu: REGCMD_FULL[91]: off=0x4098 val=0x00000000
+[15004.715155] rocket fde40000.npu: REGCMD_FULL[92]: off=0x409c val=0x00000000
+[15004.715765] rocket fde40000.npu: REGCMD_FULL[93]: off=0x40a0 val=0x00000000
+[15004.716389] rocket fde40000.npu: REGCMD_FULL[94]: off=0x40a4 val=0x00000000
+[15004.717004] rocket fde40000.npu: REGCMD_FULL[95]: off=0x40a8 val=0x00000000
+[15004.717615] rocket fde40000.npu: REGCMD_FULL[96]: off=0x40ac val=0x00000000
+[15004.718225] rocket fde40000.npu: REGCMD_FULL[97]: off=0x40c0 val=0x0000c800
+[15004.718835] rocket fde40000.npu: REGCMD_FULL[98]: off=0x40c4 val=0x00000000
+[15004.719445] rocket fde40000.npu: REGCMD_FULL[99]: off=0x4100 val=0x00000000
+[15004.720055] rocket fde40000.npu: REGCMD_FULL[100]: off=0x4104 val=0x00000000
+[15004.720686] rocket fde40000.npu: REGCMD_FULL[101]: off=0x4108 val=0x00000000
+[15004.721307] rocket fde40000.npu: REGCMD_FULL[102]: off=0x410c val=0x00000000
+[15004.721923] rocket fde40000.npu: REGCMD_FULL[103]: off=0x4110 val=0x00000000
+[15004.722540] rocket fde40000.npu: REGCMD_FULL[104]: off=0x4114 val=0x00000000
+[15004.723157] rocket fde40000.npu: REGCMD_FULL[105]: off=0x4118 val=0x00000000
+[15004.723774] rocket fde40000.npu: REGCMD_FULL[106]: off=0x411c val=0x00000000
+[15004.724404] rocket fde40000.npu: REGCMD_FULL[107]: off=0x4120 val=0x00000000
+[15004.725027] rocket fde40000.npu: REGCMD_FULL[108]: off=0x4124 val=0x00000000
+[15004.725645] rocket fde40000.npu: REGCMD_FULL[109]: off=0x4128 val=0x00000000
+[15004.726262] rocket fde40000.npu: REGCMD_FULL[110]: off=0x412c val=0x00000000
+[15004.726879] rocket fde40000.npu: REGCMD_FULL[111]: off=0x500c val=0x00000027
+[15004.727497] rocket fde40000.npu: REGCMD_FULL[112]: off=0x5010 val=0x00000000
+[15004.728113] rocket fde40000.npu: REGCMD_FULL[113]: off=0x5014 val=0x00000000
+[15004.728742] rocket fde40000.npu: REGCMD_FULL[114]: off=0x5018 val=0x00000000
+[15004.729363] rocket fde40000.npu: REGCMD_FULL[115]: off=0x501c val=0x00000000
+[15004.729985] rocket fde40000.npu: REGCMD_FULL[116]: off=0x5020 val=0xfff3f000
+[15004.730604] rocket fde40000.npu: REGCMD_FULL[117]: off=0x5028 val=0x00000000
+[15004.731222] rocket fde40000.npu: REGCMD_FULL[118]: off=0x502c val=0x00000000
+[15004.731839] rocket fde40000.npu: REGCMD_FULL[119]: off=0x5034 val=0x00000000
+[15004.732478] rocket fde40000.npu: REGCMD_FULL[120]: off=0x5038 val=0x00000000
+[15004.733104] rocket fde40000.npu: REGCMD_OP[120]: off=0x5038 val=0x00000000 routing=0x20
+[15004.733804] rocket fde40000.npu: REGCMD_FULL[121]: off=0x5040 val=0x00000000
+[15004.734421] rocket fde40000.npu: REGCMD_OP[121]: off=0x5040 val=0x00000000 routing=0x20
+[15004.735122] rocket fde40000.npu: REGCMD_IOVA[122]: off=0x5044 val=0x00004000
+[15004.735740] rocket fde40000.npu: REGCMD_FULL[122]: off=0x5044 val=0x00004000
+[15004.736369] rocket fde40000.npu: REGCMD_OP[122]: off=0x5044 val=0x00004000 routing=0x20
+[15004.737071] rocket fde40000.npu: REGCMD_FULL[123]: off=0x5048 val=0x00000000
+[15004.737689] rocket fde40000.npu: REGCMD_OP[123]: off=0x5048 val=0x00000000 routing=0x20
+[15004.738389] rocket fde40000.npu: REGCMD_FULL[124]: off=0x504c val=0x00000000
+[15004.739006] rocket fde40000.npu: REGCMD_OP[124]: off=0x504c val=0x00000000 routing=0x20
+[15004.739708] rocket fde40000.npu: REGCMD_FULL[125]: off=0x5064 val=0x00000000
+[15004.740324] rocket fde40000.npu: REGCMD_OP[125]: off=0x5064 val=0x00000000 routing=0x20
+[15004.741046] rocket fde40000.npu: REGCMD_FULL[126]: off=0x5068 val=0x01010101
+[15004.741683] rocket fde40000.npu: REGCMD_OP[126]: off=0x5068 val=0x01010101 routing=0x20
+[15004.742384] rocket fde40000.npu: REGCMD_FULL[127]: off=0x506c val=0x00000000
+[15004.743001] rocket fde40000.npu: REGCMD_OP[127]: off=0x506c val=0x00000000 routing=0x20
+[15004.743701] rocket fde40000.npu: REGCMD_OP[128]: off=0x0000 val=0x00000000 routing=0x00
+[15004.744415] rocket fde40000.npu: REGCMD_OP[129]: off=0x0014 val=0x00000000 routing=0x01
+[15004.745120] rocket fde40000.npu: REGCMD_OP[130]: off=0x0000 val=0x00000000 routing=0x00
+[15004.745820] rocket fde40000.npu: REGCMD_OP[131]: off=0x0000 val=0x00000000 routing=0x02
+[15004.746519] rocket fde40000.npu: REGCMD_FULL[132]: off=0x300c val=0x00000000
+[15004.747136] rocket fde40000.npu: REGCMD_OP[132]: off=0x300c val=0x00000000 routing=0x08
+[15004.747837] rocket fde40000.npu: REGCMD_FULL[133]: off=0x5064 val=0x00000000
+[15004.748471] rocket fde40000.npu: REGCMD_OP[133]: off=0x5064 val=0x00000000 routing=0x20
+[15004.749179] rocket fde40000.npu: REGCMD_FULL[134]: off=0x5068 val=0x01010101
+[15004.749796] rocket fde40000.npu: REGCMD_OP[134]: off=0x5068 val=0x01010101 routing=0x20
+[15004.750513] rocket fde40000.npu: OUTPUT_BO_PRE iova=0xffe80000: 00 00 00 00 00 00 00 00
+[15004.751218] rocket fde40000.npu: INPUT_BO iova=0xfff00000 pa=0x41bd000: 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81
+[15004.752165] rocket fde40000.npu: WEIGHT_BO[000] iova=0xfff40000: e9 0a c9 04 23 fc 0d da 1b f0 59 14 05 35 44 26
+[15004.753079] rocket fde40000.npu: WEIGHT_BO[010] iova=0xfff40000: 21 f5 f4 fe 15 e4 d5 ef ee f9 2e 1a f0 17 d3 f8
+[15004.753979] rocket fde40000.npu: WEIGHT_BO[020] iova=0xfff40000: cf e7 cf 21 38 bf 1e 2c e9 0a e0 eb 33 0f fd e4
+[15004.754871] rocket fde40000.npu: WEIGHT_BO[030] iova=0xfff40000: ea ea 09 06 ff 1e 24 23 f1 23 0c e9 15 24 1c 03
+[15004.755762] rocket fde40000.npu: WEIGHT_BO[040] iova=0xfff40000: f4 19 03 e8 02 2f fa fc 18 0b fd ee e1 ff fa e8
+[15004.756663] rocket fde40000.npu: WEIGHT_BO[050] iova=0xfff40000: 09 44 fc 1d f7 df f2 fd ea 0f b0 d0 f8 cb 1c 1e
+[15004.757557] rocket fde40000.npu: WEIGHT_BO[060] iova=0xfff40000: e2 0c f9 ec e6 fa e3 e0 f8 25 eb d7 ca 19 10 12
+[15004.758448] rocket fde40000.npu: WEIGHT_BO[070] iova=0xfff40000: 21 14 e2 df 31 ef 10 d3 f8 00 1f a5 00 2c ff df
+[15004.759339] rocket fde40000.npu: WEIGHT_BO[080] iova=0xfff40000: 37 1a 23 0b b9 0f f4 fd 0c 0f e1 dc ec 25 2f 2a
+[15004.760230] rocket fde40000.npu: WEIGHT_BO[090] iova=0xfff40000: fb 07 45 04 fe 0d e9 1c 60 13 0a e3 f7 f9 23 f3
+[15004.761147] rocket fde40000.npu: WEIGHT_BO[0a0] iova=0xfff40000: f0 01 31 13 d9 ff f1 16 e0 09 02 10 e8 e5 10 c5
+[15004.762044] rocket fde40000.npu: WEIGHT_BO[0b0] iova=0xfff40000: 1a 07 ee eb 40 f9 ee 05 0a 0f e0 37 0a de f3 d6
+[15004.762936] rocket fde40000.npu: WEIGHT_BO[0c0] iova=0xfff40000: 13 24 26 20 09 12 be 0b 19 00 f3 0f 2b de fd 01
+[15004.763828] rocket fde40000.npu: WEIGHT_BO[0d0] iova=0xfff40000: df 18 11 04 ee 32 0c f3 15 15 20 28 fe ee 06 25
+[15004.764739] rocket fde40000.npu: WEIGHT_BO[0e0] iova=0xfff40000: 17 07 c3 e0 e4 f7 e4 0b 13 ea 12 21 fa e9 ad 0f
+[15004.765637] rocket fde40000.npu: WEIGHT_BO[0f0] iova=0xfff40000: 22 0c 01 08 fe 1d 01 f5 2e 11 31 07 fa e9 0c 0c
+[15004.766530] rocket fde40000.npu: WEIGHT_BO[100] iova=0xfff40000: c7 d6 1f e5 ec 32 1b c3 06 fc 0b c1 30 f5 e4 40
+[15004.767421] rocket fde40000.npu: WEIGHT_BO[110] iova=0xfff40000: 1b f0 ea 0f f5 35 f6 33 d8 15 f2 01 32 35 1f e2
+[15004.768312] rocket fde40000.npu: WEIGHT_BO[120] iova=0xfff40000: 10 14 ff 0e 09 04 ea ff d4 a6 05 0c d0 b5 e9 0e
+[15004.769222] rocket fde40000.npu: WEIGHT_BO[130] iova=0xfff40000: ff f0 fa 05 19 0e f3 3d fb 0b cc d7 2e 1f 18 0f
+[15004.770117] rocket fde40000.npu: WEIGHT_BO[140] iova=0xfff40000: e6 13 17 df f1 16 f9 d6 3f 04 d7 d9 10 1c 3c 37
+[15004.771011] rocket fde40000.npu: WEIGHT_BO[150] iova=0xfff40000: 12 f1 fa 0d 04 2f e8 13 0e cf eb 03 f1 02 f6 26
+[15004.771902] rocket fde40000.npu: WEIGHT_BO[160] iova=0xfff40000: f0 0f ee 2d 18 cc dd 05 26 24 b6 1a 48 f1 25 f1
+[15004.772806] rocket fde40000.npu: WEIGHT_BO[170] iova=0xfff40000: e3 0e 19 30 d0 0c e5 06 f8 22 08 16 d3 fb 0c 02
+[15004.773701] rocket fde40000.npu: WEIGHT_BO[180] iova=0xfff40000: fe fc df ce f8 04 15 02 1f 1e fe 02 21 0d 32 05
+[15004.774592] rocket fde40000.npu: WEIGHT_BO[190] iova=0xfff40000: c5 e3 24 da e0 de 20 f0 20 0d ee 11 13 c8 f0 1c
+[15004.775485] rocket fde40000.npu: WEIGHT_BO[1a0] iova=0xfff40000: 02 f5 d7 3c fb 10 11 08 e2 ef 33 f7 22 03 17 f0
+[15004.776390] rocket fde40000.npu: WEIGHT_BO[1b0] iova=0xfff40000: e9 28 10 e7 15 38 27 fc 1d e6 32 d4 48 fc 01 f0
+[15004.777287] rocket fde40000.npu: WEIGHT_BO[1c0] iova=0xfff40000: de 30 3c 19 f0 25 bd 2b 2e 16 c7 fe 18 f2 02 dc
+[15004.778178] rocket fde40000.npu: WEIGHT_BO[1d0] iova=0xfff40000: 12 26 08 25 16 2e 0b fb ee 44 e5 f8 3e 08 33 fb
+[15004.779069] rocket fde40000.npu: WEIGHT_BO[1e0] iova=0xfff40000: 11 26 f1 0e fd 00 f6 20 02 e9 0e 1c 11 eb 0b 2b
+[15004.779960] rocket fde40000.npu: WEIGHT_BO[1f0] iova=0xfff40000: 23 fb f9 e7 0e f0 c0 19 16 3b f4 ed 15 00 ed 13
+[15004.780866] rocket fde40000.npu: REGCMD_SCAN: count=135 CNA_OP=0 CORE_OP=0 DPU_OP=0 PPU_OP=0 LAST_OFF=0x5068 LAST_VAL=0x01010101
+[15004.781889] rocket fde40000.npu: DTE_DRAM: [0]=0x0417a001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[15004.782705] rocket fde40000.npu: PTE_DRAM: table=0x0417a000 idx=0x27d PTE=0x00000000 (expected_pa=0x4253000)
+[15004.783565] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15004.784905] rocket fde40000.npu: PRE_OP CNA: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000 CBUF_CON0=00000044 DCOMP_CTRL=00000000
+[15004.785971] rocket fde40000.npu: PRE_OP CORE: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000
+[15004.786766] rocket fde40000.npu: PERF_CLR(pre-OP): clr=00000101 dt_wr=00000000 dt_rd=00000000 wt_rd=00000000
+[15004.787928] rocket fde40000.npu: AFTER_OPEN_ENGAGE(bit16-ever): CNA=00000000 CMAC=00000000 CORE=00000000 DPU=00000000 RDMA=00000000
+[15004.788984] rocket fde40000.npu: VMIN: single OP_EN pulse
+[15004.789474] rocket fde40000.npu: AT_OPEN CNA: OP_EN=00000000  CORE: OP_EN=00000000  DPU: OP_EN=00000000  DPU_RDMA: OP_EN=00000000
+[15004.790504] rocket fde40000.npu: AT_OPEN PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.791981] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000019 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[15004.792899] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000019 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000
+[15004.793927] rocket fde40000.npu: AT50US CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15004.794990] rocket fde40000.npu: AT50US CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.795787] rocket fde40000.npu: AT50US PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.804378] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15004.805424] rocket fde40000.npu: AT1MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15004.806334] rocket fde40000.npu: AT1MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.807130] rocket fde40000.npu: AT1MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.816400] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15004.817442] rocket fde40000.npu: AT5MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15004.818347] rocket fde40000.npu: AT5MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.819140] rocket fde40000.npu: AT5MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.832433] rocket fde40000.npu: AT10MS: PC_RS=0x00000000 PC_ISTATUS=0x00000000 PC_OPENA=0x00000000 PC_BASE=0xffe7d000 PC_AMOUNTS=0x0000008a PC_TASKST=0x0000f000
+[15004.833708] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[15004.834907] rocket fde40000.npu: AT10MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15004.836418] rocket fde40000.npu: AT10MS PCDUMP: VER=00000000 VERNUM=00000000 OPENA=00000000 BASE=ffe7d000 AMOUNTS=0000008a MASK=00010300 CLEAR=00000000 STATUS=00000000 RAW=00000000 TASKCON=00001001 TASKDMA=00000000 TASKST=0000f000
+[15004.838201] rocket fde40000.npu: AT10MS CNADUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CONV_CON1=0000a000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15004.839460] rocket fde40000.npu: AT10MS CNA_DBG[90-1fc]: 1110=fff40000
+[15004.840051] rocket fde40000.npu: AT10MS CNA_DBG[200-2fc]: 1210=01ff0000 1280=00000078 1284=00200001
+[15004.840872] rocket fde40000.npu: AT10MS COREDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.841705] rocket fde40000.npu: AT10MS CMACDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.842524] rocket fde40000.npu: AT10MS OPEN_C: CMAC[0x200c]=0x1 ACCU[0x300c]=0x0 DPU[0x400c]=0x108 DPU_RDMA[0x500c]=0x27
+[15004.843481] rocket fde40000.npu: AT10MS OPEN_8 (run status): CMAC[0x2008]=0x0 ACCU[0x3008]=0x0 DPU[0x4008]=0x0 DPU_RDMA[0x5008]=0x0 CNA[0x1008]=0x0
+[15004.844655] rocket fde40000.npu: AT10MS PERF_POST: dt_wr(0x8034)=00000000 dt_rd(0x8038)=0000008b wt_rd(0x803c)=00000000 clr(0x8010)=00000101
+[15004.845756] rocket fde40000.npu: AT10MS DPU: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 DST_BASE=ffe80000
+[15004.846659] rocket fde40000.npu: AT10MS DPU_RDMA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15004.847466] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 500c=00000027 5010=00000000 5014=00000000 5018=00000000 501c=00000000 5020=fff3f000
+[15004.848559] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 5024=00000000 5028=00000000 502c=00000000 5030=00000000 5034=00000000 5038=00000000 503c=00000000 5040=00000000
+[15004.849850] rocket fde40000.npu: AT10MS DCOMP_CTRL/REGNUM/ADDR0/AMOUNT0: 0x1100=00000000 0x1104=00000000 0x1110=fff40000 0x1140=00000000
+[15004.850922] rocket fde40000.npu: AT10MS CNA CONV: 0x100c=0000a000 0x1010=00000040 0x1014=00000012 0x1018=0003de00
+[15004.851821] rocket fde40000.npu: AT10MS DATA/WEIGHT: 0x1020=0280002c 0x1024=00020008 0x1028=00000140 0x1030=00000180 0x1034=00000020 0x1038=0202000c
+[15004.853008] ROCKET: after hw_submit
+[15005.088444] rocket fde40000.npu: NPU job timed out
+[15005.088916] rocket fde40000.npu: TIMEOUT PC_RS=0x00000000 TASKST=0x0000f000 IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15005.090104] rocket fde40000.npu: POST_TIMEOUT_CNA: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15005.091590] rocket fde40000.npu: POST_TIMEOUT_CNA_SWAP: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15005.093197] rocket fde40000.npu: ALL_SP CNA(0x1000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=0000a000
+[15005.094165] rocket fde40000.npu: ALL_SP CMAC(0x2000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000001
+[15005.095134] rocket fde40000.npu: ALL_SP ACCU(0x3000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000000
+[15005.096100] rocket fde40000.npu: ALL_SP DPU(0x4000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000108
+[15005.097119] rocket fde40000.npu: ALL_SP RDMA(0x5000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000027
+[15005.098094] rocket fde40000.npu: PERF_POST(dt_wr=DPU output bytes): dt_wr=00000000 dt_rd=0000008b wt_rd=00000000
+[15005.099033] rocket fde40000.npu: WEIGHT_CFG: CBUF_CON0=00000017 CBUF_CON1=028000a0 WSIZE0=00000180 WSIZE1=00000020 WSIZE2=0202000c DMACON0=00171c07 DMACON2=00064000 FEAT_ADDR=fff00000 DCOMP_CTRL=00000000 DCOMP_ADDR0=fff40000 DCOMP_AMT0=00000000
+[15005.101039] rocket fde40000.npu: DPU_CFG: DST_4018=00000000 SIZE_401c=00000000 4020=ffe80000 4024=00000000 4034=00000000 WIN_40b8=00000000 SURF_40c0=0000c800 BIAS_5020=fff3f000
+[15005.102467] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000963dec8b
+[15005.103170] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[15005.103748] rocket fde40000.npu: NOC_DEIDLE: BUS_IDLE_ACK(0x60)=0x000001ea BUS_IDLE_ST(0x68)=0x000001ea PWR_STATUS(0x98)=0x0000007d ret=0
+[15005.104924] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[15005.105505] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[15005.111589] rocket fde40000.npu: CNA_BISECT_T0(post-pm_get): S_STATUS=00000000
+[15005.112238] ROCKET: before hw_submit
+[15005.112582] rocket fde40000.npu: PRE_SUBMIT_RESET: skipped (test)
+[15005.113150] rocket fde40000.npu: PROBE: zeroed DPU OP_EN, readback=0x0
+[15005.113730] rocket fde40000.npu: MYSTERY_INIT: 0x2004=0x00000000 0x200c=0x00001000
+[15005.114397] rocket fde40000.npu: DPU_BSP: 0x4060=0x53 0x4070=0x383 0x4078=0x0 0x4080=0x0 0x4084=0x1 0x4088=0x0 0x40c0=0x0
+[15005.115373] rocket fde40000.npu: OP_EN_PATCH[5]: old(w0=0x00171040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15005.116522] rocket fde40000.npu: OP_EN_PATCH[6]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15005.117616] rocket fde40000.npu: OP_EN_PATCH[8]: old(w0=0xa000100c w1=0x02010000) → new off=0x100c val=0xa000 (w0=0xa000100c w1=0x02010000)
+[15005.118726] rocket fde40000.npu: OP_EN_PATCH[9]: old(w0=0x00401010 w1=0x02010000) → new off=0x1010 val=0x40 (w0=0x00401010 w1=0x02010000)
+[15005.119821] rocket fde40000.npu: OP_EN_PATCH[10]: old(w0=0x00121014 w1=0x02010000) → new off=0x1014 val=0x12 (w0=0x00121014 w1=0x02010000)
+[15005.120947] rocket fde40000.npu: OP_EN_PATCH[11]: old(w0=0xde001018 w1=0x02010003) → new off=0x1018 val=0x3de00 (w0=0xde001018 w1=0x02010003)
+[15005.122081] rocket fde40000.npu: OP_EN_PATCH[12]: old(w0=0x002c1020 w1=0x02010280) → new off=0x1020 val=0x280002c (w0=0x002c1020 w1=0x02010280)
+[15005.123222] rocket fde40000.npu: OP_EN_PATCH[13]: old(w0=0x00081024 w1=0x02010002) → new off=0x1024 val=0x20008 (w0=0x00081024 w1=0x02010002)
+[15005.124382] rocket fde40000.npu: OP_EN_PATCH[14]: old(w0=0x01401028 w1=0x02010000) → new off=0x1028 val=0x140 (w0=0x01401028 w1=0x02010000)
+[15005.125501] rocket fde40000.npu: OP_EN_PATCH[15]: old(w0=0x1b80102c w1=0x02010000) → new off=0x102c val=0x1b80 (w0=0x1b80102c w1=0x02010000)
+[15005.126620] rocket fde40000.npu: OP_EN_PATCH[16]: old(w0=0x01801030 w1=0x02010000) → new off=0x1030 val=0x180 (w0=0x01801030 w1=0x02010000)
+[15005.127730] rocket fde40000.npu: OP_EN_PATCH[17]: old(w0=0x00201034 w1=0x02010000) → new off=0x1034 val=0x20 (w0=0x00201034 w1=0x02010000)
+[15005.128850] rocket fde40000.npu: OP_EN_PATCH[18]: old(w0=0x000c1038 w1=0x02010202) → new off=0x1038 val=0x202000c (w0=0x000c1038 w1=0x02010202)
+[15005.131213] rocket fde40000.npu: OP_EN_PATCH[19]: old(w0=0x00171040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15005.132339] rocket fde40000.npu: OP_EN_PATCH[20]: old(w0=0x00a01044 w1=0x02010280) → new off=0x1044 val=0x28000a0 (w0=0x00a01044 w1=0x02010280)
+[15005.133533] rocket fde40000.npu: OP_EN_PATCH[21]: old(w0=0x38e1104c w1=0x0201000e) → new off=0x104c val=0xe38e1 (w0=0x38e1104c w1=0x0201000e)
+[15005.134665] rocket fde40000.npu: OP_EN_PATCH[22]: old(w0=0xff801050 w1=0x02014000) → new off=0x1050 val=0x4000ff80 (w0=0xff801050 w1=0x02014000)
+[15005.135813] rocket fde40000.npu: OP_EN_PATCH[23]: old(w0=0xff801054 w1=0x02014000) → new off=0x1054 val=0x4000ff80 (w0=0xff801054 w1=0x02014000)
+[15005.136995] rocket fde40000.npu: OP_EN_PATCH[24]: old(w0=0xff801058 w1=0x02014000) → new off=0x1058 val=0x4000ff80 (w0=0xff801058 w1=0x02014000)
+[15005.138155] rocket fde40000.npu: OP_EN_PATCH[25]: old(w0=0x0000105c w1=0x02010001) → new off=0x105c val=0x10000 (w0=0x0000105c w1=0x02010001)
+[15005.139279] rocket fde40000.npu: OP_EN_PATCH[26]: old(w0=0x00001060 w1=0x02010000) → new off=0x1060 val=0x0 (w0=0x00001060 w1=0x02010000)
+[15005.140387] rocket fde40000.npu: OP_EN_PATCH[27]: old(w0=0x00001064 w1=0x02010000) → new off=0x1064 val=0x0 (w0=0x00001064 w1=0x02010000)
+[15005.141481] rocket fde40000.npu: OP_EN_PATCH[30]: old(w0=0x00001074 w1=0x02010000) → new off=0x1074 val=0x0 (w0=0x00001074 w1=0x02010000)
+[15005.142575] rocket fde40000.npu: OP_EN_PATCH[31]: old(w0=0x1c071078 w1=0x02010017) → new off=0x1078 val=0x171c07 (w0=0x1c071078 w1=0x02010017)
+[15005.143705] rocket fde40000.npu: OP_EN_PATCH[32]: old(w0=0x00f0107c w1=0x02010000) → new off=0x107c val=0xf0 (w0=0x00f0107c w1=0x02010000)
+[15005.144818] rocket fde40000.npu: OP_EN_PATCH[33]: old(w0=0x40001080 w1=0x02010006) → new off=0x1080 val=0x64000 (w0=0x40001080 w1=0x02010006)
+[15005.145941] rocket fde40000.npu: OP_EN_PATCH[34]: old(w0=0x002c1084 w1=0x02010280) → new off=0x1084 val=0x280002c (w0=0x002c1084 w1=0x02010280)
+[15005.147081] rocket fde40000.npu: OP_EN_PATCH[35]: old(w0=0x00081088 w1=0x02010000) → new off=0x1088 val=0x8 (w0=0x00081088 w1=0x02010000)
+[15005.148174] rocket fde40000.npu: OP_EN_PATCH[36]: old(w0=0x00001100 w1=0x02010000) → new off=0x1100 val=0x0 (w0=0x00001100 w1=0x02010000)
+[15005.149302] rocket fde40000.npu: OP_EN_PATCH[37]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15005.150409] rocket fde40000.npu: OP_EN_PATCH[39]: old(w0=0x00001114 w1=0x02010000) → new off=0x1114 val=0x0 (w0=0x00001114 w1=0x02010000)
+[15005.151507] rocket fde40000.npu: OP_EN_PATCH[40]: old(w0=0x00001118 w1=0x02010000) → new off=0x1118 val=0x0 (w0=0x00001118 w1=0x02010000)
+[15005.152631] rocket fde40000.npu: OP_EN_PATCH[41]: old(w0=0x0000111c w1=0x02010000) → new off=0x111c val=0x0 (w0=0x0000111c w1=0x02010000)
+[15005.153734] rocket fde40000.npu: OP_EN_PATCH[42]: old(w0=0x00001120 w1=0x02010000) → new off=0x1120 val=0x0 (w0=0x00001120 w1=0x02010000)
+[15005.154831] rocket fde40000.npu: OP_EN_PATCH[43]: old(w0=0x00001124 w1=0x02010000) → new off=0x1124 val=0x0 (w0=0x00001124 w1=0x02010000)
+[15005.155926] rocket fde40000.npu: OP_EN_PATCH[44]: old(w0=0x00001128 w1=0x02010000) → new off=0x1128 val=0x0 (w0=0x00001128 w1=0x02010000)
+[15005.157048] rocket fde40000.npu: OP_EN_PATCH[45]: old(w0=0x0000112c w1=0x02010000) → new off=0x112c val=0x0 (w0=0x0000112c w1=0x02010000)
+[15005.158156] rocket fde40000.npu: OP_EN_PATCH[46]: old(w0=0x00001130 w1=0x02010000) → new off=0x1130 val=0x0 (w0=0x00001130 w1=0x02010000)
+[15005.159256] rocket fde40000.npu: OP_EN_PATCH[47]: old(w0=0x00001134 w1=0x02010000) → new off=0x1134 val=0x0 (w0=0x00001134 w1=0x02010000)
+[15005.160379] rocket fde40000.npu: OP_EN_PATCH[48]: old(w0=0x00001138 w1=0x02010000) → new off=0x1138 val=0x0 (w0=0x00001138 w1=0x02010000)
+[15005.161488] rocket fde40000.npu: OP_EN_PATCH[49]: old(w0=0x0000113c w1=0x02010000) → new off=0x113c val=0x0 (w0=0x0000113c w1=0x02010000)
+[15005.162586] rocket fde40000.npu: OP_EN_PATCH[50]: old(w0=0x00001140 w1=0x02010000) → new off=0x1140 val=0x0 (w0=0x00001140 w1=0x02010000)
+[15005.163695] rocket fde40000.npu: OP_EN_PATCH[51]: old(w0=0x00001144 w1=0x02010000) → new off=0x1144 val=0x0 (w0=0x00001144 w1=0x02010000)
+[15005.164819] rocket fde40000.npu: OP_EN_PATCH[52]: old(w0=0x00001148 w1=0x02010000) → new off=0x1148 val=0x0 (w0=0x00001148 w1=0x02010000)
+[15005.165934] rocket fde40000.npu: OP_EN_PATCH[53]: old(w0=0x0000114c w1=0x02010000) → new off=0x114c val=0x0 (w0=0x0000114c w1=0x02010000)
+[15005.167034] rocket fde40000.npu: OP_EN_PATCH[56]: old(w0=0x00003010 w1=0x08010000) → new off=0x3010 val=0x0 (w0=0x00003010 w1=0x08010000)
+[15005.168131] rocket fde40000.npu: OP_EN_PATCH[57]: old(w0=0x00003014 w1=0x08010000) → new off=0x3014 val=0x0 (w0=0x00003014 w1=0x08010000)
+[15005.169247] rocket fde40000.npu: OP_EN_PATCH[62]: old(w0=0x00004010 w1=0x10010000) → new off=0x4010 val=0x0 (w0=0x00004010 w1=0x10010000)
+[15005.170347] rocket fde40000.npu: OP_EN_PATCH[63]: old(w0=0x00004014 w1=0x10010000) → new off=0x4014 val=0x0 (w0=0x00004014 w1=0x10010000)
+[15005.171440] rocket fde40000.npu: OP_EN_PATCH[65]: old(w0=0x00004024 w1=0x10010000) → new off=0x4024 val=0x0 (w0=0x00004024 w1=0x10010000)
+[15005.172545] rocket fde40000.npu: OP_EN_PATCH[66]: old(w0=0x00004030 w1=0x10010000) → new off=0x4030 val=0x0 (w0=0x00004030 w1=0x10010000)
+[15005.173640] rocket fde40000.npu: OP_EN_PATCH[67]: old(w0=0x00004034 w1=0x10010000) → new off=0x4034 val=0x0 (w0=0x00004034 w1=0x10010000)
+[15005.174733] rocket fde40000.npu: OP_EN_PATCH[68]: old(w0=0x00004038 w1=0x10010000) → new off=0x4038 val=0x0 (w0=0x00004038 w1=0x10010000)
+[15005.175836] rocket fde40000.npu: OP_EN_PATCH[69]: old(w0=0x0000403c w1=0x10010000) → new off=0x403c val=0x0 (w0=0x0000403c w1=0x10010000)
+[15005.176945] rocket fde40000.npu: OP_EN_PATCH[70]: old(w0=0x00004040 w1=0x10010000) → new off=0x4040 val=0x0 (w0=0x00004040 w1=0x10010000)
+[15005.178039] rocket fde40000.npu: OP_EN_PATCH[71]: old(w0=0x00004044 w1=0x10010000) → new off=0x4044 val=0x0 (w0=0x00004044 w1=0x10010000)
+[15005.179131] rocket fde40000.npu: OP_EN_PATCH[72]: old(w0=0x00004048 w1=0x10010000) → new off=0x4048 val=0x0 (w0=0x00004048 w1=0x10010000)
+[15005.180223] rocket fde40000.npu: OP_EN_PATCH[73]: old(w0=0x0000404c w1=0x10010000) → new off=0x404c val=0x0 (w0=0x0000404c w1=0x10010000)
+[15005.181334] rocket fde40000.npu: OP_EN_PATCH[112]: old(w0=0x00005010 w1=0x20010000) → new off=0x5010 val=0x0 (w0=0x00005010 w1=0x20010000)
+[15005.182435] rocket fde40000.npu: OP_EN_PATCH[113]: old(w0=0x00005014 w1=0x20010000) → new off=0x5014 val=0x0 (w0=0x00005014 w1=0x20010000)
+[15005.183534] rocket fde40000.npu: OP_EN_PATCH[115]: old(w0=0x0000501c w1=0x20010000) → new off=0x501c val=0x0 (w0=0x0000501c w1=0x20010000)
+[15005.184676] rocket fde40000.npu: OP_EN_PATCH[117]: old(w0=0x00005028 w1=0x20010000) → new off=0x5028 val=0x0 (w0=0x00005028 w1=0x20010000)
+[15005.185778] rocket fde40000.npu: OP_EN_PATCH[119]: old(w0=0x00005034 w1=0x20010000) → new off=0x5034 val=0x0 (w0=0x00005034 w1=0x20010000)
+[15005.186877] rocket fde40000.npu: OP_EN_PATCH[121]: old(w0=0x00005040 w1=0x20010000) → new off=0x5040 val=0x0 (w0=0x00005040 w1=0x20010000)
+[15005.187976] rocket fde40000.npu: OP_EN_PATCH[122]: old(w0=0x40005044 w1=0x20010000) → new off=0x5044 val=0x4000 (w0=0x40005044 w1=0x20010000)
+[15005.189119] rocket fde40000.npu: OP_EN_PATCH[123]: old(w0=0x00005048 w1=0x20010000) → new off=0x5048 val=0x0 (w0=0x00005048 w1=0x20010000)
+[15005.190221] rocket fde40000.npu: OP_EN_PATCH[124]: old(w0=0x0000504c w1=0x20010000) → new off=0x504c val=0x0 (w0=0x0000504c w1=0x20010000)
+[15005.191321] rocket fde40000.npu: OP_EN_PATCH[133]: old(w0=0x00005064 w1=0x20010000) → new off=0x5064 val=0x0 (w0=0x00005064 w1=0x20010000)
+[15005.192434] rocket fde40000.npu: OP_EN_PATCH[134]: old(w0=0x01015068 w1=0x20010101) → new off=0x5068 val=0x1010101 (w0=0x01015068 w1=0x20010101)
+[15005.193582] rocket fde40000.npu: OP_EN_PATCH: patched 69 entries
+[15005.194999] iova: 0x00000000ff900000 already mapped to 0x00000000ec900000 cannot remap to phys: 0x00000000ec100000 prot: 0x3
+[15005.195985] rocket fde40000.npu: TASK_DESC v4: dma_map_single 1MB failed
+[15005.196623] rocket fde40000.npu: CLK_RATES: scmi=1000000000 clk=600000000 aclk=600000000 hclk=150000000
+[15005.197447] rocket fde40000.npu: HW_SUBMIT: regcmd=0xffe7d000 count=135 scale=1 AMOUNTS=0x0000008a TASKST=0x00007000 INT_MASK=0x00010300 INT_CLEAR=0x00000000 INT_STATUS=0x00000000 INT_RAWST=0x00000000
+[15005.199011] PBLK: iommu_dev=ffff0001009b6010 attached=ffff0001088604e0 domain=ffff00010948b330
+[15005.199786] rocket fde40000.npu: IOMMU_EXT: AUTO_GATING=0x00000003 INT_MASK=0x00000003 INT_STATUS=0x00000000
+[15005.200670] XDBG_PREOP_IOVA_ENTRY
+[15005.200966] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xffe7d000 SW_PA=0x4253000
+[15005.201622] rocket fde40000.npu: REGCMD_DRAM[0..7]: 000e1004 02010000 000e2004 04010000 000e3004 08010000 000e4004 10010000
+[15005.202597] rocket fde40000.npu: REGCMD_FULL[0]: off=0x1004 val=0x0000000e
+[15005.203201] rocket fde40000.npu: REGCMD_FULL[1]: off=0x2004 val=0x0000000e
+[15005.203803] rocket fde40000.npu: REGCMD_FULL[2]: off=0x3004 val=0x0000000e
+[15005.204427] rocket fde40000.npu: REGCMD_FULL[3]: off=0x4004 val=0x0000000e
+[15005.205045] rocket fde40000.npu: REGCMD_FULL[4]: off=0x5004 val=0x0000000e
+[15005.205651] rocket fde40000.npu: REGCMD_FULL[5]: off=0x1040 val=0x00000017
+[15005.206253] rocket fde40000.npu: REGCMD_FULL[6]: off=0x1104 val=0x00000000
+[15005.206857] rocket fde40000.npu: REGCMD_FULL[7]: off=0x200c val=0x00000001
+[15005.207460] rocket fde40000.npu: REGCMD_IOVA[8]: off=0x100c val=0x0000a000
+[15005.208062] rocket fde40000.npu: REGCMD_FULL[8]: off=0x100c val=0x0000a000
+[15005.208677] rocket fde40000.npu: REGCMD_FULL[9]: off=0x1010 val=0x00000040
+[15005.209283] rocket fde40000.npu: REGCMD_FULL[10]: off=0x1014 val=0x00000012
+[15005.209892] rocket fde40000.npu: REGCMD_FULL[11]: off=0x1018 val=0x0003de00
+[15005.210503] rocket fde40000.npu: REGCMD_FULL[12]: off=0x1020 val=0x0280002c
+[15005.211113] rocket fde40000.npu: REGCMD_FULL[13]: off=0x1024 val=0x00020008
+[15005.211731] rocket fde40000.npu: REGCMD_FULL[14]: off=0x1028 val=0x00000140
+[15005.212354] rocket fde40000.npu: REGCMD_FULL[15]: off=0x102c val=0x00001b80
+[15005.212966] rocket fde40000.npu: REGCMD_FULL[16]: off=0x1030 val=0x00000180
+[15005.213575] rocket fde40000.npu: REGCMD_FULL[17]: off=0x1034 val=0x00000020
+[15005.214184] rocket fde40000.npu: REGCMD_FULL[18]: off=0x1038 val=0x0202000c
+[15005.214794] rocket fde40000.npu: REGCMD_FULL[19]: off=0x1040 val=0x00000017
+[15005.215405] rocket fde40000.npu: REGCMD_FULL[20]: off=0x1044 val=0x028000a0
+[15005.216015] rocket fde40000.npu: REGCMD_FULL[21]: off=0x104c val=0x000e38e1
+[15005.216636] rocket fde40000.npu: REGCMD_FULL[22]: off=0x1050 val=0x4000ff80
+[15005.217248] rocket fde40000.npu: REGCMD_FULL[23]: off=0x1054 val=0x4000ff80
+[15005.217860] rocket fde40000.npu: REGCMD_FULL[24]: off=0x1058 val=0x4000ff80
+[15005.218470] rocket fde40000.npu: REGCMD_IOVA[25]: off=0x105c val=0x00010000
+[15005.219080] rocket fde40000.npu: REGCMD_FULL[25]: off=0x105c val=0x00010000
+[15005.219688] rocket fde40000.npu: REGCMD_FULL[26]: off=0x1060 val=0x00000000
+[15005.220300] rocket fde40000.npu: REGCMD_FULL[27]: off=0x1064 val=0x00000000
+[15005.220922] rocket fde40000.npu: REGCMD_FULL[28]: off=0x1068 val=0x00000011
+[15005.221534] rocket fde40000.npu: REGCMD_FULL[29]: off=0x1070 val=0xfff00000
+[15005.222144] rocket fde40000.npu: REGCMD_FULL[30]: off=0x1074 val=0x00000000
+[15005.222754] rocket fde40000.npu: REGCMD_FULL[31]: off=0x1078 val=0x00171c07
+[15005.223364] rocket fde40000.npu: REGCMD_FULL[32]: off=0x107c val=0x000000f0
+[15005.223973] rocket fde40000.npu: REGCMD_IOVA[33]: off=0x1080 val=0x00064000
+[15005.224593] rocket fde40000.npu: REGCMD_FULL[33]: off=0x1080 val=0x00064000
+[15005.225204] rocket fde40000.npu: REGCMD_FULL[34]: off=0x1084 val=0x0280002c
+[15005.225813] rocket fde40000.npu: REGCMD_FULL[35]: off=0x1088 val=0x00000008
+[15005.226423] rocket fde40000.npu: REGCMD_FULL[36]: off=0x1100 val=0x00000000
+[15005.227034] rocket fde40000.npu: REGCMD_FULL[37]: off=0x1104 val=0x00000000
+[15005.227643] rocket fde40000.npu: REGCMD_FULL[38]: off=0x1110 val=0xfff40000
+[15005.228254] rocket fde40000.npu: REGCMD_FULL[39]: off=0x1114 val=0x00000000
+[15005.228875] rocket fde40000.npu: REGCMD_FULL[40]: off=0x1118 val=0x00000000
+[15005.229485] rocket fde40000.npu: REGCMD_FULL[41]: off=0x111c val=0x00000000
+[15005.230096] rocket fde40000.npu: REGCMD_FULL[42]: off=0x1120 val=0x00000000
+[15005.230705] rocket fde40000.npu: REGCMD_FULL[43]: off=0x1124 val=0x00000000
+[15005.231315] rocket fde40000.npu: REGCMD_FULL[44]: off=0x1128 val=0x00000000
+[15005.231924] rocket fde40000.npu: REGCMD_FULL[45]: off=0x112c val=0x00000000
+[15005.232556] rocket fde40000.npu: REGCMD_FULL[46]: off=0x1130 val=0x00000000
+[15005.233169] rocket fde40000.npu: REGCMD_FULL[47]: off=0x1134 val=0x00000000
+[15005.233780] rocket fde40000.npu: REGCMD_FULL[48]: off=0x1138 val=0x00000000
+[15005.234390] rocket fde40000.npu: REGCMD_FULL[49]: off=0x113c val=0x00000000
+[15005.235001] rocket fde40000.npu: REGCMD_FULL[50]: off=0x1140 val=0x00000000
+[15005.235611] rocket fde40000.npu: REGCMD_FULL[51]: off=0x1144 val=0x00000000
+[15005.236221] rocket fde40000.npu: REGCMD_FULL[52]: off=0x1148 val=0x00000000
+[15005.236844] rocket fde40000.npu: REGCMD_FULL[53]: off=0x114c val=0x00000000
+[15005.237456] rocket fde40000.npu: REGCMD_FULL[54]: off=0x1180 val=0x00000000
+[15005.238065] rocket fde40000.npu: REGCMD_FULL[55]: off=0x1184 val=0x00000000
+[15005.238674] rocket fde40000.npu: REGCMD_FULL[56]: off=0x3010 val=0x00000000
+[15005.239284] rocket fde40000.npu: REGCMD_FULL[57]: off=0x3014 val=0x00000000
+[15005.239894] rocket fde40000.npu: REGCMD_FULL[58]: off=0x3018 val=0x0000000f
+[15005.240515] rocket fde40000.npu: REGCMD_FULL[59]: off=0x301c val=0x00000000
+[15005.241125] rocket fde40000.npu: REGCMD_FULL[60]: off=0x3030 val=0x00000000
+[15005.241737] rocket fde40000.npu: REGCMD_FULL[61]: off=0x400c val=0x00000108
+[15005.242347] rocket fde40000.npu: REGCMD_FULL[62]: off=0x4010 val=0x00000000
+[15005.242955] rocket fde40000.npu: REGCMD_FULL[63]: off=0x4014 val=0x00000000
+[15005.243566] rocket fde40000.npu: REGCMD_FULL[64]: off=0x4020 val=0xffe80000
+[15005.244175] rocket fde40000.npu: REGCMD_FULL[65]: off=0x4024 val=0x00000000
+[15005.244796] rocket fde40000.npu: REGCMD_FULL[66]: off=0x4030 val=0x00000000
+[15005.245409] rocket fde40000.npu: REGCMD_FULL[67]: off=0x4034 val=0x00000000
+[15005.246019] rocket fde40000.npu: REGCMD_FULL[68]: off=0x4038 val=0x00000000
+[15005.246628] rocket fde40000.npu: REGCMD_FULL[69]: off=0x403c val=0x00000000
+[15005.247238] rocket fde40000.npu: REGCMD_FULL[70]: off=0x4040 val=0x00000000
+[15005.247848] rocket fde40000.npu: REGCMD_FULL[71]: off=0x4044 val=0x00000000
+[15005.248469] rocket fde40000.npu: REGCMD_FULL[72]: off=0x4048 val=0x00000000
+[15005.249081] rocket fde40000.npu: REGCMD_FULL[73]: off=0x404c val=0x00000000
+[15005.249691] rocket fde40000.npu: REGCMD_FULL[74]: off=0x4050 val=0x00000124
+[15005.250299] rocket fde40000.npu: REGCMD_FULL[75]: off=0x4054 val=0x0000fffb
+[15005.250908] rocket fde40000.npu: REGCMD_FULL[76]: off=0x4058 val=0x0000007f
+[15005.251517] rocket fde40000.npu: REGCMD_FULL[77]: off=0x405c val=0x00270027
+[15005.252127] rocket fde40000.npu: REGCMD_FULL[78]: off=0x4060 val=0x00000053
+[15005.252749] rocket fde40000.npu: REGCMD_FULL[79]: off=0x4064 val=0x00000000
+[15005.253359] rocket fde40000.npu: REGCMD_FULL[80]: off=0x4068 val=0x00000000
+[15005.253968] rocket fde40000.npu: REGCMD_FULL[81]: off=0x406c val=0x00000000
+[15005.254579] rocket fde40000.npu: REGCMD_FULL[82]: off=0x4070 val=0x00000383
+[15005.255189] rocket fde40000.npu: REGCMD_FULL[83]: off=0x4074 val=0x00000000
+[15005.255799] rocket fde40000.npu: REGCMD_FULL[84]: off=0x4078 val=0x00000001
+[15005.256419] rocket fde40000.npu: REGCMD_FULL[85]: off=0x407c val=0x00000000
+[15005.257030] rocket fde40000.npu: REGCMD_FULL[86]: off=0x4080 val=0xffffff80
+[15005.257639] rocket fde40000.npu: REGCMD_FULL[87]: off=0x4084 val=0x00005325
+[15005.258251] rocket fde40000.npu: REGCMD_FULL[88]: off=0x4088 val=0x0000000e
+[15005.258860] rocket fde40000.npu: REGCMD_FULL[89]: off=0x4090 val=0x00000000
+[15005.259469] rocket fde40000.npu: REGCMD_FULL[90]: off=0x4094 val=0x00000000
+[15005.260079] rocket fde40000.npu: REGCMD_FULL[91]: off=0x4098 val=0x00000000
+[15005.260698] rocket fde40000.npu: REGCMD_FULL[92]: off=0x409c val=0x00000000
+[15005.261309] rocket fde40000.npu: REGCMD_FULL[93]: off=0x40a0 val=0x00000000
+[15005.261918] rocket fde40000.npu: REGCMD_FULL[94]: off=0x40a4 val=0x00000000
+[15005.262527] rocket fde40000.npu: REGCMD_FULL[95]: off=0x40a8 val=0x00000000
+[15005.263139] rocket fde40000.npu: REGCMD_FULL[96]: off=0x40ac val=0x00000000
+[15005.263748] rocket fde40000.npu: REGCMD_FULL[97]: off=0x40c0 val=0x0000c800
+[15005.264366] rocket fde40000.npu: REGCMD_FULL[98]: off=0x40c4 val=0x00000000
+[15005.264977] rocket fde40000.npu: REGCMD_FULL[99]: off=0x4100 val=0x00000000
+[15005.265587] rocket fde40000.npu: REGCMD_FULL[100]: off=0x4104 val=0x00000000
+[15005.266203] rocket fde40000.npu: REGCMD_FULL[101]: off=0x4108 val=0x00000000
+[15005.266819] rocket fde40000.npu: REGCMD_FULL[102]: off=0x410c val=0x00000000
+[15005.267437] rocket fde40000.npu: REGCMD_FULL[103]: off=0x4110 val=0x00000000
+[15005.268055] rocket fde40000.npu: REGCMD_FULL[104]: off=0x4114 val=0x00000000
+[15005.268685] rocket fde40000.npu: REGCMD_FULL[105]: off=0x4118 val=0x00000000
+[15005.269303] rocket fde40000.npu: REGCMD_FULL[106]: off=0x411c val=0x00000000
+[15005.269921] rocket fde40000.npu: REGCMD_FULL[107]: off=0x4120 val=0x00000000
+[15005.270539] rocket fde40000.npu: REGCMD_FULL[108]: off=0x4124 val=0x00000000
+[15005.271156] rocket fde40000.npu: REGCMD_FULL[109]: off=0x4128 val=0x00000000
+[15005.271773] rocket fde40000.npu: REGCMD_FULL[110]: off=0x412c val=0x00000000
+[15005.272401] rocket fde40000.npu: REGCMD_FULL[111]: off=0x500c val=0x00000027
+[15005.273021] rocket fde40000.npu: REGCMD_FULL[112]: off=0x5010 val=0x00000000
+[15005.273638] rocket fde40000.npu: REGCMD_FULL[113]: off=0x5014 val=0x00000000
+[15005.274254] rocket fde40000.npu: REGCMD_FULL[114]: off=0x5018 val=0x00000000
+[15005.274872] rocket fde40000.npu: REGCMD_FULL[115]: off=0x501c val=0x00000000
+[15005.275491] rocket fde40000.npu: REGCMD_FULL[116]: off=0x5020 val=0xfff3f000
+[15005.276109] rocket fde40000.npu: REGCMD_FULL[117]: off=0x5028 val=0x00000000
+[15005.276737] rocket fde40000.npu: REGCMD_FULL[118]: off=0x502c val=0x00000000
+[15005.277356] rocket fde40000.npu: REGCMD_FULL[119]: off=0x5034 val=0x00000000
+[15005.277974] rocket fde40000.npu: REGCMD_FULL[120]: off=0x5038 val=0x00000000
+[15005.278592] rocket fde40000.npu: REGCMD_OP[120]: off=0x5038 val=0x00000000 routing=0x20
+[15005.279292] rocket fde40000.npu: REGCMD_FULL[121]: off=0x5040 val=0x00000000
+[15005.279908] rocket fde40000.npu: REGCMD_OP[121]: off=0x5040 val=0x00000000 routing=0x20
+[15005.280619] rocket fde40000.npu: REGCMD_IOVA[122]: off=0x5044 val=0x00004000
+[15005.281239] rocket fde40000.npu: REGCMD_FULL[122]: off=0x5044 val=0x00004000
+[15005.281857] rocket fde40000.npu: REGCMD_OP[122]: off=0x5044 val=0x00004000 routing=0x20
+[15005.282557] rocket fde40000.npu: REGCMD_FULL[123]: off=0x5048 val=0x00000000
+[15005.283175] rocket fde40000.npu: REGCMD_OP[123]: off=0x5048 val=0x00000000 routing=0x20
+[15005.283875] rocket fde40000.npu: REGCMD_FULL[124]: off=0x504c val=0x00000000
+[15005.284504] rocket fde40000.npu: REGCMD_OP[124]: off=0x504c val=0x00000000 routing=0x20
+[15005.285205] rocket fde40000.npu: REGCMD_FULL[125]: off=0x5064 val=0x00000000
+[15005.285823] rocket fde40000.npu: REGCMD_OP[125]: off=0x5064 val=0x00000000 routing=0x20
+[15005.286523] rocket fde40000.npu: REGCMD_FULL[126]: off=0x5068 val=0x01010101
+[15005.287141] rocket fde40000.npu: REGCMD_OP[126]: off=0x5068 val=0x01010101 routing=0x20
+[15005.287841] rocket fde40000.npu: REGCMD_FULL[127]: off=0x506c val=0x00000000
+[15005.288475] rocket fde40000.npu: REGCMD_OP[127]: off=0x506c val=0x00000000 routing=0x20
+[15005.289179] rocket fde40000.npu: REGCMD_OP[128]: off=0x0000 val=0x00000000 routing=0x00
+[15005.289880] rocket fde40000.npu: REGCMD_OP[129]: off=0x0014 val=0x00000000 routing=0x01
+[15005.290579] rocket fde40000.npu: REGCMD_OP[130]: off=0x0000 val=0x00000000 routing=0x00
+[15005.291279] rocket fde40000.npu: REGCMD_OP[131]: off=0x0000 val=0x00000000 routing=0x02
+[15005.291979] rocket fde40000.npu: REGCMD_FULL[132]: off=0x300c val=0x00000000
+[15005.292608] rocket fde40000.npu: REGCMD_OP[132]: off=0x300c val=0x00000000 routing=0x08
+[15005.293312] rocket fde40000.npu: REGCMD_FULL[133]: off=0x5064 val=0x00000000
+[15005.293929] rocket fde40000.npu: REGCMD_OP[133]: off=0x5064 val=0x00000000 routing=0x20
+[15005.294629] rocket fde40000.npu: REGCMD_FULL[134]: off=0x5068 val=0x01010101
+[15005.295246] rocket fde40000.npu: REGCMD_OP[134]: off=0x5068 val=0x01010101 routing=0x20
+[15005.295962] rocket fde40000.npu: OUTPUT_BO_PRE iova=0xffe80000: 00 00 00 00 00 00 00 00
+[15005.296678] rocket fde40000.npu: INPUT_BO iova=0xfff00000 pa=0x41bd000: 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81
+[15005.297627] rocket fde40000.npu: WEIGHT_BO[000] iova=0xfff40000: e9 0a c9 04 23 fc 0d da 1b f0 59 14 05 35 44 26
+[15005.298518] rocket fde40000.npu: WEIGHT_BO[010] iova=0xfff40000: 21 f5 f4 fe 15 e4 d5 ef ee f9 2e 1a f0 17 d3 f8
+[15005.299408] rocket fde40000.npu: WEIGHT_BO[020] iova=0xfff40000: cf e7 cf 21 38 bf 1e 2c e9 0a e0 eb 33 0f fd e4
+[15005.300299] rocket fde40000.npu: WEIGHT_BO[030] iova=0xfff40000: ea ea 09 06 ff 1e 24 23 f1 23 0c e9 15 24 1c 03
+[15005.301204] rocket fde40000.npu: WEIGHT_BO[040] iova=0xfff40000: f4 19 03 e8 02 2f fa fc 18 0b fd ee e1 ff fa e8
+[15005.302098] rocket fde40000.npu: WEIGHT_BO[050] iova=0xfff40000: 09 44 fc 1d f7 df f2 fd ea 0f b0 d0 f8 cb 1c 1e
+[15005.302989] rocket fde40000.npu: WEIGHT_BO[060] iova=0xfff40000: e2 0c f9 ec e6 fa e3 e0 f8 25 eb d7 ca 19 10 12
+[15005.303881] rocket fde40000.npu: WEIGHT_BO[070] iova=0xfff40000: 21 14 e2 df 31 ef 10 d3 f8 00 1f a5 00 2c ff df
+[15005.304789] rocket fde40000.npu: WEIGHT_BO[080] iova=0xfff40000: 37 1a 23 0b b9 0f f4 fd 0c 0f e1 dc ec 25 2f 2a
+[15005.305682] rocket fde40000.npu: WEIGHT_BO[090] iova=0xfff40000: fb 07 45 04 fe 0d e9 1c 60 13 0a e3 f7 f9 23 f3
+[15005.306574] rocket fde40000.npu: WEIGHT_BO[0a0] iova=0xfff40000: f0 01 31 13 d9 ff f1 16 e0 09 02 10 e8 e5 10 c5
+[15005.307464] rocket fde40000.npu: WEIGHT_BO[0b0] iova=0xfff40000: 1a 07 ee eb 40 f9 ee 05 0a 0f e0 37 0a de f3 d6
+[15005.308368] rocket fde40000.npu: WEIGHT_BO[0c0] iova=0xfff40000: 13 24 26 20 09 12 be 0b 19 00 f3 0f 2b de fd 01
+[15005.309260] rocket fde40000.npu: WEIGHT_BO[0d0] iova=0xfff40000: df 18 11 04 ee 32 0c f3 15 15 20 28 fe ee 06 25
+[15005.310152] rocket fde40000.npu: WEIGHT_BO[0e0] iova=0xfff40000: 17 07 c3 e0 e4 f7 e4 0b 13 ea 12 21 fa e9 ad 0f
+[15005.311044] rocket fde40000.npu: WEIGHT_BO[0f0] iova=0xfff40000: 22 0c 01 08 fe 1d 01 f5 2e 11 31 07 fa e9 0c 0c
+[15005.311935] rocket fde40000.npu: WEIGHT_BO[100] iova=0xfff40000: c7 d6 1f e5 ec 32 1b c3 06 fc 0b c1 30 f5 e4 40
+[15005.312843] rocket fde40000.npu: WEIGHT_BO[110] iova=0xfff40000: 1b f0 ea 0f f5 35 f6 33 d8 15 f2 01 32 35 1f e2
+[15005.313735] rocket fde40000.npu: WEIGHT_BO[120] iova=0xfff40000: 10 14 ff 0e 09 04 ea ff d4 a6 05 0c d0 b5 e9 0e
+[15005.314627] rocket fde40000.npu: WEIGHT_BO[130] iova=0xfff40000: ff f0 fa 05 19 0e f3 3d fb 0b cc d7 2e 1f 18 0f
+[15005.315518] rocket fde40000.npu: WEIGHT_BO[140] iova=0xfff40000: e6 13 17 df f1 16 f9 d6 3f 04 d7 d9 10 1c 3c 37
+[15005.316420] rocket fde40000.npu: WEIGHT_BO[150] iova=0xfff40000: 12 f1 fa 0d 04 2f e8 13 0e cf eb 03 f1 02 f6 26
+[15005.317321] rocket fde40000.npu: WEIGHT_BO[160] iova=0xfff40000: f0 0f ee 2d 18 cc dd 05 26 24 b6 1a 48 f1 25 f1
+[15005.318213] rocket fde40000.npu: WEIGHT_BO[170] iova=0xfff40000: e3 0e 19 30 d0 0c e5 06 f8 22 08 16 d3 fb 0c 02
+[15005.319105] rocket fde40000.npu: WEIGHT_BO[180] iova=0xfff40000: fe fc df ce f8 04 15 02 1f 1e fe 02 21 0d 32 05
+[15005.319996] rocket fde40000.npu: WEIGHT_BO[190] iova=0xfff40000: c5 e3 24 da e0 de 20 f0 20 0d ee 11 13 c8 f0 1c
+[15005.320898] rocket fde40000.npu: WEIGHT_BO[1a0] iova=0xfff40000: 02 f5 d7 3c fb 10 11 08 e2 ef 33 f7 22 03 17 f0
+[15005.321792] rocket fde40000.npu: WEIGHT_BO[1b0] iova=0xfff40000: e9 28 10 e7 15 38 27 fc 1d e6 32 d4 48 fc 01 f0
+[15005.322684] rocket fde40000.npu: WEIGHT_BO[1c0] iova=0xfff40000: de 30 3c 19 f0 25 bd 2b 2e 16 c7 fe 18 f2 02 dc
+[15005.323576] rocket fde40000.npu: WEIGHT_BO[1d0] iova=0xfff40000: 12 26 08 25 16 2e 0b fb ee 44 e5 f8 3e 08 33 fb
+[15005.324479] rocket fde40000.npu: WEIGHT_BO[1e0] iova=0xfff40000: 11 26 f1 0e fd 00 f6 20 02 e9 0e 1c 11 eb 0b 2b
+[15005.325371] rocket fde40000.npu: WEIGHT_BO[1f0] iova=0xfff40000: 23 fb f9 e7 0e f0 c0 19 16 3b f4 ed 15 00 ed 13
+[15005.326263] rocket fde40000.npu: REGCMD_SCAN: count=135 CNA_OP=0 CORE_OP=0 DPU_OP=0 PPU_OP=0 LAST_OFF=0x5068 LAST_VAL=0x01010101
+[15005.327280] rocket fde40000.npu: DTE_DRAM: [0]=0x0417a001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[15005.328094] rocket fde40000.npu: PTE_DRAM: table=0x0417a000 idx=0x27d PTE=0x00000000 (expected_pa=0x4253000)
+[15005.328964] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15005.330291] rocket fde40000.npu: PRE_OP CNA: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000 CBUF_CON0=00000044 DCOMP_CTRL=00000000
+[15005.331354] rocket fde40000.npu: PRE_OP CORE: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000
+[15005.332160] rocket fde40000.npu: PERF_CLR(pre-OP): clr=00000101 dt_wr=00000000 dt_rd=00000000 wt_rd=00000000
+[15005.333324] rocket fde40000.npu: AFTER_OPEN_ENGAGE(bit16-ever): CNA=00000000 CMAC=00000000 CORE=00000000 DPU=00000000 RDMA=00000000
+[15005.334359] rocket fde40000.npu: VMIN: single OP_EN pulse
+[15005.334840] rocket fde40000.npu: AT_OPEN CNA: OP_EN=00000000  CORE: OP_EN=00000000  DPU: OP_EN=00000000  DPU_RDMA: OP_EN=00000000
+[15005.335865] rocket fde40000.npu: AT_OPEN PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.337356] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000019 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[15005.338252] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000019 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000
+[15005.339277] rocket fde40000.npu: AT50US CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15005.340349] rocket fde40000.npu: AT50US CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.341135] rocket fde40000.npu: AT50US PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.352356] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15005.353387] rocket fde40000.npu: AT1MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15005.354292] rocket fde40000.npu: AT1MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.355070] rocket fde40000.npu: AT1MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.368354] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15005.369382] rocket fde40000.npu: AT5MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15005.370286] rocket fde40000.npu: AT5MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.371062] rocket fde40000.npu: AT5MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.384419] rocket fde40000.npu: AT10MS: PC_RS=0x00000000 PC_ISTATUS=0x00000000 PC_OPENA=0x00000000 PC_BASE=0xffe7d000 PC_AMOUNTS=0x0000008a PC_TASKST=0x0000f000
+[15005.385697] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[15005.386904] rocket fde40000.npu: AT10MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.388400] rocket fde40000.npu: AT10MS PCDUMP: VER=00000000 VERNUM=00000000 OPENA=00000000 BASE=ffe7d000 AMOUNTS=0000008a MASK=00010300 CLEAR=00000000 STATUS=00000000 RAW=00000000 TASKCON=00001001 TASKDMA=00000000 TASKST=0000f000
+[15005.390186] rocket fde40000.npu: AT10MS CNADUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CONV_CON1=0000a000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15005.391444] rocket fde40000.npu: AT10MS CNA_DBG[90-1fc]: 1110=fff40000
+[15005.392031] rocket fde40000.npu: AT10MS CNA_DBG[200-2fc]: 1210=01ff0000 1280=00000078 1284=00200001
+[15005.392842] rocket fde40000.npu: AT10MS COREDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.393662] rocket fde40000.npu: AT10MS CMACDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.394476] rocket fde40000.npu: AT10MS OPEN_C: CMAC[0x200c]=0x1 ACCU[0x300c]=0x0 DPU[0x400c]=0x108 DPU_RDMA[0x500c]=0x27
+[15005.395434] rocket fde40000.npu: AT10MS OPEN_8 (run status): CMAC[0x2008]=0x0 ACCU[0x3008]=0x0 DPU[0x4008]=0x0 DPU_RDMA[0x5008]=0x0 CNA[0x1008]=0x0
+[15005.396598] rocket fde40000.npu: AT10MS PERF_POST: dt_wr(0x8034)=00000000 dt_rd(0x8038)=0000008b wt_rd(0x803c)=00000000 clr(0x8010)=00000101
+[15005.397699] rocket fde40000.npu: AT10MS DPU: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 DST_BASE=ffe80000
+[15005.398604] rocket fde40000.npu: AT10MS DPU_RDMA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.399410] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 500c=00000027 5010=00000000 5014=00000000 5018=00000000 501c=00000000 5020=fff3f000
+[15005.400500] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 5024=00000000 5028=00000000 502c=00000000 5030=00000000 5034=00000000 5038=00000000 503c=00000000 5040=00000000
+[15005.401790] rocket fde40000.npu: AT10MS DCOMP_CTRL/REGNUM/ADDR0/AMOUNT0: 0x1100=00000000 0x1104=00000000 0x1110=fff40000 0x1140=00000000
+[15005.402858] rocket fde40000.npu: AT10MS CNA CONV: 0x100c=0000a000 0x1010=00000040 0x1014=00000012 0x1018=0003de00
+[15005.403755] rocket fde40000.npu: AT10MS DATA/WEIGHT: 0x1020=0280002c 0x1024=00020008 0x1028=00000140 0x1030=00000180 0x1034=00000020 0x1038=0202000c
+[15005.404960] ROCKET: after hw_submit
+[15005.632469] rocket fde40000.npu: NPU job timed out
+[15005.633124] rocket fde40000.npu: TIMEOUT PC_RS=0x00000000 TASKST=0x0000f000 IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15005.634344] rocket fde40000.npu: POST_TIMEOUT_CNA: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15005.635850] rocket fde40000.npu: POST_TIMEOUT_CNA_SWAP: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15005.637544] rocket fde40000.npu: ALL_SP CNA(0x1000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=0000a000
+[15005.638529] rocket fde40000.npu: ALL_SP CMAC(0x2000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000001
+[15005.639510] rocket fde40000.npu: ALL_SP ACCU(0x3000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000000
+[15005.640548] rocket fde40000.npu: ALL_SP DPU(0x4000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000108
+[15005.641531] rocket fde40000.npu: ALL_SP RDMA(0x5000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000027
+[15005.642508] rocket fde40000.npu: PERF_POST(dt_wr=DPU output bytes): dt_wr=00000000 dt_rd=0000008b wt_rd=00000000
+[15005.643427] rocket fde40000.npu: WEIGHT_CFG: CBUF_CON0=00000017 CBUF_CON1=028000a0 WSIZE0=00000180 WSIZE1=00000020 WSIZE2=0202000c DMACON0=00171c07 DMACON2=00064000 FEAT_ADDR=fff00000 DCOMP_CTRL=00000000 DCOMP_ADDR0=fff40000 DCOMP_AMT0=00000000
+[15005.645405] rocket fde40000.npu: DPU_CFG: DST_4018=00000000 SIZE_401c=00000000 4020=ffe80000 4024=00000000 4034=00000000 WIN_40b8=00000000 SURF_40c0=0000c800 BIAS_5020=fff3f000
+[15005.646843] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000963dec8b
+[15005.647549] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[15005.648188] rocket fde40000.npu: NOC_DEIDLE: BUS_IDLE_ACK(0x60)=0x000001ea BUS_IDLE_ST(0x68)=0x000001ea PWR_STATUS(0x98)=0x0000007d ret=0
+[15005.649364] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[15005.649988] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[15005.658870] rocket fde40000.npu: CNA_BISECT_T0(post-pm_get): S_STATUS=00000000
+[15005.659770] ROCKET: before hw_submit
+[15005.660122] rocket fde40000.npu: PRE_SUBMIT_RESET: skipped (test)
+[15005.660900] rocket fde40000.npu: PROBE: zeroed DPU OP_EN, readback=0x0
+[15005.661592] rocket fde40000.npu: MYSTERY_INIT: 0x2004=0x00000000 0x200c=0x00001000
+[15005.662362] rocket fde40000.npu: DPU_BSP: 0x4060=0x53 0x4070=0x383 0x4078=0x0 0x4080=0x0 0x4084=0x1 0x4088=0x0 0x40c0=0x0
+[15005.663465] rocket fde40000.npu: OP_EN_PATCH[5]: old(w0=0x00171040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15005.664730] rocket fde40000.npu: OP_EN_PATCH[6]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15005.666139] rocket fde40000.npu: OP_EN_PATCH[8]: old(w0=0xa000100c w1=0x02010000) → new off=0x100c val=0xa000 (w0=0xa000100c w1=0x02010000)
+[15005.667284] rocket fde40000.npu: OP_EN_PATCH[9]: old(w0=0x00401010 w1=0x02010000) → new off=0x1010 val=0x40 (w0=0x00401010 w1=0x02010000)
+[15005.668418] rocket fde40000.npu: OP_EN_PATCH[10]: old(w0=0x00121014 w1=0x02010000) → new off=0x1014 val=0x12 (w0=0x00121014 w1=0x02010000)
+[15005.669534] rocket fde40000.npu: OP_EN_PATCH[11]: old(w0=0xde001018 w1=0x02010003) → new off=0x1018 val=0x3de00 (w0=0xde001018 w1=0x02010003)
+[15005.670668] rocket fde40000.npu: OP_EN_PATCH[12]: old(w0=0x002c1020 w1=0x02010280) → new off=0x1020 val=0x280002c (w0=0x002c1020 w1=0x02010280)
+[15005.671817] rocket fde40000.npu: OP_EN_PATCH[13]: old(w0=0x00081024 w1=0x02010002) → new off=0x1024 val=0x20008 (w0=0x00081024 w1=0x02010002)
+[15005.672992] rocket fde40000.npu: OP_EN_PATCH[14]: old(w0=0x01401028 w1=0x02010000) → new off=0x1028 val=0x140 (w0=0x01401028 w1=0x02010000)
+[15005.674131] rocket fde40000.npu: OP_EN_PATCH[15]: old(w0=0x1b80102c w1=0x02010000) → new off=0x102c val=0x1b80 (w0=0x1b80102c w1=0x02010000)
+[15005.675263] rocket fde40000.npu: OP_EN_PATCH[16]: old(w0=0x01801030 w1=0x02010000) → new off=0x1030 val=0x180 (w0=0x01801030 w1=0x02010000)
+[15005.676447] rocket fde40000.npu: OP_EN_PATCH[17]: old(w0=0x00201034 w1=0x02010000) → new off=0x1034 val=0x20 (w0=0x00201034 w1=0x02010000)
+[15005.677567] rocket fde40000.npu: OP_EN_PATCH[18]: old(w0=0x000c1038 w1=0x02010202) → new off=0x1038 val=0x202000c (w0=0x000c1038 w1=0x02010202)
+[15005.678718] rocket fde40000.npu: OP_EN_PATCH[19]: old(w0=0x00171040 w1=0x02010000) → new off=0x1040 val=0x17 (w0=0x00171040 w1=0x02010000)
+[15005.679829] rocket fde40000.npu: OP_EN_PATCH[20]: old(w0=0x00a01044 w1=0x02010280) → new off=0x1044 val=0x28000a0 (w0=0x00a01044 w1=0x02010280)
+[15005.681111] rocket fde40000.npu: OP_EN_PATCH[21]: old(w0=0x38e1104c w1=0x0201000e) → new off=0x104c val=0xe38e1 (w0=0x38e1104c w1=0x0201000e)
+[15005.682303] rocket fde40000.npu: OP_EN_PATCH[22]: old(w0=0xff801050 w1=0x02014000) → new off=0x1050 val=0x4000ff80 (w0=0xff801050 w1=0x02014000)
+[15005.683504] rocket fde40000.npu: OP_EN_PATCH[23]: old(w0=0xff801054 w1=0x02014000) → new off=0x1054 val=0x4000ff80 (w0=0xff801054 w1=0x02014000)
+[15005.684737] rocket fde40000.npu: OP_EN_PATCH[24]: old(w0=0xff801058 w1=0x02014000) → new off=0x1058 val=0x4000ff80 (w0=0xff801058 w1=0x02014000)
+[15005.685937] rocket fde40000.npu: OP_EN_PATCH[25]: old(w0=0x0000105c w1=0x02010001) → new off=0x105c val=0x10000 (w0=0x0000105c w1=0x02010001)
+[15005.687120] rocket fde40000.npu: OP_EN_PATCH[26]: old(w0=0x00001060 w1=0x02010000) → new off=0x1060 val=0x0 (w0=0x00001060 w1=0x02010000)
+[15005.688261] rocket fde40000.npu: OP_EN_PATCH[27]: old(w0=0x00001064 w1=0x02010000) → new off=0x1064 val=0x0 (w0=0x00001064 w1=0x02010000)
+[15005.689473] rocket fde40000.npu: OP_EN_PATCH[30]: old(w0=0x00001074 w1=0x02010000) → new off=0x1074 val=0x0 (w0=0x00001074 w1=0x02010000)
+[15005.690573] rocket fde40000.npu: OP_EN_PATCH[31]: old(w0=0x1c071078 w1=0x02010017) → new off=0x1078 val=0x171c07 (w0=0x1c071078 w1=0x02010017)
+[15005.691709] rocket fde40000.npu: OP_EN_PATCH[32]: old(w0=0x00f0107c w1=0x02010000) → new off=0x107c val=0xf0 (w0=0x00f0107c w1=0x02010000)
+[15005.692838] rocket fde40000.npu: OP_EN_PATCH[33]: old(w0=0x40001080 w1=0x02010006) → new off=0x1080 val=0x64000 (w0=0x40001080 w1=0x02010006)
+[15005.693968] rocket fde40000.npu: OP_EN_PATCH[34]: old(w0=0x002c1084 w1=0x02010280) → new off=0x1084 val=0x280002c (w0=0x002c1084 w1=0x02010280)
+[15005.695110] rocket fde40000.npu: OP_EN_PATCH[35]: old(w0=0x00081088 w1=0x02010000) → new off=0x1088 val=0x8 (w0=0x00081088 w1=0x02010000)
+[15005.696213] rocket fde40000.npu: OP_EN_PATCH[36]: old(w0=0x00001100 w1=0x02010000) → new off=0x1100 val=0x0 (w0=0x00001100 w1=0x02010000)
+[15005.697406] rocket fde40000.npu: OP_EN_PATCH[37]: old(w0=0x00001104 w1=0x02010000) → new off=0x1104 val=0x0 (w0=0x00001104 w1=0x02010000)
+[15005.698542] rocket fde40000.npu: OP_EN_PATCH[39]: old(w0=0x00001114 w1=0x02010000) → new off=0x1114 val=0x0 (w0=0x00001114 w1=0x02010000)
+[15005.699674] rocket fde40000.npu: OP_EN_PATCH[40]: old(w0=0x00001118 w1=0x02010000) → new off=0x1118 val=0x0 (w0=0x00001118 w1=0x02010000)
+[15005.700828] rocket fde40000.npu: OP_EN_PATCH[41]: old(w0=0x0000111c w1=0x02010000) → new off=0x111c val=0x0 (w0=0x0000111c w1=0x02010000)
+[15005.701957] rocket fde40000.npu: OP_EN_PATCH[42]: old(w0=0x00001120 w1=0x02010000) → new off=0x1120 val=0x0 (w0=0x00001120 w1=0x02010000)
+[15005.703086] rocket fde40000.npu: OP_EN_PATCH[43]: old(w0=0x00001124 w1=0x02010000) → new off=0x1124 val=0x0 (w0=0x00001124 w1=0x02010000)
+[15005.704209] rocket fde40000.npu: OP_EN_PATCH[44]: old(w0=0x00001128 w1=0x02010000) → new off=0x1128 val=0x0 (w0=0x00001128 w1=0x02010000)
+[15005.705390] rocket fde40000.npu: OP_EN_PATCH[45]: old(w0=0x0000112c w1=0x02010000) → new off=0x112c val=0x0 (w0=0x0000112c w1=0x02010000)
+[15005.706489] rocket fde40000.npu: OP_EN_PATCH[46]: old(w0=0x00001130 w1=0x02010000) → new off=0x1130 val=0x0 (w0=0x00001130 w1=0x02010000)
+[15005.707585] rocket fde40000.npu: OP_EN_PATCH[47]: old(w0=0x00001134 w1=0x02010000) → new off=0x1134 val=0x0 (w0=0x00001134 w1=0x02010000)
+[15005.708730] rocket fde40000.npu: OP_EN_PATCH[48]: old(w0=0x00001138 w1=0x02010000) → new off=0x1138 val=0x0 (w0=0x00001138 w1=0x02010000)
+[15005.709852] rocket fde40000.npu: OP_EN_PATCH[49]: old(w0=0x0000113c w1=0x02010000) → new off=0x113c val=0x0 (w0=0x0000113c w1=0x02010000)
+[15005.710973] rocket fde40000.npu: OP_EN_PATCH[50]: old(w0=0x00001140 w1=0x02010000) → new off=0x1140 val=0x0 (w0=0x00001140 w1=0x02010000)
+[15005.712093] rocket fde40000.npu: OP_EN_PATCH[51]: old(w0=0x00001144 w1=0x02010000) → new off=0x1144 val=0x0 (w0=0x00001144 w1=0x02010000)
+[15005.713225] rocket fde40000.npu: OP_EN_PATCH[52]: old(w0=0x00001148 w1=0x02010000) → new off=0x1148 val=0x0 (w0=0x00001148 w1=0x02010000)
+[15005.714346] rocket fde40000.npu: OP_EN_PATCH[53]: old(w0=0x0000114c w1=0x02010000) → new off=0x114c val=0x0 (w0=0x0000114c w1=0x02010000)
+[15005.715468] rocket fde40000.npu: OP_EN_PATCH[56]: old(w0=0x00003010 w1=0x08010000) → new off=0x3010 val=0x0 (w0=0x00003010 w1=0x08010000)
+[15005.716771] rocket fde40000.npu: OP_EN_PATCH[57]: old(w0=0x00003014 w1=0x08010000) → new off=0x3014 val=0x0 (w0=0x00003014 w1=0x08010000)
+[15005.717902] rocket fde40000.npu: OP_EN_PATCH[62]: old(w0=0x00004010 w1=0x10010000) → new off=0x4010 val=0x0 (w0=0x00004010 w1=0x10010000)
+[15005.719016] rocket fde40000.npu: OP_EN_PATCH[63]: old(w0=0x00004014 w1=0x10010000) → new off=0x4014 val=0x0 (w0=0x00004014 w1=0x10010000)
+[15005.720131] rocket fde40000.npu: OP_EN_PATCH[65]: old(w0=0x00004024 w1=0x10010000) → new off=0x4024 val=0x0 (w0=0x00004024 w1=0x10010000)
+[15005.721259] rocket fde40000.npu: OP_EN_PATCH[66]: old(w0=0x00004030 w1=0x10010000) → new off=0x4030 val=0x0 (w0=0x00004030 w1=0x10010000)
+[15005.722378] rocket fde40000.npu: OP_EN_PATCH[67]: old(w0=0x00004034 w1=0x10010000) → new off=0x4034 val=0x0 (w0=0x00004034 w1=0x10010000)
+[15005.723490] rocket fde40000.npu: OP_EN_PATCH[68]: old(w0=0x00004038 w1=0x10010000) → new off=0x4038 val=0x0 (w0=0x00004038 w1=0x10010000)
+[15005.724656] rocket fde40000.npu: OP_EN_PATCH[69]: old(w0=0x0000403c w1=0x10010000) → new off=0x403c val=0x0 (w0=0x0000403c w1=0x10010000)
+[15005.725752] rocket fde40000.npu: OP_EN_PATCH[70]: old(w0=0x00004040 w1=0x10010000) → new off=0x4040 val=0x0 (w0=0x00004040 w1=0x10010000)
+[15005.726844] rocket fde40000.npu: OP_EN_PATCH[71]: old(w0=0x00004044 w1=0x10010000) → new off=0x4044 val=0x0 (w0=0x00004044 w1=0x10010000)
+[15005.727936] rocket fde40000.npu: OP_EN_PATCH[72]: old(w0=0x00004048 w1=0x10010000) → new off=0x4048 val=0x0 (w0=0x00004048 w1=0x10010000)
+[15005.729042] rocket fde40000.npu: OP_EN_PATCH[73]: old(w0=0x0000404c w1=0x10010000) → new off=0x404c val=0x0 (w0=0x0000404c w1=0x10010000)
+[15005.730137] rocket fde40000.npu: OP_EN_PATCH[112]: old(w0=0x00005010 w1=0x20010000) → new off=0x5010 val=0x0 (w0=0x00005010 w1=0x20010000)
+[15005.731237] rocket fde40000.npu: OP_EN_PATCH[113]: old(w0=0x00005014 w1=0x20010000) → new off=0x5014 val=0x0 (w0=0x00005014 w1=0x20010000)
+[15005.732348] rocket fde40000.npu: OP_EN_PATCH[115]: old(w0=0x0000501c w1=0x20010000) → new off=0x501c val=0x0 (w0=0x0000501c w1=0x20010000)
+[15005.733449] rocket fde40000.npu: OP_EN_PATCH[117]: old(w0=0x00005028 w1=0x20010000) → new off=0x5028 val=0x0 (w0=0x00005028 w1=0x20010000)
+[15005.734549] rocket fde40000.npu: OP_EN_PATCH[119]: old(w0=0x00005034 w1=0x20010000) → new off=0x5034 val=0x0 (w0=0x00005034 w1=0x20010000)
+[15005.735649] rocket fde40000.npu: OP_EN_PATCH[121]: old(w0=0x00005040 w1=0x20010000) → new off=0x5040 val=0x0 (w0=0x00005040 w1=0x20010000)
+[15005.736759] rocket fde40000.npu: OP_EN_PATCH[122]: old(w0=0x40005044 w1=0x20010000) → new off=0x5044 val=0x4000 (w0=0x40005044 w1=0x20010000)
+[15005.737883] rocket fde40000.npu: OP_EN_PATCH[123]: old(w0=0x00005048 w1=0x20010000) → new off=0x5048 val=0x0 (w0=0x00005048 w1=0x20010000)
+[15005.738983] rocket fde40000.npu: OP_EN_PATCH[124]: old(w0=0x0000504c w1=0x20010000) → new off=0x504c val=0x0 (w0=0x0000504c w1=0x20010000)
+[15005.740082] rocket fde40000.npu: OP_EN_PATCH[133]: old(w0=0x00005064 w1=0x20010000) → new off=0x5064 val=0x0 (w0=0x00005064 w1=0x20010000)
+[15005.741196] rocket fde40000.npu: OP_EN_PATCH[134]: old(w0=0x01015068 w1=0x20010101) → new off=0x5068 val=0x1010101 (w0=0x01015068 w1=0x20010101)
+[15005.742343] rocket fde40000.npu: OP_EN_PATCH: patched 69 entries
+[15005.743768] iova: 0x00000000ff900000 already mapped to 0x00000000ec900000 cannot remap to phys: 0x00000000ec100000 prot: 0x3
+[15005.744770] rocket fde40000.npu: TASK_DESC v4: dma_map_single 1MB failed
+[15005.745395] rocket fde40000.npu: CLK_RATES: scmi=1000000000 clk=600000000 aclk=600000000 hclk=150000000
+[15005.746221] rocket fde40000.npu: HW_SUBMIT: regcmd=0xffe7d000 count=135 scale=1 AMOUNTS=0x0000008a TASKST=0x00007000 INT_MASK=0x00010300 INT_CLEAR=0x00000000 INT_STATUS=0x00000000 INT_RAWST=0x00000000
+[15005.747784] PBLK: iommu_dev=ffff0001009b6010 attached=ffff0001088604e0 domain=ffff00010948b330
+[15005.748568] rocket fde40000.npu: IOMMU_EXT: AUTO_GATING=0x00000003 INT_MASK=0x00000003 INT_STATUS=0x00000000
+[15005.749434] XDBG_PREOP_IOVA_ENTRY
+[15005.749727] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xffe7d000 SW_PA=0x4253000
+[15005.750384] rocket fde40000.npu: REGCMD_DRAM[0..7]: 000e1004 02010000 000e2004 04010000 000e3004 08010000 000e4004 10010000
+[15005.751357] rocket fde40000.npu: REGCMD_FULL[0]: off=0x1004 val=0x0000000e
+[15005.751960] rocket fde40000.npu: REGCMD_FULL[1]: off=0x2004 val=0x0000000e
+[15005.752583] rocket fde40000.npu: REGCMD_FULL[2]: off=0x3004 val=0x0000000e
+[15005.753186] rocket fde40000.npu: REGCMD_FULL[3]: off=0x4004 val=0x0000000e
+[15005.753791] rocket fde40000.npu: REGCMD_FULL[4]: off=0x5004 val=0x0000000e
+[15005.754393] rocket fde40000.npu: REGCMD_FULL[5]: off=0x1040 val=0x00000017
+[15005.754994] rocket fde40000.npu: REGCMD_FULL[6]: off=0x1104 val=0x00000000
+[15005.755596] rocket fde40000.npu: REGCMD_FULL[7]: off=0x200c val=0x00000001
+[15005.756199] rocket fde40000.npu: REGCMD_IOVA[8]: off=0x100c val=0x0000a000
+[15005.756815] rocket fde40000.npu: REGCMD_FULL[8]: off=0x100c val=0x0000a000
+[15005.757419] rocket fde40000.npu: REGCMD_FULL[9]: off=0x1010 val=0x00000040
+[15005.758021] rocket fde40000.npu: REGCMD_FULL[10]: off=0x1014 val=0x00000012
+[15005.758632] rocket fde40000.npu: REGCMD_FULL[11]: off=0x1018 val=0x0003de00
+[15005.759240] rocket fde40000.npu: REGCMD_FULL[12]: off=0x1020 val=0x0280002c
+[15005.759851] rocket fde40000.npu: REGCMD_FULL[13]: off=0x1024 val=0x00020008
+[15005.760473] rocket fde40000.npu: REGCMD_FULL[14]: off=0x1028 val=0x00000140
+[15005.761085] rocket fde40000.npu: REGCMD_FULL[15]: off=0x102c val=0x00001b80
+[15005.761695] rocket fde40000.npu: REGCMD_FULL[16]: off=0x1030 val=0x00000180
+[15005.762305] rocket fde40000.npu: REGCMD_FULL[17]: off=0x1034 val=0x00000020
+[15005.762916] rocket fde40000.npu: REGCMD_FULL[18]: off=0x1038 val=0x0202000c
+[15005.763525] rocket fde40000.npu: REGCMD_FULL[19]: off=0x1040 val=0x00000017
+[15005.764134] rocket fde40000.npu: REGCMD_FULL[20]: off=0x1044 val=0x028000a0
+[15005.764764] rocket fde40000.npu: REGCMD_FULL[21]: off=0x104c val=0x000e38e1
+[15005.765381] rocket fde40000.npu: REGCMD_FULL[22]: off=0x1050 val=0x4000ff80
+[15005.765992] rocket fde40000.npu: REGCMD_FULL[23]: off=0x1054 val=0x4000ff80
+[15005.766601] rocket fde40000.npu: REGCMD_FULL[24]: off=0x1058 val=0x4000ff80
+[15005.767212] rocket fde40000.npu: REGCMD_IOVA[25]: off=0x105c val=0x00010000
+[15005.767821] rocket fde40000.npu: REGCMD_FULL[25]: off=0x105c val=0x00010000
+[15005.768443] rocket fde40000.npu: REGCMD_FULL[26]: off=0x1060 val=0x00000000
+[15005.769066] rocket fde40000.npu: REGCMD_FULL[27]: off=0x1064 val=0x00000000
+[15005.769676] rocket fde40000.npu: REGCMD_FULL[28]: off=0x1068 val=0x00000011
+[15005.770286] rocket fde40000.npu: REGCMD_FULL[29]: off=0x1070 val=0xfff00000
+[15005.770898] rocket fde40000.npu: REGCMD_FULL[30]: off=0x1074 val=0x00000000
+[15005.771508] rocket fde40000.npu: REGCMD_FULL[31]: off=0x1078 val=0x00171c07
+[15005.772119] rocket fde40000.npu: REGCMD_FULL[32]: off=0x107c val=0x000000f0
+[15005.772749] rocket fde40000.npu: REGCMD_IOVA[33]: off=0x1080 val=0x00064000
+[15005.773364] rocket fde40000.npu: REGCMD_FULL[33]: off=0x1080 val=0x00064000
+[15005.773976] rocket fde40000.npu: REGCMD_FULL[34]: off=0x1084 val=0x0280002c
+[15005.774588] rocket fde40000.npu: REGCMD_FULL[35]: off=0x1088 val=0x00000008
+[15005.775201] rocket fde40000.npu: REGCMD_FULL[36]: off=0x1100 val=0x00000000
+[15005.775811] rocket fde40000.npu: REGCMD_FULL[37]: off=0x1104 val=0x00000000
+[15005.776454] rocket fde40000.npu: REGCMD_FULL[38]: off=0x1110 val=0xfff40000
+[15005.777072] rocket fde40000.npu: REGCMD_FULL[39]: off=0x1114 val=0x00000000
+[15005.777682] rocket fde40000.npu: REGCMD_FULL[40]: off=0x1118 val=0x00000000
+[15005.778291] rocket fde40000.npu: REGCMD_FULL[41]: off=0x111c val=0x00000000
+[15005.778902] rocket fde40000.npu: REGCMD_FULL[42]: off=0x1120 val=0x00000000
+[15005.779509] rocket fde40000.npu: REGCMD_FULL[43]: off=0x1124 val=0x00000000
+[15005.780120] rocket fde40000.npu: REGCMD_FULL[44]: off=0x1128 val=0x00000000
+[15005.780745] rocket fde40000.npu: REGCMD_FULL[45]: off=0x112c val=0x00000000
+[15005.781358] rocket fde40000.npu: REGCMD_FULL[46]: off=0x1130 val=0x00000000
+[15005.781970] rocket fde40000.npu: REGCMD_FULL[47]: off=0x1134 val=0x00000000
+[15005.782579] rocket fde40000.npu: REGCMD_FULL[48]: off=0x1138 val=0x00000000
+[15005.783188] rocket fde40000.npu: REGCMD_FULL[49]: off=0x113c val=0x00000000
+[15005.783798] rocket fde40000.npu: REGCMD_FULL[50]: off=0x1140 val=0x00000000
+[15005.784427] rocket fde40000.npu: REGCMD_FULL[51]: off=0x1144 val=0x00000000
+[15005.785041] rocket fde40000.npu: REGCMD_FULL[52]: off=0x1148 val=0x00000000
+[15005.785653] rocket fde40000.npu: REGCMD_FULL[53]: off=0x114c val=0x00000000
+[15005.786263] rocket fde40000.npu: REGCMD_FULL[54]: off=0x1180 val=0x00000000
+[15005.786872] rocket fde40000.npu: REGCMD_FULL[55]: off=0x1184 val=0x00000000
+[15005.787482] rocket fde40000.npu: REGCMD_FULL[56]: off=0x3010 val=0x00000000
+[15005.788092] rocket fde40000.npu: REGCMD_FULL[57]: off=0x3014 val=0x00000000
+[15005.788726] rocket fde40000.npu: REGCMD_FULL[58]: off=0x3018 val=0x0000000f
+[15005.789343] rocket fde40000.npu: REGCMD_FULL[59]: off=0x301c val=0x00000000
+[15005.789954] rocket fde40000.npu: REGCMD_FULL[60]: off=0x3030 val=0x00000000
+[15005.790562] rocket fde40000.npu: REGCMD_FULL[61]: off=0x400c val=0x00000108
+[15005.791170] rocket fde40000.npu: REGCMD_FULL[62]: off=0x4010 val=0x00000000
+[15005.791779] rocket fde40000.npu: REGCMD_FULL[63]: off=0x4014 val=0x00000000
+[15005.792409] rocket fde40000.npu: REGCMD_FULL[64]: off=0x4020 val=0xffe80000
+[15005.793023] rocket fde40000.npu: REGCMD_FULL[65]: off=0x4024 val=0x00000000
+[15005.793633] rocket fde40000.npu: REGCMD_FULL[66]: off=0x4030 val=0x00000000
+[15005.794243] rocket fde40000.npu: REGCMD_FULL[67]: off=0x4034 val=0x00000000
+[15005.794854] rocket fde40000.npu: REGCMD_FULL[68]: off=0x4038 val=0x00000000
+[15005.795464] rocket fde40000.npu: REGCMD_FULL[69]: off=0x403c val=0x00000000
+[15005.796074] rocket fde40000.npu: REGCMD_FULL[70]: off=0x4040 val=0x00000000
+[15005.796710] rocket fde40000.npu: REGCMD_FULL[71]: off=0x4044 val=0x00000000
+[15005.797328] rocket fde40000.npu: REGCMD_FULL[72]: off=0x4048 val=0x00000000
+[15005.797941] rocket fde40000.npu: REGCMD_FULL[73]: off=0x404c val=0x00000000
+[15005.798553] rocket fde40000.npu: REGCMD_FULL[74]: off=0x4050 val=0x00000124
+[15005.799162] rocket fde40000.npu: REGCMD_FULL[75]: off=0x4054 val=0x0000fffb
+[15005.799772] rocket fde40000.npu: REGCMD_FULL[76]: off=0x4058 val=0x0000007f
+[15005.800403] rocket fde40000.npu: REGCMD_FULL[77]: off=0x405c val=0x00270027
+[15005.801017] rocket fde40000.npu: REGCMD_FULL[78]: off=0x4060 val=0x00000053
+[15005.801629] rocket fde40000.npu: REGCMD_FULL[79]: off=0x4064 val=0x00000000
+[15005.802240] rocket fde40000.npu: REGCMD_FULL[80]: off=0x4068 val=0x00000000
+[15005.802850] rocket fde40000.npu: REGCMD_FULL[81]: off=0x406c val=0x00000000
+[15005.803459] rocket fde40000.npu: REGCMD_FULL[82]: off=0x4070 val=0x00000383
+[15005.804068] rocket fde40000.npu: REGCMD_FULL[83]: off=0x4074 val=0x00000000
+[15005.804697] rocket fde40000.npu: REGCMD_FULL[84]: off=0x4078 val=0x00000001
+[15005.805312] rocket fde40000.npu: REGCMD_FULL[85]: off=0x407c val=0x00000000
+[15005.805922] rocket fde40000.npu: REGCMD_FULL[86]: off=0x4080 val=0xffffff80
+[15005.806533] rocket fde40000.npu: REGCMD_FULL[87]: off=0x4084 val=0x00005325
+[15005.807142] rocket fde40000.npu: REGCMD_FULL[88]: off=0x4088 val=0x0000000e
+[15005.807752] rocket fde40000.npu: REGCMD_FULL[89]: off=0x4090 val=0x00000000
+[15005.808382] rocket fde40000.npu: REGCMD_FULL[90]: off=0x4094 val=0x00000000
+[15005.808996] rocket fde40000.npu: REGCMD_FULL[91]: off=0x4098 val=0x00000000
+[15005.809606] rocket fde40000.npu: REGCMD_FULL[92]: off=0x409c val=0x00000000
+[15005.810216] rocket fde40000.npu: REGCMD_FULL[93]: off=0x40a0 val=0x00000000
+[15005.810824] rocket fde40000.npu: REGCMD_FULL[94]: off=0x40a4 val=0x00000000
+[15005.811433] rocket fde40000.npu: REGCMD_FULL[95]: off=0x40a8 val=0x00000000
+[15005.812043] rocket fde40000.npu: REGCMD_FULL[96]: off=0x40ac val=0x00000000
+[15005.812675] rocket fde40000.npu: REGCMD_FULL[97]: off=0x40c0 val=0x0000c800
+[15005.813288] rocket fde40000.npu: REGCMD_FULL[98]: off=0x40c4 val=0x00000000
+[15005.813898] rocket fde40000.npu: REGCMD_FULL[99]: off=0x4100 val=0x00000000
+[15005.814507] rocket fde40000.npu: REGCMD_FULL[100]: off=0x4104 val=0x00000000
+[15005.815125] rocket fde40000.npu: REGCMD_FULL[101]: off=0x4108 val=0x00000000
+[15005.815742] rocket fde40000.npu: REGCMD_FULL[102]: off=0x410c val=0x00000000
+[15005.816377] rocket fde40000.npu: REGCMD_FULL[103]: off=0x4110 val=0x00000000
+[15005.816998] rocket fde40000.npu: REGCMD_FULL[104]: off=0x4114 val=0x00000000
+[15005.817615] rocket fde40000.npu: REGCMD_FULL[105]: off=0x4118 val=0x00000000
+[15005.818232] rocket fde40000.npu: REGCMD_FULL[106]: off=0x411c val=0x00000000
+[15005.818850] rocket fde40000.npu: REGCMD_FULL[107]: off=0x4120 val=0x00000000
+[15005.819469] rocket fde40000.npu: REGCMD_FULL[108]: off=0x4124 val=0x00000000
+[15005.820085] rocket fde40000.npu: REGCMD_FULL[109]: off=0x4128 val=0x00000000
+[15005.820721] rocket fde40000.npu: REGCMD_FULL[110]: off=0x412c val=0x00000000
+[15005.821342] rocket fde40000.npu: REGCMD_FULL[111]: off=0x500c val=0x00000027
+[15005.821960] rocket fde40000.npu: REGCMD_FULL[112]: off=0x5010 val=0x00000000
+[15005.822578] rocket fde40000.npu: REGCMD_FULL[113]: off=0x5014 val=0x00000000
+[15005.823195] rocket fde40000.npu: REGCMD_FULL[114]: off=0x5018 val=0x00000000
+[15005.823812] rocket fde40000.npu: REGCMD_FULL[115]: off=0x501c val=0x00000000
+[15005.824449] rocket fde40000.npu: REGCMD_FULL[116]: off=0x5020 val=0xfff3f000
+[15005.825071] rocket fde40000.npu: REGCMD_FULL[117]: off=0x5028 val=0x00000000
+[15005.825689] rocket fde40000.npu: REGCMD_FULL[118]: off=0x502c val=0x00000000
+[15005.826308] rocket fde40000.npu: REGCMD_FULL[119]: off=0x5034 val=0x00000000
+[15005.826925] rocket fde40000.npu: REGCMD_FULL[120]: off=0x5038 val=0x00000000
+[15005.827542] rocket fde40000.npu: REGCMD_OP[120]: off=0x5038 val=0x00000000 routing=0x20
+[15005.828242] rocket fde40000.npu: REGCMD_FULL[121]: off=0x5040 val=0x00000000
+[15005.828881] rocket fde40000.npu: REGCMD_OP[121]: off=0x5040 val=0x00000000 routing=0x20
+[15005.829586] rocket fde40000.npu: REGCMD_IOVA[122]: off=0x5044 val=0x00004000
+[15005.830204] rocket fde40000.npu: REGCMD_FULL[122]: off=0x5044 val=0x00004000
+[15005.830821] rocket fde40000.npu: REGCMD_OP[122]: off=0x5044 val=0x00004000 routing=0x20
+[15005.831522] rocket fde40000.npu: REGCMD_FULL[123]: off=0x5048 val=0x00000000
+[15005.832140] rocket fde40000.npu: REGCMD_OP[123]: off=0x5048 val=0x00000000 routing=0x20
+[15005.832860] rocket fde40000.npu: REGCMD_FULL[124]: off=0x504c val=0x00000000
+[15005.833481] rocket fde40000.npu: REGCMD_OP[124]: off=0x504c val=0x00000000 routing=0x20
+[15005.834183] rocket fde40000.npu: REGCMD_FULL[125]: off=0x5064 val=0x00000000
+[15005.834800] rocket fde40000.npu: REGCMD_OP[125]: off=0x5064 val=0x00000000 routing=0x20
+[15005.835500] rocket fde40000.npu: REGCMD_FULL[126]: off=0x5068 val=0x01010101
+[15005.836118] rocket fde40000.npu: REGCMD_OP[126]: off=0x5068 val=0x01010101 routing=0x20
+[15005.836840] rocket fde40000.npu: REGCMD_FULL[127]: off=0x506c val=0x00000000
+[15005.837462] rocket fde40000.npu: REGCMD_OP[127]: off=0x506c val=0x00000000 routing=0x20
+[15005.838163] rocket fde40000.npu: REGCMD_OP[128]: off=0x0000 val=0x00000000 routing=0x00
+[15005.838863] rocket fde40000.npu: REGCMD_OP[129]: off=0x0014 val=0x00000000 routing=0x01
+[15005.839563] rocket fde40000.npu: REGCMD_OP[130]: off=0x0000 val=0x00000000 routing=0x00
+[15005.840263] rocket fde40000.npu: REGCMD_OP[131]: off=0x0000 val=0x00000000 routing=0x02
+[15005.840984] rocket fde40000.npu: REGCMD_FULL[132]: off=0x300c val=0x00000000
+[15005.841604] rocket fde40000.npu: REGCMD_OP[132]: off=0x300c val=0x00000000 routing=0x08
+[15005.842305] rocket fde40000.npu: REGCMD_FULL[133]: off=0x5064 val=0x00000000
+[15005.842924] rocket fde40000.npu: REGCMD_OP[133]: off=0x5064 val=0x00000000 routing=0x20
+[15005.843624] rocket fde40000.npu: REGCMD_FULL[134]: off=0x5068 val=0x01010101
+[15005.844242] rocket fde40000.npu: REGCMD_OP[134]: off=0x5068 val=0x01010101 routing=0x20
+[15005.844981] rocket fde40000.npu: OUTPUT_BO_PRE iova=0xffe80000: 00 00 00 00 00 00 00 00
+[15005.845691] rocket fde40000.npu: INPUT_BO iova=0xfff00000 pa=0x41bd000: 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81 81
+[15005.846639] rocket fde40000.npu: WEIGHT_BO[000] iova=0xfff40000: e9 0a c9 04 23 fc 0d da 1b f0 59 14 05 35 44 26
+[15005.847531] rocket fde40000.npu: WEIGHT_BO[010] iova=0xfff40000: 21 f5 f4 fe 15 e4 d5 ef ee f9 2e 1a f0 17 d3 f8
+[15005.848445] rocket fde40000.npu: WEIGHT_BO[020] iova=0xfff40000: cf e7 cf 21 38 bf 1e 2c e9 0a e0 eb 33 0f fd e4
+[15005.849340] rocket fde40000.npu: WEIGHT_BO[030] iova=0xfff40000: ea ea 09 06 ff 1e 24 23 f1 23 0c e9 15 24 1c 03
+[15005.850233] rocket fde40000.npu: WEIGHT_BO[040] iova=0xfff40000: f4 19 03 e8 02 2f fa fc 18 0b fd ee e1 ff fa e8
+[15005.851125] rocket fde40000.npu: WEIGHT_BO[050] iova=0xfff40000: 09 44 fc 1d f7 df f2 fd ea 0f b0 d0 f8 cb 1c 1e
+[15005.852016] rocket fde40000.npu: WEIGHT_BO[060] iova=0xfff40000: e2 0c f9 ec e6 fa e3 e0 f8 25 eb d7 ca 19 10 12
+[15005.852930] rocket fde40000.npu: WEIGHT_BO[070] iova=0xfff40000: 21 14 e2 df 31 ef 10 d3 f8 00 1f a5 00 2c ff df
+[15005.853827] rocket fde40000.npu: WEIGHT_BO[080] iova=0xfff40000: 37 1a 23 0b b9 0f f4 fd 0c 0f e1 dc ec 25 2f 2a
+[15005.854720] rocket fde40000.npu: WEIGHT_BO[090] iova=0xfff40000: fb 07 45 04 fe 0d e9 1c 60 13 0a e3 f7 f9 23 f3
+[15005.855611] rocket fde40000.npu: WEIGHT_BO[0a0] iova=0xfff40000: f0 01 31 13 d9 ff f1 16 e0 09 02 10 e8 e5 10 c5
+[15005.856521] rocket fde40000.npu: WEIGHT_BO[0b0] iova=0xfff40000: 1a 07 ee eb 40 f9 ee 05 0a 0f e0 37 0a de f3 d6
+[15005.857416] rocket fde40000.npu: WEIGHT_BO[0c0] iova=0xfff40000: 13 24 26 20 09 12 be 0b 19 00 f3 0f 2b de fd 01
+[15005.858308] rocket fde40000.npu: WEIGHT_BO[0d0] iova=0xfff40000: df 18 11 04 ee 32 0c f3 15 15 20 28 fe ee 06 25
+[15005.859199] rocket fde40000.npu: WEIGHT_BO[0e0] iova=0xfff40000: 17 07 c3 e0 e4 f7 e4 0b 13 ea 12 21 fa e9 ad 0f
+[15005.860089] rocket fde40000.npu: WEIGHT_BO[0f0] iova=0xfff40000: 22 0c 01 08 fe 1d 01 f5 2e 11 31 07 fa e9 0c 0c
+[15005.861007] rocket fde40000.npu: WEIGHT_BO[100] iova=0xfff40000: c7 d6 1f e5 ec 32 1b c3 06 fc 0b c1 30 f5 e4 40
+[15005.861903] rocket fde40000.npu: WEIGHT_BO[110] iova=0xfff40000: 1b f0 ea 0f f5 35 f6 33 d8 15 f2 01 32 35 1f e2
+[15005.862796] rocket fde40000.npu: WEIGHT_BO[120] iova=0xfff40000: 10 14 ff 0e 09 04 ea ff d4 a6 05 0c d0 b5 e9 0e
+[15005.863688] rocket fde40000.npu: WEIGHT_BO[130] iova=0xfff40000: ff f0 fa 05 19 0e f3 3d fb 0b cc d7 2e 1f 18 0f
+[15005.864598] rocket fde40000.npu: WEIGHT_BO[140] iova=0xfff40000: e6 13 17 df f1 16 f9 d6 3f 04 d7 d9 10 1c 3c 37
+[15005.865494] rocket fde40000.npu: WEIGHT_BO[150] iova=0xfff40000: 12 f1 fa 0d 04 2f e8 13 0e cf eb 03 f1 02 f6 26
+[15005.866385] rocket fde40000.npu: WEIGHT_BO[160] iova=0xfff40000: f0 0f ee 2d 18 cc dd 05 26 24 b6 1a 48 f1 25 f1
+[15005.867278] rocket fde40000.npu: WEIGHT_BO[170] iova=0xfff40000: e3 0e 19 30 d0 0c e5 06 f8 22 08 16 d3 fb 0c 02
+[15005.868168] rocket fde40000.npu: WEIGHT_BO[180] iova=0xfff40000: fe fc df ce f8 04 15 02 1f 1e fe 02 21 0d 32 05
+[15005.869082] rocket fde40000.npu: WEIGHT_BO[190] iova=0xfff40000: c5 e3 24 da e0 de 20 f0 20 0d ee 11 13 c8 f0 1c
+[15005.869979] rocket fde40000.npu: WEIGHT_BO[1a0] iova=0xfff40000: 02 f5 d7 3c fb 10 11 08 e2 ef 33 f7 22 03 17 f0
+[15005.870870] rocket fde40000.npu: WEIGHT_BO[1b0] iova=0xfff40000: e9 28 10 e7 15 38 27 fc 1d e6 32 d4 48 fc 01 f0
+[15005.871763] rocket fde40000.npu: WEIGHT_BO[1c0] iova=0xfff40000: de 30 3c 19 f0 25 bd 2b 2e 16 c7 fe 18 f2 02 dc
+[15005.872674] rocket fde40000.npu: WEIGHT_BO[1d0] iova=0xfff40000: 12 26 08 25 16 2e 0b fb ee 44 e5 f8 3e 08 33 fb
+[15005.873570] rocket fde40000.npu: WEIGHT_BO[1e0] iova=0xfff40000: 11 26 f1 0e fd 00 f6 20 02 e9 0e 1c 11 eb 0b 2b
+[15005.874462] rocket fde40000.npu: WEIGHT_BO[1f0] iova=0xfff40000: 23 fb f9 e7 0e f0 c0 19 16 3b f4 ed 15 00 ed 13
+[15005.875355] rocket fde40000.npu: REGCMD_SCAN: count=135 CNA_OP=0 CORE_OP=0 DPU_OP=0 PPU_OP=0 LAST_OFF=0x5068 LAST_VAL=0x01010101
+[15005.876393] rocket fde40000.npu: DTE_DRAM: [0]=0x0417a001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[15005.877213] rocket fde40000.npu: PTE_DRAM: table=0x0417a000 idx=0x27d PTE=0x00000000 (expected_pa=0x4253000)
+[15005.878073] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15005.879398] rocket fde40000.npu: PRE_OP CNA: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000 CBUF_CON0=00000044 DCOMP_CTRL=00000000
+[15005.880481] rocket fde40000.npu: PRE_OP CORE: S_STATUS=00000000 S_POINTER=00000000 OP_EN=00000000
+[15005.881280] rocket fde40000.npu: PERF_CLR(pre-OP): clr=00000101 dt_wr=00000000 dt_rd=00000000 wt_rd=00000000
+[15005.882441] rocket fde40000.npu: AFTER_OPEN_ENGAGE(bit16-ever): CNA=00000000 CMAC=00000000 CORE=00000000 DPU=00000000 RDMA=00000000
+[15005.883479] rocket fde40000.npu: VMIN: single OP_EN pulse
+[15005.883964] rocket fde40000.npu: AT_OPEN CNA: OP_EN=00000000  CORE: OP_EN=00000000  DPU: OP_EN=00000000  DPU_RDMA: OP_EN=00000000
+[15005.885029] rocket fde40000.npu: AT_OPEN PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.886510] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000019 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[15005.887407] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000019 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000
+[15005.888467] rocket fde40000.npu: AT50US CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15005.889533] rocket fde40000.npu: AT50US CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.890327] rocket fde40000.npu: AT50US PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.896359] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15005.897401] rocket fde40000.npu: AT1MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15005.898305] rocket fde40000.npu: AT1MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.899097] rocket fde40000.npu: AT1MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.908354] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000019 FA=0x00000000 PC_AMOUNTS=0x0000008a PC_RS=0x00000000 TASKST=0x0000f000
+[15005.909397] rocket fde40000.npu: AT5MS CNA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CBUF_CON0=00000017
+[15005.910301] rocket fde40000.npu: AT5MS CORE: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.911123] rocket fde40000.npu: AT5MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.924357] rocket fde40000.npu: AT10MS: PC_RS=0x00000000 PC_ISTATUS=0x00000000 PC_OPENA=0x00000000 PC_BASE=0xffe7d000 PC_AMOUNTS=0x0000008a PC_TASKST=0x0000f000
+[15005.925637] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[15005.926837] rocket fde40000.npu: AT10MS PIPE Sstatus: CNA=00000000 CMAC=00000000 ACCU=00000000 DPU=00000000 RDMA=00000000 | CBUF0=00000017 bit13=0 | run8: CNA=0 CMAC=0 ACCU=0 DPU=0 RDMA=0
+[15005.928305] rocket fde40000.npu: AT10MS PCDUMP: VER=00000000 VERNUM=00000000 OPENA=00000000 BASE=ffe7d000 AMOUNTS=0000008a MASK=00010300 CLEAR=00000000 STATUS=00000000 RAW=00000000 TASKCON=00001001 TASKDMA=00000000 TASKST=0000f000
+[15005.930114] rocket fde40000.npu: AT10MS CNADUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 CONV_CON1=0000a000 CBUF_CON0=00000017 DCOMP_CTRL=00000000
+[15005.931378] rocket fde40000.npu: AT10MS CNA_DBG[90-1fc]: 1110=fff40000
+[15005.931966] rocket fde40000.npu: AT10MS CNA_DBG[200-2fc]: 1210=01ff0000 1280=00000078 1284=00200001
+[15005.932785] rocket fde40000.npu: AT10MS COREDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.933618] rocket fde40000.npu: AT10MS CMACDUMP: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.934439] rocket fde40000.npu: AT10MS OPEN_C: CMAC[0x200c]=0x1 ACCU[0x300c]=0x0 DPU[0x400c]=0x108 DPU_RDMA[0x500c]=0x27
+[15005.935397] rocket fde40000.npu: AT10MS OPEN_8 (run status): CMAC[0x2008]=0x0 ACCU[0x3008]=0x0 DPU[0x4008]=0x0 DPU_RDMA[0x5008]=0x0 CNA[0x1008]=0x0
+[15005.936563] rocket fde40000.npu: AT10MS PERF_POST: dt_wr(0x8034)=00000000 dt_rd(0x8038)=0000008b wt_rd(0x803c)=00000000 clr(0x8010)=00000101
+[15005.937665] rocket fde40000.npu: AT10MS DPU: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000 DST_BASE=ffe80000
+[15005.938576] rocket fde40000.npu: AT10MS DPU_RDMA: S_STATUS=00000000 S_POINTER=0000000e OP_EN=00000000
+[15005.939387] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 500c=00000027 5010=00000000 5014=00000000 5018=00000000 501c=00000000 5020=fff3f000
+[15005.940492] rocket fde40000.npu: AT10MS DPU_RDMA cfg: 5024=00000000 5028=00000000 502c=00000000 5030=00000000 5034=00000000 5038=00000000 503c=00000000 5040=00000000
+[15005.941789] rocket fde40000.npu: AT10MS DCOMP_CTRL/REGNUM/ADDR0/AMOUNT0: 0x1100=00000000 0x1104=00000000 0x1110=fff40000 0x1140=00000000
+[15005.942858] rocket fde40000.npu: AT10MS CNA CONV: 0x100c=0000a000 0x1010=00000040 0x1014=00000012 0x1018=0003de00
+[15005.943755] rocket fde40000.npu: AT10MS DATA/WEIGHT: 0x1020=0280002c 0x1024=00020008 0x1028=00000140 0x1030=00000180 0x1034=00000020 0x1038=0202000c
+[15005.944974] ROCKET: after hw_submit
+[15006.180411] rocket fde40000.npu: NPU job timed out
+[15006.180850] rocket fde40000.npu: TIMEOUT PC_RS=0x00000000 TASKST=0x0000f000 IOMMU: DTE=0x004cf000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[15006.181996] rocket fde40000.npu: POST_TIMEOUT_CNA: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15006.183460] rocket fde40000.npu: POST_TIMEOUT_CNA_SWAP: S_POINTER=0000000e CONV_CON1=0000a000 CONV_CON2=00000040 CONV_CON4=0003de00 DATA_SIZE0=0280002c DATA_SIZE3=00001b80 WEIGHT_SIZE2=0202000c
+[15006.185001] rocket fde40000.npu: ALL_SP CNA(0x1000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=0000a000
+[15006.185950] rocket fde40000.npu: ALL_SP CMAC(0x2000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000001
+[15006.186901] rocket fde40000.npu: ALL_SP ACCU(0x3000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000000
+[15006.187851] rocket fde40000.npu: ALL_SP DPU(0x4000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000108
+[15006.188927] rocket fde40000.npu: ALL_SP RDMA(0x5000): S_STATUS=00000000 S_POINTER=0000000e OE008=00000000 OE00c=00000027
+[15006.189885] rocket fde40000.npu: PERF_POST(dt_wr=DPU output bytes): dt_wr=00000000 dt_rd=0000008b wt_rd=00000000
+[15006.190775] rocket fde40000.npu: WEIGHT_CFG: CBUF_CON0=00000017 CBUF_CON1=028000a0 WSIZE0=00000180 WSIZE1=00000020 WSIZE2=0202000c DMACON0=00171c07 DMACON2=00064000 FEAT_ADDR=fff00000 DCOMP_CTRL=00000000 DCOMP_ADDR0=fff40000 DCOMP_AMT0=00000000
+[15006.192695] rocket fde40000.npu: DPU_CFG: DST_4018=00000000 SIZE_401c=00000000 4020=ffe80000 4024=00000000 4034=00000000 WIN_40b8=00000000 SURF_40c0=0000c800 BIAS_5020=fff3f000
+[15006.194085] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000963dec8b
+[15006.194759] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[15006.195332] rocket fde40000.npu: NOC_DEIDLE: BUS_IDLE_ACK(0x60)=0x000001ea BUS_IDLE_ST(0x68)=0x000001ea PWR_STATUS(0x98)=0x0000007d ret=0
+[15006.196433] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[15006.196997] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[15064.706304] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15064.711657] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15064.713200] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15064.714895] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15064.716544] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15064.718401] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15064.723230] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[15103.885371] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0

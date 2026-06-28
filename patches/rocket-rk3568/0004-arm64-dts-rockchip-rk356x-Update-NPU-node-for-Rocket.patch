@@ -1,0 +1,83 @@
+From: Midgy BALON <midgy971@gmail.com>
+Date: Fri, 4 Apr 2026 00:00:00 +0000
+Subject: [PATCH 4/5] arm64: dts: rockchip: rk356x: Update NPU node for
+ Rocket accel driver
+
+Update the RK3568 NPU device tree node to match the binding expected by
+the upstream Rocket accel driver (drivers/accel/rocket/):
+
+- Use the "rockchip,rk3568-rknn-core" compatible string instead of the
+  out-of-tree "rockchip,rk3568-rknpu" / "rockchip,rknpu" pair.
+
+- Split the single 0x10000-byte register region into three named regions
+  matching the Rocket driver's resource names: "pc" (program control,
+  +0x0000), "cna" (convolution neural net accelerator, +0x1000), and
+  "core" (CMAC/ACCU/DPU/PPU, +0x3000), each 0x1000 bytes.
+
+- Reorder clocks to match rocket_core.c's rocket_clk_names[]:
+  "aclk" (ACLK_NPU), "hclk" (HCLK_NPU), "npu" (SCMI_CLK_NPU, the
+  PVTPLL/SCMI-managed high-speed clock), "pclk" (PCLK_NPU_PRE).
+
+- Add "rockchip,pmu" pointing to the PMU syscon, required by the
+  RK3568-specific NOC de-idle sequence in the driver.
+
+- Drop "interrupt-names": the Rocket driver uses platform_get_irq(pdev, 0)
+  by index, so interrupt names are not needed.
+
+Rename the node label from "rknpu" to "rknn_core_0" to align with the
+naming convention used for RK3588 NPU core nodes.
+
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ arch/arm64/boot/dts/rockchip/rk356x-base.dtsi | 29 +++++++++++++--------
+ 1 file changed, 16 insertions(+), 13 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/rockchip/rk356x-base.dtsi b/arch/arm64/boot/dts/rockchip/rk356x-base.dtsi
+index XXXXXXX..XXXXXXX 100644
+--- a/arch/arm64/boot/dts/rockchip/rk356x-base.dtsi
++++ b/arch/arm64/boot/dts/rockchip/rk356x-base.dtsi
+@@ -561,7 +561,7 @@
+ 	rknpu_mmu: rknn_mmu_0: iommu@fde4b000 {
+ 		compatible = "rockchip,rk3568-iommu";
+ 		reg = <0x0 0xfde4b000 0x0 0x40>;
+ 		interrupts = <GIC_SPI 151 IRQ_TYPE_LEVEL_HIGH>;
+ 		clock-names = "aclk", "iface";
+ 		clocks = <&cru ACLK_NPU>, <&cru HCLK_NPU>;
+ 		power-domains = <&power RK3568_PD_NPU>;
+ 		#iommu-cells = <0>;
+ 		status = "disabled";
+ 	};
+
+-	rknpu: npu@fde40000 {
+-		compatible = "rockchip,rk3568-rknpu", "rockchip,rknpu";
+-		reg = <0x0 0xfde40000 0x0 0x10000>;
+-		interrupts = <GIC_SPI 151 IRQ_TYPE_LEVEL_HIGH>;
+-		interrupt-names = "npu_irq";
+-		clocks = <&scmi_clk SCMI_CLK_NPU>, <&cru CLK_NPU>,
+-			 <&cru ACLK_NPU>, <&cru HCLK_NPU>;
+-		clock-names = "scmi_clk", "clk", "aclk", "hclk";
+-		resets = <&cru SRST_A_NPU>, <&cru SRST_H_NPU>;
+-		reset-names = "srst_a", "srst_h";
+-		power-domains = <&power RK3568_PD_NPU>;
+-		iommus = <&rknpu_mmu>;
+-		status = "disabled";
+-	};
++	rknpu: rknn_core_0: npu@fde40000 {
++		compatible = "rockchip,rk3568-rknn-core";
++		reg = <0x0 0xfde40000 0x0 0x1000>,
++		      <0x0 0xfde41000 0x0 0x1000>,
++		      <0x0 0xfde43000 0x0 0x1000>;
++		reg-names = "pc", "cna", "core";
++		interrupts = <GIC_SPI 151 IRQ_TYPE_LEVEL_HIGH>;
++		clocks = <&cru ACLK_NPU>, <&cru HCLK_NPU>,
++			 <&scmi_clk SCMI_CLK_NPU>, <&cru PCLK_NPU_PRE>;
++		clock-names = "aclk", "hclk", "npu", "pclk";
++		assigned-clocks = <&scmi_clk SCMI_CLK_NPU>;
++		assigned-clock-rates = <200000000>;
++		resets = <&cru SRST_A_NPU>, <&cru SRST_H_NPU>;
++		reset-names = "srst_a", "srst_h";
++		power-domains = <&power RK3568_PD_NPU>;
++		rockchip,pmu = <&pmu>;
++		iommus = <&rknpu_mmu>;
++		status = "disabled";
++	};

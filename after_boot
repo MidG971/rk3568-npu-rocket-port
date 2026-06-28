@@ -1,0 +1,22 @@
+After rebooting, replug the eMMC and run these commands (no more raw device reads):
+
+  # Mount read-only, skip journal replay (avoids hang)
+  sudo mount -o ro,norecovery /dev/mmcblk0p3 /mnt/rock3b-boot
+
+  # Verify our extlinux.conf change is there
+  grep "^default" /mnt/rock3b-boot/boot/extlinux/extlinux.conf
+
+  # Find U-Boot env offset (targeted, not whole-device scan)
+  sudo dd if=/dev/mmcblk0 bs=4096 skip=1024 count=8 2>/dev/null | strings | grep "bootdelay\|bootcmd"
+  # (offset 0x400000 = 4MB, common Rockchip env location)
+
+  sudo umount /mnt/rock3b-boot
+
+  Also — since the boot goes instantly from "out" to the next SPL, I suspect U-Boot is either crashing before
+  UART init, or (more likely) your USB-serial adapter is briefly disconnecting during the U-Boot+kernel phase
+  and missing all that output. That dialog box Impossible d'ouvrir /dev/ttyUSB0 we saw mid-DDR suggests it's
+  flapping.
+
+  Is there any chance the board is actually booting successfully but you can't SSH in because the IP changed?
+  After rebooting your PC, try:
+  nmap -sn 10.160.1.0/24 | grep -A1 "Nmap scan"

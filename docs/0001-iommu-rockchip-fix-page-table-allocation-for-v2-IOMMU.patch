@@ -1,0 +1,60 @@
+From: Midgy BALON <midgy971@gmail.com>
+Date: Tue, 31 Mar 2026 00:00:00 +0100
+Subject: [PATCH] iommu/rockchip: fix page table allocation flags for v2 IOMMU
+
+The v2 IOMMU ops (used by RK3568, "rockchip,rk3568-iommu") had
+dma_bit_mask = DMA_BIT_MASK(40) and gfp_flags = 0, while v1 ops
+correctly set dma_bit_mask = DMA_BIT_MASK(32) and gfp_flags = GFP_DMA32.
+
+The RK3568 IOMMU page table walker uses a 32-bit AXI bus and cannot
+access physical addresses above 4 GB.  On boards with more than 4 GB
+of RAM (e.g. 8 GB variants), the two missing constraints cause two
+distinct failure modes:
+
+1. Direct allocation above 4 GB: iommu_alloc_pages_sz() may return
+   memory above 0x100000000.  The hardware page-table walker issues a
+   bus error trying to dereference those addresses, causing an IOMMU
+   fault on the first DMA transaction.
+
+2. SWIOTLB bounce-buffer poisoning (4 GB boards and above): without
+   GFP_DMA32, page tables land above the SWIOTLB window.  dma_map_single()
+   with DMA_BIT_MASK(32) bounces them through a SWIOTLB buffer below 4 GB.
+   rk_dte_get_page_table() then returns phys_to_virt() of the bounce
+   buffer's bus address.  PTEs are written into the bounce buffer;
+   the next dma_sync_single_for_device(DMA_TO_DEVICE) copies the
+   original (zero) data back, silently erasing the freshly written PTEs.
+   The IOMMU then faults because every page-table entry reads as zero.
+
+Fix by giving v2 the same constraints as v1: DMA_BIT_MASK(32) and
+GFP_DMA32 so that both the directory table and page tables are always
+allocated below 4 GB.
+
+Tested on Radxa ROCK 3B (RK3568, 8 GB LPDDR4X):
+  - MobileNetV1 via RKNN: 5.8 ms/inference (IOMMU mode)
+  - YOLOv5s 640x640 via RKNN: ~57 ms/inference (IOMMU mode)
+  - No IOMMU faults, correct inference results
+
+Fixes: 99b678d672f8 ("iommu/rockchip: Add support for rk3568")
+Cc: stable@vger.kernel.org
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ drivers/iommu/rockchip-iommu.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/iommu/rockchip-iommu.c b/drivers/iommu/rockchip-iommu.c
+index 85f3667e7..XXXXXXX 100644
+--- a/drivers/iommu/rockchip-iommu.c
++++ b/drivers/iommu/rockchip-iommu.c
+@@ -1483,8 +1483,8 @@ static struct rk_iommu_ops iommu_data_ops_v2 = {
+ 	.pt_address = &rk_dte_pt_address_v2,
+ 	.mk_dtentries = &rk_mk_dte_v2,
+ 	.mk_ptentries = &rk_mk_pte_v2,
+-	.dma_bit_mask = DMA_BIT_MASK(40),
+-	.gfp_flags = 0,
++	.dma_bit_mask = DMA_BIT_MASK(32),
++	.gfp_flags = GFP_DMA32,
+ };
+
+ static const struct of_device_id rk_iommu_dt_ids[] = {
+--
+2.39.5

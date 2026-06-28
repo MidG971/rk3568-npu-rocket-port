@@ -1,0 +1,157 @@
+From 8cf97f502c6b95c867afefaedb1fbe182a3ad304 Mon Sep 17 00:00:00 2001
+From: Midgy BALON <midgy971@gmail.com>
+Date: Thu, 4 Jun 2026 13:37:40 +0000
+Subject: [RFC PATCH v4 05/10] accel: rocket: Keep the IOMMU domain attached
+ across jobs
+
+rocket attached the job's IOMMU domain in rocket_job_run() and
+detached it again on every completion and reset. Each attach/detach
+toggles the rk_iommu stall/force-reset/paging handshake, and on
+RK3568 the NPU MMU is idle between jobs, so that handshake times out
+and logs a burst of "stall/paging request timed out" errors for
+every job.
+
+Attach the per-context domain once and keep it: track the attached
+domain in the core, swap it only when a job from a different context
+runs, and detach it at core teardown. A reference on the attached
+domain is held so it outlives the job that first attached it and is
+released on swap/teardown.
+
+Because a hardware reset (on job timeout) wipes the IOMMU page-table
+base register, drop the attached domain after rocket_core_reset() so
+the next job re-attaches and reprograms it. Also tear down the
+scheduler before detaching the IOMMU in rocket_core_fini(), so an
+in-flight job can no longer reach the domain being detached.
+
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ drivers/accel/rocket/rocket_core.c | 14 +++++++++++-
+ drivers/accel/rocket/rocket_core.h |  3 +++
+ drivers/accel/rocket/rocket_job.c  | 35 +++++++++++++++++++++++++-----
+ 3 files changed, 46 insertions(+), 6 deletions(-)
+
+diff --git a/drivers/accel/rocket/rocket_core.c b/drivers/accel/rocket/rocket_core.c
+index 779e95159..6c128f585 100644
+--- a/drivers/accel/rocket/rocket_core.c
++++ b/drivers/accel/rocket/rocket_core.c
+@@ -13,6 +13,7 @@
+ #include <linux/reset.h>
+ 
+ #include "rocket_core.h"
++#include "rocket_drv.h"
+ #include "rocket_job.h"
+ 
+ int rocket_core_init(struct rocket_core *core)
+@@ -112,9 +113,20 @@ void rocket_core_fini(struct rocket_core *core)
+ {
+ 	pm_runtime_dont_use_autosuspend(core->dev);
+ 	pm_runtime_disable(core->dev);
++
++	/*
++	 * Stop the scheduler before tearing down the IOMMU so an in-flight
++	 * job can no longer touch the (about to be detached) domain.
++	 */
++	rocket_job_fini(core);
++
++	if (core->attached_domain) {
++		iommu_detach_group(NULL, core->iommu_group);
++		rocket_iommu_domain_put(core->attached_domain);
++		core->attached_domain = NULL;
++	}
+ 	iommu_group_put(core->iommu_group);
+ 	core->iommu_group = NULL;
+-	rocket_job_fini(core);
+ }
+ 
+ void rocket_core_reset(struct rocket_core *core)
+diff --git a/drivers/accel/rocket/rocket_core.h b/drivers/accel/rocket/rocket_core.h
+index 5a145ba8c..78791ecb3 100644
+--- a/drivers/accel/rocket/rocket_core.h
++++ b/drivers/accel/rocket/rocket_core.h
+@@ -42,6 +42,8 @@ struct rocket_soc_data {
+ #define rocket_core_writel(core, reg, value) \
+ 	writel(value, (core)->core_iomem + (REG_CORE_##reg) - REG_CORE_S_STATUS)
+ 
++struct rocket_iommu_domain;
++
+ struct rocket_core {
+ 	struct device *dev;
+ 	struct rocket_device *rdev;
+@@ -56,6 +58,7 @@ struct rocket_core {
+ 	struct reset_control_bulk_data resets[2];
+ 
+ 	struct iommu_group *iommu_group;
++	struct rocket_iommu_domain *attached_domain;
+ 
+ 	struct mutex job_lock;
+ 	struct rocket_job *in_flight_job;
+diff --git a/drivers/accel/rocket/rocket_job.c b/drivers/accel/rocket/rocket_job.c
+index e25234261..368b2ebea 100644
+--- a/drivers/accel/rocket/rocket_job.c
++++ b/drivers/accel/rocket/rocket_job.c
+@@ -9,6 +9,7 @@
+ #include <drm/rocket_accel.h>
+ #include <linux/interrupt.h>
+ #include <linux/iommu.h>
++#include <linux/kref.h>
+ #include <linux/platform_device.h>
+ #include <linux/pm_runtime.h>
+ 
+@@ -314,9 +315,26 @@ static struct dma_fence *rocket_job_run(struct drm_sched_job *sched_job)
+ 	if (ret < 0)
+ 		return fence;
+ 
+-	ret = iommu_attach_group(job->domain->domain, core->iommu_group);
+-	if (ret < 0)
+-		return fence;
++	/*
++	 * Attach the job's IOMMU domain only when it differs from the one
++	 * already attached. Re-attaching per job toggles the rk_iommu
++	 * stall/reset handshake on an idle NPU MMU, which is slow and
++	 * noisy; keep the domain attached across jobs instead.
++	 */
++	if (core->attached_domain != job->domain) {
++		if (core->attached_domain) {
++			iommu_detach_group(NULL, core->iommu_group);
++			rocket_iommu_domain_put(core->attached_domain);
++			core->attached_domain = NULL;
++		}
++
++		ret = iommu_attach_group(job->domain->domain, core->iommu_group);
++		if (ret < 0)
++			return fence;
++
++		kref_get(&job->domain->kref);
++		core->attached_domain = job->domain;
++	}
+ 
+ 	scoped_guard(mutex, &core->job_lock) {
+ 		core->in_flight_job = job;
+@@ -340,7 +358,6 @@ static void rocket_job_handle_irq(struct rocket_core *core)
+ 				return;
+ 			}
+ 
+-			iommu_detach_group(NULL, iommu_group_get(core->dev));
+ 			dma_fence_signal(core->in_flight_job->done_fence);
+ 			pm_runtime_put_autosuspend(core->dev);
+ 			core->in_flight_job = NULL;
+@@ -376,7 +393,15 @@ rocket_reset(struct rocket_core *core, struct drm_sched_job *bad)
+ 	 */
+ 	rocket_core_reset(core);
+ 
+-	iommu_detach_group(NULL, core->iommu_group);
++	/*
++	 * The reset wipes the IOMMU page-table base, so drop the attached
++	 * domain to force the next job to re-attach and reprogram it.
++	 */
++	if (core->attached_domain) {
++		iommu_detach_group(NULL, core->iommu_group);
++		rocket_iommu_domain_put(core->attached_domain);
++		core->attached_domain = NULL;
++	}
+ 
+ 	/* NPU has been reset, we can clear the reset pending bit. */
+ 	atomic_set(&core->reset.pending, 0);
+-- 
+2.47.3
+

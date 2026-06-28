@@ -1,0 +1,18 @@
+radxa
+Password: 
+Linux rock-3b 6.19.0-rc5-00003-gb16c04e5e619-dirty #65 SMP PREEMPT Thu May 21 11:16:54 CEST 2026 aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Jun 18 16:08:03 CEST 2026 from 100.73.162.100 on pts/0
+[?2004hradxa@rock-3b:~$ [ 7420.786275] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[ 7420.791238] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[ 7420.792505] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[ 7420.793659] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[ 7420.794872] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[ 7420.796496] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0
+[ 7420.800756] hdmi-audio-codec hdmi-audio-codec.11.auto: HDMI: Unknown ELD version 0

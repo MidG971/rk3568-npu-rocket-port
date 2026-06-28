@@ -1,0 +1,173 @@
+From: MidG971 <midgy971@gmail.com>
+Subject: [PATCH 1/2] pmdomain: rockchip: Add regulator support for power domains
+
+Some power domains (like GPU and NPU) require their voltage supply
+to be enabled before the domain can be powered on. Without the
+regulator enabled, the domain fails to de-idle with errors like:
+
+  rockchip-pm-domain: failed to get ack on domain 'npu', val=0x1ee
+
+Add optional regulator support to the Rockchip power domain driver.
+Domains that need a regulator can specify this via the need_regulator
+flag in their domain_info, and the regulator is acquired from the
+domain's device tree node using devm_of_regulator_get().
+
+This is based on Sebastian Reichel's work for RK3588 GPU power domain.
+
+Signed-off-by: MidG971 <midgy971@gmail.com>
+Co-developed-by: Claude <noreply@anthropic.com>
+Signed-off-by: Claude <noreply@anthropic.com>
+---
+ drivers/pmdomain/rockchip/pm-domains.c | 73 ++++++++++++++++++++++++--
+ 1 file changed, 69 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/pmdomain/rockchip/pm-domains.c b/drivers/pmdomain/rockchip/pm-domains.c
+index XXXXXX..YYYYYY 100644
+--- a/drivers/pmdomain/rockchip/pm-domains.c
++++ b/drivers/pmdomain/rockchip/pm-domains.c
+@@ -18,6 +18,7 @@
+ #include <linux/regmap.h>
+ #include <linux/mfd/syscon.h>
+ #include <soc/rockchip/pm_domains.h>
++#include <linux/regulator/consumer.h>
+ #include <dt-bindings/power/px30-power.h>
+ #include <dt-bindings/power/rockchip,rv1126-power.h>
+ #include <dt-bindings/power/rk3036-power.h>
+@@ -48,6 +49,7 @@ struct rockchip_domain_info {
+ 	u32 pwr_offset;
+ 	u32 mem_offset;
+ 	u32 req_offset;
++	bool need_regulator;
+ };
+
+ struct rockchip_pmu_info {
+@@ -81,10 +83,12 @@ struct rockchip_pm_domain {
+ 	struct generic_pm_domain genpd;
+ 	const struct rockchip_domain_info *info;
+ 	struct rockchip_pmu *pmu;
++	struct device_node *node;
+ 	int num_qos;
+ 	struct regmap **qos_regmap;
+ 	u32 *qos_save_regs[MAX_QOS_REGS_NUM];
+ 	int num_clks;
++	struct regulator *supply;
+ 	struct clk_bulk_data *clks;
+ };
+
+@@ -168,6 +172,17 @@ static const struct rockchip_domain_info rk3399_pm_domains[] = {
+ #define DOMAIN_RK3568(name, pwr, req, wakeup)		\
+ 	DOMAIN_M(name, pwr, pwr, req, req, req, wakeup)
+
++/* RK3568 domain with regulator support */
++#define DOMAIN_RK3568_R(name, pwr, req, wakeup)		\
++{							\
++	.name = name,					\
++	.pwr_w_mask = (pwr) << 16,			\
++	.pwr_mask = (pwr),				\
++	.status_mask = (pwr),				\
++	.req_w_mask = (req) << 16,			\
++	.req_mask = (req),				\
++	.idle_mask = (req),				\
++	.ack_mask = (req),				\
++	.active_wakeup = wakeup,			\
++	.need_regulator = true,				\
++}
++
+ /*
+  * Dynamic Memory Controller may need to coordinate with us -- see
+  * rockchip_pmu_block().
+@@ -279,6 +294,42 @@ EXPORT_SYMBOL_GPL(rockchip_pmu_unblock);
+ #define DOMAIN_RK3588(name, p_offset, pwr, status, m_offset, m_status, r_status, r_offset, req, idle, wakeup)	\
+ 	DOMAIN_M_O_R(name, p_offset, pwr, status, m_offset, m_status, r_status, r_offset, req, idle, idle, wakeup)
+
++static int rockchip_pd_regulator_disable(struct rockchip_pm_domain *pd)
++{
++	if (IS_ERR_OR_NULL(pd->supply))
++		return 0;
++
++	return regulator_disable(pd->supply);
++}
++
++static int rockchip_pd_regulator_enable(struct rockchip_pm_domain *pd)
++{
++	int ret;
++
++	if (!pd->info->need_regulator)
++		return 0;
++
++	if (!pd->supply) {
++		pd->supply = devm_of_regulator_get(pd->pmu->dev, pd->node, "domain");
++		if (IS_ERR(pd->supply)) {
++			ret = PTR_ERR(pd->supply);
++			if (ret == -ENODEV) {
++				/* No regulator specified, that's OK */
++				pd->supply = NULL;
++				return 0;
++			}
++			dev_err(pd->pmu->dev, "failed to get regulator for %s: %d\n",
++				pd->genpd.name, ret);
++			pd->supply = NULL;
++			return ret;
++		}
++	}
++
++	if (IS_ERR_OR_NULL(pd->supply))
++		return 0;
++
++	return regulator_enable(pd->supply);
++}
++
+ static bool rockchip_pmu_domain_is_idle(struct rockchip_pm_domain *pd)
+ {
+ 	struct rockchip_pmu *pmu = pd->pmu;
+@@ -525,7 +576,13 @@ static int rockchip_pd_power(struct rockchip_pm_domain *pd, bool power_on)
+ static int rockchip_pd_power_on(struct generic_pm_domain *domain)
+ {
+ 	struct rockchip_pm_domain *pd = to_rockchip_pd(domain);
++	int ret;
++
++	ret = rockchip_pd_regulator_enable(pd);
++	if (ret)
++		return ret;
+
+-	return rockchip_pd_power(pd, true);
++	ret = rockchip_pd_power(pd, true);
++	if (ret)
++		rockchip_pd_regulator_disable(pd);
++
++	return ret;
+ }
+
+ static int rockchip_pd_power_off(struct generic_pm_domain *domain)
+ {
+ 	struct rockchip_pm_domain *pd = to_rockchip_pd(domain);
++	int ret;
+
+-	return rockchip_pd_power(pd, false);
++	ret = rockchip_pd_power(pd, false);
++	if (!ret)
++		rockchip_pd_regulator_disable(pd);
++
++	return ret;
+ }
+
+ static int rockchip_pd_attach_dev(struct generic_pm_domain *genpd,
+@@ -617,6 +688,7 @@ static int rockchip_pm_add_one_domain(struct rockchip_pmu *pmu,
+
+ 	pd->info = pd_info;
+ 	pd->pmu = pmu;
++	pd->node = node;
+
+ 	pd->num_clks = of_clk_get_parent_count(node);
+ 	if (pd->num_clks > 0) {
+@@ -1102,7 +1174,7 @@ static const struct rockchip_domain_info rk3399_pm_domains[] = {
+ };
+
+ static const struct rockchip_domain_info rk3568_pm_domains[] = {
+-	[RK3568_PD_NPU]		= DOMAIN_RK3568("npu",  BIT(1), BIT(2),  false),
++	[RK3568_PD_NPU]		= DOMAIN_RK3568_R("npu",  BIT(1), BIT(2),  false),
+ 	[RK3568_PD_GPU]		= DOMAIN_RK3568("gpu",  BIT(0), BIT(1),  false),
+ 	[RK3568_PD_VI]		= DOMAIN_RK3568("vi",   BIT(6), BIT(3),  false),
+ 	[RK3568_PD_VO]		= DOMAIN_RK3568("vo",   BIT(7), BIT(4),  false),
+--
+2.39.5

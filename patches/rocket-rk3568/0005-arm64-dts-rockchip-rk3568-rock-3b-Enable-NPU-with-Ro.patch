@@ -1,0 +1,41 @@
+From: Midgy BALON <midgy971@gmail.com>
+Date: Fri, 4 Apr 2026 00:00:00 +0000
+Subject: [PATCH 5/5] arm64: dts: rockchip: rk3568-rock-3b: Enable NPU with
+ Rocket driver
+
+Enable the RK3568 NPU on the Radxa ROCK 3B board.  The NPU is fed from
+vdd_npu (825–1000 mV range), with clock rates of 1 GHz (SCMI/PVTPLL)
+and 600 MHz (CRU divider), matching the 1000 mV operating point.
+
+Rename the supply property from the BSP-specific "rknpu-supply" to the
+"npu-supply" property required by the binding.
+
+Drop "operating-points-v2": the Rocket driver does not implement devfreq
+and the OPP table is not part of the rknn-core binding schema.
+
+Enable the NPU IOMMU (rknpu_mmu) so the Rocket driver can create a
+per-file IOMMU domain for DMA isolation.
+
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts b/arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts
+index XXXXXXX..XXXXXXX 100644
+--- a/arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts
++++ b/arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts
+@@ -809,10 +809,8 @@
+
+ &rknpu {
+ 	assigned-clocks = <&scmi_clk SCMI_CLK_NPU>, <&cru CLK_NPU>;
+ 	assigned-clock-rates = <1000000000>, <600000000>;
+-	operating-points-v2 = <&npu_opp_table>;
+-	rknpu-supply = <&vdd_npu>;
++	npu-supply = <&vdd_npu>;
+ 	status = "okay";
+ };
+
+ &rknpu_mmu {
+ 	status = "okay";
+ };

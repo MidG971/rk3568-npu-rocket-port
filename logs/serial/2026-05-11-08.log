@@ -1,0 +1,464 @@
+[ 2402.289026] platform rknn: [drm] BO first page PA=0x42b2000 size=51200
+[ 2402.289872] platform rknn: [drm] BO first page PA=0x42b8000 size=512
+[ 2402.290757] platform rknn: [drm] BO first page PA=0x42b9000 size=204800
+[ 2402.291886] platform rknn: [drm] BO first page PA=0x40cb000 size=512
+[ 2402.292809] platform rknn: [drm] BO first page PA=0x40cc000 size=204800
+[ 2402.293855] platform rknn: [drm] BO first page PA=0x409e000 size=409600
+[ 2402.294581] platform rknn: [drm] BO first page PA=0x4002000 size=1088
+[ 2402.298347] rocket fde40000.npu: job_run: detach+attach: attached=0000000000000000 job=000000009393abcc
+[ 2402.299190] rocket fde40000.npu: rk_iommu_attach_device: 0000000062a47bb4 -> 0000000075dc5a42 type=1
+[ 2402.299990] rocket fde40000.npu: rk_iommu_identity_attach: detaching from rk_domain=0000000081600b72 dt_dma=0x0000000000493000
+[ 2402.300994] rocket fde40000.npu: rk_iommu_attach: new_domain=0000000075dc5a42 type=1 dt_dma=0x00000000040f8000
+[ 2402.301903] ROCKET: before trigger_enable
+[ 2402.302258] ROCKET: after trigger_enable
+[ 2402.302603] ROCKET: before hw_submit
+[ 2402.302923] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2402.303834] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001e8 NOC_AUTO=0x0000fffb IOMMU: DTE=0x040f8000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2402.305170] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001e8
+[ 2402.306110] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2402.317555] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2402.325578] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2402.337569] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2402.338690] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001e8 NOC_AUTO=0x0000fffb
+[ 2402.339869] ROCKET: after hw_submit
+[ 2402.809669] rocket fde40000.npu: NPU job timed out
+[ 2402.810247] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2402.811442] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000a4cc9e3a
+[ 2402.812148] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2402.812794] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2402.814038] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2402.822113] ROCKET: before hw_submit
+[ 2402.822460] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2402.823407] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x040f8000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2402.824767] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2402.825790] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2402.833529] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2402.841548] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2402.857603] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2402.858738] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2402.859934] ROCKET: after hw_submit
+[ 2403.353648] rocket fde40000.npu: NPU job timed out
+[ 2403.354141] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2403.355295] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000ffc6a5f1
+[ 2403.355997] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2403.356638] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2403.357639] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2403.364991] ROCKET: before hw_submit
+[ 2403.365574] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2403.366711] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x040f8000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2403.368237] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2403.369297] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2403.381601] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2403.389614] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2403.405529] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2403.406645] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2403.407823] ROCKET: after hw_submit
+[ 2403.865631] rocket fde40000.npu: NPU job timed out
+[ 2403.866123] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2403.867273] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=000000007cad1225
+[ 2403.867974] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2403.868617] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2403.869253] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2403.877915] ROCKET: before hw_submit
+[ 2403.878260] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2403.879207] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x040f8000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2403.880609] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2403.881669] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2403.889531] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2403.897541] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2403.909562] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2403.910687] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2403.911870] ROCKET: after hw_submit
+[ 2404.409662] rocket fde40000.npu: NPU job timed out
+[ 2404.410161] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2404.411313] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000c4bd3287
+[ 2404.412016] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2404.412659] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2404.413271] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2404.421475] ROCKET: before hw_submit
+[ 2404.421834] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2404.422800] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x040f8000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2404.424217] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2404.425149] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2404.433481] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2404.441478] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2404.457612] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2404.458776] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2404.459988] ROCKET: after hw_submit
+[ 2404.953578] rocket fde40000.npu: NPU job timed out
+[ 2404.954070] rocket fde40000.npu: TIMEOUT PC_RS=0x00000000 TASKST=0x00007000 IOMMU: DTE=0x040f8000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2404.955221] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000220dbe93
+[ 2404.955922] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2404.956566] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2404.957193] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2405.104635] rocket fde40000.npu: rk_iommu_attach_device: 0000000075dc5a42 -> 0000000062a47bb4 type=3
+[ 2405.105481] rocket fde40000.npu: rk_iommu_identity_attach: detaching from rk_domain=000000007f4bf564 dt_dma=0x00000000040f8000
+[ 2405.106483] rocket fde40000.npu: rk_iommu_attach: new_domain=0000000062a47bb4 type=3 dt_dma=0x0000000000493000
+[ 2689.326061] [drm] Initialized rocket 0.0.0 for rknn on minor 0
+[ 2689.326623] rocket fde40000.npu: iommu_dev = 00000000462956d7
+[ 2689.327138] rocket fde40000.npu: BOUNCE: staging page PA=0x00498000
+[ 2689.328162] rocket fde40000.npu: Rockchip NPU core 0 version: 0
+[ 2697.580046] platform rknn: [drm] BO first page PA=0x4004000 size=51200
+[ 2697.580805] platform rknn: [drm] BO first page PA=0x4012000 size=512
+[ 2697.581788] platform rknn: [drm] BO first page PA=0x4013000 size=204800
+[ 2697.583016] platform rknn: [drm] BO first page PA=0x4045000 size=512
+[ 2697.584018] platform rknn: [drm] BO first page PA=0x4046000 size=204800
+[ 2697.585011] platform rknn: [drm] BO first page PA=0x4078000 size=409600
+[ 2697.585761] platform rknn: [drm] BO first page PA=0x475c000 size=1088
+[ 2697.589364] rocket fde40000.npu: job_run: detach+attach: attached=0000000000000000 job=0000000031dd7159
+[ 2697.590205] rocket fde40000.npu: rk_iommu_attach_device: 0000000062a47bb4 -> 000000008a7a9820 type=1
+[ 2697.591005] rocket fde40000.npu: rk_iommu_identity_attach: detaching from rk_domain=0000000081600b72 dt_dma=0x0000000000493000
+[ 2697.592005] rocket fde40000.npu: rk_iommu_attach: new_domain=000000008a7a9820 type=1 dt_dma=0x0000000004003000
+[ 2697.592889] ROCKET: before trigger_enable
+[ 2697.593250] ROCKET: after trigger_enable
+[ 2697.593615] ROCKET: before hw_submit
+[ 2697.593936] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2697.594857] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x475c000
+[ 2697.595478] rocket fde40000.npu: DTE_DRAM: [0]=0x04011001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2697.596294] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001e8 NOC_AUTO=0x0000fffb IOMMU: DTE=0x04003000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2697.597664] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001e8
+[ 2697.598568] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2697.605306] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2697.613304] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2697.625317] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2697.626434] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001e8 NOC_AUTO=0x0000fffb
+[ 2697.627618] ROCKET: after hw_submit
+[ 2698.093351] rocket fde40000.npu: NPU job timed out
+[ 2698.093877] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2698.095031] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000efcdde18
+[ 2698.095778] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2698.096426] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2698.097034] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2698.105826] ROCKET: before hw_submit
+[ 2698.106214] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2698.107185] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x475c000
+[ 2698.107838] rocket fde40000.npu: DTE_DRAM: [0]=0x04011001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2698.108682] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x04003000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2698.110181] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2698.111132] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2698.117268] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2698.125330] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2698.137332] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2698.138456] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2698.139643] ROCKET: after hw_submit
+[ 2698.641444] rocket fde40000.npu: NPU job timed out
+[ 2698.641933] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2698.643087] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=0000000066232af3
+[ 2698.643789] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2698.644429] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2698.645044] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2698.653135] ROCKET: before hw_submit
+[ 2698.653541] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2698.654516] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x475c000
+[ 2698.655168] rocket fde40000.npu: DTE_DRAM: [0]=0x04011001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2698.656057] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x04003000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2698.657557] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2698.658495] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2698.669263] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2698.681249] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2698.693392] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2698.694584] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2698.695798] ROCKET: after hw_submit
+[ 2699.181341] rocket fde40000.npu: NPU job timed out
+[ 2699.181833] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2699.182983] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=000000001ca0397e
+[ 2699.183684] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2699.184326] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2699.184939] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2699.192877] ROCKET: before hw_submit
+[ 2699.193308] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2699.194286] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x475c000
+[ 2699.194941] rocket fde40000.npu: DTE_DRAM: [0]=0x04011001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2699.195821] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x04003000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2699.197258] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2699.198205] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2699.205284] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2699.213275] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2699.225410] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2699.226570] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2699.227778] ROCKET: after hw_submit
+[ 2699.693340] rocket fde40000.npu: NPU job timed out
+[ 2699.693831] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2699.694982] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000ca628e13
+[ 2699.695685] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2699.696328] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2699.696946] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2699.705821] ROCKET: before hw_submit
+[ 2699.706178] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2699.707142] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x475c000
+[ 2699.707791] rocket fde40000.npu: DTE_DRAM: [0]=0x04011001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2699.708633] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x04003000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2699.710107] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2699.711045] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2699.717262] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2699.729232] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2699.741306] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2699.742424] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2699.743608] ROCKET: after hw_submit
+[ 2700.237280] rocket fde40000.npu: NPU job timed out
+[ 2700.237772] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x04003000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2700.238924] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000a4cc9e3a
+[ 2700.239628] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2700.240304] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2700.240925] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2700.387061] rocket fde40000.npu: rk_iommu_attach_device: 000000008a7a9820 -> 0000000062a47bb4 type=3
+[ 2700.387883] rocket fde40000.npu: rk_iommu_identity_attach: detaching from rk_domain=00000000550ad182 dt_dma=0x0000000004003000
+[ 2700.388883] rocket fde40000.npu: rk_iommu_attach: new_domain=0000000062a47bb4 type=3 dt_dma=0x0000000000493000
+cls
+[?2004l[H[J[3J[?2004hradxa@rock-3b:~$ [ 2890.036006] [drm] Initialized rocket 0.0.0 for rknn on minor 0
+[ 2890.036567] rocket fde40000.npu: iommu_dev = 00000000462956d7
+[ 2890.037104] rocket fde40000.npu: BOUNCE: staging page PA=0x046ef000
+[ 2890.038164] rocket fde40000.npu: Rockchip NPU core 0 version: 0
+[ 2890.617289] platform rknn: [drm] BO first page PA=0x475e000 size=51200
+[ 2890.618130] platform rknn: [drm] BO first page PA=0x476c000 size=512
+[ 2890.619087] platform rknn: [drm] BO first page PA=0x476d000 size=204800
+[ 2890.620323] platform rknn: [drm] BO first page PA=0x479f000 size=512
+[ 2890.621288] platform rknn: [drm] BO first page PA=0x47a0000 size=204800
+[ 2890.622438] platform rknn: [drm] BO first page PA=0x47d2000 size=409600
+[ 2890.623198] platform rknn: [drm] BO first page PA=0x4336000 size=1088
+[ 2890.626924] rocket fde40000.npu: job_run: detach+attach: attached=0000000000000000 job=000000000f4c9cbf
+[ 2890.627768] rocket fde40000.npu: rk_iommu_attach_device: 0000000062a47bb4 -> 00000000d8573ef7 type=1
+[ 2890.628568] rocket fde40000.npu: rk_iommu_identity_attach: detaching from rk_domain=0000000081600b72 dt_dma=0x0000000000493000
+[ 2890.629565] rocket fde40000.npu: rk_iommu_attach: new_domain=00000000d8573ef7 type=1 dt_dma=0x000000000475d000
+[ 2890.630484] ROCKET: before trigger_enable
+[ 2890.630846] ROCKET: after trigger_enable
+[ 2890.631192] ROCKET: before hw_submit
+[ 2890.631512] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2890.632422] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x4336000
+[ 2890.633044] rocket fde40000.npu: DTE_DRAM: [0]=0x0476b001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2890.633915] rocket fde40000.npu: PTE_DRAM: table=0x0476b000 idx=0x0d7 PTE=0x04336007 (expected_pa=0x4336000)
+[ 2890.634810] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001e8 NOC_AUTO=0x0000fffb IOMMU: DTE=0x0475d000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2890.636153] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001e8
+[ 2890.637058] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2890.646045] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2890.654028] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2890.666070] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2890.667180] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001e8 NOC_AUTO=0x0000fffb
+[ 2890.668355] ROCKET: after hw_submit
+[ 2891.142123] rocket fde40000.npu: NPU job timed out
+[ 2891.142614] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2891.143803] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000879c0821
+[ 2891.144508] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2891.145149] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2891.145763] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2891.154456] ROCKET: before hw_submit
+[ 2891.154986] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2891.156104] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x4336000
+[ 2891.156884] rocket fde40000.npu: DTE_DRAM: [0]=0x0476b001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2891.157863] rocket fde40000.npu: PTE_DRAM: table=0x0476b000 idx=0x0d7 PTE=0x04336007 (expected_pa=0x4336000)
+[ 2891.158976] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x0475d000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2891.160615] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2891.161769] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2891.170033] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2891.178033] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2891.194111] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2891.195246] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2891.196441] ROCKET: after hw_submit
+[ 2891.686077] rocket fde40000.npu: NPU job timed out
+[ 2891.686568] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2891.687723] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=000000000ba47d58
+[ 2891.688459] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2891.689107] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2891.689729] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2891.697686] ROCKET: before hw_submit
+[ 2891.698098] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2891.699068] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x4336000
+[ 2891.699715] rocket fde40000.npu: DTE_DRAM: [0]=0x0476b001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2891.700560] rocket fde40000.npu: PTE_DRAM: table=0x0476b000 idx=0x0d7 PTE=0x04336007 (expected_pa=0x4336000)
+[ 2891.701446] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x0475d000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2891.702896] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2891.703825] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2891.710050] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2891.718041] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2891.730045] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2891.731171] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2891.732350] ROCKET: after hw_submit
+[ 2892.198147] rocket fde40000.npu: NPU job timed out
+[ 2892.198640] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2892.199792] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000efcdde18
+[ 2892.200493] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2892.201134] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2892.201749] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2892.210026] ROCKET: before hw_submit
+[ 2892.210364] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2892.211408] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x4336000
+[ 2892.212153] rocket fde40000.npu: DTE_DRAM: [0]=0x0476b001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2892.213090] rocket fde40000.npu: PTE_DRAM: table=0x0476b000 idx=0x0d7 PTE=0x04336007 (expected_pa=0x4336000)
+[ 2892.214047] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x0475d000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2892.215434] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2892.216346] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2892.222162] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2892.230008] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2892.242108] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2892.243263] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2892.244473] ROCKET: after hw_submit
+[ 2892.746027] rocket fde40000.npu: NPU job timed out
+[ 2892.746482] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2892.747608] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=00000000112b88ea
+[ 2892.748291] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2892.748886] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2892.749576] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2892.757123] ROCKET: before hw_submit
+[ 2892.757473] rocket fde40000.npu: HW_SUBMIT: regcmd=0xd7000 count=133 scale=1 AMOUNTS=0x00004084 TASKST=0x00007000
+[ 2892.758466] rocket fde40000.npu: PRE_OP_IOVA: regcmd=0xd7000 SW_PA=0x4336000
+[ 2892.759106] rocket fde40000.npu: DTE_DRAM: [0]=0x0476b001 [1]=0x00000000 [2]=0x00000000 [3]=0x00000000
+[ 2892.759933] rocket fde40000.npu: PTE_DRAM: table=0x0476b000 idx=0x0d7 PTE=0x04336007 (expected_pa=0x4336000)
+[ 2892.760805] rocket fde40000.npu: PRE_OP: PC_RAWST=0x00004000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb IOMMU: DTE=0x0475d000 ST=0x00000019 FA=0x00000000 RAWST=0x00000000
+[ 2892.762289] rocket fde40000.npu: IMM_POST_OPENEN: IOMMU_ST=0x00000001 FA=0x00000000 BUS_IDLE_ST=0x000001ea
+[ 2892.763218] rocket fde40000.npu: AT50US: IOMMU_ST=0x00000001 FA=0x00000000 RAWST=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000
+[ 2892.769954] rocket fde40000.npu: AT1MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00000084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2892.777950] rocket fde40000.npu: AT5MS: IOMMU_ST=0x00000001 FA=0x00000000 PC_AMOUNTS=0x00004084 PC_RS=0x00000000 TASKST=0x00007000
+[ 2892.790065] rocket fde40000.npu: AT10MS: PC_RS=0x00004000 PC_OPENA=0x00000001 PC_BASE=0x000d7000 PC_AMOUNTS=0x00004084 PC_TASKST=0x00007000
+[ 2892.791205] rocket fde40000.npu: AT10MS: IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000 BUS_IDLE_ST=0x000001ea NOC_AUTO=0x0000fffb
+[ 2892.792402] ROCKET: after hw_submit
+[ 2893.286000] rocket fde40000.npu: NPU job timed out
+[ 2893.286492] rocket fde40000.npu: TIMEOUT PC_RS=0x00004000 TASKST=0x00007000 IOMMU: DTE=0x0475d000 ST=0x00000001 FA=0x00000000 RAWST=0x00000000
+[ 2893.287645] rocket fde40000.npu: rocket_reset: ENTRY pending=1 bad=0000000066232af3
+[ 2893.288346] rocket fde40000.npu: rocket_reset: PAST_PENDING_CHECK
+[ 2893.288989] rocket fde40000.npu: rocket_reset: resume_paging ret=0
+[ 2893.289603] rocket fde40000.npu: TIMEDOUT: rocket_reset returned
+[ 2893.440515] rocket fde40000.npu: rk_iommu_attach_device: 00000000d8573ef7 -> 0000000062a47bb4 type=3
+[ 2893.441338] rocket fde40000.npu: rk_iommu_identity_attach: detaching from rk_domain=000000005e53d35f dt_dma=0x000000000475d000
+[ 2893.442367] rocket fde40000.npu: rk_iommu_attach: new_domain=0000000062a47bb4 type=3 dt_dma=0x0000000000493000
+
+[?2004l[?2004hradxa@rock-3b:~$ e[Ksudo sht[Kutdown now
+[?2004l         Stopping [0;1;39mSession 3 of[[0;32m  OK  [0m] Removed slice [0;1;39msystem-modprobe.slice[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-ssh.slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mGraphical Interface[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mMulti-User System[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLogin Prompts[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSound Card[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mHardware activated USB gadget[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mLoad/Save RF Kill Switch Status /dev/rfkill Watch[0m.
+         Unmounting [0;1;39m/config[0m...
+         Stopping [0;1;39mSave/Restore Sound Card State[0m...
+         Stopping [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
+         Stopping [0;1;39mGetty on tty1[0m...
+         Stopping [0;1;39mNetdata, X-Ray Vi…on for your infrastructure![0m...
+         Stopping [0;1;39mEnable adbd on supported Radxa products[0m...
+         Stopping [0;1;39mEnable USB Ethern…on supported Radxa products[0m...
+         Stopping [0;1;39mSerial Getty on ttyS2[0m...
+         Stopping [0;1;39mLSB: Set sysfs variables from /etc/sysfs.conf[0m...
+         Stopping [0;1;39mJournal Service for Namespace netdata[0m...
+         Stopping [0;1;39mLoad/Save Random Seed[0m...
+         Stopping [0;1;39mTailscale node agent[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSerial Getty on ttyS2[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/config[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSave/Restore Sound Card State[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSession 3 of user radxa[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-getty.slice[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-serial\x2dgetty.slice[0m.
+         Stopping [0;1;39mUser Login Management[0m...
+         Stopping [0;1;39mUser Manager for UID 1000[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mLSB: Set sysfs variables from /etc/sysfs.conf[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mJournal Service for Namespace netdata[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Login Management[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 1000[0m.
+         Stopping [0;1;39mUser Runtime Directory /run/user/1000[0m...
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/1000[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/1000[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 1000[0m.
+         Stopping [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mTailscale node agent[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetdata, X-Ray Vision for your infrastructure![0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork is Online[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager Wait Online[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWait for Network to be Configured[0m.
+[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] (2 of 2) A stop job is running for …ted Radxa products (4s / 1min 30s)
+[ 4882.540416] dwc3 fcc00000.usb: request 000000008636031b was not queued to ep0out
+[ 4882.550134] unloading
+M[K[[0;32m  OK  [0m] Stopped [0;1;39mEnable adbd on supported Radxa products[0m.
+[K[[0;32m  OK  [0m] Stopped [0;1;39mEnable USB Ethernet on supported Radxa products[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+         Stopping [0;1;39mNetwork Manager[0m...
+         Stopping [0;1;39mRaise network interfaces[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+         Stopping [0;1;39mNetwork Service[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Service[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRaise network interfaces[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork (Pre)[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mOpenBSD Secure Shell server socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mJournal Varlink Socket for Namespace netdata[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-syste…\x2djournald\x2dvarlink.slice[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mJournal Socket for Namespace netdata[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2djournald.slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDispatch Password …ts to Console Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+         Deactivating swap [0;1;39m/mnt/nvme/swapfile[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/mnt/nvme/swapfile[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mboot-efi.automount[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mconfig.automount[0m.
+         Unmounting [0;1;39m/mnt/nvme[0m...
+[ 4883.079591] EXT4-fs (nvme0n1): unmounting filesystem 0d9000fd-1edf-455d-9058-56e0855a1edb.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/mnt/nvme[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check …d-1edf-455d-9058-56e0855a1edb[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mPower-Off[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPower-Off[0m.
+[ 4883.328971] systemd-shutdown[1]: Syncing filesystems and block devices.
+[ 4883.438253] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+[ 4883.458475] systemd-journald[196]: Received SIGTERM from PID 1 (systemd-shutdow).
+[ 4883.507263] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[ 4883.523713] systemd-shutdown[1]: Unmounting file systems.
+[ 4883.526531] [14273]: Remounting '/' read-only in with options '(null)'.
+[ 4883.563555] EXT4-fs (mmcblk0p3): re-mounted d210e617-6a4c-4771-b955-ddd835a32d2b ro.
+[ 4883.587604] systemd-shutdown[1]: All filesystems unmounted.
+[ 4883.588119] systemd-shutdown[1]: Deactivating swaps.
+[ 4883.588684] systemd-shutdown[1]: All swaps deactivated.
+[ 4883.589152] systemd-shutdown[1]: Detaching loop devices.
+[ 4883.592411] systemd-shutdown[1]: All loop devices detached.
+[ 4883.592917] systemd-shutdown[1]: Stopping MD devices.
+[ 4883.593589] systemd-shutdown[1]: All MD devices stopped.
+[ 4883.594064] systemd-shutdown[1]: Detaching DM devices.
+[ 4883.594750] systemd-shutdown[1]: All DM devices detached.
+[ 4883.595234] systemd-shutdown[1]: All filesystems, swaps, loop devices, MD devices and DM devices detached.
+[ 4883.601959] systemd-shutdown[1]: Syncing filesystems and block devices.
+[ 4883.603703] systemd-shutdown[1]: Powering off.
+[ 4883.785875] kv 

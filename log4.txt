@@ -1,0 +1,65 @@
+radxa@rock-3b:~$ [  576.956993] EXT4-fs (nvme0n1): mounted filesystem 0d9000fd-1edf-455d-9058-56e0855a1edb r/w with ordered data mode. Quota mode: none.
+[  645.372757] Internal error: synchronous external abort: 0000000096000010 [#1]  SMP
+[  645.373447] Modules linked in: aes_neon_bs aes_neon_blk ccm gpio_ir_recv snd_soc_simple_card snd_soc_simple_card_utils rockchip_saradc rc_core hantro_vpu iwlmvm industrialio_triggered_buffer rockchip_rga v4l2_vp9 kfifo_buf rockchip_dfi videobuf2_dma_sg v4l2_h264 rockchip_thermal mac80211 v4l2_jpeg snd_soc_rockchip_i2s_tdm libarc4 v4l2_mem2mem videobuf2_dma_contig videobuf2_memops rk805_pwrkey rk817_charger videobuf2_v4l2 snd_soc_rk817 videodev iwlwifi videobuf2_common mc usb_f_ecm u_ether usb_f_fs libcomposite sha256 cfg80211 rfkill fuse dm_mod ipv6 snd_soc_hdmi_codec snd_soc_core snd_compress snd_pcm_dmaengine snd_pcm snd_timer snd soundcore dw_hdmi_i2s_audio dw_hdmi_cec reset_gpio rtc_hym8563 display_connector phy_rockchip_naneng_combphy spi_rockchip_sfc rtc_rk808 dwmac_rk stmmac_platform stmmac pcs_xpcs rockchipdrm dw_hdmi_qp analogix_dp dw_dp dw_mipi_dsi dw_mipi_dsi2 drm_dp_aux_bus dw_hdmi drm_display_helper cec drm_dma_helper
+[  645.380847] CPU: 1 UID: 1000 PID: 1166 Comm: rknn_yolov5_dem Tainted: G   M                6.19.0-rc5-00006-g76cd27aa0fe5-dirty #3 PREEMPT
+[  645.381946] Tainted: [M]=MACHINE_CHECK
+[  645.382280] Hardware name: Radxa ROCK 3B (DT)
+[  645.382668] pstate: 80400009 (Nzcv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[  645.383282] pc : rknpu_get_hw_version+0x8/0x4c
+[  645.383691] lr : __rknpu_action_ioctl+0x158/0x29c
+[  645.384113] sp : ffff800083b1bc30
+[  645.384409] x29: ffff800083b1bc30 x28: ffffc68a688ed360 x27: ffff800083b1bcf8
+[  645.385046] x26: 0000000000000008 x25: ffff00013829e800 x24: 0000000000000040
+[  645.385682] x23: ffffc68a680325e8 x22: ffff00010ee04880 x21: ffff00010ee04880
+[  645.386318] x20: ffff800083b1bcf8 x19: ffff00010ee05000 x18: 0000000000000000
+[  645.386953] x17: 0000000000000000 x16: 0000000000000000 x15: 0000ffffe16d7090
+[  645.387588] x14: 0000000000000000 x13: 0000000000000000 x12: 0000000000000000
+[  645.388223] x11: 0000000000000040 x10: ffff00010ee42138 x9 : ffff00010ee42130
+[  645.388857] x8 : ffff00010f87f6e8 x7 : 0000000000000000 x6 : ffff00010baa6ac0
+[  645.389492] x5 : 00000000000099c5 x4 : 0000000000000000 x3 : 0000000000000000
+[  645.390126] x2 : ffff00010baa6ac0 x1 : ffff800083b1bcfc x0 : ffff800080be0000
+[  645.390762] Call trace:
+[  645.390984]  rknpu_get_hw_version+0x8/0x4c (P)
+[  645.391386]  drm_ioctl_kernel+0xc0/0x134
+[  645.391743]  drm_ioctl+0x1f4/0x4ec
+[  645.392053]  __arm64_sys_ioctl+0xac/0x104
+[  645.392419]  invoke_syscall+0x48/0x110
+[  645.392762]  el0_svc_common.constprop.0+0x40/0xe0
+[  645.393185]  do_el0_svc+0x1c/0x28
+[  645.393488]  el0_svc+0x34/0x10c
+[  645.393776]  el0t_64_sync_handler+0xa0/0xe4
+[  645.394154]  el0t_64_sync+0x198/0x19c
+[  645.394491] Code: 52800015 17ffffaa f9400000 b4000201 (b9400003)
+[  645.395029] ---[ end trace 0000000000000000 ]---
+[  649.075290] Internal error: synchronous external abort: 0000000096000010 [#2]  SMP
+[  649.075969] Modules linked in: aes_neon_bs aes_neon_blk ccm gpio_ir_recv snd_soc_simple_card snd_soc_simple_card_utils rockchip_saradc rc_core hantro_vpu iwlmvm industrialio_triggered_buffer rockchip_rga v4l2_vp9 kfifo_buf rockchip_dfi videobuf2_dma_sg v4l2_h264 rockchip_thermal mac80211 v4l2_jpeg snd_soc_rockchip_i2s_tdm libarc4 v4l2_mem2mem videobuf2_dma_contig videobuf2_memops rk805_pwrkey rk817_charger videobuf2_v4l2 snd_soc_rk817 videodev iwlwifi videobuf2_common mc usb_f_ecm u_ether usb_f_fs libcomposite sha256 cfg80211 rfkill fuse dm_mod ipv6 snd_soc_hdmi_codec snd_soc_core snd_compress snd_pcm_dmaengine snd_pcm snd_timer snd soundcore dw_hdmi_i2s_audio dw_hdmi_cec reset_gpio rtc_hym8563 display_connector phy_rockchip_naneng_combphy spi_rockchip_sfc rtc_rk808 dwmac_rk stmmac_platform stmmac pcs_xpcs rockchipdrm dw_hdmi_qp analogix_dp dw_dp dw_mipi_dsi dw_mipi_dsi2 drm_dp_aux_bus dw_hdmi drm_display_helper cec drm_dma_helper
+[  649.083286] CPU: 2 UID: 1000 PID: 1179 Comm: rknn_yolov5_dem Tainted: G   M  D             6.19.0-rc5-00006-g76cd27aa0fe5-dirty #3 PREEMPT
+[  649.084381] Tainted: [M]=MACHINE_CHECK, [D]=DIE
+[  649.084779] Hardware name: Radxa ROCK 3B (DT)
+[  649.085164] pstate: 80400009 (Nzcv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[  649.085775] pc : rknpu_get_hw_version+0x8/0x4c
+[  649.086175] lr : __rknpu_action_ioctl+0x158/0x29c
+[  649.086593] sp : ffff800083b6bc30
+[  649.086885] x29: ffff800083b6bc30 x28: ffffc68a688ed360 x27: ffff800083b6bcf8
+[  649.087515] x26: 0000000000000008 x25: ffff0001066b3600 x24: 0000000000000040
+[  649.088145] x23: ffffc68a680325e8 x22: ffff00010ee04880 x21: ffff00010ee04880
+[  649.088774] x20: ffff800083b6bcf8 x19: ffff00010ee05000 x18: 0000000000000000
+[  649.089404] x17: 0000000000000000 x16: 0000000000000000 x15: 0000ffffcc73c640
+[  649.090034] x14: 0000000000000000 x13: 0000000000000000 x12: 0000000000000000
+[  649.090664] x11: 0000000000000000 x10: 000000000e200001 x9 : 00000000c0086440
+[  649.091294] x8 : ffffc68a6a0cd000 x7 : 0000000000000001 x6 : ffff800083b6bd00
+[  649.091924] x5 : 00000000000035df x4 : ffff00010d468000 x3 : 0000000000000001
+[  649.092554] x2 : ffff00010d468000 x1 : ffff800083b6bcfc x0 : ffff800080be0000
+[  649.093185] Call trace:
+[  649.093403]  rknpu_get_hw_version+0x8/0x4c (P)
+[  649.093801]  drm_ioctl_kernel+0xc0/0x134
+[  649.094153]  drm_ioctl+0x1f4/0x4ec
+[  649.094458]  __arm64_sys_ioctl+0xac/0x104
+[  649.094820]  invoke_syscall+0x48/0x110
+[  649.095156]  el0_svc_common.constprop.0+0x40/0xe0
+[  649.095576]  do_el0_svc+0x1c/0x28
+[  649.095873]  el0_svc+0x34/0x10c
+[  649.096158]  el0t_64_sync_handler+0xa0/0xe4
+[  649.096531]  el0t_64_sync+0x198/0x19c
+[  649.096863] Code: 52800015 17ffffaa f9400000 b4000201 (b9400003)
+[  649.097399] ---[ end trace 0000000000000000 ]---

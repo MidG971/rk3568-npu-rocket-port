@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * rk3568-rock-3b-primer.dts — BSP-primer co-load DT (rknpu=m + rocket=m on one device).
+ *
+ * Inherits the full rocket board DT (npu_opp_table, vdd_npu, rocket node extras: rockchip,pmu,
+ * npu-supply, sram-supply, opp), then re-overrides the npu@fde40000 node so BOTH drivers can bind:
+ *   - compatible lists rocket ("rk3568-rknn-core") AND rknpu ("rk3568-rknpu","rknpu")
+ *   - reg = single full 0x10000 region (rknpu needs full range for 0x8010/0xf008; rocket falls back
+ *     to single-region pc/cna/core = base+0/0x1000/0x3000 when the "pc" byname lookup fails)
+ *   - interrupt-names restored ("npu_irq") — rknpu needs it; rocket DTS had deleted it
+ *
+ * Boot with both drivers as MODULES (neither auto-binds), then:
+ *   modprobe rknpu  (prime: vendor engages+computes) ; rmmod rknpu ; modprobe rocket  (test engage)
+ */
+
+#include "rk3568-rock-3b-rocket.dts"
+
+&rknpu {
+	compatible = "rockchip,rk3568-rknn-core",
+		     "rockchip,rk3568-rknpu",
+		     "rockchip,rknpu";
+	/delete-property/ reg-names;
+	reg = <0x0 0xfde40000 0x0 0x10000>;
+	interrupt-names = "npu_irq";
+	status = "okay";
+};

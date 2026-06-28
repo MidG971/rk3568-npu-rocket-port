@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# Dump key NPU registers via /dev/mem (SAFE only when ROCKET owns the device — NOT under rknpu).
+# Used to diff cold-vs-primed NPU state at rocket-probe time (before any rocket job).
+import mmap, os, struct, sys
+B = 0xfde40000
+OFFS = (
+    [0x00,0x04,0x08,0x10,0x14,0x20,0x24,0x28,0x2c,0x30,0x34] +                 # PC
+    [0x1000,0x1004,0x1008,0x100c,0x1010,0x1014,0x1018,0x1020,0x1024,0x1028,
+     0x102c,0x1030,0x1034,0x1038,0x1040,0x1044,0x1090,0x1100] +               # CNA
+    [0x2000,0x2004,0x2008,0x200c] +                                            # CMAC
+    [0x3000,0x3004,0x3008,0x300c] +                                            # CORE/ACCU
+    [0x4000,0x4004,0x4008,0x400c,0x4020,0x4060,0x4070,0x4080,0x4084,0x40c0] +  # DPU
+    [0x5000,0x5004,0x5008,0x500c,0x5020] +                                     # RDMA
+    [0x8010,0x8034,0x8038,0x803c] +                                           # perf
+    [0xf000,0xf004,0xf008,0xf00c]                                              # global
+)
+fd = os.open('/dev/mem', os.O_RDONLY | os.O_SYNC)
+m = mmap.mmap(fd, 0x10000, mmap.MAP_SHARED, mmap.PROT_READ, offset=B)
+for o in OFFS:
+    print("0x%04x=0x%08x" % (o, struct.unpack('<I', m[o:o+4])[0]))
+m.close(); os.close(fd)

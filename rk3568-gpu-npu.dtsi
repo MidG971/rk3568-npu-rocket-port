@@ -1,0 +1,23 @@
+// rk3568-gpu-npu.dtsi (skeleton)
+
+&gpu {
+    compatible = "arm,mali-g52";
+    reg = <0x0 0xFDE60000 0x0 0x20000>;
+    interrupts = <GIC_SPI XXX IRQ_TYPE_LEVEL_HIGH>;
+    clocks = <&cru ACLK_GPU>, <&cru HCLK_GPU>, <&cru CLK_GPU_CORE>;
+    clock-names = "aclk", "hclk", "core";
+    power-domains = <&power RK3568_PD_GPU>;
+    resets = <&cru SRST_GPU>;
+    status = "okay";
+};
+
+&npu {
+    compatible = "rockchip,rk3568-npu";
+    reg = <0x0 0xFDE40000 0x0 0x20000>;
+    interrupts = <GIC_SPI YYY IRQ_TYPE_LEVEL_HIGH>;
+    clocks = <&cru ACLK_NPU>, <&cru HCLK_NPU>, <&cru CLK_NPU_CORE>;
+    clock-names = "aclk", "hclk", "core";
+    power-domains = <&power RK3568_PD_NPU>;
+    resets = <&cru SRST_NPU>;
+    status = "okay";
+};

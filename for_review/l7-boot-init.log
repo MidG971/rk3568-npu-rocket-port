@@ -1,0 +1,24 @@
+[    0.038721] CPU features: detected: PMUv3
+[    0.228018] iommu: Default domain type: Translated
+[    0.228511] iommu: DMA domain TLB invalidation policy: strict mode
+[    2.445998] platform fde40000.npu: Adding to iommu group 0
+[    2.447211] platform fde40000.npu: rk_iommu_attach_device: 000000001a2382dd -> 0000000026dd1bd5 type=3
+[    2.448046] platform fde40000.npu: rk_iommu_attach: new_domain=0000000026dd1bd5 type=3 dt_dma=0x0000000000493000
+[    2.450080] platform fdea0000.video-codec: Adding to iommu group 1
+[    2.451274] platform fdea0000.video-codec: rk_iommu_attach_device: 000000001a2382dd -> 000000004f369611 type=3
+[    2.452166] platform fdea0000.video-codec: rk_iommu_attach: new_domain=000000004f369611 type=3 dt_dma=0x0000000000494000
+[    2.454175] platform fdee0000.video-codec: Adding to iommu group 2
+[    2.455333] platform fdee0000.video-codec: rk_iommu_attach_device: 000000001a2382dd -> 00000000cd2ee858 type=3
+[    2.456227] platform fdee0000.video-codec: rk_iommu_attach: new_domain=00000000cd2ee858 type=3 dt_dma=0x0000000000495000
+[    2.458221] platform fe040000.vop: Adding to iommu group 3
+[    2.459270] platform fe040000.vop: rk_iommu_attach_device: 000000001a2382dd -> 00000000226421e0 type=3
+[    2.460099] platform fe040000.vop: rk_iommu_attach: new_domain=00000000226421e0 type=3 dt_dma=0x0000000000496000
+[    2.606143] hw perfevents: enabled with armv8_cortex_a55 PMU driver, 7 (0,8000003f) counters available
+[    2.938559] RKNPU fde40000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[    2.939960] RKNPU fde40000.npu: error -EBUSY: can't request region for resource [mem 0xfde40000-0xfde4ffff]
+[    2.941357] [drm] Initialized rknpu 0.9.8 for fde40000.npu on minor 1
+[    2.945530] RKNPU fde40000.npu: RKNPU: PMU: NOC_AUTO=0x0000fffb after disabling NPU auto-idle
+[    2.946299] RKNPU fde40000.npu: RKNPU: PMU: PWR_STATUS=0x000000ff (NPU bit1=0 means ON)
+[    2.947003] RKNPU fde40000.npu: RKNPU: NPU de-idled: BUS_IDLE_ST=0x000001fa
+[    2.950775] RKNPU fde40000.npu: RKNPU: initial vdd set to 1000000 uV for 1000000000 Hz
+[    2.952134] RKNPU fde40000.npu: RKNPU: devfreq enabled: 1000000000 Hz, 1000000 uV

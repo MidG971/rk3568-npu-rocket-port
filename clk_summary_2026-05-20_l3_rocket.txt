@@ -1,0 +1,20 @@
+ clk_scmi_npu                        2       2        0        1000000000  0          0     50000      Y   fde40000.npu                    npu                      
+                                                                                                           fde40000.npu                    npu                      
+                                                                                                           npu@fde40000                    no_connection_id         
+    clk_npu_pvtm                     0       0        0        24000000    0          0     50000      Y      deviceless                      no_connection_id         
+             clk_gpu_pvtpll          0       0        0        166666667   0          0     50000      Y               deviceless                      no_connection_id         
+          clk_npu_src                1       1        0        200000000   0          0     50000      Y            deviceless                      no_connection_id         
+             clk_npu_pre_ndft        1       1        0        200000000   0          0     50000      Y               deviceless                      no_connection_id         
+                clk_npu_pvtpll       0       0        0        200000000   0          0     50000      Y                  deviceless                      no_connection_id         
+                clk_npu_pvtm_core    0       0        0        200000000   0          0     50000      Y                  deviceless                      no_connection_id         
+                clk_npu              3       3        0        200000000   0          0     50000      Y                  deviceless                      no_connection_id         
+                   aclk_npu_pre      1       2        0        200000000   0          0     50000      Y                     power-domain@6                  no_connection_id         
+                      aclk_npu       39      4        0        200000000   0          0     50000      Y                        fde40000.npu                    aclk                     
+                                                                                                                                npu@fde40000                    no_connection_id         
+                   pclk_npu_pre      2       2        0        33333334    0          0     50000      Y                     fde40000.npu                    pclk                     
+                                                                                                                             npu@fde40000                    no_connection_id         
+                      pclk_npu_pvtm  0       0        0        33333334    0          0     50000      Y                        deviceless                      no_connection_id         
+                   hclk_npu_pre      1       2        0        50000000    0          0     50000      Y                     power-domain@6                  no_connection_id         
+                      hclk_npu       39      4        0        50000000    0          0     50000      Y                        fde40000.npu                    hclk                     
+                                                                                                                                npu@fde40000                    no_connection_id         
+             clk_core_pvtpll         0       0        0        1992000000  0          0     50000      Y               deviceless                      no_connection_id         

@@ -1,0 +1,120 @@
+From: MidG971 <midgy971@gmail.com>
+Subject: [PATCH] arm: rockchip: rk3568: Initialize power domains and de-idle buses in SPL
+
+The Rockchip BSP U-Boot includes a qos_priority_init() function that
+powers on all power domains (except GPU and NPU) and releases their
+bus idle requests during SPL. This sets up the NoC (Network-on-Chip)
+fabric in a known-good state before the kernel takes over.
+
+Without this initialization, the Linux kernel's rockchip-pm-domains
+driver fails to de-idle certain power domains (notably NPU), because
+the NoC interconnect is left in an inconsistent state from boot.
+
+This has been confirmed to fix NPU power domain management on the
+Radxa ROCK 3B (RK3568) with mainline kernel 6.19, where the NPU
+bus de-idle previously failed with:
+  "failed to get ack on domain 'npu', val=0x1ee"
+
+The sequence follows the BSP U-Boot exactly:
+1. Power on all domains except GPU (bit0) and NPU (bit1) via
+   PMU_PWR_GATE_SFTCON using write-mask protocol
+2. Wait for power status confirmation
+3. Release bus idle for all except GPU (bit1) and NPU (bit2) via
+   PMU_BUS_IDLE_SFTCON0 using write-mask protocol
+4. Wait for bus idle ACK and status
+
+GPU and NPU are explicitly excluded because they are managed
+on-demand by the kernel's genpd framework.
+
+Signed-off-by: MidG971 <midgy971@gmail.com>
+---
+ arch/arm/mach-rockchip/rk3568/rk3568.c | 57 +++++++++++++++++++++++++
+ 1 file changed, 57 insertions(+)
+
+diff --git a/arch/arm/mach-rockchip/rk3568/rk3568.c b/arch/arm/mach-rockchip/rk3568/rk3568.c
+index XXXXXXX..XXXXXXX 100644
+--- a/arch/arm/mach-rockchip/rk3568/rk3568.c
++++ b/arch/arm/mach-rockchip/rk3568/rk3568.c
+@@ -29,8 +29,14 @@
+ #define PMU_BASE_ADDR		0xfdd90000
+ #define PMU_NOC_AUTO_CON0	(0x70)
+ #define PMU_NOC_AUTO_CON1	(0x74)
++#define PMU_PWR_DWN_ST		(0x98)
+ #define PMU_PWR_GATE_SFTCON	(0xa0)
++#define PMU_BUS_IDLE_SFTCON0	(0x50)
++#define PMU_BUS_IDLE_ACK	(0x60)
++#define PMU_BUS_IDLE_ST		(0x68)
+ #define PMU_PD_VO_DWN_ENA	BIT(7)
++#define PMU_PD_GPU_DWN_ENA	BIT(0)
++#define PMU_PD_NPU_DWN_ENA	BIT(1)
+ #define EDP_PHY_GRF_BASE	0xfdcb0000
+ #define EDP_PHY_GRF_CON0	(EDP_PHY_GRF_BASE + 0x00)
+ #define EDP_PHY_GRF_CON10	(EDP_PHY_GRF_BASE + 0x28)
+@@ -109,6 +115,53 @@ void board_debug_uart_init(void)
+ 		     GPIO0D0_UART2_RXM0 << GPIO0D0_SHIFT);
+ }
+
++#if CONFIG_IS_ENABLED(XPL_BUILD)
++/*
++ * Power on all power domains and release bus idle requests, except for
++ * GPU (power bit0, idle bit1) and NPU (power bit1, idle bit2) which
++ * are managed on-demand by the kernel's genpd framework.
++ *
++ * This is needed to set up the NoC fabric in a known-good state so
++ * that the kernel's rockchip-pm-domains driver can properly manage
++ * individual power domains later.
++ */
++static void qos_priority_init(void)
++{
++	u32 delay;
++
++	/*
++	 * Power on all domains except GPU and NPU.
++	 * Write-mask: upper 16 bits enable writing to corresponding lower bits.
++	 * Exclude bit0 (GPU) and bit1 (NPU) from the write mask.
++	 */
++	writel(0xffff0000 & ~(BIT(0 + 16) | BIT(1 + 16)),
++	       PMU_BASE_ADDR + PMU_PWR_GATE_SFTCON);
++	delay = 1000;
++	do {
++		udelay(1);
++		delay--;
++		if (delay == 0) {
++			printf("Fail to set power domain.\n");
++			break;
++		}
++	} while (readl(PMU_BASE_ADDR + PMU_PWR_DWN_ST) &
++		 ~(PMU_PD_GPU_DWN_ENA | PMU_PD_NPU_DWN_ENA));
++
++	/*
++	 * Release bus idle for all domains except GPU (bit1) and NPU (bit2).
++	 */
++	writel(0xffff0000 & ~(BIT(1 + 16) | BIT(2 + 16)),
++	       PMU_BASE_ADDR + PMU_BUS_IDLE_SFTCON0);
++	delay = 1000;
++	do {
++		udelay(1);
++		delay--;
++		if (delay == 0) {
++			printf("Fail to get ack on bus idle.\n");
++			break;
++		}
++	} while (readl(PMU_BASE_ADDR + PMU_BUS_IDLE_ACK) &
++		 ~(BIT(1) | BIT(2)));
++}
++#endif
++
+ int arch_cpu_init(void)
+ {
+ #ifdef CONFIG_XPL_BUILD
+@@ -141,6 +194,10 @@ int arch_cpu_init(void)
+ 	/* Enable VO power domain for display */
+ 	writel((PMU_PD_VO_DWN_ENA << 16),
+ 	       PMU_BASE_ADDR + PMU_PWR_GATE_SFTCON);
++
++	/* Initialize power domains and bus idle state for all peripherals */
++	qos_priority_init();
++
+ #endif
+ 	return 0;
+ }

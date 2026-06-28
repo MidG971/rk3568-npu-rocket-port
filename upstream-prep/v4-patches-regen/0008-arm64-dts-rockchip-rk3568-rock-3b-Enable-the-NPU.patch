@@ -1,0 +1,58 @@
+From 6b0ec1f9815a7cc2d5042659cc1d553c69431348 Mon Sep 17 00:00:00 2001
+From: Midgy BALON <midgy971@gmail.com>
+Date: Thu, 4 Jun 2026 13:37:41 +0000
+Subject: [RFC PATCH v4 8/9] arm64: dts: rockchip: rk3568-rock-3b: Enable the
+ NPU
+
+Enable the NPU and its IOMMU on ROCK 3B and wire vdd_npu as the NPU
+power domain's domain-supply, so genpd brings the rail up and down with
+the domain (the domain is marked need_regulator). The PVTPLL compute
+clock is brought up later by the driver.
+
+The rail is no longer kept always-on, so pin it to 1000 mV (the NPU's
+1 GHz operating voltage; the driver runs a fixed compute rate with no
+devfreq voltage scaling) and mark it boot-on, so it is up before the
+power domain de-idles the NPU NoC at power-on.
+
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ .../arm64/boot/dts/rockchip/rk3568-rock-3b.dts | 18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts b/arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts
+index 69001e453732e..d3f9776c2bdc3 100644
+--- a/arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts
++++ b/arch/arm64/boot/dts/rockchip/rk3568-rock-3b.dts
+@@ -330,9 +330,10 @@ regulator-state-mem {
+ 
+ 			vdd_npu: DCDC_REG4 {
+ 				regulator-name = "vdd_npu";
++				regulator-boot-on;
+ 				regulator-initial-mode = <0x2>;
+-				regulator-min-microvolt = <500000>;
+-				regulator-max-microvolt = <1350000>;
++				regulator-min-microvolt = <1000000>;
++				regulator-max-microvolt = <1000000>;
+ 				regulator-ramp-delay = <6001>;
+ 
+ 				regulator-state-mem {
+@@ -787,3 +788,16 @@ vp0_out_hdmi: endpoint@ROCKCHIP_VOP2_EP_HDMI0 {
+ 		remote-endpoint = <&hdmi_in_vp0>;
+ 	};
+ };
++
++&pd_npu {
++	domain-supply = <&vdd_npu>;
++};
++
++&rknn_core_0 {
++	npu-supply = <&vdd_npu>;
++	status = "okay";
++};
++
++&rknn_mmu_0 {
++	status = "okay";
++};
+-- 
+2.39.5
+

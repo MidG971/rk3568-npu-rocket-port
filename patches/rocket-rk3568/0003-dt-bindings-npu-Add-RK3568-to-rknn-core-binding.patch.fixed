@@ -1,0 +1,63 @@
+From: Midgy BALON <midgy971@gmail.com>
+Date: Fri, 4 Apr 2026 00:00:00 +0000
+Subject: [PATCH 3/5] dt-bindings: npu: Add RK3568 to rknn-core binding
+
+Extend the Rockchip RKNN core binding to cover the RK3568 NPU:
+
+  - Add "rockchip,rk3568-rknn-core" to the compatible enum.
+
+  - Document the "rockchip,pmu" property, which is required on RK3568.
+    The RK3568 NPU NOC bus must be explicitly de-idled via PMU registers
+    before the hardware can be accessed; the Rocket driver reads the PMU
+    syscon handle from this property to perform that sequence.
+
+  - Make "sram-supply" optional.  On RK3568 there is only a single NPU
+    power rail (vdd_npu), so the same regulator covers both the core and
+    SRAM.  Boards can still supply it (pointing to the same regulator as
+    "npu-supply") to keep the binding consistent.
+
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ .../bindings/npu/rockchip,rk3588-rknn-core.yaml         | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml b/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
+index XXXXXXX..XXXXXXX 100644
+--- a/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
++++ b/Documentation/devicetree/bindings/npu/rockchip,rk3588-rknn-core.yaml
+@@ -18,6 +18,7 @@ description:
+   compatible:
+     enum:
++      - rockchip,rk3568-rknn-core
+       - rockchip,rk3588-rknn-core
+ 
+   reg:
+@@ -52,6 +53,12 @@ properties:
+   npu-supply: true
+ 
++  rockchip,pmu:
++    $ref: /schemas/types.yaml#/definitions/phandle
++    description:
++      Phandle to the Rockchip PMU syscon node.  Required on RK3568 to
++      perform the NPU NOC bus de-idle sequence via PMU registers before
++      the hardware can be accessed.
++
+   power-domains:
+     maxItems: 1
+ 
+@@ -66,14 +73,14 @@ properties:
+   sram-supply: true
+ 
+ required:
+   - compatible
+   - reg
+   - reg-names
+   - clocks
+   - clock-names
+   - interrupts
+   - iommus
+   - power-domains
+   - resets
+   - reset-names
+   - npu-supply
+-  - sram-supply

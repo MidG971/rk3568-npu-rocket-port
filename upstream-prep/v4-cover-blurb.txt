@@ -1,0 +1,103 @@
+RFC, not for merge. End-to-end inference does not produce correct output
+yet (see Status), so per the v2 discussion this is a request for design
+feedback. It probes, attaches, and submits cleanly on a stock v7.1-rc6
+tree; what remains is one hardware-internal issue.
+
+The RK3568 has a single NVDLA-derived NPU core, the same IP family as the
+RK3588 NPU the driver already supports; the register layout matches. The
+RK3568 differences are a 32-bit NPU AXI/IOMMU (vs 40-bit) and explicit
+PVTPLL/PMU bring-up to power and de-idle the NPU before it is reachable.
+
+Patches:
+  1-2  rocket: per-SoC data struct, then derive DMA width and core count
+       from match data (refactors, no functional change); patch 2 also
+       bounds-checks the per-SoC cores array.
+  3    rocket: RK3568 SoC data; start the PVTPLL compute clock via SCMI.
+       Powering on and de-idling the NPU NoC are left to the power domain.
+  4    rocket: reset the NPU before detaching the IOMMU on a job timeout
+       (the detach otherwise stalls a wedged AXI master and WARNs).
+  5    rocket: keep the IOMMU domain attached across jobs instead of
+       re-attaching per job (the per-job rk_iommu handshake on the idle
+       NPU MMU is slow and noisy); also drop the domain on reset and stop
+       the scheduler before IOMMU teardown.
+  6    dt-bindings: add the RK3568 NPU compatible; require rockchip,pmu
+       for RK3568.
+  7-8  arm64 dts: add the NPU and its IOMMU, and enable them on ROCK 3B.
+  9    pmdomain: give the RK3568 NPU power domain a regulator so genpd
+       owns vdd_npu via domain-supply (Suggested-by Chaoyi Chen).
+
+Dependencies. This series no longer touches the IOMMU driver; two
+in-flight Rockchip IOMMU changes are relevant but not part of it:
+  - Simon Xue's "iommu/rockchip: Drop global rk_ops in favor of
+    per-device ops" [1]. On boards with more than 4 GiB of RAM the NPU
+    MMU's DTE must stay below 4 GiB (its DTE address is 32-bit), so the
+    NPU IOMMU is described with the "rockchip,iommu" compatible, whose ops
+    allocate the page tables with GFP_DMA32; the SoC's other IOMMUs use
+    the "rockchip,rk3568-iommu" (40-bit) ops. The driver keeps a single
+    global ops pointer, so two ops on one SoC trip its coexistence check;
+    this series therefore sits on top of Simon's per-device-ops change,
+    which Rockchip (Chaoyi Chen) confirmed is the intended way to give the
+    NPU MMU its 32-bit DTE.
+  - "iommu/rockchip: disable fetch dte time limit" [2] (Simon Xue / Sven
+    Pueschel, in the iommu tree), which sets AUTO_GATING bit 31. v3 carried
+    a local AUTO_GATING patch; that unconditional fix has since been merged,
+    so this series drops its IOMMU patch. The bit is a no-op on this
+    hardware in any case (the page walk completes on its reset value).
+
+Power bring-up. The NPU is brought up through the power-domain layer (no
+driver hack): the NPU power-domain keeps its clocks but drops the pm_qos
+phandle (qos_npu sits behind the gated NPU NoC, so genpd's power-off QoS
+save faults reading it), and vdd_npu is wired as the domain's
+domain-supply with the domain marked need_regulator (patch 9), so genpd
+brings the rail up before it de-idles the NoC at power-on. The PMU de-idle
+then ACKs without PVTPLL running; PVTPLL is only needed for compute.
+
+Status. On v7.1-rc6 the driver probes, creates /dev/accel/accel0,
+attaches an IOMMU domain, and submits jobs; the program controller
+fetches and broadcasts the command list. Inference output is still
+wrong. The kernel side (this series) appears complete; what remains is
+mesa/Teflon userspace, which still emits RK3588-tuned config (to be
+filed on mesa-dev), and the hardware: with corrected config the NPU
+reads the full input and weight tensors (per its DMA counters) but the
+MAC/output stage never completes and the job times out, leaving the
+output at the buffer's zero-point. It is not in the command list (a
+byte-exact replay of the vendor's command list behaves the same).
+Pointers from anyone with RK3568 NPU experience welcome.
+
+Known residual. On the first IOMMU attach the NPU MMU is idle with paging
+already enabled; the rk_iommu stall/reset handshake does not complete in
+that state and logs one burst of timeouts before the (kept) domain
+settles. It is harmless here because the job times out regardless, but it
+points at an idle-MMU reconfiguration corner the rk_iommu code does not
+handle on this block.
+
+[1] https://lore.kernel.org/linux-rockchip/20260310105303.128859-1-xxm@rock-chips.com/
+[2] https://lore.kernel.org/all/20260428-spu-iommudtefix-v2-1-f592f579e508@pengutronix.de/
+
+Changes since v3:
+  - Dropped the local AUTO_GATING patch: the correct fix (set AUTO_GATING
+    bit 31, "disable fetch dte time limit") has since been merged upstream
+    [2], so the series no longer touches the IOMMU driver.
+  - vdd_npu: new pmdomain patch (9) gives the RK3568 NPU domain a regulator
+    (need_regulator) and the board wires domain-supply, dropping the
+    regulator-always-on workaround (Suggested-by Chaoyi Chen). It relies on
+    the in-tree pmdomain default-off-if-need_regulator handling. The
+    "Failed to create device link ... <pmic>" line at pmdomain probe is a
+    pre-existing fw_devlink cyclic-dependency warning (the single
+    power-controller provides every domain, including the one the I2C PMIC
+    needs), seen the same way on RK3588; it is harmless here beyond a few
+    wasted EPROBE_DEFER retries, and a proper fix belongs in the
+    power-controller driver, not this series.
+  - rk356x dts: also assign the CRU CLK_NPU so the NPU AXI bus clock comes
+    up at 200 MHz instead of the 12 MHz boot default; order the NPU/IOMMU
+    nodes by unit address.
+  - rocket RK3568: fetch the SCMI/PVTPLL clock by name (the v3 bulk index
+    resolved to the wrong clock); drop the redundant driver PMU de-idle
+    writes (handled by the power domain).
+  - rocket: clear the attached IOMMU domain on reset; unwind through
+    rocket_core_fini() on noc_init failure; stop the scheduler before the
+    IOMMU teardown.
+  - rocket: bounds-check the cores array against the per-SoC core count.
+  - Binding: require rockchip,pmu on RK3568.
+  - Dependency framing: confirmed by Rockchip as v2 + 32-bit DTE via
+    Simon's per-device-ops series (was framed as v1 in v3).

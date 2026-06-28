@@ -1,0 +1,100 @@
+From: Your Name <your.email@example.com>
+Date: Thu, 13 Feb 2026 00:00:00 +0000
+Subject: [PATCH] drm: rknpu: Use standard power domain management
+
+Remove the FPGA_PLATFORM manual PMU power-on workaround and use the
+standard Linux power domain framework instead.
+
+With the rockchip pm-domains driver now properly supporting the RK3568
+NPU power domain (including regulator management), the RKNPU driver
+can rely on the genpd framework for power management.
+
+This patch:
+1. Removes manual PMU register access code
+2. Enables power-domains DT binding
+3. Uses pm_runtime for power management
+
+Note: This patch depends on:
+- "pmdomain: rockchip: Add regulator support for RK3568 NPU"
+- Proper device tree bindings with domain-supply
+
+Signed-off-by: Your Name <your.email@example.com>
+---
+ drivers/rknpu/rknpu_drv.c | 60 +--------------------------------------
+
+The key changes needed in rknpu_drv.c:
+
+1. Remove the #ifdef FPGA_PLATFORM block with manual PMU code:
+
+-#ifdef FPGA_PLATFORM
+-#include <linux/io.h>
+-
+-#define PMU_BASE                0xfdd90000
+-#define PMU_PWR_GATE_SFTCON     0xa0
+-#define PMU_BUS_IDLE_SFTCON0    0x50
+-... (entire rknpu_pmu_power_on function)
+-#endif
+
+2. Remove FPGA_PLATFORM calls in probe:
+
+-#ifdef FPGA_PLATFORM
+-    ret = rknpu_pmu_power_on(dev);
+-    if (ret) {
+-        LOG_DEV_ERROR(dev, "failed to power on NPU domain\n");
+-        return ret;
+-    }
+-#endif
+
+3. Remove FPGA_PLATFORM from rknpu_power_on():
+
+-#ifdef FPGA_PLATFORM
+-    ret = rknpu_pmu_power_on(dev);
+-    if (ret)
+-        return ret;
+-#endif
+
+4. Enable pm_runtime power management (already exists but may be disabled):
+
+In probe:
++    pm_runtime_enable(dev);
++    ret = pm_runtime_resume_and_get(dev);
++    if (ret < 0) {
++        dev_err(dev, "failed to power on NPU: %d\n", ret);
++        goto err_pm;
++    }
+
+5. Device tree should have power-domains enabled:
+
+&rknpu {
+    power-domains = <&power RK3568_PD_NPU>;
+    status = "okay";
+};
+
+---
+
+ALTERNATIVE: Keep FPGA_PLATFORM as fallback
+
+For backwards compatibility with older kernels/bootloaders, the manual
+PMU code could be kept but only used when power-domains fails:
+
+static int rknpu_power_on(struct device *dev)
+{
+    int ret;
+
+    /* Try standard pm_runtime first */
+    ret = pm_runtime_resume_and_get(dev);
+    if (ret == 0)
+        return 0;
+
+    /* Fallback to manual PMU for broken pm-domains */
+    dev_warn(dev, "pm_runtime failed (%d), using manual PMU\n", ret);
+    return rknpu_pmu_power_on(dev);
+}
+
+This approach allows the driver to work on:
+- Mainline kernels with fixed pm-domains (uses genpd)
+- BSP kernels (uses genpd via pm_runtime)
+- Broken setups (falls back to manual PMU)
+
+--
+2.39.0

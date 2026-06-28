@@ -1,0 +1,207 @@
+[   51.318011] sysrq: HELP : loglevel(0-9) reboot(b) crash(c) terminate-all-tasks(e) memory-full-oom-kill(f) kill-all-tasks(i) thaw-filesystems(j) sak(k) show-backtrace-all-active-cpus(l) show-memory-usage(m) nice-all-RT-tasks(n) poweroff(o) show-registers(p) show-all-timers(q) unraw(r) sync(s) show-task-states(t) unmount(u) force-fb(v) show-blocked-tasks(w) replay-kernel-logs(R) 
+��3
+Password: 
+[   58.824854] Unable to handle kernel NULL pointer dereference at virtual address 00000000000000b8
+[   58.825674] Mem abort info:
+[   58.825924]   ESR = 0x0000000096000004
+[   58.826254]   EC = 0x25: DABT (current EL), IL = 32 bits
+[   58.826721]   SET = 0, FnV = 0
+[   58.826991]   EA = 0, S1PTW = 0
+[   58.827268]   FSC = 0x04: level 0 translation fault
+[   58.827697] Data abort info:
+[   58.827952]   ISV = 0, ISS = 0x00000004, ISS2 = 0x00000000
+[   58.828431]   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+[   58.828873]   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+[   58.829357] user pgtable: 4k pages, 48-bit VAs, pgdp=000000010ac47000
+[   58.829923] [00000000000000b8] pgd=0000000000000000, p4d=0000000000000000
+[   58.830527] Internal error: Oops: 0000000096000004 [#1]  SMP
+[   58.831025] Modules linked in: snd_soc_hdmi_codec dw_hdmi_i2s_audio dw_hdmi_cec aes_neon_bs aes_neon_blk ccm usb_f_ecm u_ether usb_f_fs libcomposite iwlmvm mac80211 libarc4 iwlwifi sha256 cfg80211 rfkill reset_gpio snd_soc_simple_card gpio_ir_recv display_connector rc_core snd_soc_simple_card_utils rockchip_saradc rockchipdrm snd_soc_rk817 snd_soc_rockchip_i2s_tdm industrialio_triggered_buffer hantro_vpu rockchip_rga kfifo_buf snd_soc_core dw_hdmi_qp phy_rockchip_naneng_combphy v4l2_vp9 snd_compress rockchip_thermal rtc_hym8563 snd_pcm_dmaengine spi_rockchip_sfc rockchip_dfi analogix_dp dwmac_rk snd_pcm v4l2_h264 videobuf2_dma_sg v4l2_jpeg stmmac_platform dw_dp v4l2_mem2mem videobuf2_dma_contig stmmac snd_timer snd rk817_charger dw_mipi_dsi soundcore dw_mipi_dsi2 rk805_pwrkey videobuf2_memops rtc_rk808 videobuf2_v4l2 drm_dp_aux_bus pcs_xpcs rocket(O-) dw_hdmi videodev drm_display_helper videobuf2_common mc cec drm_dma_helper fuse ipv6
+[   58.838353] CPU: 0 UID: 0 PID: 1836 Comm: rmmod Tainted: G        W  O        6.19.0-rc5-00003-gb16c04e5e619-dirty #52 PREEMPT 
+[   58.839360] Tainted: [W]=WARN, [O]=OOT_MODULE
+[   58.839743] Hardware name: Radxa ROCK 3B (DT)
+[   58.840127] pstate: 60400009 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[   58.840739] pc : destroy_workqueue+0x1c/0x308
+[   58.841133] lr : rocket_job_fini+0x2c/0x3c [rocket]
+[   58.841572] sp : ffff8000848cbbd0
+[   58.841865] x29: ffff8000848cbbd0 x28: ffff00010946db80 x27: 0000000000000000
+[   58.842496] x26: 0000000000000000 x25: 0000000000000000 x24: 0000000000000000
+[   58.843124] x23: ffffc322e9175158 x22: ffff0001009b6c90 x21: 0000000000000000
+[   58.843753] x20: ffffc322e91750d8 x19: ffff000103714880 x18: 0000000000000001
+[   58.844383] x17: 0000000000000000 x16: ffffc322e62d3224 x15: 0000011380ad26dc
+[   58.845013] x14: 00000000000003db x13: 0000000000000000 x12: 0000000000000000
+[   58.845642] x11: 00000000000000c0 x10: 0000000000000aa0 x9 : ffff8000848cb9a0
+[   58.846271] x8 : 0000000000000000 x7 : 0000000000000001 x6 : 000000000080007f
+[   58.846901] x5 : ffff000100fd0780 x4 : fffffdffc403f420 x3 : 0000000000000000
+[   58.847530] x2 : 0000000000000000 x1 : ffff00010946db80 x0 : 0000000000000000
+[   58.848160] Call trace:
+[   58.848379]  destroy_workqueue+0x1c/0x308 (P)
+[   58.848768]  rocket_job_fini+0x2c/0x3c [rocket]
+[   58.849172]  rocket_core_fini+0x40/0x50 [rocket]
+[   58.849582]  rocket_remove+0x58/0x84 [rocket]
+[   58.849969]  platform_remove+0x20/0x30
+[   58.850307]  device_remove+0x4c/0x80
+[   58.850626]  device_release_driver_internal+0x1cc/0x228
+[   58.851090]  driver_detach+0x50/0x98
+[   58.851408]  bus_remove_driver+0x6c/0xbc
+[   58.851756]  driver_unregister+0x30/0x60
+[   58.852104]  platform_driver_unregister+0x14/0x20
+[   58.852520]  rocket_unregister+0x18/0xf40 [rocket]
+[   58.852947]  __arm64_sys_delete_module+0x1ac/0x298
+[   58.853373]  invoke_syscall+0x48/0x10c
+[   58.853710]  el0_svc_common.constprop.0+0x40/0xe0
+[   58.854127]  do_el0_svc+0x1c/0x28
+[   58.854424]  el0_svc+0x34/0x10c
+[   58.854706]  el0t_64_sync_handler+0xa0/0xe4
+[   58.855076]  el0t_64_sync+0x198/0x19c
+[   58.855406] Code: a90153f3 a9025bf5 aa0003f5 a90363f7 (f9405c00) 
+[   58.855942] ---[ end trace 0000000000000000 ]---
+
+
+Login incorrect
+rock-3b login: radxa
+Password:          Stopping [0;1;39mSession 9 of user radxa[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-modprobe.slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mGraphical Interface[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mMulti-User System[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLogin Prompts[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSound Card[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mPeriodic ext4 Onli…ata Check for All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDiscard unused blocks once a week[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Time Set[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mHardware activated USB gadget[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mLoad/Save RF Kill Switch Status /dev/rfkill Watch[0m.
+         Unmounting [0;1;39m/config[0m...
+         Stopping [0;1;39mSave/Restore Sound Card State[0m...
+         Stopping [0;1;39mAvahi mDNS/DNS-SD Stack[0m...
+         Stopping [0;1;39mGetty on tty1[0m...
+         Stopping [0;1;39mNetdata, X-Ray Vi…on for your infrastructure![0m...
+         Stopping [0;1;39mEnable adbd on supported Radxa products[0m...
+         Stopping [0;1;39mEnable USB Ethern…on supported Radxa products[0m...
+         Stopping [0;1;39mSerial Getty on ttyS2[0m...
+         Stopping [0;1;39mOpenBSD Secure Sh…daemon (192.168.1.21:48760)[0m...
+         Stopping [0;1;39mLSB: Set sysfs variables from /etc/sysfs.conf[0m...
+         Stopping [0;1;39mJournal Service for Namespace netdata[0m...
+         Stopping [0;1;39mLoad/Save Random Seed[0m...
+         Stopping [0;1;39mTailscale node agent[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mAvahi mDNS/DNS-SD Stack[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSerial Getty on ttyS2[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mJournal Service for Namespace netdata[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mOpenBSD Secure She…n daemon (192.168.1.21:48760)[0m.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/config[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSave/Restore Sound Card State[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mSession 9 of user radxa[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-getty.slice[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-serial\x2dgetty.slice[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-ssh.slice[0m.
+         Stopping [0;1;39mUser Login Management[0m...
+         Stopping [0;1;39mUser Manager for UID 1000[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mLSB: Set sysfs variables from /etc/sysfs.conf[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Manager for UID 1000[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Login Management[0m.
+         Stopping [0;1;39mUser Runtime Directory /run/user/1000[0m...
+[[0;32m  OK  [0m] Unmounted [0;1;39m/run/user/1000[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUser Runtime Directory /run/user/1000[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser Slice of UID 1000[0m.
+         Stopping [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mRemote File Systems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mTailscale node agent[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetdata, X-Ray Vision for your infrastructure![0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork is Online[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mHost and Network Name Lookups[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager Wait Online[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mWait for Network to be Configured[0m.
+[    [0;31m*[0;1;31m*[0m] (1 of 2) A stop job is running for …ted Radxa products (3s / 1min 30s)
+[   69.287687] dwc3 fcc00000.usb: request 00000000e2ac8efd was not queued to ep0out
+M[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] (2 of 2) A stop job is running for …ted Radxa products (4s / 1min 30s)
+[   69.333400] unloading
+M[K[[0;32m  OK  [0m] Stopped [0;1;39mEnable USB Ethernet on supported Radxa products[0m.
+[K[[0;32m  OK  [0m] Stopped [0;1;39mEnable adbd on supported Radxa products[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork[0m.
+         Stopping [0;1;39mNetwork Manager[0m...
+         Stopping [0;1;39mRaise network interfaces[0m...
+         Stopping [0;1;39mNetwork Name Resolution[0m...
+         Stopping [0;1;39mWPA supplicant[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Name Resolution[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRaise network interfaces[0m.
+         Stopping [0;1;39mNetwork Service[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Service[0m.
+[   69.462867] wlp1s0: deauthenticating from 3a:07:16:e3:53:80 by local choice (Reason: 3=DEAUTH_LEAVING)
+[[0;32m  OK  [0m] Stopped [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mNetwork (Pre)[0m.
+         Stopping [0;1;39mD-Bus System Message Bus[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mD-Bus System Message Bus[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mAvahi mDNS/DNS-SD Stack Activation Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mOpenBSD Secure Shell server socket[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mJournal Varlink Socket for Namespace netdata[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-syste…\x2djournald\x2dvarlink.slice[0m.
+[[0;32m  OK  [0m] Closed [0;1;39mJournal Socket for Namespace netdata[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2djournald.slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mDispatch Password …ts to Console Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mSwap[0m.
+         Deactivating swap [0;1;39m/mnt/nvme/swapfile[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mLoad Kernel Modules[0m.
+         Stopping [0;1;39mNetwork Time Synchronization[0m...
+         Stopping [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+[[0;32m  OK  [0m] Stopped [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Deactivated swap [0;1;39m/mnt/nvme/swapfile[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mboot-efi.automount[0m.
+[[0;32m  OK  [0m] Unset automount [0;1;39mconfig.automount[0m.
+         Unmounting [0;1;39m/mnt/nvme[0m...
+[   69.934640] EXT4-fs (nvme0n1): unmounting filesystem 0d9000fd-1edf-455d-9058-56e0855a1edb.
+[[0;32m  OK  [0m] Unmounted [0;1;39m/mnt/nvme[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mUnmount All Filesystems[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mFile System Check …d-1edf-455d-9058-56e0855a1edb[0m.
+[[0;32m  OK  [0m] Removed slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+[[0;32m  OK  [0m] Stopped target [0;1;39mLocal File Systems (Pre)[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Stopped [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mShutdown[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mFinal Step[0m.
+[[0;32m  OK  [0m] Finished [0;1;39mReboot[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mReboot[0m.
+[   70.119571] watchdog: watchdog0: watchdog did not stop!
+[   70.637619] systemd-shutdown[1]: Syncing filesystems and block devices.
+[   70.651099] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+[   70.686155] systemd-journald[208]: Received SIGTERM from PID 1 (systemd-shutdow).
+[   70.730181] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[   70.753133] systemd-shutdown[1]: Using hardware watchdog 'Synopsys DesignWare Watchdog', version 0, device /dev/watchdog
+[   70.759929] systemd-shutdown[1]: Unmounting file systems.
+[   70.763741] [1975]: Remounting '/' read-only in with options '(null)'.
+[   70.793871] EXT4-fs (mmcblk0p3): re-mounted d210e617-6a4c-4771-b955-ddd835a32d2b ro.
+[   70.810681] systemd-shutdown[1]: All filesystems unmounted.
+[   70.811262] systemd-shutdown[1]: Deactivating swaps.
+[   70.812086] systemd-shutdown[1]: All swaps deactivated.
+[   70.812605] systemd-shutdown[1]: Detaching loop devices.
+[   70.819251] systemd-shutdown[1]: All loop devices detached.
+[   70.819777] systemd-shutdown[1]: Stopping MD devices.
+[   70.820668] systemd-shutdown[1]: All MD devices stopped.
+[   70.821164] systemd-shutdown[1]: Detaching DM devices.
+[   70.822090] systemd-shutdown[1]: All DM devices detached.
+[   70.822595] systemd-shutdown[1]: All filesystems, swaps, loop devices, MD devices and DM devices detached.
+[   70.832439] systemd-shutdown[1]: Syncing filesystems and block devices.
+[   70.836073] systemd-shutdown[1]: Rebooting.

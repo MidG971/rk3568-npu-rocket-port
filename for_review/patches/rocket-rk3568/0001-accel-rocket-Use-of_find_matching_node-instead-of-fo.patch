@@ -1,0 +1,34 @@
+From: Midgy BALON <midgy971@gmail.com>
+Date: Fri, 4 Apr 2026 00:00:00 +0000
+Subject: [PATCH 1/5] accel: rocket: Use of_find_matching_node() instead of
+ for_each_of_allnodes()
+
+for_each_of_allnodes() expands to a call to __of_find_all_nodes(), which
+is not EXPORT_SYMBOL'd and therefore cannot be called from loadable
+module code.  Replace it with an of_find_matching_node() loop, which
+uses only exported symbols, to allow building the Rocket driver as a
+module (DRM_ACCEL_ROCKET=m).
+
+Fixes: 34a9d0cd5d9c ("accel/rocket: Initial import of the Rocket NPU driver")
+Signed-off-by: Midgy BALON <midgy971@gmail.com>
+---
+ drivers/accel/rocket/rocket_device.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/accel/rocket/rocket_device.c b/drivers/accel/rocket/rocket_device.c
+index XXXXXXX..XXXXXXX 100644
+--- a/drivers/accel/rocket/rocket_device.c
++++ b/drivers/accel/rocket/rocket_device.c
+@@ -29,9 +29,9 @@ struct rocket_device *rocket_device_init(struct platform_device *pdev,
+ 	dev_set_drvdata(dev, rdev);
+
+-	for_each_of_allnodes(core_node)
+-		if (of_match_node(match_table, core_node) &&
+-		    of_device_is_available(core_node))
+-			num_cores++;
++	core_node = NULL;
++	while ((core_node = of_find_matching_node(core_node, match_table)) != NULL)
++		if (of_device_is_available(core_node))
++			num_cores++;
+
+ 	rdev->cores = devm_kcalloc(dev, num_cores, sizeof(*rdev->cores), GFP_KERNEL);

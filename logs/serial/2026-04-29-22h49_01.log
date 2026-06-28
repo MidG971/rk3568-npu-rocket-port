@@ -1,0 +1,23 @@
+[    8.366288] sysrq: HELP : loglevel(0-9) reboot(b) crash(c) terminate-all-tasks(e) memory-full-oom-kill(f) kill-all-tasks(i) thaw-filesystems(j) sak(k) show-backtrace-all-active-cpus(l) show-memory-usage(m) nice-all-RT-tasks(n) poweroff(o) show-registers(p) show-all-timers(q) unraw(r) sync(s) show-task-states(t) unmount(u) force-fb(v) show-blocked-tasks(w) replay-kernel-logs(R) 
+         Starting [0;1;39mNetwork Manager Script Dispatcher Service[0m...
+[    8.447090] rk_gmac-dwmac fe010000.ethernet eth0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager Script Dispatcher Service[0m.
+[    8.473613] rk_gmac-dwmac fe010000.ethernet eth0: PHY [stmmac-1:01] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[    8.485631] dwmac4: Master AXI performs any burst length
+[    8.486143] rk_gmac-dwmac fe010000.ethernet eth0: No Safety Features support found
+[    8.487337] rk_gmac-dwmac fe010000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+[    8.489401] rk_gmac-dwmac fe010000.ethernet eth0: registered PTP clock
+[    8.490157] rk_gmac-dwmac fe010000.ethernet eth0: configuring for phy/rgmii-id link mode
+[[0;32m  OK  [0m] Started [0;1;39mTailscale node agent[0m.
+[    8.550976] rk_gmac-dwmac fe2a0000.ethernet eth1: Register MEM_TYPE_PAGE_POOL RxQ-0
+[    8.577621] rk_gmac-dwmac fe2a0000.ethernet eth1: PHY [stmmac-0:01] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[    8.589649] dwmac4: Master AXI performs any burst length
+[    8.590157] rk_gmac-dwmac fe2a0000.ethernet eth1: No Safety Features support found
+[    8.593645] rk_gmac-dwmac fe2a0000.ethernet eth1: IEEE 1588-2008 Advanced Timestamp supported
+[    8.596127] rk_gmac-dwmac fe2a0000.ethernet eth1: registered PTP clock
+[    8.596723] rk_gmac-dwmac fe2a0000.ethernet eth1: configuring for phy/rgmii-id link mode
+[    8.673094] iwlwifi 0000:01:00.0: Applying debug destination EXTERNAL_DRAM
+[    8.751745] iwlwifi 0000:01:00.0: Applying debug destination EXTERNAL_DRAM
+[    8.754859] iwlwifi 0000:01:00.0: FW already configured (0) - re-configuring
+[    8.760753] ACPI: <n/a>: failed to evaluate _DSM bf0212f2-788f-c64d-a5b3-1f738e285ade rev:0 func:0 (0x1001)
+[[0;32m  OK  [0m] Finished [0;1;39mWait for Network to be Configured[0m.

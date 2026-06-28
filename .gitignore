@@ -1,0 +1,41 @@
+# Build artifacts
+*.o
+*.ko
+*.dtb
+*.dtbo
+*.pyc
+__pycache__/
+Image-*
+vmlinuz*
+initrd*
+
+# Editor / OS cruft
+*.swp
+*.swo
+*~
+*.kate-swp
+.DS_Store
+__MACOSX/
+
+# Local board-discovery output
+.rock3b_ip
+
+# --- Safety net: excluded confidential material (see REPO-SCOPE.md) ---
+# Do NOT commit these even if regenerated locally.
+# Rockchip TRM (copyrighted)
+*TRM*.pdf
+trm/
+trm_txt.txt
+# Vendor SDK / firmware images
+rknn-convert/
+IMG_ISO/
+*.img
+spi-backup-*.bin
+*.sha512
+*.exe
+# Private collaborator correspondence
+*-reply*
+*reply*
+*outreach*
+
+# Note: logs/ and the conv2d-*.bin test fixtures ARE tracked on purpose.

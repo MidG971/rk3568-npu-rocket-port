@@ -1,0 +1,57 @@
+To: mesa-dev@lists.freedesktop.org
+Cc: Tomeu Vizoso <tomeu@tomeuvizoso.net>
+Subject: rocket/Teflon: convolution config appears RK3588-specific on RK3568
+
+Hi,
+
+I'm adding kernel support for the RK3568 NPU to the rocket accel driver
+(RFC just posted to dri-devel / linux-rockchip [1]). The RK3568 NPU is the
+same NVDLA-derived IP as the RK3588 that the rocket Mesa/Teflon driver
+targets, but on RK3568 a simple conv2d through Teflon produces wrong output
+(every element is the output zero-point), and the command list Mesa emits
+differs from the vendor (RKNPU) one for the same convolution.
+
+Comparing Mesa rocket's CNA config to a byte-exact RKNPU capture for the
+*same* convolution (conv2d, 80x80x16 -> 40x40x128, 5x5 stride 2, int8) on
+RK3568, several values look RK3588-specific:
+
+  - CONV_CON4 (0x1018):     Mesa 0x00019000 ; vendor 0 for this conv
+  - line_stride (0x107c):   Mesa 0x140      ; vendor 0x50  (4x too large)
+  - CONV_CON2 KERNEL_GROUP: Mesa 0x00030080 ; vendor 0x70
+  - DMA_CON0 fetch_pixel_len, CBUF_CON1, and several DPU/ACCU/DPU_RDMA
+    registers also differ.
+
+Structurally, rkt_ml.h assumes the RK3588 CBUF size (RK3568 has 256 KiB /
+8 banks, not 12), and the DCOMP descriptor layout differs between the two
+(RK3568: 8 ADDR + 8 AMOUNT registers; RK3588: 1 ADDR + 16 AMOUNT). The
+conv lowering in rkt_regcmd.c has essentially one RK3568 reference.
+
+Important caveat so this isn't misread: replaying the vendor's byte-exact
+command list through the mainline rocket *kernel* driver on RK3568 also does
+not execute (the MAC/output stage never completes), so the command-list
+content is not the only blocker -- there is a hardware/driver bring-up issue
+I'm still chasing on the kernel side. I'm sending this so the userspace
+config divergences are on record for RK3568 enablement, and to ask:
+
+  - Is per-SoC config generation (rkt_regcmd.c / rkt_ml.h parameterised by
+    SoC, as the kernel side now is) the direction you'd want for RK3568?
+  - Are there known RK3588-specific assumptions baked into the conv lowering
+    that I should look at first?
+
+Happy to provide the full register-by-register diff and the captures.
+
+Hardware: Radxa ROCK 3B (RK3568). Mesa 25.3.0. Test: conv2d.tflite via the
+Teflon delegate. Kernel: rocket with the RFC RK3568 series applied.
+
+[1] <RFC lore link - fill in once archived:
+     lore.kernel.org/linux-rockchip/?q=Add+RK3568+NPU+support >
+
+Thanks,
+Midgy BALON
+
+--
+NOTE (not part of the message): mesa-dev is fairly low-traffic these days;
+the more conventional venue is a GitLab issue at
+https://gitlab.freedesktop.org/mesa/mesa/-/issues (component: Teflon/rocket,
+cc Tomeu). The text above works for either. Fill in the lore link once the
+RFC shows up in the archive.

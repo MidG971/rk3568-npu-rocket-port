@@ -1,0 +1,35 @@
+radxa@rock-3b:~$ [  312.344300] RKNPU fde40000.npu: NPU power domain already on
+[  312.344930] RKNPU fde40000.npu: NPU bus ack after de-idle: 0x000001ec
+[  312.345570] Internal error: synchronous external abort: 0000000096000010 [#1]  SMP
+[  312.346246] Modules linked in: aes_neon_bs aes_neon_blk ccm gpio_ir_recv rc_core rockchip_thermal snd_soc_simple_card rockchip_saradc snd_soc_simple_card_utils industrialio_triggered_buffer kfifo_buf hantro_vpu v4l2_vp9 rockchip_rga v4l2_h264 videobuf2_dma_sg v4l2_jpeg rockchip_dfi snd_soc_rk817 snd_soc_rockchip_i2s_tdm videobuf2_dma_contig v4l2_mem2mem rk817_charger videobuf2_memops rk805_pwrkey videobuf2_v4l2 iwlmvm videodev mac80211 videobuf2_common libarc4 mc iwlwifi usb_f_ecm u_ether usb_f_fs libcomposite sha256 cfg80211 rfkill fuse dm_mod ipv6 snd_soc_hdmi_codec snd_soc_core snd_compress snd_pcm_dmaengine snd_pcm snd_timer snd soundcore dw_hdmi_cec dw_hdmi_i2s_audio reset_gpio rtc_hym8563 display_connector phy_rockchip_naneng_combphy rtc_rk808 spi_rockchip_sfc dwmac_rk stmmac_platform stmmac rockchipdrm dw_hdmi_qp analogix_dp pcs_xpcs dw_dp dw_mipi_dsi dw_mipi_dsi2 drm_dp_aux_bus dw_hdmi drm_display_helper cec drm_dma_helper
+[  312.353828] CPU: 3 UID: 1000 PID: 918 Comm: rknn_yolov5_dem Tainted: G   M                6.19.0-rc5-00006-g76cd27aa0fe5-dirty #4 PREEMPT
+[  312.354919] Tainted: [M]=MACHINE_CHECK
+[  312.355253] Hardware name: Radxa ROCK 3B (DT)
+[  312.355639] pstate: 80400009 (Nzcv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[  312.356253] pc : rknpu_get_hw_version+0x8/0x4c
+[  312.356658] lr : __rknpu_action_ioctl+0x158/0x29c
+[  312.357081] sp : ffff8000838dbc30
+[  312.357377] x29: ffff8000838dbc30 x28: ffffbb898e2fd360 x27: ffff8000838dbcf8
+[  312.358014] x26: 0000000000000008 x25: ffff00010bd3f200 x24: 0000000000000040
+[  312.358651] x23: ffffbb898da32690 x22: ffff00010e534080 x21: ffff00010e534080
+[  312.359288] x20: ffff8000838dbcf8 x19: ffff00010e534800 x18: 00000000ffffffff
+[  312.359925] x17: 0000000000000000 x16: 0000000000000000 x15: 0000000000000006
+[  312.360560] x14: 0000000000000000 x13: ffffbb898f5b6a98 x12: 000000000000093c
+[  312.361194] x11: 0000000000000040 x10: ffff00010e576138 x9 : ffff00010e576130
+[  312.361829] x8 : ffff0001022f4dd8 x7 : 0000000000000000 x6 : ffff000111c3db80
+[  312.362464] x5 : 0000000000000cfa x4 : 0000000000000000 x3 : 0000000000000000
+[  312.363098] x2 : ffff000111c3db80 x1 : ffff8000838dbcfc x0 : ffff800080b90000
+[  312.363735] Call trace:
+[  312.363956]  rknpu_get_hw_version+0x8/0x4c (P)
+[  312.364359]  drm_ioctl_kernel+0xc0/0x134
+[  312.364715]  drm_ioctl+0x1f4/0x4ec
+[  312.365023]  __arm64_sys_ioctl+0xac/0x104
+[  312.365388]  invoke_syscall+0x48/0x110
+[  312.365730]  el0_svc_common.constprop.0+0x40/0xe0
+[  312.366152]  do_el0_svc+0x1c/0x28
+[  312.366455]  el0_svc+0x34/0x10c
+[  312.366743]  el0t_64_sync_handler+0xa0/0xe4
+[  312.367122]  el0t_64_sync+0x198/0x19c
+[  312.367459] Code: 52800015 17ffffaa f9400000 b4000201 (b9400003)
+[  312.367996] ---[ end trace 0000000000000000 ]---
+

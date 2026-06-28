@@ -1,0 +1,15 @@
+[Unit]
+Description=RK3568 NPU engage primer (one-shot vendor rknpu job -> rocket handoff)
+Documentation=file:/home/radxa/npu-prime/npu-prime.sh
+After=local-fs.target systemd-modules-load.service
+Before=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/radxa/npu-prime/npu-prime.sh
+RemainAfterExit=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
