@@ -27,10 +27,10 @@ The following was **deliberately excluded** or **redacted** before assembling it
 - The public default board login `radxa`/`radxa` — documented Radxa default, needed for scripts to read sensibly.
 - Author identity in upstream patches (`Midgy BALON <midgy971@gmail.com>`) — already public on the kernel/Mesa mailing lists.
 
-## Heads-up before publishing
+## Note on collaborator references
 
-The `memory/` knowledge base and some `for_review/` / `upstream-prep/` analysis docs
-**reference and summarize collaborators' findings** (e.g. RK3576 results shared privately),
-even though the standalone correspondence files were removed. If you intend to make this
-repo **public**, review those for any third-party findings you'd rather not disclose, and
-add a top-level license.
+The standalone correspondence files were removed, but the `memory/` knowledge base and some
+`for_review/` / `upstream-prep/` analysis docs still **reference and summarize collaborators'
+findings** (e.g. RK3576 results), attributing them by name. This is intentional and kept —
+the collaboration largely took place in the open (public GitHub issues / mailing lists), and
+the names document who contributed which insight. Licensed GPL-2.0 (see `LICENSE`).

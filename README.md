@@ -83,9 +83,11 @@ Boot entries (extlinux) used during development: `l1` = mainline + vendor `rknpu
 
 ## Licensing
 
-Mixed, per component: kernel patches/driver work follow the Linux kernel (**GPL-2.0**);
-Mesa patches follow Mesa (**MIT**). Original scripts, notes, and docs here are provided
-as-is; add a top-level license of your choice before publishing.
+This repository is licensed **GPL-2.0** (see [`LICENSE`](LICENSE)) — appropriate because
+the bulk is kernel-derived driver/DTS work, which inherits the Linux kernel's GPL-2.0.
+The **Mesa** patches under `mesa-patches/` (and any Mesa source snippets) remain under
+**MIT** as marked in their own headers, per Mesa's licensing. Original scripts, notes, and
+docs are provided under GPL-2.0 as well.
 
 ## Upstream references
 
