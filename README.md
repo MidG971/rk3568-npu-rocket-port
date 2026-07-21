@@ -71,7 +71,6 @@ surface in `rkt_coefs.c` and flip `BS_MUL_SRC`/`BS_TRUNCATE_SRC` in `rkt_regcmd.
 | `docs/` | Investigation write-ups, API-porting notes (5.10 → 6.19), patch history |
 | `memory/` | Findings knowledge base — one fact per file, indexed by `MEMORY.md` |
 | `patches/`, `mesa-patches/` | Kernel and Mesa patch series |
-| `upstream-prep/` | Submission prep: cover letters, checklists, research reports |
 | `for_review/` | Patch sets prepared for review, analysis docs, test fixtures |
 | `npu-prime/`, `npu-probe/` | The "BSP primer" service + read-only register probe tool |
 | `tools/`, `test_c/` | Small C probes (register/clock/PMU/version tests) |

@@ -42,5 +42,11 @@ NEXT-SESSION*
 next-session-plan*
 next-move-plan*
 RESUME-*
+# Submission-prep scratch + send instructions — keep LOCAL, never publish
+upstream-prep/
+SEND_INSTRUCTIONS*
+# Cover letters / outbound patch-series intros — keep LOCAL, never publish
+*cover-letter*
+*cover_letter*
 
 # Note: logs/ and the conv2d-*.bin test fixtures ARE tracked on purpose.
