@@ -23,16 +23,23 @@ base.
    SCMI two-step rate change (PVTPLL init), PMU NoC de-idle, `always_on` NPU power domain,
    IOMMU v1 `GFP_DMA32` page-table fix, and the `RK_MMU_AUTO_GATING` fix.
 
-2. **Upstream `rocket` accel driver on RK3568 — RFC v3 sent.** The NPU **probes and submits
-   cleanly on stock mainline** via a DT-only power-domain bring-up plus rocket robustness
-   fixes. Two walls remained on the compute path, and both are now characterized:
-   - **Executer engage** (the NPU's per-unit pipeline never armed) — root cause is
-     HW-internal init that the vendor performs; solved *in practice* with a "BSP primer"
-     (run one vendor job, then hand the powered, engaged NPU to `rocket`).
-   - **Per-channel requant** (int8 conv output collapses to zero-point / "degenerate") —
-     **root cause found:** Mesa rocket emits no per-channel requantization (SDP `BS_MUL`
-     bypassed, CNA CVT scale hardcoded, coefficient buffer = biases only). The vendor
-     coefficient-buffer record format has been **decoded** and the fix is specified.
+2. **Upstream `rocket` accel driver on RK3568 — RFC posted; first infra patch reviewed.**
+   The NPU **probes and submits cleanly on stock mainline** via a DT-only power-domain
+   bring-up plus rocket robustness fixes. The **`pmdomain` RK3568-NPU regulator patch is
+   reviewed and merge-pending upstream** (Reviewed-by from the Rockchip pmdomain
+   maintainers); the rest of the driver/DT series is gated on the compute wall. Two walls
+   on the compute path, both characterized:
+   - **Compute gate (the primary wall).** Every unit engages, but the CNA never issues its
+     weight-fetch DMA (`wt_rd=0` vs the vendor's `0x1900`), so the MAC array starves and the
+     output stays at the zero-point. The full software-visible surface — every `writel`,
+     payload replay, clocks/power/reset/IOMMU — has been matched to the vendor, so the gate
+     is **below the register interface, in the CSC/CMAC sequencer**; a parallel RK3576
+     effort reached the same conclusion independently. A "BSP primer" (run one vendor job
+     first) engages the pipeline but does not arm the weight-fetch.
+   - **Per-channel requant (a known downstream bug).** Mesa rocket emits no per-channel
+     requantization (SDP `BS_MUL` bypassed, CNA CVT scale hardcoded, coefficient buffer =
+     biases only); **root cause found** and the vendor coefficient-buffer record format
+     **decoded**. It matters once the compute gate is cleared.
 
 The most current status and next steps live in **[`PLAN.md`](PLAN.md)**,
 **[`for_review/NEXT-SESSION-PLAN.md`](for_review/NEXT-SESSION-PLAN.md)**, and the
@@ -53,20 +60,22 @@ surface in `rkt_coefs.c` and flip `BS_MUL_SRC`/`BS_TRUNCATE_SRC` in `rkt_regcmd.
 
 | Path | What |
 |------|------|
-| `PLAN.md`, `PLAN_2026-05-20.md` | Living plans for the rocket bring-up |
+| `PLAN.md` | Living plan for the rocket bring-up (current truth + dated session log) |
 | `CLAUDE.md` | Operational context / running session log (build commands, config, history) |
+| `README.md`, `REPO-SCOPE.md` | This guide + the curation/scope notes |
+| `driver-snapshots/` | Dated `rocket_*.c` driver experiment snapshots (the investigation trail) + early reference C |
+| `debug-scripts/` | `patch_*.py` live-patching helpers and register/serial probe scripts |
+| `notes/` | Session logs, analysis notes, and earlier plans (`SESSION_*`, `PLAN_2026-05-20.md`, …) |
+| `scripts/` | Deploy / run / setup shell scripts (board-access `find-rock3b.sh` + `rock3b-ssh.sh` stay at root) |
+| `logs/` | Serial / boot capture logs |
+| `dts/` | Device-tree sources + the NPU binding (`*.dts`, `*.dtsi`, `*.yaml`) |
 | `docs/` | Investigation write-ups, API-porting notes (5.10 → 6.19), patch history |
 | `memory/` | Findings knowledge base — one fact per file, indexed by `MEMORY.md` |
 | `patches/`, `mesa-patches/` | Kernel and Mesa patch series |
-| `for_review/` | Patch sets prepared for review, analysis docs, test fixtures, driver snapshots |
 | `upstream-prep/` | Submission prep: cover letters, checklists, research reports |
-| `dts/`, `*.dts*`, `*.dtsi` | Device-tree sources for the NPU node |
+| `for_review/` | Patch sets prepared for review, analysis docs, test fixtures |
+| `npu-prime/`, `npu-probe/` | The "BSP primer" service + read-only register probe tool |
 | `tools/`, `test_c/` | Small C probes (register/clock/PMU/version tests) |
-| `npu-prime/` | The "BSP primer" service that engages the NPU before handing it to `rocket` |
-| `rocket_*.c`, `rkt_*` | Dated driver experiment snapshots (the investigation trail) |
-| `patch_*.py` | Live-patching helpers used during debugging |
-| `logs/` | Serial/boot capture logs |
-| `rocket_replay.c`, `*.sh` | Replay tool and run/deploy scripts |
 
 ## Quick start (board scripts)
 
