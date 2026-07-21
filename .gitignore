@@ -37,5 +37,10 @@ spi-backup-*.bin
 *-reply*
 *reply*
 *outreach*
+# Internal next-session / working plans — keep LOCAL, never publish
+NEXT-SESSION*
+next-session-plan*
+next-move-plan*
+RESUME-*
 
 # Note: logs/ and the conv2d-*.bin test fixtures ARE tracked on purpose.

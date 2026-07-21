@@ -41,8 +41,7 @@ base.
      biases only); **root cause found** and the vendor coefficient-buffer record format
      **decoded**. It matters once the compute gate is cleared.
 
-The most current status and next steps live in **[`PLAN.md`](PLAN.md)**,
-**[`for_review/NEXT-SESSION-PLAN.md`](for_review/NEXT-SESSION-PLAN.md)**, and the
+The most current status and next steps live in **[`PLAN.md`](PLAN.md)** and the
 **[`memory/`](memory/)** knowledge base (start at `memory/MEMORY.md`).
 
 ## What's the actual bug? (latest finding)
