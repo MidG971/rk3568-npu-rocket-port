@@ -1,0 +1,56 @@
+--- rkt_regcmd.c.bak-q4-20260703-115736	2026-07-03 11:57:36.871782969 +0200
++++ rkt_regcmd.c	2026-11-20 13:02:37.459011473 +0100
+@@ -3,6 +3,8 @@
+  * SPDX-License-Identifier: MIT
+  */
+ 
++#include <stdlib.h>
++
+ #include "rkt_regcmd.h"
+ #include "rkt_ml.h"
+ #include "rkt_registers.h"
+@@ -279,11 +281,27 @@
+    EMIT(REG_DPU_DATA_CUBE_CHANNEL,
+         DPU_DATA_CUBE_CHANNEL_ORIG_CHANNEL(task->output_channels_real - 1) |
+            DPU_DATA_CUBE_CHANNEL_CHANNEL(task->output_channels - 1));
+-   EMIT(REG_DPU_BS_CFG, DPU_BS_CFG_BS_ALU_ALGO(2) | DPU_BS_CFG_BS_ALU_SRC(1) |
+-                           DPU_BS_CFG_BS_RELU_BYPASS(1) |
+-                           DPU_BS_CFG_BS_MUL_BYPASS(1));
+-   EMIT(REG_DPU_BS_ALU_CFG, 0);
+-   EMIT(REG_DPU_BS_MUL_CFG, 0);
++   {
++      /* Match the working vendor conv2d regcmd (BSP capture, RK3568): per-tensor
++       * conv uses BS_CFG=0x158 (BS_ALU_SRC|BS_RELU_BYPASS|BS_MUL_BYPASS|bit3),
++       * BS_ALU_CFG=0, BS_MUL_CFG=0. Per-axis models set ROCKET_PER_CHANNEL=1 to
++       * un-bypass BS_MUL and stream the C multiplier from the A/B/C buffer. */
++      uint32_t bscfg = 0x158;
++      uint32_t bsmul = 0;
++      if (getenv("ROCKET_PER_CHANNEL")) {
++         bscfg = DPU_BS_CFG_BS_ALU_ALGO(2) | DPU_BS_CFG_BS_ALU_SRC(1);
++         if (!getenv("ROCKET_NO_RELU_BYPASS"))
++            bscfg |= DPU_BS_CFG_BS_RELU_BYPASS(1);
++         bsmul = DPU_BS_MUL_CFG_BS_MUL_SRC(1) | DPU_BS_MUL_CFG_BS_TRUNCATE_SRC(1);
++      }
++      EMIT(REG_DPU_BS_CFG, getenv("ROCKET_BS_CFG")
++                              ? (uint32_t)strtoul(getenv("ROCKET_BS_CFG"), NULL, 0)
++                              : bscfg);
++      EMIT(REG_DPU_BS_ALU_CFG, 0);
++      EMIT(REG_DPU_BS_MUL_CFG, getenv("ROCKET_BS_MULCFG")
++                                  ? (uint32_t)strtoul(getenv("ROCKET_BS_MULCFG"), NULL, 0)
++                                  : bsmul);
++   }
+    EMIT(REG_DPU_BS_RELUX_CMP_VALUE, 0);
+ 
+    if (operation->depthwise) {
+@@ -501,7 +519,10 @@
+       EMIT(REG_DPU_RDMA_RDMA_SRC_BASE_ADDR, 0);
+    }
+ 
+-   EMIT(REG_DPU_RDMA_RDMA_BRDMA_CFG, DPU_RDMA_RDMA_BRDMA_CFG_BRDMA_DATA_USE(1));
++   EMIT(REG_DPU_RDMA_RDMA_BRDMA_CFG,
++        getenv("ROCKET_BRDMA_CFG")
++           ? (uint32_t)strtoul(getenv("ROCKET_BRDMA_CFG"), NULL, 0)
++           : DPU_RDMA_RDMA_BRDMA_CFG_BRDMA_DATA_USE(getenv("ROCKET_NO_ABC") ? 1 : 7));
+    EMIT(REG_DPU_RDMA_RDMA_BS_BASE_ADDR,
+         rkt_resource(operation->biases)->phys_addr);
+    EMIT(REG_DPU_RDMA_RDMA_NRDMA_CFG, 0);

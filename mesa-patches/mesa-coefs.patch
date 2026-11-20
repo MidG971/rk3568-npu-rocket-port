@@ -1,0 +1,90 @@
+--- rkt_coefs.c.bak-q4-20260703-115736	2026-07-03 11:57:36.869653747 +0200
++++ rkt_coefs.c	2026-11-20 13:02:37.457229622 +0100
+@@ -3,6 +3,8 @@
+  * SPDX-License-Identifier: MIT
+  */
+ 
++#include <stdlib.h>
++#include <string.h>
+ #include "util/u_inlines.h"
+ 
+ #include "rkt_coefs.h"
+@@ -129,6 +131,29 @@
+    return correction;
+ }
+ 
++/* Sum over the kernel of (weight - weight_zero_point), per output channel. */
++static int32_t
++rkt_calc_weight_sum(const struct pipe_ml_operation *poperation, unsigned oc, void *map)
++{
++   unsigned input_channels = poperation->input_tensors[0]->dims[3];
++   unsigned ww = poperation->conv.weight_tensor->dims[1];
++   unsigned wh = poperation->conv.weight_tensor->dims[2];
++   unsigned wzp = poperation->conv.weight_tensor->zero_point;
++   uint8_t(*w)[ww][wh][input_channels] = map;
++   int32_t sum = 0;
++   if (rkt_is_depthwise(poperation)) {
++      for (unsigned x = 0; x < ww; x++)
++         for (unsigned y = 0; y < wh; y++)
++            sum += w[0][x][y][oc] - wzp;
++   } else {
++      for (unsigned x = 0; x < ww; x++)
++         for (unsigned y = 0; y < wh; y++)
++            for (unsigned ic = 0; ic < input_channels; ic++)
++               sum += w[oc][x][y][ic] - wzp;
++   }
++   return sum;
++}
++
+ struct pipe_resource *
+ rkt_fill_biases(struct rkt_ml_subgraph *subgraph,
+                 const struct pipe_ml_operation *poperation,
+@@ -147,6 +172,48 @@
+    struct pipe_resource *rsc;
+    uint32_t *biases;
+ 
++   /* RK3568 A/B/C coefficient buffer, vendor format (decoded from vendor-bias.bin
++    * bytes + BSP regcmd capture, 2026-11-20): per 8 output channels one 64 B record
++    * [8xi32 A | 8xi16 B | 8xi16 C]; A = bias - (in_zp-0x80)*wsum, B = shift,
++    * C = Q14 multiplier relative to the max channel scale (max 16384); the absolute
++    * scale stays in DPU OUT_CVT. Default on; ROCKET_NO_ABC=1 restores bias-only. */
++   if (!getenv("ROCKET_NO_ABC")) {
++      unsigned in_zp = poperation->input_tensors[0]->zero_point;
++      unsigned wt_zp = poperation->conv.weight_tensor->zero_point;
++      const float *wsc = poperation->conv.weight_tensor->scales;
++      float max_sc = wsc ? wsc[0] : 1.0f;
++      if (wsc)
++         for (unsigned oc = 1; oc < output_channels; oc++)
++            if (wsc[oc] > max_sc) max_sc = wsc[oc];
++      unsigned groups = DIV_ROUND_UP(output_channels, 8);
++      unsigned bufsize = groups * 64 + 0x100;
++      const char *cval = getenv("ROCKET_C_VALUE");
++      *truncate_bits = 0;
++      rsc = pipe_buffer_create(pcontext->screen, 0, PIPE_USAGE_DEFAULT, bufsize);
++      uint8_t *b8 = pipe_buffer_map(pcontext, rsc, PIPE_MAP_WRITE, &transfer_out);
++      memset(b8, 0, bufsize);
++      for (unsigned oc = 0; oc < output_channels; oc++) {
++         int32_t sw = rkt_calc_weight_sum(poperation, oc, weights);
++         unsigned g = oc / 8, i = oc % 8;
++         int32_t *A = (int32_t *)(b8 + g * 64 + i * 4);
++         int16_t *B = (int16_t *)(b8 + g * 64 + 32 + i * 2);
++         int16_t *C = (int16_t *)(b8 + g * 64 + 48 + i * 2);
++         float rel = wsc ? (wsc[oc] / max_sc) : 1.0f;
++         *A = biases_in[oc] - ((int32_t)in_zp - 0x80) * sw;
++         *B = 0; /* shift: 0 for per-tensor weights */
++         *C = cval ? (int16_t)strtol(cval, NULL, 0) : (int16_t)(16384.0f * rel + 0.5f); /* Q14, max 16384 */
++      }
++      fprintf(stderr, "rocket: ABC buffer oc=%u groups=%u bufsize=%u wt_zp=%u in_zp=%u max_sc=%g\n",
++              output_channels, groups, bufsize, wt_zp, in_zp, max_sc);
++      if (DBG_ENABLED(ROCKET_DBG_DUMP_BOS)) {
++         static int t = 0; rkt_dump_buffer(b8, "biases", 0, t++, 0, bufsize);
++      }
++      pipe_buffer_unmap(pcontext, transfer_out);
++      pipe_buffer_unmap(pcontext, transfer_weights);
++      pipe_buffer_unmap(pcontext, transfer_in);
++      return rsc;
++   }
++
+    rsc = pipe_buffer_create(pcontext->screen, 0, PIPE_USAGE_DEFAULT,
+                             output_channels * sizeof(uint32_t));
+    biases = pipe_buffer_map(pcontext, rsc, PIPE_MAP_WRITE, &transfer_out);

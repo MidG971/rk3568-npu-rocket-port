@@ -18,28 +18,40 @@ base.
 
 **Two tracks:**
 
-1. **Vendor `rknpu` driver on mainline 6.19 — WORKING.** Loads on 6.19.0-rc5; IOMMU mode
-   functional (YOLOv5s ≈ 57 ms, MobileNetV1 ≈ 8 ms, correct outputs). Required fixes:
-   SCMI two-step rate change (PVTPLL init), PMU NoC de-idle, `always_on` NPU power domain,
-   IOMMU v1 `GFP_DMA32` page-table fix, and the `RK_MMU_AUTO_GATING` fix.
+1. **Vendor `rknpu` driver on mainline — WORKING.** Ported to mainline **v7.4-rc3**
+   (board boot entry `l10`/`l11`); IOMMU mode functional (YOLOv5s ≈ 57 ms, MobileNetV1
+   ≈ 8 ms, correct outputs). Required fixes: SCMI two-step rate change (PVTPLL init),
+   PMU NoC de-idle, NPU power-domain regulator wiring, IOMMU v1 `GFP_DMA32` page-table
+   fix, and the `RK_MMU_AUTO_GATING` bit-31 fix (now upstream as `8d4346ecd495`).
 
-2. **Upstream `rocket` accel driver on RK3568 — RFC posted; first infra patch reviewed.**
-   The NPU **probes and submits cleanly on stock mainline** via a DT-only power-domain
-   bring-up plus rocket robustness fixes. The **`pmdomain` RK3568-NPU regulator patch is
-   reviewed and merge-pending upstream** (Reviewed-by from the Rockchip pmdomain
-   maintainers); the rest of the driver/DT series is gated on the compute wall. Two walls
-   on the compute path, both characterized:
+2. **Upstream `rocket` accel driver on RK3568 — one patch IN mainline; series send-ready,
+   gated on the compute wall.** The NPU **probes, powers and submits cleanly on stock
+   mainline v7.4-rc3**. The **`pmdomain: rockchip: Add a regulator to the RK3568 NPU
+   power domain` patch is IN mainline v7.4-rc3** (`c8e1c83f9ad7`). The driver+DT series
+   (v4, 8 patches) is rebased onto v7.4-rc3 and **self-contained** — the other former
+   dependencies (per-device IOMMU ops `414cb6f3ac62`, AUTO_GATING bit-31 `8d4346ecd495`)
+   are also in v7.4-rc3 — and held send-ready pending the compute wall below. Compute
+   path, characterized:
    - **Compute gate (the primary wall).** Every unit engages, but the CNA never issues its
      weight-fetch DMA (`wt_rd=0` vs the vendor's `0x1900`), so the MAC array starves and the
      output stays at the zero-point. The full software-visible surface — every `writel`,
-     payload replay, clocks/power/reset/IOMMU — has been matched to the vendor, so the gate
-     is **below the register interface, in the CSC/CMAC sequencer**; a parallel RK3576
-     effort reached the same conclusion independently. A "BSP primer" (run one vendor job
-     first) engages the pipeline but does not arm the weight-fetch.
-   - **Per-channel requant (a known downstream bug).** Mesa rocket emits no per-channel
-     requantization (SDP `BS_MUL` bypassed, CNA CVT scale hardcoded, coefficient buffer =
-     biases only); **root cause found** and the vendor coefficient-buffer record format
-     **decoded**. It matters once the compute gate is cleared.
+     payload replay, clocks/power/reset/IOMMU, coherency, cold PD power-cycle with a
+     kiln-style NIU reset edge — has been matched to the vendor or tested negative, so the
+     gate is **below the register interface**: a per-power-session hardware state that a
+     *working vendor job* arms (BSP-primer) and no register write re-arms. Escalated to
+     Rockchip on linux-rockchip (lore thread `20260721230746.175786`, follow-up
+     `20261120112754.1400099`) and discussed in the public RK3576 sibling thread
+     (github.com/gahingwoo/linux-rk3576-npu issue #1).
+   - **Per-channel requant — FIXED in Mesa (this repo's `mesa-patches/`).** The vendor
+     coefficient-buffer record format is decoded (`[8×int32 bias | 8×int16 shift |
+     8×int16 mult]` per 64 B, 8 channels per record; Q14 multiplier, max 16384) and mesa
+     now emits it by default, with `BS_CFG=0x158` matching the working vendor regcmd
+     byte-exactly; validated offline against the vendor captures. End-to-end output
+     correctness still waits on the kernel compute gate.
+   - **Board QoL:** Ethernet jack LEDs restored on mainline (amber = link, green =
+     activity, HW-offloaded to the RTL8211F) — DT patch sent to the lists
+     (`[PATCH v2] ... rk3568-rock-3b: describe the Ethernet PHY LEDs`,
+     Msg-Id `20261120123250.1417061-1`).
 
 The most current status and next steps live in **[`PLAN.md`](PLAN.md)** and the
 **[`memory/`](memory/)** knowledge base (start at `memory/MEMORY.md`).
@@ -47,13 +59,16 @@ The most current status and next steps live in **[`PLAN.md`](PLAN.md)** and the
 ## What's the actual bug? (latest finding)
 
 For an int8 conv, the requant `out = (acc + bias) * (w_scale·in_scale/out_scale)` must be
-applied. Mesa rocket bypasses it for multi-channel-input convs, so the output rails to the
-zero-point. The vendor streams per-channel `{bias, mult, shift}` from a coefficient surface
+applied. Mesa rocket bypassed it for multi-channel-input convs, so the output rails to the
+zero-point. The vendor streams per-channel `{bias, shift, mult}` from a coefficient surface
 at `DPU_RDMA.RDMA_BS_BASE_ADDR`, laid out as **8 bytes/channel**, interleaved 8 channels per
-64-byte record: `[8×int32 bias | 8×int16 shift | 8×int16 mult]`. This was confirmed two ways
-(the captured buffer's bytes *and* the register field widths). The fix is to build that
-surface in `rkt_coefs.c` and flip `BS_MUL_SRC`/`BS_TRUNCATE_SRC` in `rkt_regcmd.c`. See
-`memory/coeff-buffer-format-decoded-2026-06-27.md`.
+64-byte record: `[8×int32 bias | 8×int16 shift | 8×int16 mult]` (mult is Q14, max 16384;
+the absolute scale stays in DPU `OUT_CVT`). This was confirmed two ways (the captured
+buffer's bytes *and* the register field widths). **Fixed** in `mesa-patches/`
+(`mesa-coefs.patch`, `mesa-regcmd.patch`, 2026-11-20): mesa now builds that surface by
+default and emits `BS_CFG=0x158`, byte-identical to the working vendor regcmd; validated
+offline against the vendor captures (see `mesa-patches/README-2026-11-20-vendorfmt.md`).
+End-to-end correctness additionally needs the kernel-side compute gate above to clear.
 
 ## Repository layout
 
@@ -85,8 +100,10 @@ The board uses a dynamic LAN IP; scripts discover it (you must set your own boar
 ./rock3b-ssh.sh "uname -a"
 ```
 
-Boot entries (extlinux) used during development: `l1` = mainline + vendor `rknpu` (IOMMU),
-`l3` = mainline + `rocket`, `l8` = `rocket` with the BSP-primer auto-run at boot.
+Boot entries (extlinux) used during development: `l1`/`l3`/`l8` = 6.19-era test kernels
+(vendor `rknpu` IOMMU / `rocket` / BSP-primer), `l10` = **mainline v7.4-rc3 + RK3568 NPU
+port (default)**, `l11` = l10 + eth-LED DT + cold-PD test patch. Board runs Debian 11
+(bullseye, now from archive.debian.org).
 
 ## Licensing
 
@@ -101,3 +118,10 @@ docs are provided under GPL-2.0 as well.
 - [Rocket NPU driver](https://docs.kernel.org/accel/rocket/index.html)
 - [RKNPU2 SDK](https://github.com/rockchip-linux/rknpu2) · [RKNN Toolkit 2](https://github.com/rockchip-linux/rknn-toolkit2)
 - RK3568 TRM Part 1 (public): rockchip opensource mirror
+- Compute-gate escalation on linux-rockchip:
+  [thread](https://lore.kernel.org/all/20260721230746.175786-1-midgy971@gmail.com/)
+  + [follow-up 2026-11-20](https://lore.kernel.org/all/20261120112754.1400099-1-midgy971@gmail.com/)
+- RK3576 sibling collaboration thread: [gahingwoo/linux-rk3576-npu#1](https://github.com/gahingwoo/linux-rk3576-npu/issues/1)
+- Ethernet PHY LED DT patch on the lists:
+  [v1](https://lore.kernel.org/all/20261120113555.1402132-1-midgy971@gmail.com/) ·
+  [v2](https://lore.kernel.org/all/20261120123250.1417061-1-midgy971@gmail.com/)
