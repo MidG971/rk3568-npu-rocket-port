@@ -54,7 +54,7 @@ base.
      Msg-Id `20261120123250.1417061-1`).
    - **Mesa Draft MR opened**: [!46552](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/46552)
      — `Draft: rocket: Add RK3568 NPU support for Teflon`, branch `rk3568-teflon`
-     @ `7b4b2fa64663` (rebased onto main `bf593eb0` 2026-11-20, conflict-free;
+     @ `8eee49103808` (rebased onto main `bf593eb0` 2026-11-20, conflict-free, compile-checked on board;
      commit carries `Assisted-by: LLM` per Mesa's AI-disclosure rule). Held in
      Draft until the kernel compute gate clears and a conv completes end-to-end
      on hardware.
