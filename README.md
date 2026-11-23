@@ -18,16 +18,17 @@ base.
 
 **Two tracks:**
 
-1. **Vendor `rknpu` driver on mainline — WORKING.** Ported to mainline **v7.4-rc3**
-   (board boot entry `l10`/`l11`); IOMMU mode functional (YOLOv5s ≈ 57 ms, MobileNetV1
+1. **Vendor `rknpu` driver on mainline — WORKING.** Ported to mainline **v7.4-rc4**
+   (board boot entry `l12`, default; `l10`/`l11` on v7.4-rc3 kept); IOMMU mode functional (YOLOv5s ≈ 57 ms, MobileNetV1
    ≈ 8 ms, correct outputs). Required fixes: SCMI two-step rate change (PVTPLL init),
    PMU NoC de-idle, NPU power-domain regulator wiring, IOMMU v1 `GFP_DMA32` page-table
    fix, and the `RK_MMU_AUTO_GATING` bit-31 fix (now upstream as `8d4346ecd495`).
 
 2. **Upstream `rocket` accel driver on RK3568 — one patch IN mainline; series send-ready,
    gated on the compute wall.** The NPU **probes, powers and submits cleanly on stock
-   mainline v7.4-rc3**. The **`pmdomain: rockchip: Add a regulator to the RK3568 NPU
-   power domain` patch is IN mainline v7.4-rc3** (`c8e1c83f9ad7`). The driver+DT series
+   mainline v7.4-rc4** (re-baselined 2026-11-23: gate unchanged by the rc3→rc4 rocket
+   hardening delta). The **`pmdomain: rockchip: Add a regulator to the RK3568 NPU
+   power domain` patch is IN mainline** (`c8e1c83f9ad7`, v7.4-rc3+). The driver+DT series
    (v4, 8 patches) is rebased onto v7.4-rc3 and **self-contained** — the other former
    dependencies (per-device IOMMU ops `414cb6f3ac62`, AUTO_GATING bit-31 `8d4346ecd495`)
    are also in v7.4-rc3 — and held send-ready pending the compute wall below. Compute
