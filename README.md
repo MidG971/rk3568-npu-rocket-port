@@ -19,7 +19,8 @@ base.
 **Two tracks:**
 
 1. **Vendor `rknpu` driver on mainline — WORKING.** Ported to mainline **v7.4-rc4**
-   (board boot entry `l12`, default; `l10`/`l11` on v7.4-rc3 kept); IOMMU mode functional (YOLOv5s ≈ 57 ms, MobileNetV1
+   (board boot entry `l12` on eMMC bullseye; **`l13` = Debian 12 bookworm on the NVMe
+   loop-image is now the default boot**, bullseye kept as fallback); IOMMU mode functional (YOLOv5s ≈ 57 ms, MobileNetV1
    ≈ 8 ms, correct outputs). Required fixes: SCMI two-step rate change (PVTPLL init),
    PMU NoC de-idle, NPU power-domain regulator wiring, IOMMU v1 `GFP_DMA32` page-table
    fix, and the `RK_MMU_AUTO_GATING` bit-31 fix (now upstream as `8d4346ecd495`).
@@ -108,9 +109,10 @@ The board uses a dynamic LAN IP; scripts discover it (you must set your own boar
 ```
 
 Boot entries (extlinux) used during development: `l1`/`l3`/`l8` = 6.19-era test kernels
-(vendor `rknpu` IOMMU / `rocket` / BSP-primer), `l10` = **mainline v7.4-rc3 + RK3568 NPU
-port (default)**, `l11` = l10 + eth-LED DT + cold-PD test patch. Board runs Debian 11
-(bullseye, now from archive.debian.org).
+(vendor `rknpu` IOMMU / `rocket` / BSP-primer), `l10`/`l11` = mainline v7.4-rc3 + RK3568 NPU
+port, `l12` = **mainline v7.4-rc4 on eMMC bullseye (fallback)**, `l13` = **v7.4-rc4 on
+Debian 12 bookworm (NVMe loop-image `/mnt/nvme/bookworm.img`, custom loop-root initrd) —
+DEFAULT boot since 2026-11-24**.
 
 ## Licensing
 
